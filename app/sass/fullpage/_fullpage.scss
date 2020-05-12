@@ -2,7 +2,7 @@
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  transition: all .9s ease-in-out;
+  transition: all .6s ease-in-out;
   position: fixed;
   left: 0;
   top: 0;
@@ -10,4 +10,9 @@
   background-size: cover;
   z-index: -1;
   opacity: 0;
+
+  &--active {
+    z-index: 50;
+    opacity: 1;
+  }
 }

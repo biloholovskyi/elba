@@ -28,7 +28,6 @@ button {
 @import "fonts";
 @import "var";
 @import "fullpage/fullpage";
-@import "fullpage/fullpageNav";
 @import "grid/main-grid";
 
 /*over use blocks*/
@@ -37,7 +36,7 @@ button {
 
 /*pages*/
 // home
-
+@import "pages/home/home-first";
 
 /*media*/
 @import "media/1199";
