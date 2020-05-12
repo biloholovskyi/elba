@@ -1,1 +1,22 @@
-header.header header
+header.header
+  .m-container
+    .m-row
+      .m-col
+        .header__wrapper
+          .header__left
+            a.header__logo(href='/')
+              img(alt='elba' src='./media/icon/logo.png')
+
+            .header__lang
+              a.item(href='#') EN
+              a.item.item--active(href='#') FR
+
+            .header__nav
+              a.nav__item(href='#') Shop
+              a.nav__item(href='#') Concept
+              a.nav__item(href='#') Univers
+              a.nav__item(href='#') News
+          .header__right
+            .small-icon(style='background-image: url(./media/icon/search.svg)')
+            .small-icon(style='background-image: url(./media/icon/profile.svg)')
+            .big-icon(style='background-image: url(./media/icon/cart.svg)')
