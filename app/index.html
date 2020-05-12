@@ -7,7 +7,7 @@
     <title>ELBA</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header header--white">
       <div class="m-container">
         <div class="m-row">
           <div class="m-col">
@@ -26,9 +26,45 @@
         </div>
       </div>
     </header>
-    <div class="fullPage home-first"></div>
-    <div class="fullPage home-two">
-      <!--video.about__videoblock#about-video(src='./media/video/about.mp4' playsinline muted autoplay loop preload="" controls)-->
+    <div class="fullPage home-first">
+      <video class="home-first__video" src="./media/video/test.mp4" playsinline muted autoplay loop preload=""></video>
+      <div class="home-first__top">
+        <div class="m-container">
+          <div class="m-row">
+            <div class="m-col">
+              <div class="home-first__video-line">
+                <div class="first">01</div>
+                <div class="line">
+                  <div class="line__progress"></div>
+                  <div class="line__full"></div>
+                </div>
+                <div class="last">04</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home-first__content">
+        <div class="m-container">
+          <div class="m-row">
+            <div class="m-col m-col--3">
+              <div class="follow-us"><a class="follow-us__link" href="#">Follow us</a></div>
+            </div>
+            <div class="m-col m-col--10">
+              <h3 class="home-first__title">Create your <br> own style</h3>
+              <div class="home-first__desc">Welcome to «elbag yourself» the elbag customization tool <br> the best way to achieve the bag of your dream</div><a class="home-first__link" href="#">Discover</a>
+            </div>
+            <div class="m-col m-col--2">
+              <div class="home-first__navigation">
+                <div class="home-first__nav">
+                  <div class="nav__item prev"></div>
+                  <div class="nav__item next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="buildjs/index.js"></script>

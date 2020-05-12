@@ -100,4 +100,30 @@
       cursor: pointer;
     }
   }
+
+  // white
+  &--white {
+    * {
+      filter: brightness(0) invert(1);
+    }
+
+    .header__right {
+      .big-icon {
+        border: none;
+        position: relative;
+
+        &::after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          border: 1px solid #fff;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: .2;
+        }
+      }
+    }
+  }
 }

@@ -4,8 +4,33 @@ block variables
   - const pageTitle = 'ELBA'
 
 block content
-  include ../modules/header
+  include ../modules/header-white
 
   .fullPage.home-first
-  .fullPage.home-two
-    //video.about__videoblock#about-video(src='./media/video/about.mp4' playsinline muted autoplay loop preload="" controls)
+    video.home-first__video(src='./media/video/test.mp4' playsinline muted autoplay loop preload="")
+    .home-first__top
+      .m-container
+        .m-row
+          .m-col
+            .home-first__video-line
+              .first 01
+              .line
+                .line__progress
+                .line__full
+              .last 04
+    .home-first__content
+      .m-container
+        .m-row
+          .m-col.m-col--3
+            .follow-us
+              a.follow-us__link(href='#') Follow us
+
+          .m-col.m-col--10
+            h3.home-first__title Create your #[br] own style
+            .home-first__desc Welcome to «elbag yourself» the elbag customization tool #[br] the best way to achieve the bag of your dream
+            a.home-first__link(href='#') Discover
+          .m-col.m-col--2
+            .home-first__navigation
+              .home-first__nav
+                .nav__item.prev
+                .nav__item.next

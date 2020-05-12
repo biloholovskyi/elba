@@ -1,0 +1,16 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'ELBA'
+
+block content
+  include ../modules/header
+
+  .fullPage.home-text
+      .m-container
+        .m-row
+          .m-col.m-col--3
+            .follow-us
+              a.follow-us__link(href='#') Follow us
+
+          .m-col.m-col--9
