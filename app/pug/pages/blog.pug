@@ -1,0 +1,46 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'ELBA'
+
+block content
+  include ../modules/header
+
+  .fullPage.blog
+    .blog__content.full-height
+      .m-container.full-height
+        .m-row.full-height
+          .m-col.m-col--3
+            .follow-us
+              a.follow-us__link.follow-us__link--dark(href='#') Follow us
+
+          .m-col.m-col--12
+            .blog__wrapper
+              .blog__title Our Blog
+              .blog__list
+                .list__row
+                  .item
+                    img(src='./media/image/blog1.jpg')
+                    .name Title of the page
+                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+                  .item
+                    img(src='./media/image/blog2.jpg')
+                    .name Title of the page
+                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+                  .item
+                    img(src='./media/image/blog3.jpg')
+                    .name Title of the page
+                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+                .list__row
+                  .item
+                    img(src='./media/image/blog4.jpg')
+                    .name Title of the page
+                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+                  .item
+                    img(src='./media/image/blog5.jpg')
+                    .name Title of the page
+                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+                  .item
+                    img(src='./media/image/blog6.jpg')
+                    .name Title of the page
+                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
