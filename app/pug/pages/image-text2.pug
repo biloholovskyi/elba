@@ -1,0 +1,25 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'ELBA'
+
+block content
+  include ../modules/header
+
+  .fullPage.image-text
+    .image-text__content.full-height
+      .m-container.full-height
+        .m-row.full-height
+          .m-col.m-col--3
+            .follow-us
+              a.follow-us__link.follow-us__link--dark(href='#') Follow us
+
+          .m-col.m-col--6.full-height
+            .image-text__imgs.image-text__imgs--big
+              img.image-text__img.image-text__img--4(src='./media/image/img-4.png')
+          .m-col.m-col--5.full-height
+            .image-text__text
+              .image-text__title Just 10 seconds
+              .image-text__desc
+                p Choose the shape of the bag. With one set, you can coordinately change the shape of the bag in 5 seconds.
+                p The minimum storage space will allow you to change as soon as such a need arose.
