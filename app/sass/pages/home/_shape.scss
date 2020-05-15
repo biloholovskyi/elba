@@ -1,6 +1,4 @@
 .shape {
-  position: relative;
-
   &__content {
     padding-bottom: 85px;
   }
@@ -50,7 +48,7 @@
     position: relative;
     width: 581px;
     height: 581px;
-    animation: .6s ease-in 3.6s forwards img-anim;
+    //animation: .6s ease-in 3.6s forwards img-anim;
   }
 
   &__img {
@@ -68,46 +66,46 @@
 
     &--1 {
       z-index: 10;
-      animation: .6s ease-in .6s forwards anim1;
+      //animation: .6s ease-in .6s forwards anim1;
     }
 
     &--2 {
       z-index: 9;
-      animation: .6s ease-in 1s forwards anim2;
+      //animation: .6s ease-in 1s forwards anim2;
     }
 
     &--3 {
       z-index: 8;
-      animation: .6s ease-in 1s forwards anim3;
+      //animation: .6s ease-in 1s forwards anim3;
     }
 
     &--4 {
       z-index: 7;
       width: 97px;
       margin-left: -48.5px;
-      animation: .6s ease-in 1s forwards anim4;
+      //animation: .6s ease-in 1s forwards anim4;
     }
 
     &--5 {
       z-index: 6;
-      animation: .6s ease-in 1s forwards anim5;
+      //animation: .6s ease-in 1s forwards anim5;
     }
 
     &--6 {
       z-index: 5;
-      animation: .6s ease-in 1s forwards anim6;
+      //animation: .6s ease-in 1s forwards anim6;
     }
 
     &--7 {
       z-index: 4;
-      animation: .6s ease-in 1s forwards anim7;
+      //animation: .6s ease-in 1s forwards anim7;
     }
 
     &--8 {
       z-index: 3;
       width: 97px;
       margin-left: -48.5px;
-      animation: .3s ease-in 1s forwards anim8;
+      //animation: .3s ease-in 1s forwards anim8;
     }
   }
 
@@ -121,63 +119,63 @@
     background-position: center;
     background-size: cover;
     opacity: 0;
-    animation: .6s ease-in forwards circle-anim;
+    //animation: .6s ease-in forwards circle-anim;
 
     &--1 {
       top: 0;
       left: 50%;
       margin-left: -21.5px;
       background-image: url(../media/image/circle1.jpg);
-      animation-delay: 1.8s;
+      //animation-delay: 1.8s;
     }
 
     &--2 {
       top: 22px;
       left: calc(50% + 60px + 21.5px);
       background-image: url(../media/image/circle2.jpg);
-      animation-delay: 1.9s;
+      //animation-delay: 1.9s;
     }
 
     &--3 {
       top: 80px;
       left: calc(50% + 150px + 21.5px);
       background-image: url(../media/image/circle3.jpg);
-      animation-delay: 2s;
+      //animation-delay: 2s;
     }
 
     &--4 {
       top: 168px;
       left: calc(50% + 210px + 21.5px);
       background-image: url(../media/image/circle4.jpg);
-      animation-delay: 2.1s;
+      //animation-delay: 2.1s;
     }
 
     &--5 {
       top: 272px;
       left: calc(50% + 230px + 21.5px);
       background-image: url(../media/image/circle5.jpg);
-      animation-delay: 2.2s;
+      //animation-delay: 2.2s;
     }
 
     &--6 {
       bottom: 168px;
       left: calc(50% + 210px + 21.5px);
       background-image: url(../media/image/circle6.jpg);
-      animation-delay: 2.3s;
+      //animation-delay: 2.3s;
     }
 
     &--7 {
       bottom: 80px;
       left: calc(50% + 150px + 21.5px);
       background-image: url(../media/image/circle7.jpg);
-      animation-delay: 2.4s;
+      //animation-delay: 2.4s;
     }
 
     &--8 {
       bottom: 22px;
       left: calc(50% + 60px + 21.5px);
       background-image: url(../media/image/circle8.jpg);
-      animation-delay: 2.5s;
+      //animation-delay: 2.5s;
     }
 
     &--9 {
@@ -185,55 +183,163 @@
       left: 50%;
       margin-left: -21.5px;
       background-image: url(../media/image/circle9.jpg);
-      animation-delay: 2.6s;
+      //animation-delay: 2.6s;
     }
 
     &--10 {
       bottom: 22px;
       right: calc(50% + 60px + 21.5px);
       background-image: url(../media/image/circle10.jpg);
-      animation-delay: 2.7s;
+      //animation-delay: 2.7s;
     }
 
     &--11 {
       bottom: 80px;
       right: calc(50% + 150px + 21.5px);
       background-image: url(../media/image/circle11.jpg);
-      animation-delay: 2.8s;
+      //animation-delay: 2.8s;
     }
 
     &--12 {
       bottom: 168px;
       right: calc(50% + 210px + 21.5px);
       background-image: url(../media/image/circle12.jpg);
-      animation-delay: 2.9s;
+      //animation-delay: 2.9s;
     }
 
     &--13 {
       top: 272px;
       right: calc(50% + 230px + 21.5px);
       background-image: url(../media/image/circle13.jpg);
-      animation-delay: 3s;
+      //animation-delay: 3s;
     }
 
     &--14 {
       top: 168px;
       right: calc(50% + 210px + 21.5px);
       background-image: url(../media/image/circle14.jpg);
-      animation-delay: 3.1s;
+      //animation-delay: 3.1s;
     }
 
     &--15 {
       top: 80px;
       right: calc(50% + 150px + 21.5px);
       background-image: url(../media/image/circle15.jpg);
-      animation-delay: 3.2s;
+      //animation-delay: 3.2s;
     }
 
     &--16 {
       top: 22px;
       right: calc(50% + 60px + 21.5px);
       background-image: url(../media/image/circle16.jpg);
+      //animation-delay: 3.3s;
+    }
+  }
+}
+
+.shape--animation {
+  .shape__imgs {
+    animation: .6s ease-in 3.6s forwards img-anim;
+  }
+
+  .shape__img {
+    &--1 {
+      animation: .6s ease-in .6s forwards anim1;
+    }
+
+    &--2 {
+      animation: .6s ease-in 1s forwards anim2;
+    }
+
+    &--3 {
+      animation: .6s ease-in 1s forwards anim3;
+    }
+
+    &--4 {
+      animation: .6s ease-in 1s forwards anim4;
+    }
+
+    &--5 {
+      animation: .6s ease-in 1s forwards anim5;
+    }
+
+    &--6 {
+      animation: .6s ease-in 1s forwards anim6;
+    }
+
+    &--7 {
+      animation: .6s ease-in 1s forwards anim7;
+    }
+
+    &--8 {
+      animation: .3s ease-in 1s forwards anim8;
+    }
+  }
+
+  .shape__circle {
+    animation: .6s ease-in forwards circle-anim;
+
+    &--1 {
+      animation-delay: 1.8s;
+    }
+
+    &--2 {
+      animation-delay: 1.9s;
+    }
+
+    &--3 {
+      animation-delay: 2s;
+    }
+
+    &--4 {
+      animation-delay: 2.1s;
+    }
+
+    &--5 {
+      animation-delay: 2.2s;
+    }
+
+    &--6 {
+      animation-delay: 2.3s;
+    }
+
+    &--7 {
+      animation-delay: 2.4s;
+    }
+
+    &--8 {
+      animation-delay: 2.5s;
+    }
+
+    &--9 {
+      animation-delay: 2.6s;
+    }
+
+    &--10 {
+      animation-delay: 2.7s;
+    }
+
+    &--11 {
+      animation-delay: 2.8s;
+    }
+
+    &--12 {
+      animation-delay: 2.9s;
+    }
+
+    &--13 {
+      animation-delay: 3s;
+    }
+
+    &--14 {
+      animation-delay: 3.1s;
+    }
+
+    &--15 {
+      animation-delay: 3.2s;
+    }
+
+    &--16 {
       animation-delay: 3.3s;
     }
   }

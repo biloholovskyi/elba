@@ -1,11 +1,11 @@
 import 'normalize.css';
-import {startFullPage} from "./fullPage";
+import {startFullPage, fullPageSwitch} from "./fullPage";
 import {shapeText} from "./shapeAnimations";
 import {evSize} from './eventVideo';
 
 $(document).ready(() => {
   startFullPage();
-  shapeText();
+  // shapeText();
   evSize();
 
   // collections slider
@@ -16,6 +16,25 @@ $(document).ready(() => {
     nav: true,
     navText: ''
   });
+
+  // full page switch
+  document.querySelectorAll('.fullPage').forEach((elem) => {
+    if (elem.addEventListener) {
+      if ('onwheel' in document) {
+        // IE9+, FF17+
+        elem.addEventListener("wheel", fullPageSwitch);
+      } else if ('onmousewheel' in fullPageSwitch) {
+        // устаревший вариант события
+        elem.addEventListener("mousewheel", fullPageSwitch);
+      } else {
+        // Firefox < 17
+        elem.addEventListener("MozMousePixelScroll", fullPageSwitch);
+      }
+    } else { // IE8-
+      elem.attachEvent("onmousewheel", fullPageSwitch);
+    }
+  });
+  // full page switch end
 });
 
 
