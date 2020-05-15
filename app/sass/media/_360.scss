@@ -1,0 +1,120 @@
+@media (max-width: 360px) {
+  // follow us
+  .follow-us {
+    display: none;
+  }
+  // follow us end
+
+  // header
+  .header {
+    background: #F8F8F8;
+
+    * {
+      filter: none;
+    }
+
+    &__mobile {
+      display: flex;
+      width: 100%;
+      height: 48px;
+      position: relative;
+      z-index: 100;
+      align-items: center;
+      justify-content: space-between;
+
+      .menu {
+        @include base-box(24px);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+
+        .item {
+          width: 100%;
+          height: 1px;
+          background: #1F1F22;
+
+          &:first-child {
+            margin-bottom: 6px;
+          }
+        }
+      }
+
+      .mobile-button {
+        @include base-box(24px);
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      .mobile__link {
+        display: block;
+        width: 26px;
+        height: 32px;
+        background-image: url(../media/icon/mobile-logo.svg);
+        @include base-background(contain)
+      }
+    }
+
+    &__wrapper {
+      display: none;
+    }
+  }
+  // header end
+
+  // home-first
+  .home-first__content {
+    height: 100%;
+    padding-bottom: 32px;
+    position: relative;
+  }
+
+  .home-first__top {
+    display: none;
+  }
+
+  .home-first__navigation {
+    display: none;
+  }
+
+  .home-first__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .home-first__desc {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .home-first__dots {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 81px;
+    left: 24px;
+
+    .dot {
+      @include base-box(8px);
+      border-radius: 50%;
+      background: #FFFFFF;
+      opacity: 0.3;
+      margin-right: 12px;
+      transition: all .6s;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &--active {
+        opacity: 1;
+      }
+    }
+  }
+  // home-first end
+}

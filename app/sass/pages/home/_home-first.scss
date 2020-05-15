@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
 
+  &__dots {
+    display: none;
+  }
+
   &__video {
     object-fit: cover;
     object-position: center;
