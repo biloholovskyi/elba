@@ -1,0 +1,62 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'ELBA'
+
+block content
+  include ../modules/header
+
+  .fullPage.list
+    .list__content.full-height
+      .m-container.full-height
+        .m-row.full-height
+          .m-col.m-col--3
+            .list__follow-us
+              .follow-us
+                a.follow-us__link.follow-us__link--dark(href='#') Follow us
+
+          .m-col.m-col--3
+            .list__col
+              .list__item
+                .img__block
+                  img(src='./media/image/list1.png' alt='elba')
+                .name Little E — Logo Max #[br] White & Black
+                .price €295.00
+
+              .list__item
+                .img__block
+                  img(src='./media/image/list2.png' alt='elba')
+                .name Little E — Logo Max #[br] White & Black
+                .price €295.00
+          .m-col.m-col--3
+            .list__col
+              .list__item
+                .img__block
+                  img(src='./media/image/list3.png' alt='elba')
+                .name Little E — Logo Max #[br] White & Black
+                .price €295.00
+
+              .list__item
+                .img__block
+                  img(src='./media/image/list4.png' alt='elba')
+                .name Little E — Logo Max #[br] White & Black
+                .price €295.00
+          .m-col.m-col--3
+            .list__col
+              .list__item
+                .img__block
+                  img(src='./media/image/list2.png' alt='elba')
+                .name Little E — Logo Max #[br] White & Black
+                .price €295.00
+
+              .list__item
+                .img__block
+                  img(src='./media/image/list5.png' alt='elba')
+                .name Little E — Logo Max #[br] White & Black
+                .price €295.00
+          .m-col.m-col--3
+            .list__text-fixed
+              .list__text
+                .title Best sellers
+                .desc We are anxiously creating each model so that you can be brighter and more unique.
+                a.arrow-link.arrow-link--dark(href='#') Show all
