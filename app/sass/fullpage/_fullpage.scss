@@ -6,10 +6,9 @@
   position: fixed;
   left: 0;
   top: 0;
-  background-position: center;
-  background-size: cover;
   z-index: -1;
   opacity: 0;
+  background: #F8F8F8;
 
   &--active {
     z-index: 50;

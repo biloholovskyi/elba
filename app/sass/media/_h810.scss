@@ -52,6 +52,13 @@
 }
 
 @media(max-height: 810px) and (min-width: 1060px) {
+  // event
+  .event__video-block {
+    height: 400px !important;
+    width: 400px !important;
+  }
+  // event end
+
   // blog
   .blog__list {
     .list__row {

@@ -1,11 +1,9 @@
 import 'normalize.css';
 import {startFullPage, fullPageSwitch} from "./fullPage";
-import {shapeText} from "./shapeAnimations";
 import {evSize} from './eventVideo';
 
 $(document).ready(() => {
   startFullPage();
-  // shapeText();
   evSize();
 
   // collections slider

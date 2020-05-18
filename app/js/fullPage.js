@@ -5,7 +5,7 @@ const startFullPage = () => {
   const fullPages = document.querySelectorAll('.fullPage');
 
   // сделать первый экран видимым
-  fullPages[9].classList.add('fullPage--active');
+  fullPages[0].classList.add('fullPage--active');
 }
 
 const fullPageSwitch = (e) => {
@@ -33,11 +33,18 @@ const fullPageSwitch = (e) => {
 
     // next section
     if(dataDelta > 1000) {
-      nextSection = active.next('.fullPage').length > 0 ? active.next('.fullPage') : all.eq(0);
+      if(active.next().hasClass('fullPage-wrapper')) {
+        nextSection = $('.fullPage-wrapper .fullPage').eq(0);
+      } else {
+        nextSection = active.next('.fullPage').length > 0 ? active.next('.fullPage') : all.eq(0);
+      }
 
     } else if(dataDelta < -1000) {
-      nextSection = active.prev('.fullPage').length > 0 ? active.prev('.fullPage') : all.last();
-
+      if(active.parent().hasClass('fullPage-wrapper')) {
+        nextSection = active.prev('.fullPage').length > 0 ? active.prev('.fullPage') : active.parent().prev('.fullPage');
+      } else {
+        nextSection = active.prev('.fullPage').length > 0 ? active.prev('.fullPage') : all.last();
+      }
     }
 
     // switch section
