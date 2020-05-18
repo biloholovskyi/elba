@@ -7,3 +7,13 @@
     }
   }
 }
+
+@media (max-height: 570px) and (min-width: 1061px) {
+  // home-about
+  .home-about__big-block {
+    img {
+      display: none;
+    }
+  }
+  // home-about end
+}

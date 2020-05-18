@@ -5,7 +5,7 @@ const startFullPage = () => {
   const fullPages = document.querySelectorAll('.fullPage');
 
   // сделать первый экран видимым
-  fullPages[6].classList.add('fullPage--active');
+  fullPages[9].classList.add('fullPage--active');
 }
 
 const fullPageSwitch = (e) => {

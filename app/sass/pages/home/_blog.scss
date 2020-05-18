@@ -18,6 +18,10 @@
     margin-bottom: 48px;
   }
 
+  &__slider {
+    display: none !important;
+  }
+
   &__list {
     .list__row {
       display: flex;

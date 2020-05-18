@@ -5,6 +5,10 @@
     padding-bottom: 85px;
   }
 
+  .about__mobile-bottom {
+    display: none;
+  }
+
   &__container {
     position: relative;
 
@@ -61,6 +65,7 @@
       line-height: 40px;
       color: #000000;
       margin-bottom: 17px;
+      white-space: nowrap;
     }
 
     .desc {

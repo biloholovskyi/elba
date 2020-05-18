@@ -12,4 +12,26 @@
     transform: scale(.5);
   }
   // shape end
+
+  // home about
+  .home-about__container{
+    &::after {
+      display: none;
+    }
+  }
+
+  .home-about__content {
+    padding-bottom: 32px;
+  }
+
+  .home-about__col {
+    .coll__bottom {
+      height: 50px;
+    }
+
+    .elba-coop {
+      margin-top: 30px;
+    }
+  }
+  // home about end
 }

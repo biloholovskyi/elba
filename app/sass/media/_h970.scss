@@ -7,3 +7,24 @@
     }
   }
 }
+
+@media(max-height: 970px) and (min-width: 1060px) {
+  // blog
+  .blog__list {
+    .list__row {
+      margin-bottom: 24px;
+
+      .item {
+        img {
+          height: 140px;
+        }
+      }
+    }
+  }
+
+  .blog__title {
+    margin-bottom: 24px;
+    font-size: 40px;
+  }
+  // blog end
+}

@@ -5,6 +5,10 @@
     padding-bottom: 85px;
   }
 
+  &__mobile-title {
+    display: none;
+  }
+
   &__text {
     height: 100%;
     display: flex;

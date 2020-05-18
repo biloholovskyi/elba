@@ -26,6 +26,14 @@ $(document).ready(() => {
     }
   });
 
+  // blog slider
+  $('.blog__slider').owlCarousel({
+    margin: 12,
+    loop: false,
+    nav: false,
+    items: 1
+  });
+
   // full page switch
   document.querySelectorAll('.fullPage').forEach((elem) => {
     if (elem.addEventListener) {

@@ -20,4 +20,28 @@
     }
   }
   // list end
+
+  // event
+  .event__video-block{
+    &::after {
+      width: 156px;
+      height: 156px;
+      margin-top: -78px;
+      margin-left: -78px;
+    }
+  }
+  // event end
+
+  // home about
+  .home-about__big-block  {
+    .name {
+      font-size: 24px;
+    }
+
+    .desc {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  // home about end
 }

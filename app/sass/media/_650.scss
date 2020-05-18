@@ -69,4 +69,45 @@
     }
   }
   // collection end
+
+  // blog
+  .blog__list {
+    display: none;
+  }
+
+  .blog__slider {
+    display: block !important;
+    .owl-stage-outer {
+      overflow: visible !important;
+    }
+
+    .item {
+      img {
+        height: 136px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top center;
+        margin-bottom: 16px;
+      }
+
+      .name {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 28px;
+        color: #1F1F22;
+        margin-bottom: 12px;
+      }
+
+      .desc {
+        font-size: 14px;
+        line-height: 24px;
+        color: #7D838A;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+  // blog end
 }

@@ -1,0 +1,60 @@
+@media (max-width: 800px) {
+  // home about
+  .home-about__content {
+    padding-bottom: 24px;
+  }
+
+  .home-about__col {
+    .coll__top {
+      padding-bottom: 48px;
+    }
+
+    .coll__center {
+      display: none;
+    }
+
+    .coll__bottom {
+      display: none;
+    }
+  }
+
+  .home-about__big-block {
+    img {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .home-about__container{
+    &::after {
+      display: none;
+    }
+  }
+
+  .home-about__border {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+  }
+
+  .home-about {
+    .about__mobile-bottom {
+      display: block;
+
+      .links {
+        margin: 48px 0;
+      }
+
+      .subs {
+        padding-bottom: 48px;
+      }
+
+      .elba-coop {
+        margin-top: 24px;
+        font-size: 12px;
+        line-height: 20px;
+        color: #565B62;
+      }
+    }
+  }
+  // home about end
+}

@@ -50,3 +50,33 @@
   }
   // collection end
 }
+
+@media(max-height: 810px) and (min-width: 1060px) {
+  // blog
+  .blog__list {
+    .list__row {
+      &:last-child {
+        display: none;
+      }
+
+      .item {
+        img {
+          height: 140px;
+        }
+      }
+    }
+  }
+  // blog end
+
+  // home about
+  .home-about__col {
+    .coll__top {
+      padding-bottom: 24px;
+    }
+
+    .coll__center {
+      height: 130px;
+    }
+  }
+  // home about end
+}
