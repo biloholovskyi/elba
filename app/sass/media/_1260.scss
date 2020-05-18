@@ -1,0 +1,23 @@
+@media (max-width: 1260px) {
+  // header
+  .header__logo {
+    margin-right: 100px;
+  }
+
+  .header__lang {
+    margin-right: 110px;
+  }
+  // header end
+
+  // list
+  .list__item {
+    .img__block {
+      img {
+        min-width: 100px;
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  // list end
+}

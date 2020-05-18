@@ -1,3 +1,39 @@
 @media screen and (max-width: 760px) {
+  // list
+  .list__col-wrapper {
+    padding-bottom: 80px;
+  }
 
+  .list__col {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .list__item {
+    max-width: calc(100% / 2 - 24px);
+    margin-bottom: 24px;
+
+    .img__block {
+      padding: 20px;
+      margin-bottom: 16px;
+
+      img {
+        @include base-box(84px)
+      }
+    }
+
+    .name {
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 20px
+    }
+
+    .price {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+  // list end
 }

@@ -5,10 +5,13 @@ const startFullPage = () => {
   const fullPages = document.querySelectorAll('.fullPage');
 
   // сделать первый экран видимым
-  fullPages[0].classList.add('fullPage--active');
+  fullPages[6].classList.add('fullPage--active');
 }
 
 const fullPageSwitch = (e) => {
+  if($(window).width() < 1061) {
+    return
+  }
   e = e || window.event;
 
   // for data storage

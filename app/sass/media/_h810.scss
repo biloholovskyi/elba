@@ -1,0 +1,52 @@
+@media (max-height: 810px) {
+  // collection
+  .collections__content {
+    padding-bottom: 32px;
+  }
+
+  .collections__slider {
+    .collect-slider__item {
+      width: 100%;
+
+      .poster {
+        height: 212px;
+        margin-bottom: 24px;
+      }
+
+      .color-list {
+        margin-bottom: 24px;
+      }
+
+      .color-list__item {
+        @include base-box(16px);
+      }
+
+      .title {
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 12px;
+      }
+
+      .desc {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 28px;
+      }
+    }
+
+    .owl-nav {
+      display: none;
+    }
+  }
+
+  .collections {
+    .collect__nav-box {
+      .title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+  // collection end
+}

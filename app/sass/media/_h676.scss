@@ -1,0 +1,15 @@
+@media (max-height: 676px) and (min-width: 1061px) {
+  // shape
+  .shape__wrapper {
+    width: 100vw;
+    height: 100vh;
+    margin-left: 0;
+    left: 0;
+    max-width: 100%;
+  }
+
+  .shape__imgs {
+    transform: scale(.5);
+  }
+  // shape end
+}

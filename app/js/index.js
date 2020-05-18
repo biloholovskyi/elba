@@ -14,7 +14,16 @@ $(document).ready(() => {
     autoWidth: true,
     loop: false,
     nav: true,
-    navText: ''
+    navText: '',
+    responsive : {
+      0 : {
+        autoWidth: false,
+        items: 1
+      },
+      650: {
+        autoWidth: true
+      }
+    }
   });
 
   // full page switch

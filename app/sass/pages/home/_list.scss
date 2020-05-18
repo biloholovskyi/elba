@@ -19,15 +19,29 @@
     padding-bottom: 85px;
     height: 100vh;
     max-height: 100vh;
+  }
+
+  &__col-wrapper {
+    height: 100vh;
+    max-height: 100vh;
     overflow: auto;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     &::-webkit-scrollbar { width: 0; }
   }
 
+  &__mobile-title {
+    display: none;
+  }
+
   &__col {
     padding-top: 148px;
+    width: 100%;
+    max-width: calc(100% / 3 - 32px);
   }
 
   &__item {

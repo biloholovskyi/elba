@@ -1,0 +1,16 @@
+@media (max-height: 600px) and (min-width: 1061px) {
+  // home first
+  .home-first {
+    justify-content: flex-end;
+  }
+
+  .home-first__title {
+    font-size: 56px;
+    line-height: 120%;
+  }
+
+  .home-first__top {
+    display: none;
+  }
+  // home first end
+}
