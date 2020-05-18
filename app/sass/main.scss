@@ -8,9 +8,9 @@
 
 body,
 html {
-  overflow: hidden;
-  height: 100vh;
-  position: relative;
+  // overflow: hidden;
+  // height: 100vh;
+  // position: relative;
 }
 
 a,
@@ -47,6 +47,10 @@ button {
 @import "pages/home/list";
 @import "pages/home/home-about";
 @import "pages/home/event";
+/*pages*/
+// OUR philosophy
+@import "pages/philosophy/philosophy";
+@import "pages/philosophy/aside-bar";
 
 /*media*/
 @import "media/h970";

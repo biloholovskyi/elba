@@ -1,0 +1,80 @@
+.philosophy-page {
+    padding-top: 160px;
+    .philosophy-content {
+        margin-bottom: 196px;
+        h1 {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 56px;
+            line-height: 68px;
+            color: #1F1F22;
+            margin: 0 0 64px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            margin-bottom: 64px;
+        }
+
+        .philosophy-inner {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            margin-bottom: 64px;
+            p {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 28px;
+                color: #565B62;
+                max-width: 600px;
+            }
+
+            h3 {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 28px;
+                line-height: 40px;
+                color: #000;
+                margin: 96px 0 64px;
+            }
+        }
+        .founder-photo {
+            display: flex;
+            max-height: 700px;
+            margin-bottom: 64px;
+            .text {
+                flex: 1;
+                align-self: flex-end;
+                h3 {
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #1F1F22;
+                    margin-bottom: 16px;
+                }
+                p {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #7D838A;
+                    max-width: 250px;
+                }
+            }
+
+            img {
+                flex: 2;
+                width: 100%;
+                height: 100%;
+                max-width: 557px;
+                object-fit: cover;
+                object-position: center;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
