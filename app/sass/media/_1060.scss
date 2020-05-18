@@ -42,6 +42,7 @@
         justify-content: center;
         flex-direction: column;
         cursor: pointer;
+        transition: all .6s;
 
         .item {
           width: 100%;
@@ -50,6 +51,18 @@
 
           &:first-child {
             margin-bottom: 6px;
+          }
+        }
+
+        &--show {
+          .item {
+            &:first-child {
+              transform: rotateZ(45deg) translateY(4.5px);
+            }
+
+            &:last-child {
+              transform: rotateZ(-45deg) translateY(-4.5px);
+            }
           }
         }
       }

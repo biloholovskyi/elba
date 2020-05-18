@@ -1,6 +1,7 @@
 import 'normalize.css';
 import {startFullPage, fullPageSwitch} from "./fullPage";
 import {evSize} from './eventVideo';
+import {toggleMenu} from "./mobileMenu";
 
 $(document).ready(() => {
   startFullPage();
@@ -50,6 +51,8 @@ $(document).ready(() => {
     }
   });
   // full page switch end
+
+  $('.header__mobile .menu').on('click', toggleMenu);
 });
 
 

@@ -50,3 +50,9 @@
 .elba-coop {
   white-space: nowrap;
 }
+
+.stop-scroll {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
