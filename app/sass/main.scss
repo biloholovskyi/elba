@@ -48,9 +48,19 @@ button {
 @import "pages/home/home-about";
 @import "pages/home/event";
 /*pages*/
+// GENERAL STYLES FOR INNER STYLE
+@import "pages/inner-pages/inner-page";
+@import "pages/inner-pages/aside-bar";
+/*pages*/
 // OUR philosophy
 @import "pages/philosophy/philosophy";
-@import "pages/philosophy/aside-bar";
+/*pages*/
+// OUR comunity
+@import "pages/comunity/comunity"; 
+/*pages*/
+// OUR factory
+@import "pages/factory/factory"; 
+
 
 /*media*/
 @import "media/h970";

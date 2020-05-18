@@ -2,6 +2,7 @@ import 'normalize.css';
 import {startFullPage, fullPageSwitch} from "./fullPage";
 import {shapeText} from "./shapeAnimations";
 import {evSize} from './eventVideo';
+import './factory-slider';
 
 $(document).ready(() => {
   startFullPage();
@@ -25,6 +26,7 @@ $(document).ready(() => {
       }
     }
   });
+  
 
   // blog slider
   $('.blog__slider').owlCarousel({

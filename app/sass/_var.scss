@@ -46,3 +46,29 @@
     filter: brightness(0);
   }
 }
+
+.inner-btn {
+  font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 20px;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: #1F1F22;
+position: relative;
+    &:after {
+      content:  "";
+      position: absolute;
+      width: 18px;
+      height: 8px;
+      background-image: url(../media/icon/arrow-right.svg);
+      background-size: cover;
+      background-position: center;
+      margin-left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:hover {
+      opacity: .3;
+    }
+}
