@@ -1,0 +1,128 @@
+.configurator__main {
+  .configurator__content {
+    position: relative;
+  }
+
+  .conf__title {
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 68px;
+    color: #1F1F22;
+  }
+
+  .conf__main-top {
+    padding-top: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .text {
+      padding-right: 16px;
+      font-size: 20px;
+      line-height: 32px;
+      color: #7D838A;
+
+      span {
+        color: #1F1F22;
+        font-weight: 500;
+      }
+    }
+
+    .links {
+      width: 100%;
+      max-width: calc(100% / 8 * 3 - 16px);
+      border-top: 1px solid #E4E8EB;
+      border-bottom: 1px solid #E4E8EB;
+      padding: 12px 0;
+      margin-left: 16px;
+
+      .link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #1F1F22;
+        margin-bottom: 8px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          width: 9px;
+          height: 9px;
+          @include base-background(contain);
+          background-image: url(../media/icon/plus.svg);
+          margin-top: -4px;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+
+  .conf__img {
+    display: block;
+    margin: 40px auto 0;
+    width: 360px;
+    height: 360px;
+    object-position: center;
+    object-fit: contain;
+  }
+
+  .conf__main-bottom {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .bot__info {
+
+    }
+
+    .bot__total {
+      font-size: 14px;
+      line-height: 24px;
+      color: #565B62;
+    }
+
+    .bot__prices {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .bot__price {
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 40px;
+      color: #1F1F22;
+      margin-right: 8px;
+    }
+
+    .bot__real-price {
+      font-size: 16px;
+      line-height: 24px;
+      text-decoration-line: line-through;
+      color: #7D838A;
+      margin-bottom: 5px;
+    }
+
+    .bot__text {
+      width: 100%;
+      max-width: calc(100% / 8 * 4);
+      padding-right: calc(100% / 8 * 0.4);
+      font-size: 14px;
+      line-height: 24px;
+      color: #565B62;
+    }
+  }
+}

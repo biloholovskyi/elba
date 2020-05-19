@@ -1,0 +1,103 @@
+.configurator__sidebar {
+  height: 100%;
+
+  .conf-sidebar__title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
+    color: #1F1F22;
+  }
+
+  .configurator__content {
+    position: relative;
+  }
+
+  .conf__slider {
+    .item {
+      width: 100%;
+      margin-bottom: 32px;
+      
+      &__img-box {
+        height: 180px;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+
+        img {
+          @include base-box(96px);
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+
+      &__info {
+        display: flex;
+        justify-content: space-between;
+
+        .name {
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 20px;
+          color: #1F1F22;
+          margin-right: 29px;
+        }
+
+        .prices {
+          display: flex;
+          align-items: flex-start;
+
+          .price {
+            font-size: 14px;
+            line-height: 24px;
+            color: #1F1F22;
+          }
+
+          .real-price {
+            font-size: 14px;
+            line-height: 24px;
+            text-align: right;
+            text-decoration-line: line-through;
+            color: #7D838A;
+            margin-left: 8px;
+            margin-top: -.5px;
+
+            &--single {
+              text-decoration-line: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .conf__slider-nav {
+    display: flex;
+    align-items: center;
+
+    .conf-slider__btn {
+      @include base-box(48px);
+      border-radius: 50%;
+      background-color: #000;
+      cursor: pointer;
+      background-image: url(../media/icon/arrow.svg);
+      @include base-background(18px 8px);
+      filter: invert(1);
+      transition: all .3s;
+    }
+
+    .prev {
+      transform: rotate(180deg);
+      margin-right: 24px;
+    }
+  }
+
+  .follow-us {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: auto;
+  }
+}
