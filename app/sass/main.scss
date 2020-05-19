@@ -47,6 +47,31 @@ button {
 @import "pages/home/list";
 @import "pages/home/home-about";
 @import "pages/home/event";
+/*pages*/
+// GENERAL STYLES FOR INNER STYLE
+@import "pages/inner-pages/inner-page";
+@import "pages/inner-pages/aside-bar";
+/*pages*/
+// OUR philosophy
+@import "pages/philosophy/philosophy";
+/*pages*/
+// OUR comunity
+@import "pages/comunity/comunity"; 
+/*pages*/
+// OUR factory
+@import "pages/factory/factory";
+@import "pages/factory/factory-slider";
+/*pages*/
+// OUR materials
+@import "pages/materials/materials";
+/*pages*/
+// news
+@import "pages/news/news";
+/*pages*/
+//  concept page
+@import "pages/concept/concept"; 
+     
+
 
 // configurator
 @import "pages/configurator/configurator";
