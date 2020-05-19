@@ -110,4 +110,34 @@
     }
   }
   // blog end
+
+  // second block home
+  .image-text__imgs--double {
+    justify-content: space-evenly;
+  }
+
+  .image-text__title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+
+  .image-text__desc {
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .image-text__img--1 {
+    max-height: calc(100vh / 2 - 48px);
+  }
+
+  .image-text__img--2 {
+    margin-left: -30px;
+    max-height: calc(100vh / 2 - 48px);
+  }
+  // second block home end
 }

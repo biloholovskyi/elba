@@ -8,8 +8,6 @@
 
 body,
 html {
-  overflow: hidden;
-  height: 100vh;
   position: relative;
 }
 
@@ -31,6 +29,7 @@ button {
 @import "var";
 @import "fullpage/fullpage";
 @import "grid/main-grid";
+@import "animations";
 
 /*over use blocks*/
 @import "header";

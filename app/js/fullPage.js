@@ -6,6 +6,24 @@ const startFullPage = () => {
 
   // сделать первый экран видимым
   fullPages[0].classList.add('fullPage--active');
+
+  // новый скрипт
+  let mrgTop = 0;
+  let mrgTopBody = 0;
+  fullPages.forEach((page, index) => {
+    const pageHeight = page.getBoundingClientRect().height.toString()
+    mrgTopBody += +pageHeight;
+    if(index > 0) {
+      mrgTop += +pageHeight;
+    }
+    page.setAttribute('data-height', mrgTop);
+
+    document.querySelector('body').style.height = mrgTopBody + 'px';
+    // document.querySelector('.fullPage__box').setAttribute('data-page', '0');
+    // дать отступ всем блокам
+  });
+
+  // конец нового скрипта
 }
 
 const fullPageSwitch = (e) => {
@@ -75,4 +93,21 @@ const fullPageSwitch = (e) => {
   }
 }
 
-export {startFullPage, fullPageSwitch}
+const scriptScroll = () => {
+  const fullPages = document.querySelectorAll('.fullPage');
+  const page =  document.querySelector('.fullPage--active');
+  const next = page.nextElementSibling;
+  const switchHeight = +next.getAttribute('data-height') - 10;
+  if(pageYOffset > switchHeight) {
+    page.classList.add('fullPage--close');
+    setTimeout(() => {
+      next.classList.add('fullPage--active');
+      page.classList.remove('fullPage--active');
+    }, 700)
+    setTimeout(() => {
+      page.classList.remove('fullPage--close');
+    }, 1000)
+  }
+}
+
+export {startFullPage, fullPageSwitch, scriptScroll}

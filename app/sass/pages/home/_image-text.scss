@@ -36,17 +36,20 @@
       height: 339.37px;
       margin-left: -100px;
       margin-bottom: 20px;
+      max-height: calc(100vh / 2 - 48px - 85px);
     }
 
     &--2 {
       width: 269px;
       height: 376px;
       margin-left: -55px;
+      max-height: calc(100vh / 2 - 48px - 85px);
     }
 
     &--3 {
       width: 453px;
       height: 453px;
+      max-height: calc(100vh - 48px - 85px);
     }
 
     &--4 {
