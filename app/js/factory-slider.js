@@ -6,4 +6,5 @@ $(document).ready(function(){
         nav: true,
         items: 1
       });
+
 });
