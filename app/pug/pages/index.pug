@@ -7,297 +7,325 @@ block content
   include ../modules/header-white
   include ../modules/modal-menu
 
-  // home first
-  .fullPage.home-first#fullPageData
-    video.home-first__video(src='./media/video/test.mp4' playsinline muted autoplay loop preload="")
-    .home-first__top
-      .m-container
-        .m-row
-          .m-col
-            .home-first__video-line
-              .first 01
-              .line
-                .line__progress
-                .line__full
-              .last 04
-    .home-first__content
-      .home-first__dots
-        .dot.dot--active
-        .dot
-        .dot
-        .dot
-        .dot
-        .dot
-        .dot
-      .m-container
-        .m-row
-          .m-col.m-col--3
-            .follow-us
-              a.follow-us__link(href='#') Follow us
 
-          .m-col.m-col--10.m-col__ms--15
-            h3.home-first__title Create your #[br] own style
-            .home-first__desc Welcome to «elbag yourself» the elbag customization tool #[br] the best way to achieve the bag of your dream
-            a.home-first__link.arrow-link(href='#') Discover
-          .m-col.m-col--2
-            .home-first__navigation
-              .home-first__nav
-                .nav__item.prev
-                .nav__item.next
+  .fullPage__box
+    // home first
+    .fullPage.home-first#fullPageData
+      video.home-first__video(src='./media/video/test.mp4' playsinline muted autoplay loop preload="")
+      .home-first__top
+        .m-container
+          .m-row
+            .m-col
+              .home-first__video-line
+                .first 01
+                .line
+                  .line__progress
+                  .line__full
+                .last 04
+      .home-first__content
+        .home-first__dots
+          .dot.dot--active
+          .dot
+          .dot
+          .dot
+          .dot
+          .dot
+          .dot
+        .m-container
+          .m-row
+            .m-col.m-col--3
+              .follow-us
+                a.follow-us__link(href='#') Follow us
+
+            .m-col.m-col--10.m-col__ms--15
+              h3.home-first__title Create your #[br] own style
+              .home-first__desc Welcome to «elbag yourself» the elbag customization tool #[br] the best way to achieve the bag of your dream
+              a.home-first__link.arrow-link(href='#') Discover
+            .m-col.m-col--2
+              .home-first__navigation
+                .home-first__nav
+                  .nav__item.prev
+                  .nav__item.next
 
 
-  // home text
-  .fullPage.home-text
-    .home-text__content
-      .m-container.full-height
-        .m-row.full-height
-          .m-col.m-col--3
-            .follow-us
-              a.follow-us__link.follow-us__link--dark(href='#') Follow us
-
-          .m-col.m-col--9.m-col__ms--15.full-height
-            .home-text__center
-              h3.home-text__title Create your own look
-              .home-text__desc Only you yourself know what exactly you need. We just create tools for this. Do not limit yourself in your choice. Create, combine, experiment. Create your own style
-
-  // image text 1
-  .fullPage.image-text
-    .image-text__content.full-height
-      .m-container.full-height
-        .m-row.full-height
-          .m-col.m-col--3
-            .follow-us
-              a.follow-us__link.follow-us__link--dark(href='#') Follow us
-
-          .m-col.m-col--2.full-height
-            .image-text__imgs.image-text__imgs--double
-              img.image-text__img.image-text__img--1(src='./media/image/img-1.png')
-              img.image-text__img.image-text__img--2(src='./media/image/img-2.png')
-          .m-col.m-col--4.full-height
-            .image-text__imgs.image-text__imgs--single
-              img.image-text__img.image-text__img--3(src='./media/image/img-3.png')
-          .m-col.m-col--5.full-height
-            .image-text__text
-              .image-text__title Select everything
-              .image-text__desc
-                p Choose several combinations to stay unique and vibrant in any situation.
-                p It does not matter what situations occur during the day. Whether it's a date, playing sports, or meeting friends.
-                p Are you ready for any situation with ELBA bags?
-
-  // image text 2
-  .fullPage.image-text
-    .image-text__content.full-height
-      .m-container.full-height
-        .m-row.full-height
-          .m-col.m-col--3
-            .follow-us
-              a.follow-us__link.follow-us__link--dark(href='#') Follow us
-
-          .m-col.m-col--6.full-height
-            .image-text__imgs.image-text__imgs--big
-              img.image-text__img.image-text__img--4(src='./media/image/img-4.png')
-          .m-col.m-col--5.full-height
-            .image-text__text
-              .image-text__title Just 10 seconds
-              .image-text__desc
-                p Choose the shape of the bag. With one set, you can coordinately change the shape of the bag in 5 seconds.
-                p The minimum storage space will allow you to change as soon as such a need arose.
-
-  // shape
-  .fullPage.shape
-    .shape__content.full-height
-      .m-container.full-height
-        .m-row.full-height
-          .m-col.m-col--3
-            .follow-us
-              a.follow-us__link.follow-us__link--dark(href='#') Follow us
-
-          .m-col.m-col--5.m-col__ms--15
-            .shape__text-wrapper
-              .shape__text.shape__text--active
-                .shape__padding
-                p We believe in the power of the individual. old soul, young at heart, a stunning spectrum of color.
-                p Born this way, identify another way, you love who you love. From here, from there, from a distant planet.
-                p Free spirit, firmly grounded, rebellious, harmonious. shaped by your past, driven by your future. no box can hold you.
-                p No label can define you. You are one and you are everything.
-                p Long live the individual.
-          .m-col.m-col--7
-            .shape__wrapper.m-container
-              .shape__imgs
-                img.shape__img.shape__img--1(src='./media/image/shape1.png')
-                img.shape__img.shape__img--2(src='./media/image/shape2.png')
-                img.shape__img.shape__img--3(src='./media/image/shape3.png')
-                img.shape__img.shape__img--4(src='./media/image/shape4.png')
-                img.shape__img.shape__img--5(src='./media/image/shape5.png')
-                img.shape__img.shape__img--6(src='./media/image/shape6.png')
-                img.shape__img.shape__img--7(src='./media/image/shape7.png')
-                img.shape__img.shape__img--8(src='./media/image/shape4.png')
-                .shape__circle.shape__circle--1
-                .shape__circle.shape__circle--2
-                .shape__circle.shape__circle--3
-                .shape__circle.shape__circle--4
-                .shape__circle.shape__circle--5
-                .shape__circle.shape__circle--6
-                .shape__circle.shape__circle--7
-                .shape__circle.shape__circle--8
-                .shape__circle.shape__circle--9
-                .shape__circle.shape__circle--10
-                .shape__circle.shape__circle--11
-                .shape__circle.shape__circle--12
-                .shape__circle.shape__circle--13
-                .shape__circle.shape__circle--14
-                .shape__circle.shape__circle--15
-                .shape__circle.shape__circle--16
-
-  // collections
-  .fullPage.collections
-    .collections__content.full-height
-      .m-container.full-height
-        .m-row.full-height
-          .m-col.m-col--3
-            .follow-us
-              a.follow-us__link.follow-us__link--dark(href='#') Follow us
-
-          .m-col.m-col--12.m-col__ms--15
-            .collections__slider-box.collections__slider-box--active
-              .collect__nav-box
-                .title Our collections
-              .collections__slider.owl-carousel
-                .collect-slider__item
-                  img.poster(src='./media/image/collect1.jpg')
-                  .color-list
-                    .color-list__item(style='background: #0097AB')
-                    .color-list__item(style='background: #E7D9B6')
-                    .color-list__item(style='background: #C1E6FF')
-                  .title Miami
-                  .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
-                  a.arrow-link.arrow-link--dark(href='#') Discover
-                .collect-slider__item
-                  img.poster(src='./media/image/collect2.jpg')
-                  .color-list
-                    .color-list__item(style='background: #3E7AD6')
-                    .color-list__item(style='background: #FFA7AC')
-                    .color-list__item(style='background: #5E23AA')
-                  .title Paris
-                  .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
-                  a.arrow-link.arrow-link--dark(href='#') Discover
-                .collect-slider__item
-                  img.poster(src='./media/image/collect3.jpg')
-                  .color-list
-                    .color-list__item(style='background: #FDB14B')
-                    .color-list__item(style='background: #E2DED7')
-                    .color-list__item(style='background: #813B01')
-                  .title Zimbabwe
-                  .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
-                  a.arrow-link.arrow-link--dark(href='#') Discover
-                .collect-slider__item
-                  img.poster(src='./media/image/collect4.jpg')
-                  .color-list
-                    .color-list__item(style='background: #006703')
-                    .color-list__item(style='background: #394E49')
-                    .color-list__item(style='background: #C1E6FF')
-                  .title Jungle
-                  .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
-                  a.arrow-link.arrow-link--dark(href='#') Discover
-
-  // list
-  .fullPage.list
-    .list__content.full-height
-      .m-container.full-height
-        .m-row.full-height
-          .m-col.m-col--3
-            .list__follow-us
-              .follow-us.m-container
+    // home text
+    .fullPage.home-text
+      .home-text__content
+        .m-container.full-height
+          .m-row.full-height
+            .m-col.m-col--3
+              .follow-us
                 a.follow-us__link.follow-us__link--dark(href='#') Follow us
 
-          .m-col.m-col--9.m-col__ms--15
-            .list__mobile-title Best sellers
-            .list__col-wrapper
-              .list__col
-                .list__item
-                  .img__block
-                    img(src='./media/image/list1.png' alt='elba')
-                  .name Little E — Logo Max #[br] White & Black
-                  .price €295.00
+            .m-col.m-col--9.m-col__ms--15.full-height
+              .home-text__center
+                h3.home-text__title.fadeTopAnim Create your own look
+                .home-text__desc.fadeTopAnim.fadeTopAnim--second Only you yourself know what exactly you need. We just create tools for this. Do not limit yourself in your choice. Create, combine, experiment. Create your own style
 
-                .list__item
-                  .img__block
-                    img(src='./media/image/list2.png' alt='elba')
-                  .name Little E — Logo Max #[br] White & Black
-                  .price €295.00
-
-              .list__col
-                .list__item
-                  .img__block
-                    img(src='./media/image/list3.png' alt='elba')
-                  .name Little E — Logo Max #[br] White & Black
-                  .price €295.00
-
-                .list__item
-                  .img__block
-                    img(src='./media/image/list4.png' alt='elba')
-                  .name Little E — Logo Max #[br] White & Black
-                  .price €295.00
-
-
-              .list__col
-                .list__item
-                  .img__block
-                    img(src='./media/image/list2.png' alt='elba')
-                  .name Little E — Logo Max #[br] White & Black
-                  .price €295.00
-
-                .list__item
-                  .img__block
-                    img(src='./media/image/list5.png' alt='elba')
-                  .name Little E — Logo Max #[br] White & Black
-                  .price €295.00
-
-          .m-col.m-col--3
-            .list__text-fixed
-              .list__text
-                .title Best sellers
-                .desc We are anxiously creating each model so that you can be brighter and more unique.
-                a.arrow-link.arrow-link--dark(href='#') Show all
-
-  .fullPage-wrapper
-    // event
-    .fullPage.event
-      .event__content.full-height
+    // image text 1
+    .fullPage.image-text
+      .image-text__content.full-height
         .m-container.full-height
           .m-row.full-height
             .m-col.m-col--3.m-col__ms-display-none
               .follow-us
                 a.follow-us__link.follow-us__link--dark(href='#') Follow us
 
-            .m-col.m-col--5.m-col__ms--15.m-order__ms--last
-              .event__text
-                h3.event__title Events
-                .text__bottom
-                  .event__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  a.arrow-link.arrow-link--dark(href='#') Discover
+            .m-col.m-col--2.m-col__ms--7.full-height
+              .image-text__imgs.image-text__imgs--double
+                img.image-text__img.image-text__img--1.fadeAnim(src='./media/image/img-1.png')
+                img.image-text__img.image-text__img--2.fadeAnim(src='./media/image/img-2.png')
+            .m-col.m-col--4.m-col__ms--8.full-height
+              .image-text__imgs.image-text__imgs--single
+                img.image-text__img.image-text__img--3.fadeAnim(src='./media/image/img-3.png')
+            .m-col.m-col--5.m-col__ms--15.full-height
+              .image-text__text
+                .image-text__title.fadeTopAnim.fadeTopAnim--delay Select everything
+                .image-text__desc.fadeTopAnim.fadeTopAnim--delay-second
+                  p Choose several combinations to stay unique and vibrant in any situation.
+                  p It does not matter what situations occur during the day. Whether it's a date, playing sports, or meeting friends.
+                  p Are you ready for any situation with ELBA bags?
 
-            .m-col.m-col--7.m-col__ms--15.m-order__ms--first
-              .event__video-wrapper
-                h3.event__mobile-title Events
-                .event__video-block
-                  .play
-                  video.event__video(src='./media/video/test.mp4' playsinline muted autoplay loop preload="")
-
-    // blog
-    .fullPage.blog
-      .blog__content.full-height
+    // image text 2
+    .fullPage.image-text
+      .image-text__content.full-height
         .m-container.full-height
           .m-row.full-height
             .m-col.m-col--3.m-col__ms-display-none
+              .follow-us
+                a.follow-us__link.follow-us__link--dark(href='#') Follow us
+
+            .m-col.m-col--6.m-col__ms--15.full-height
+              .image-text__imgs.image-text__imgs--big.image-text__imgs--big-2
+                img.image-text__img.image-text__img--4.fadeAnim(src='./media/image/img-4.png')
+            .m-col.m-col--5.m-col__ms--15.full-height
+              .image-text__text
+                .image-text__title.fadeTopAnim.fadeTopAnim--delay Just 10 seconds
+                .image-text__desc.fadeTopAnim.fadeTopAnim--delay-second
+                  p Choose the shape of the bag. With one set, you can coordinately change the shape of the bag in 5 seconds.
+                  p The minimum storage space will allow you to change as soon as such a need arose.
+    // shape
+    .fullPage.shape
+      .shape__content.full-height
+        .m-container.full-height
+          .m-row.full-height
+            .m-col.m-col--3
+              .follow-us
+                a.follow-us__link.follow-us__link--dark(href='#') Follow us
+
+            .m-col.m-col--5.m-col__ms--15
+              .shape__text-wrapper
+                .shape__text.shape__text--active
+                  .shape__padding
+                  p We believe in the power of the individual. old soul, young at heart, a stunning spectrum of color.
+                  p Born this way, identify another way, you love who you love. From here, from there, from a distant planet.
+                  p Free spirit, firmly grounded, rebellious, harmonious. shaped by your past, driven by your future. no box can hold you.
+                  p No label can define you. You are one and you are everything.
+                  p Long live the individual.
+            .m-col.m-col--7
+              .shape__wrapper.m-container
+                .shape__imgs
+                  img.shape__img.shape__img--1(src='./media/image/shape1.png')
+                  img.shape__img.shape__img--2(src='./media/image/shape2.png')
+                  img.shape__img.shape__img--3(src='./media/image/shape3.png')
+                  img.shape__img.shape__img--4(src='./media/image/shape4.png')
+                  img.shape__img.shape__img--5(src='./media/image/shape5.png')
+                  img.shape__img.shape__img--6(src='./media/image/shape6.png')
+                  img.shape__img.shape__img--7(src='./media/image/shape7.png')
+                  img.shape__img.shape__img--8(src='./media/image/shape4.png')
+                  .shape__circle.shape__circle--1
+                  .shape__circle.shape__circle--2
+                  .shape__circle.shape__circle--3
+                  .shape__circle.shape__circle--4
+                  .shape__circle.shape__circle--5
+                  .shape__circle.shape__circle--6
+                  .shape__circle.shape__circle--7
+                  .shape__circle.shape__circle--8
+                  .shape__circle.shape__circle--9
+                  .shape__circle.shape__circle--10
+                  .shape__circle.shape__circle--11
+                  .shape__circle.shape__circle--12
+                  .shape__circle.shape__circle--13
+                  .shape__circle.shape__circle--14
+                  .shape__circle.shape__circle--15
+                  .shape__circle.shape__circle--16
+
+    // collections
+    .fullPage.collections
+      .collections__content.full-height
+        .m-container.full-height
+          .m-row.full-height
+            .m-col.m-col--3
               .follow-us
                 a.follow-us__link.follow-us__link--dark(href='#') Follow us
 
             .m-col.m-col--12.m-col__ms--15
-              .blog__wrapper
-                .blog__title Our Blog
-                .blog__list
-                  .list__row
+              .collections__slider-box.collections__slider-box--active
+                .collect__nav-box
+                  .title.fadeTopAnim Our collections
+                .collections__slider.owl-carousel
+                  .collect-slider__item.fadeTopAnim.fadeTopAnim--second
+                    img.poster(src='./media/image/collect1.jpg')
+                    .color-list
+                      .color-list__item(style='background: #0097AB')
+                      .color-list__item(style='background: #E7D9B6')
+                      .color-list__item(style='background: #C1E6FF')
+                    .title Miami
+                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+                    a.arrow-link.arrow-link--dark(href='#') Discover
+                  .collect-slider__item.fadeTopAnim.fadeTopAnim--3
+                    img.poster(src='./media/image/collect2.jpg')
+                    .color-list
+                      .color-list__item(style='background: #3E7AD6')
+                      .color-list__item(style='background: #FFA7AC')
+                      .color-list__item(style='background: #5E23AA')
+                    .title Paris
+                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+                    a.arrow-link.arrow-link--dark(href='#') Discover
+                  .collect-slider__item.fadeTopAnim.fadeTopAnim--4
+                    img.poster(src='./media/image/collect3.jpg')
+                    .color-list
+                      .color-list__item(style='background: #FDB14B')
+                      .color-list__item(style='background: #E2DED7')
+                      .color-list__item(style='background: #813B01')
+                    .title Zimbabwe
+                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+                    a.arrow-link.arrow-link--dark(href='#') Discover
+                  .collect-slider__item.fadeTopAnim.fadeTopAnim--5
+                    img.poster(src='./media/image/collect4.jpg')
+                    .color-list
+                      .color-list__item(style='background: #006703')
+                      .color-list__item(style='background: #394E49')
+                      .color-list__item(style='background: #C1E6FF')
+                    .title Jungle
+                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+                    a.arrow-link.arrow-link--dark(href='#') Discover
+
+    // list
+    .fullPage.list
+      .list__content.full-height
+        .m-container.full-height
+          .m-row.full-height
+            .m-col.m-col--3
+              .list__follow-us
+                .follow-us.m-container
+                  a.follow-us__link.follow-us__link--dark(href='#') Follow us
+
+            .m-col.m-col--9.m-col__ms--15
+              .list__mobile-title Best sellers
+              .list__col-wrapper
+                .list__col.fadeTopAnim.fadeTopAnim--3
+                  .list__item
+                    .img__block
+                      img(src='./media/image/list1.png' alt='elba')
+                    .name Little E — Logo Max #[br] White & Black
+                    .price €295.00
+
+                  .list__item
+                    .img__block
+                      img(src='./media/image/list2.png' alt='elba')
+                    .name Little E — Logo Max #[br] White & Black
+                    .price €295.00
+
+                .list__col.fadeTopAnim.fadeTopAnim--second
+                  .list__item
+                    .img__block
+                      img(src='./media/image/list3.png' alt='elba')
+                    .name Little E — Logo Max #[br] White & Black
+                    .price €295.00
+
+                  .list__item
+                    .img__block
+                      img(src='./media/image/list4.png' alt='elba')
+                    .name Little E — Logo Max #[br] White & Black
+                    .price €295.00
+
+
+                .list__col.fadeTopAnim
+                  .list__item
+                    .img__block
+                      img(src='./media/image/list2.png' alt='elba')
+                    .name Little E — Logo Max #[br] White & Black
+                    .price €295.00
+
+                  .list__item
+                    .img__block
+                      img(src='./media/image/list5.png' alt='elba')
+                    .name Little E — Logo Max #[br] White & Black
+                    .price €295.00
+
+            .m-col.m-col--3
+              .list__text-fixed
+                .list__text.fadeTopAnim
+                  .title Best sellers
+                  .desc We are anxiously creating each model so that you can be brighter and more unique.
+                  a.arrow-link.arrow-link--dark(href='#') Show all
+
+    .fullPage-wrapper
+      // event
+      .fullPage.event
+        .event__content.full-height
+          .m-container.full-height
+            .m-row.full-height
+              .m-col.m-col--3.m-col__ms-display-none
+                .follow-us
+                  a.follow-us__link.follow-us__link--dark(href='#') Follow us
+
+              .m-col.m-col--5.m-col__ms--15.m-order__ms--last
+                .event__text
+                  h3.event__title.fadeTopAnim Events
+                  .text__bottom
+                    .event__desc.fadeTopAnim.fadeTopAnim--second Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    a.arrow-link.arrow-link--dark.fadeTopAnim.fadeTopAnim--3(href='#') Discover
+
+              .m-col.m-col--7.m-col__ms--15.m-order__ms--first
+                .event__video-wrapper
+                  h3.event__mobile-title Events
+                  .event__video-block.fadeTopAnimClose
+                    .play
+                    video.event__video(src='./media/video/test.mp4' playsinline muted autoplay loop preload="")
+
+      // blog
+      .fullPage.blog
+        .blog__content.full-height
+          .m-container.full-height
+            .m-row.full-height
+              .m-col.m-col--3.m-col__ms-display-none
+                .follow-us
+                  a.follow-us__link.follow-us__link--dark(href='#') Follow us
+
+              .m-col.m-col--12.m-col__ms--15
+                .blog__wrapper
+                  .blog__title.fadeTopAnim Our Blog
+                  .blog__list
+                    .list__row
+                      .item.fadeTopAnim.fadeTopAnim--second
+                        img(src='./media/image/blog1.jpg')
+                        .name Title of the page
+                        .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+                      .item.fadeTopAnim.fadeTopAnim--2
+                        img(src='./media/image/blog2.jpg')
+                        .name Title of the page
+                        .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+                      .item.fadeTopAnim.fadeTopAnim--3
+                        img(src='./media/image/blog3.jpg')
+                        .name Title of the page
+                        .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+                    .list__row
+                      .item.fadeTopAnim.fadeTopAnim--4
+                        img(src='./media/image/blog4.jpg')
+                        .name Title of the page
+                        .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+                      .item.fadeTopAnim.fadeTopAnim--5
+                        img(src='./media/image/blog5.jpg')
+                        .name Title of the page
+                        .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+                      .item.fadeTopAnim.fadeTopAnim--6
+                        img(src='./media/image/blog6.jpg')
+                        .name Title of the page
+                        .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+
+                  .blog__slider.owl-carousel
                     .item
                       img(src='./media/image/blog1.jpg')
                       .name Title of the page
@@ -310,7 +338,6 @@ block content
                       img(src='./media/image/blog3.jpg')
                       .name Title of the page
                       .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
-                  .list__row
                     .item
                       img(src='./media/image/blog4.jpg')
                       .name Title of the page
@@ -323,101 +350,75 @@ block content
                       img(src='./media/image/blog6.jpg')
                       .name Title of the page
                       .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
+      // about
+      .fullPage.home-about
+        .home-about__content.full-height
+          .m-container.full-height.home-about__container
+            .m-row.full-height
+              .m-col.m-col--3.m-col__ms-display-none
+                .follow-us
+                  a.follow-us__link.follow-us__link--dark(href='#') Follow us
 
-                .blog__slider.owl-carousel
-                  .item
-                    img(src='./media/image/blog1.jpg')
-                    .name Title of the page
-                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
-                  .item
-                    img(src='./media/image/blog2.jpg')
-                    .name Title of the page
-                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
-                  .item
-                    img(src='./media/image/blog3.jpg')
-                    .name Title of the page
-                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
-                  .item
-                    img(src='./media/image/blog4.jpg')
-                    .name Title of the page
-                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
-                  .item
-                    img(src='./media/image/blog5.jpg')
-                    .name Title of the page
-                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
-                  .item
-                    img(src='./media/image/blog6.jpg')
-                    .name Title of the page
-                    .desc Inspiration by the ocean and warm sand. #[br] The combination of aquamarine and beige.
-    // about
-    .fullPage.home-about
-      .home-about__content.full-height
-        .m-container.full-height.home-about__container
-          .m-row.full-height
-            .m-col.m-col--3.m-col__ms-display-none
-              .follow-us
-                a.follow-us__link.follow-us__link--dark(href='#') Follow us
+              .m-col.m-col--4.m-col__ms--5.m-col__mxs--15
+                .home-about__col
+                  .coll__top
+                    .home-about__big-block.fadeTopAnim
+                      img(src='./media/icon/payment.svg' alt='elba')
+                      .name Payment security
+                      .desc All payments are protected by the #[br] standard of 256 bit encryption
 
-            .m-col.m-col--4.m-col__ms--5.m-col__mxs--15
-              .home-about__col
-                .coll__top
-                  .home-about__big-block
-                    img(src='./media/icon/payment.svg' alt='elba')
-                    .name Payment security
-                    .desc All payments are protected by the #[br] standard of 256 bit encryption
+                  .coll__center.fadeTopAnim.fadeTopAnim--4
+                    a.home-about__link(href='#') Garanties
+                    a.home-about__link(href='#') Livraisons & Retour
+                    a.home-about__link(href='#') CGV
+                    a.home-about__link(href='#') Paiements
 
-                .coll__center
+                  .coll__bottom.fadeTopAnim.fadeTopAnim--7
+                    .elba-coop ELBACONCEPT©2020. All right reserved.
+
+              .m-col.m-col--4.m-col__ms--5.m-col__mxs--15
+                .home-about__col
+                  .coll__top
+                    .home-about__big-block.fadeTopAnim.fadeTopAnim--second
+                      img(src='./media/icon/fast.svg' alt='elba')
+                      .name Fast shipping
+                      .desc Delivery in 2 to 5 working days #[br] Excluding personalized Elbag
+                  .coll__center.fadeTopAnim.fadeTopAnim--5
+                    a.home-about__link(href='#') Contact
+                    a.home-about__link(href='#') Adresses des boutiQues
+
+                  .coll__bottom
+
+              .m-col.m-col--4.m-col__ms--5.m-col__mxs--15.home-about__border
+                .home-about__col
+                  .coll__top
+                    .home-about__big-block.fadeTopAnim.fadeTopAnim--3
+                      img(src='./media/icon/money.svg' alt='elba')
+                      .name Money Back Guarantee
+                      .desc Free return within 30 days #[br] Excluding personalized Elbag
+                  .coll__center.fadeTopAnim.fadeTopAnim--6
+                    .subs__title Get 10% Off your first order
+                    .subs__desc Get an discount on the first order of your bag
+                    form.subs__form
+                      input(type='email' placeholder='Enter your Email').subs__input
+                      button.subs__submit
+
+                  .coll__bottom
+
+              .m-col.m-col__mxs--15.about__mobile-bottom
+                .links
                   a.home-about__link(href='#') Garanties
                   a.home-about__link(href='#') Livraisons & Retour
                   a.home-about__link(href='#') CGV
                   a.home-about__link(href='#') Paiements
-
-                .coll__bottom
-                  .elba-coop ELBACONCEPT©2020. All right reserved.
-
-            .m-col.m-col--4.m-col__ms--5.m-col__mxs--15
-              .home-about__col
-                .coll__top
-                  .home-about__big-block
-                    img(src='./media/icon/fast.svg' alt='elba')
-                    .name Fast shipping
-                    .desc Delivery in 2 to 5 working days #[br] Excluding personalized Elbag
-                .coll__center
                   a.home-about__link(href='#') Contact
                   a.home-about__link(href='#') Adresses des boutiQues
 
-                .coll__bottom
-
-            .m-col.m-col--4.m-col__ms--5.m-col__mxs--15.home-about__border
-              .home-about__col
-                .coll__top
-                  .home-about__big-block
-                    img(src='./media/icon/money.svg' alt='elba')
-                    .name Money Back Guarantee
-                    .desc Free return within 30 days #[br] Excluding personalized Elbag
-                .coll__center
+                .subs.home-about__border
                   .subs__title Get 10% Off your first order
                   .subs__desc Get an discount on the first order of your bag
                   form.subs__form
                     input(type='email' placeholder='Enter your Email').subs__input
                     button.subs__submit
 
-                .coll__bottom
-
-            .m-col.m-col__mxs--15.about__mobile-bottom
-              .links
-                a.home-about__link(href='#') Garanties
-                a.home-about__link(href='#') Livraisons & Retour
-                a.home-about__link(href='#') CGV
-                a.home-about__link(href='#') Paiements
-                a.home-about__link(href='#') Contact
-                a.home-about__link(href='#') Adresses des boutiQues
-
-              .subs.home-about__border
-                .subs__title Get 10% Off your first order
-                .subs__desc Get an discount on the first order of your bag
-                form.subs__form
-                  input(type='email' placeholder='Enter your Email').subs__input
-                  button.subs__submit
-
-              .elba-coop ELBACONCEPT©2020. All right reserved.
+                .elba-coop ELBACONCEPT©2020. All right reserved.

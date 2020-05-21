@@ -96,13 +96,47 @@ const fullPageSwitch = (e) => {
 const scriptScroll = () => {
   const fullPages = document.querySelectorAll('.fullPage');
   const page =  document.querySelector('.fullPage--active');
-  const next = page.nextElementSibling;
+  let next = page.nextElementSibling;
+
+
   const switchHeight = +next.getAttribute('data-height') - 10;
+  const prevHeight = +page.getAttribute('data-height');
+  if(pageYOffset < prevHeight) {
+    next = page.previousElementSibling;
+    if(next === null) {
+      next = page.parentElement.previousElementSibling;
+      page.parentElement.classList.remove('fullPage-wrapper--active');
+    }
+
+    page.classList.add('fullPage--close');
+    setTimeout(() => {
+      next.classList.add('fullPage--active');
+      page.classList.remove('fullPage--active');
+      if(next.classList.contains('shape')) {
+        next.classList.add('shape--animation');
+        shapeText();
+      }
+    }, 700)
+    setTimeout(() => {
+      page.classList.remove('fullPage--close');
+    }, 1000)
+  }
+
+  if(next.classList.contains('fullPage-wrapper')) {
+    console.log(next);
+    next.classList.add('fullPage-wrapper--active');
+    next = next.children[0];
+  }
+
   if(pageYOffset > switchHeight) {
     page.classList.add('fullPage--close');
     setTimeout(() => {
       next.classList.add('fullPage--active');
       page.classList.remove('fullPage--active');
+      if(next.classList.contains('shape')) {
+        next.classList.add('shape--animation');
+        shapeText();
+      }
     }, 700)
     setTimeout(() => {
       page.classList.remove('fullPage--close');
