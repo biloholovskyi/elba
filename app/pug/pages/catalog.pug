@@ -1,0 +1,168 @@
+extends ../layout/main
+
+block variables
+	- const pageTitle = 'Catalog'
+
+block content
+	include ../modules/header
+
+	#catalog-page.inner-page
+		.m-container
+			.m-row
+				.m-col.m-col--3
+				.m-col.m-col--9
+					button.modalOpen open modal
+				.m-col.m-col--3
+					.aside-catalog
+						ul
+							li.dropdown
+								input(type="checkbox")
+								a(href="#" data-toggle="dropdown") Product type
+								ul.dropdown-menu
+									li
+										label.radio
+											input(type="radio" name="r" value="1" checked)
+											span Bag
+									li
+										label.radio
+											input(type="radio" name="r" value="2")
+											span Backpack
+									li
+										label.radio
+											input(type="radio" name="r" value="3")
+											span Tent
+
+							li.dropdown
+								input(type="checkbox")
+								a(href="#" data-toggle="dropdown") Elements
+								ul.dropdown-menu
+									li
+										label.checklink
+											input(type="checkbox" name="r" value="1" checked).option-input
+											span Body
+									li
+										label.checklink
+											input(type="checkbox" name="r" value="2").option-input
+											span Shape
+									li
+										label.checklink
+											input(type="checkbox" name="r" value="3").option-input
+											span Handle
+
+							li.dropdown
+								input(type="checkbox")
+								a(href="#" data-toggle="dropdown") Materials
+								ul.dropdown-menu
+									li
+										label.checklink
+											input(type="checkbox" name="r" value="1" checked).option-input
+											span Materials_1
+									li
+										label.checklink
+											input(type="checkbox" name="r" value="2").option-input
+											span Materials_2
+									li
+										label.checklink
+											input(type="checkbox" name="r" value="3").option-input
+											span Materials_3
+									li
+										label.checklink
+											input(type="checkbox" name="r" value="4").option-input
+											span Materials_4
+									li
+										label.checklink
+											input(type="checkbox" name="r" value="5").option-input
+											span Materials_5
+
+							li.dropdown
+								input(type="checkbox")
+								a(href="#" data-toggle="dropdown") Color
+								ul.dropdown-menu.catalog-color
+									li
+										button.color-btn
+											img(src="../media/icon/color.png", alt="icon")
+									li
+										button.color-btn
+											img(src="../media/icon/color2.png", alt="icon")
+									li
+										button.color-btn
+											img(src="../media/icon/color3.png", alt="icon")
+									li
+										button.color-btn
+											img(src="../media/icon/color.png", alt="icon")
+									li
+										button.color-btn
+											img(src="../media/icon/color.png", alt="icon")
+									li
+										button.color-btn
+											img(src="../media/icon/color3.png", alt="icon")
+									li
+										button.color-btn
+											img(src="../media/icon/color.png", alt="icon")
+									li
+										button.color-btn
+											img(src="../media/icon/color2.png", alt="icon")
+									li
+										button.color-btn
+											img(src="../media/icon/color3.png", alt="icon")
+																
+
+							li.dropdown
+								input(type="checkbox")
+								a(href="#" data-toggle="dropdown") Collection
+								ul.dropdown-menu
+									li
+										label.checklink
+											input(type="checkbox" name="r" value="1" checked).option-input
+											span Collection_1
+									li
+										label.checklink
+											input(type="checkbox" name="r" value="2").option-input
+											span Collection_2
+									li
+										label.checklink
+											input(type="checkbox" name="r" value="3").option-input
+											span Collection_3
+									li
+										label.checklink
+											input(type="checkbox" name="r" value="4").option-input
+											span Collection_4
+									li
+										label.checklink
+											input(type="checkbox" name="r" value="5").option-input
+											span Collection_5
+
+							li.dropdown
+								input(type="checkbox")
+								a(href="#" data-toggle="dropdown") Motives
+								ul.dropdown-menu#catalog-btn
+									li
+										button.acc-btn neo
+									li
+										button.acc-btn Future
+									li
+										button.acc-btn Desert
+									li
+										button.acc-btn Night
+									li
+										button.acc-btn Jungle
+									li
+										button.acc-btn Pirozhok
+									li
+										button.acc-btn Jungle
+									li
+										button.acc-btn Sky
+									li
+										button.acc-btn Jungle					 																
+
+
+
+
+			.m-row
+				.m-col.m-col--15
+					include ../modules/footer
+	include ../modules/catalog-modal		 
+
+
+
+
