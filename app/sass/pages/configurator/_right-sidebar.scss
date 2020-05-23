@@ -7,6 +7,8 @@
     background-color: #fff;
     width: 100%;
     height: 100%;
+    padding-bottom: 50px;
+    overflow: auto;
 
     &__item {
       display: flex;
@@ -104,6 +106,7 @@
     left: 0;
     display: flex;
     width: 100%;
+    z-index: 10;
 
     .item {
       width: 100%;
@@ -118,14 +121,161 @@
       align-items: center;
       justify-content: center;
       padding: 14px 0;
+      background: #fff;
+      cursor: pointer;
+      border-top: 1px solid #E4E8EB;
 
       &--add {
-        border-top: 1px solid #E4E8EB;
+
       }
 
       &--check {
         color: #fff;
         background: #1F1F22;
+        border: none;
+      }
+
+      &--select {
+        border-right: 1px solid #E4E8EB;
+      }
+    }
+  }
+  
+  .order-new-element {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: calc(100% - 40px);
+    width: 100%;
+    background-color: #fff;
+    transition: all .3s;
+    visibility: hidden;
+    opacity: 0;
+
+    &--show {
+      visibility: visible;
+      opacity: 1;
+      z-index: 18;
+    }
+
+    .order-list {
+      .new-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 0 45px;
+        cursor: pointer;
+
+        img {
+          @include base-box(104px);
+          object-fit: contain;
+          object-position: center;
+        }
+
+        .new-name {
+          margin-top: 16px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          color: #1F1F22;
+        }
+      }
+    }
+
+    &--material {
+      .order-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        .new-material {
+          width: 100%;
+          max-width: 50%;
+          min-width: 50%;
+          display: flex;
+          flex-direction: column;
+          padding: 40px 0;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all .3s;
+          position: relative;
+
+          img {
+            @include base-box(40px);
+            object-position: center;
+            object-fit: contain;
+            z-index: 2;
+          }
+
+          .name {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 16px;
+            text-align: center;
+            color: #1F1F22;
+            z-index: 2;
+          }
+
+          &--active {
+            &::before {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              background: #F2F4F7;
+              opacity: 0.5;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+    
+    &--tabs {
+      .order-tabs {
+        background-color: #fff;
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid #E4E8EB;
+        z-index: 11;
+        position: relative;
+
+        .item {
+          height: 48px;
+          width: 100%;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 20px;
+          text-align: center;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #1F1F22;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          &--active {
+            border-bottom: 1px solid #1F1F22;
+          }
+        }
+      }
+
+      .order-list {
+        max-height: calc(100% - 48px);
+        display: none;
+        opacity: 0;
+        transition: all .3s;
+
+        &--show {
+          display: flex;
+          opacity: 1;
+        }
       }
     }
   }

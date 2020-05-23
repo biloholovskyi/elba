@@ -16,5 +16,7 @@
 
   &__content {
     height: calc(100% - 215px);
+    max-height: calc(100vh - 215px - 85px);
+    overflow: hidden;
   }
 }
