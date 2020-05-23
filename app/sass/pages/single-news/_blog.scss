@@ -1,0 +1,181 @@
+#blog-page {
+    .inner-btn {
+        padding-left: 35px;
+        &:after {
+            left: 0;
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+    .inner-content {
+        h2 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 40px;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 64;
+                    }
+    .inner-photo {
+        justify-content: flex-end;
+        p {
+            flex: 2;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 28px;
+            color: #565B62;
+            max-width: 557px;
+        }
+        .text {
+            align-self: center;
+            max-width: 260px;
+            img {
+                width: 25px;
+                height: 15px;
+                object-fit: cover;
+                object-position: center;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .inner-block {
+        h4 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 40px;
+            color: #000;
+            margin: 45px 0 64px;
+            text-align: left;
+            width: 100%;
+            max-width: 557px;
+            
+        }
+
+        .sublist {
+            li {
+                list-style-type: square;
+                margin-bottom: 15px;
+                p {
+                    padding-left: 45px;
+                }
+            }
+        }
+        .blog-list {
+            max-width: 557px;
+            margin: 32px 0 64px;
+            .blog-item {
+                display: flex;
+                .num {
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #1F1F22;
+                    margin-right: 24px;
+                }
+            }
+        }
+    }
+    .blog-photo {
+            .text {
+                align-self: flex-start;
+            }
+    }
+    .gallery {
+        justify-content: center;
+        img {
+            flex: 1;
+            max-width: 263px;
+        }
+        .gallery-item {
+            flex: 1;
+            max-height: 157px;
+            max-width: 263px;
+            align-self: flex-end;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-position: center;
+                    object-fit: cover;
+                }
+            }
+        }
+        .share_on {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(31,31,34,.1);
+            border-bottom: 1px solid rgba(31,31,34,.1);
+            margin-bottom: 96px;
+            .share-icon {
+                width: 24px;
+                height: 24px;
+                a {
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+            .social {
+                a {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #1F1F22;
+                }
+                & a:first-child {
+                    margin-right: 40px;
+                }
+            }
+        }
+
+        .blog-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            .news-link {
+                flex: 32%;
+                .news-content {
+                    margin: 0 15px 64px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        margin-bottom: 24px;
+                    }
+                    h3 {
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 16px;
+                        line-height: 28px;
+                        color: #1F1F22;
+                        margin-bottom: 8px;
+                    }
+            
+                    p {
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 28px;
+                        color: #7D838A;
+                    }
+                }
+            }
+        }
+    }  
+}
+
+
+.slider-text {
+    align-self: flex-start;
+    max-width: 263px;
+    flex: 1;
+    transform: translateY(-110px);
+}

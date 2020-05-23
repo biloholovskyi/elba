@@ -301,6 +301,7 @@
     margin-bottom: 32px;
   }
   // blog end
+<<<<<<< HEAD
 
   // second home block
   .image-text__imgs--big-2 {
@@ -343,6 +344,19 @@
     }
   }
   // second home block end
+
+  // philosophy page 
+  .inner-page {
+    .aside-bar{
+      display: none;
+    }
+  }
+// NEWS PAGE 
+  #news {
+    .aside-bar{
+      display: none;
+    }
+  }
 }
 
 @keyframes img-anim-mobile {

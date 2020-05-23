@@ -6,4 +6,11 @@ $(document).ready(function(){
         nav: true,
         items: 1
       });
+
+      $('#blog-owl').owlCarousel({
+        margin: 10,
+        loop: true,
+        nav: true,
+        items: 1
+      });
 });

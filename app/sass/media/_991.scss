@@ -14,4 +14,12 @@
     line-height: 38px;
   }
   // home about
+  // NEWS PAGE 
+  #news {
+    .news-wrap {
+      .news-link {
+          flex: 50%;
+      }
+    }
+  } 
 }

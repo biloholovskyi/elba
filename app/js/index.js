@@ -4,6 +4,10 @@ import {evSize} from './eventVideo';
 import {toggleMenu} from "./mobileMenu";
 import './factory-slider';
 import {confHidden, selectMaterial, newElement, newMainElement, switchTabs, toggleModal} from "./configuratorSidebar";
+import './accordion';
+import './modal-catalog';
+import './search';
+import './catalog-aside';
 
 $(document).ready(() => {
   startFullPage();
@@ -62,3 +66,15 @@ $(document).ready(() => {
 $(window).resize(() => {
   evSize();
 });
+
+
+let btnContainer = document.getElementsByClassName('.catalog-btn');
+let btns = document.getElementsByClassName('.acc-btn');
+
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    let current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}

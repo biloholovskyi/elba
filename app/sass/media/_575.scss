@@ -9,4 +9,103 @@
     }
   }
   // shape end
+  // inner  pages 
+  .inner-page,
+  #philosophy-page,
+  #comunity-page,
+  #materials-page,
+  #concept-page,
+  #factory-page {
+    padding-top: 80px;
+    .inner-content{
+      margin-bottom: 64px;
+      h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+      img {
+        margin-bottom: 15px;
+        height: 160px;
+      }
+      .inner-block {
+        align-items: flex-start;
+        margin-bottom: 0;
+        p {
+          font-size: 14px;
+          margin-bottom: 30px;
+          line-height: 24px;
+        }
+        h3 {
+          margin-bottom: 44px;
+        }
+      }
+      .inner-photo{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        max-height: none;
+        margin-bottom: 50px;
+        img {
+          margin-bottom: 15px;
+        }
+        .text {
+         
+          align-self: flex-start;
+        }
+         P {
+          line-height: 24px;
+         }
+      }
+    }
+  }
+  // page materials
+    #materials-page {
+      .inner-content {
+        .materials-table {
+          .caption {
+            display: none;
+          }
+          .table-row  {
+            flex-direction: column;
+            h3 {
+              margin-bottom: 15px;
+            }
+            p {
+              font-size: 14px;
+              margin-bottom: 15px;
+            }
+            & p:last-child {
+              font-size: 14px;
+              margin-left: 0;
+              margin-bottom: 15px;
+            }
+            
+          }
+        }  
+      }
+    }
+// factory page
+  #factory-page {
+    .factory-content {
+      .factory-photo {
+       .text {
+         h3 {
+          margin-top: 40px;
+         }
+       }
+      }
+    }
+  }
+   // NEWS PAGE 
+   #news {
+     padding-top: 80px;
+     h1 {
+      font-size: 42px;
+     }
+    .news-wrap {
+      padding-bottom: 50px;
+      .news-link {
+          flex: 100%;
+      }
+    }
+  } 
 }

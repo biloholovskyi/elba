@@ -1,0 +1,180 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Terms and Conditions'
+
+    mixin asideNav(link,name)
+      li
+        a(href=link)=name
+
+block content
+  include ../modules/header
+
+  #terms-page.inner-page
+    .m-container
+      .m-row
+        .m-col.m-col--3
+        .m-col.m-col--9
+          .inner-content
+            h1 Terms and Conditions
+      .m-row
+        .m-col.m-col--3
+          include ../modules/aside-bar-terms
+        .m-col.m-col--3
+        .m-col.m-col--6
+          .terms-content
+            p La présente page (ainsi que tous les documents auxquels elle fait renvoi) décrit les conditions générales selon lesquelles nous vous fournissons l’un quelconque des produits (« Produits ») répertoriés sur notre Site Internet www.elbaconcept.com (« notre site » ou « Site Internet »). Veuillez lire attentivement les présentes conditions générales (« Conditions générales de vente ») avant de commander l’un quelconque des Produits sur notre site. Il est entendu qu’en commandant l’un quelconque des Produits, vous acceptez d’être lié par les présentes Conditions générales de vente. #[br]#[br] Nous vous conseillons d’imprimer une copie des présentes Conditions générales de vente à titre de référence. #[br]#[br] Veuillez cliquer sur le bouton « J’accepte » à la fin des conditions du formulaire d’achat si vous les acceptez. Veuillez noter que si vous refuser d’accepter les présentes Conditions générales de vente, vous ne pourrez plus commander l’un quelconque des Produits de notre site. Après avoir accepté les Conditions générales de vente suivantes, vous serez également dénommé ci-après « Clients », « Client » ou « vous ».
+            h2 Conditions générales de vente
+            .list-wrap
+              .list-item
+                h3 01.
+              .list-text
+                h3 Informations nous concernant
+                p ELBA est un site exploité par ELEPHANT BAG COMPANY LIMITED dont le siège social est Flat D, 11/FI., Four Seas Communications Bank Building, 49-51 Bonham Strand West, Sheung Wan, Hong Kong , numéro d’enregistrement de la société 67614402-000-04-18-6 (« nous » ou « ELBA »).
+            .list-wrap  
+              .list-item
+                h3 02.
+              .list-text
+                h3 Disponibilité du service
+                p Notre site n’est destiné à être utilisé que par des personnes résidant dans l’Union européenne (« Territoire ») ou qui achètent des Produits devant être livrés sur ou vers le Territoire (« Clients » ou « Client »). Nous n’acceptons pas de commandes pour des livraisons à destination d’autres pays se trouvant en dehors du Territoire.
+            .list-wrap  
+              .list-item
+                h3 03.
+              .list-text
+                h3 Disponibilité du service
+                .sublist
+                  .sublist-item
+                    h3 3.1
+                  .sublist-text
+                    p En passant une commande via notre site, vous garantissez que :
+                    ul
+                      li
+                        p vous êtes juridiquement capable de conclure des contrats contraignants;
+                      li
+                        p vous avez au moins 18 ans;
+                      li
+                        p vous achetez les Produits pour votre usage personnel et non commercial; et
+                      li
+                        p vous êtes juridiquement capable de conclure des contrats contraignants;
+                .sublist
+                  .sublist-item
+                    h3 3.2
+                  .sublist-text
+                    p Toutes les données à caractère personnel que nous recueillons vous concernant seront utilisées uniquement conformément à notre « Politique de confidentialité »                
+            .list-wrap  
+              .list-item
+                h3 04.
+              .list-text
+                h3 Exécution du contrat
+                .sublist
+                  .sublist-item
+                    h3 4.1
+                  .sublist-text
+                    p En passant une commande via notre site, vous garantissez que :
+                .sublist
+                  .sublist-item
+                    h3 4.2
+                  .sublist-text
+                    p Avant de passer une commande via notre site, vous devrez lire attentivement la totalité des instructions fournies au cours de la procédure d’achat (en ce qui concerne également les conditions du droit de rétractation, les frais de livraison et la déclaration sur la Politique de confidentialité), accompagnées des présentes Conditions générales de vente.
+                .sublist
+                  .sublist-item
+                    h3 4.3
+                  .sublist-text
+                    p Pour passer une commande, vous devez vous enregistrer notre site Interne en tant qu’invité ou utilisateur normal.
+                .sublist
+                  .sublist-item
+                    h3 4.4
+                  .sublist-text
+                    p Pour acheter un Produit, le Client doit (i) mettre le Produit choisi dans le « Panier » en cliquant sur le bouton correspondant, (ii) remplir la proposition de commande, (iii) sélectionner le moyen de paiement, (iv) accepter les Conditions générales de vente et la Politique de confidentialité et (v) envoyer la proposition de commande à ELBA via notre site. Après la conclusion de la procédure d’achat précédemment décrite, le Client recevra un message électronique transactionnel prouvant l’achat des Produits (« Confirmation de commande »). En cas de retour des Produits aux termes des clauses 9, 10 et 11 ci-après, le Client sera tenu de fournir à ELBA le numéro de Confirmation de commande et l’adresse mail qu’il aura utilisé pour effectuer l’achat des Produits apparaissant sur la même Confirmation de commande conformément aux procédures décrites aux clauses susmentionnées.
+                .sublist  
+                  .sublist-item
+                    h3 4.5
+                  .sublist-text
+                    p L’envoi de la commande constitue une proposition afin d’acheter le Produit sélectionné, régie aux termes des présentes Conditions générales de vente et contraignante pour le Client (sans préjudice du droit de rétractation aux termes de l’article 9). L’envoi de la proposition de commande par le Client implique l’obligation pour ce dernier de payer le prix du(des) Produit(s) commandé(s)
+                .sublist
+                  .sublist-item
+                    h3 4.6
+                  .sublist-text
+                    p Toute erreur/modification des données insérées par le Client dans la proposition de commande doit être validée par ce dernier, en suivant le processus décrit sur notre site, avant l’envoi de la proposition de commande (par exemple : le Client peut modifier la quantité des Produits qu’il entend acheter en ajoutant ou en supprimant un ou plusieurs Produits de son « Panier »).                    
+                .sublist
+                  .sublist-item
+                    h3 4.7
+                  .sublist-text
+                    p Sans préjudice de l’utilisation des données décrites dans la Politique de confidentialité, la proposition de commande et les données concernant le Client relatives à ladite proposition de commande peuvent être conservées par ELBA pendant la période requise par la législation applicable. Par ailleurs, les contrats exécutés par les Clients seront archivés par ELBA pendant la période de conservation requise par la loi applicable.
+                .sublist
+                  .sublist-item
+                    h3 4.8
+                  .sublist-text
+                    p Une proposition de commande peut être refusée par ELBA y compris après la Confirmation de commande (à condition que le Client ne doive aucune contrepartie à ELBA, à la seule exception des sommes aux termes de la clause 12 ci-après, le cas échéant) dans un délai de 30 jours à sa seule discrétion, y compris dans le cas où
+                    ul
+                      li
+                        p les Produits ne sont pas disponibles (sans préjudice de la disposition énoncée aux termes des clauses 4.11, 5.2, 5.3) ; ou
+                      li
+                        p des activités frauduleuses ou illégales signalées, ou suspectées, y compris des achats suspectés d’avoir été faits à des fins commerciales ;
+                      li
+                        p le Client n’a pas rempli ses obligations découlant d’un précédent contrat exécuté avec ELBA.    
+                .sublist
+                  .sublist-item
+                    h3 4.9
+                  .sublist-text
+                    p En passant une commande via notre site, vous garantissez que :
+                .sublist
+                  .sublist-item
+                    h3 4.10
+                  .sublist-text
+                    p Sans préjudice des dispositions énoncées à la clause 4.8, le contrat entre ELBA et le Client est exécuté dès réception par le Client de l’acceptation par ELBA de la proposition de commande envoyée grâce au processus indiqué sur notre site via la Confirmation de commande
+                .sublist
+                  .sublist-item
+                    h3 4.11
+                  .sublist-text
+                    p Malgré la Confirmation de commande, en cas d’indisponibilité d’un ou plusieurs des Produits commandés, le Client recevra un email l’informant dûment de l’indisponibilité des Produits. Dans ce cas la proposition de commande sera annulée ou partiellement acceptée pour les Produits disponibles. Dans le cas d’une acceptation partielle, le Client ne devra payer (ou ne sera facturé, en cas de paiement par carte de crédit) que le prix des Produits disponibles.
+                .sublist
+                  .sublist-item
+                    h3 4.12
+                  .sublist-text
+                    p La Confirmation de commande inclura un résumé des caractéristiques essentielles des Produits achetés, une indication détaillée du prix et des modalités de paiement, des informations relatives aux conditions et modalités d’exercice du droit de rétractation (y compris des informations relatives à l’exclusion du droit de rétractation pour des Produits personnalisés), des informations relatives aux frais de livraison, l’adresse à laquelle les réclamations peuvent être adressées, des informations sur les services support et sur les conditions commerciales existantes et une copie des présentes Conditions générales de vente.           
+            .list-wrap  
+              .list-item
+                h3 05.
+              .list-text
+                h3 Exécution du contrat
+                .sublist
+                  .sublist-item
+                    h3 5.1
+                  .sublist-text
+                    p Les informations sur les Produits (accompagnées des codes Produits correspondants) et les prix correspondants sont disponibles sur notre site.
+                .sublist
+                  .sublist-item
+                    h3 5.2
+                  .sublist-text
+                    p Les Produits disponibles sur notre site représentent une sélection d’éléments normalement disponibles en magasin ; cependant, ELBA ne fournit aucune garantie au Client en ce qui concerne la disponibilité en magasin des Produits disponibles sur le Site Internet. Par ailleurs, nous de garantissons pas que l’un quelconque des Produits présentés sur notre site sera en stock. Les photos des Produits affichées sur notre site peuvent ne pas correspondre à leur réelle apparence ; le Client doit par conséquent se fier exclusivement à la description des Produits et à leurs caractéristiques telles que mentionnées sur notre site.
+                .sublist
+                  .sublist-item
+                    h3 5.3
+                  .sublist-text
+                    p ELBA se réserve le droit, à tout moment, de limiter les quantités et/ou le type de Produits disponibles sur le Site Internet. Le style, les modèles et les couleurs des Produits y étant décrits peuvent être modifiés sans préavis. Au cours du processus d’achat, une réponse automatique informera le Client si la commande ne peut pas être traitée du fait de l’indisponibilité du Produit commandé ; ELBA n’est pas responsable envers le Client en cas d’indisponibilité du Produit.
+                .sublist
+                  .sublist-item
+                    h3 5.4
+                  .sublist-text
+                    p Le nombre maximum de pièces pour chaque Produit mis par le Client dans la proposition de commande est de cinq pièces par UGS et de vingt-cinq pièces par Commande.
+                .sublist
+                  .sublist-item
+                    h3 5.5
+                  .sublist-text
+                    p ELBA ne sera en aucun cas tenue responsable d’erreurs dues à un échec de la connexion du Client au Site Internet. Par ailleurs, ELBA ne prendra aucune responsabilité envers le Client dans les circonstances suivantes, indépendamment de la raison des dommages, de la cause, de la nature des dommages, ou des résultats :
+                    ul
+                      li
+                        p les Produits ne sont pas disponibles (sans préjudice de la disposition énoncée aux termes des clauses 4.11, 5.2, 5.3) ; ou
+                      li
+                        p des activités frauduleuses ou illégales signalées, ou suspectées, y compris des achats suspectés d’avoir été faits à des fins commerciales ;
+        .m-col.m-col--3
+              
+
+      .m-row
+        .m-col.m-col--15
+          include ../modules/footer 
+
+
+
+
