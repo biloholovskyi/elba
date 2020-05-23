@@ -4,3 +4,4 @@
 *.rar
 .idea
 /vendore
+.DS_Store
