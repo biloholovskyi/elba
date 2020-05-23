@@ -267,6 +267,18 @@
     margin-bottom: 32px;
   }
   // blog end
+  // philosophy page 
+  .inner-page {
+    .aside-bar{
+      display: none;
+    }
+  }
+// NEWS PAGE 
+  #news {
+    .aside-bar{
+      display: none;
+    }
+  }  
 }
 
 @keyframes img-anim-mobile {

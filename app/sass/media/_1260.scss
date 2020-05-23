@@ -44,4 +44,34 @@
     }
   }
   // home about end
+   // philosophy page 
+   .inner-page {
+    .inner-content{
+      .inner-block {
+        align-items: flex-start;
+      }
+      .inner-photo{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        max-height: none;
+        margin-bottom: 50px;
+        img {
+          margin-bottom: 15px;
+        }
+        .text {
+         
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+  // factory page
+  #factory-page {
+    .factory-content {
+      .factory-photo {
+        flex-direction: column!important;
+      }
+    }
+  }
+
 }
