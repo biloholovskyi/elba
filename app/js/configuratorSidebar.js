@@ -41,10 +41,23 @@ const switchTabs = (e) => {
   lists.eq($(e.currentTarget).index()).addClass('order-list--show');
 }
 
+const toggleModal = (e) => {
+  e.preventDefault();
+  const modal = $('.conf-modal');
+  const header = $('.header');
+  modal.toggleClass('conf-modal--show');
+  if(modal.hasClass('conf-modal--show')) {
+    header.css('z-index', '1');
+  } else {
+    header.css('z-index', '60');
+  }
+}
+
 export {
   confHidden,
   selectMaterial,
   newElement,
   newMainElement,
-  switchTabs
+  switchTabs,
+  toggleModal
 }

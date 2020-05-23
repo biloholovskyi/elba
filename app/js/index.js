@@ -3,7 +3,7 @@ import {startFullPage, fullPageSwitch, scriptScroll} from "./fullPage";
 import {evSize} from './eventVideo';
 import {toggleMenu} from "./mobileMenu";
 import './factory-slider';
-import {confHidden, selectMaterial, newElement, newMainElement, switchTabs} from "./configuratorSidebar";
+import {confHidden, selectMaterial, newElement, newMainElement, switchTabs, toggleModal} from "./configuratorSidebar";
 
 $(document).ready(() => {
   startFullPage();
@@ -44,6 +44,18 @@ $(document).ready(() => {
   $('.order-buttons .item--add, .order-buttons .item--cancel').on('click', (e) => {newElement(e)});
   $('.order-new-element--main .new-item').on('click', (e) => {newMainElement(e)});
   $('.order-tabs .item').on('click', (e) => {switchTabs(e)});
+  $('.configurator__main .conf__main-top .links .link, .conf-modal__close').on('click', (e) => toggleModal(e));
+
+  $(document).on('click', (e) => {
+    // close modal configurator
+    const btn = $('.configurator__main .conf__main-top .links .link, .conf-modal__close');
+    const modal = $('.conf-modal__body');
+    if ( !btn.is(e.target) && !modal.is(e.target) && modal.has(e.target).length === 0) {
+      if($('.conf-modal').hasClass('conf-modal--show')) {
+        toggleModal(e);
+      }
+    }
+  });
 });
 
 

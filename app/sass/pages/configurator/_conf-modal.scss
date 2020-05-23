@@ -1,0 +1,138 @@
+.conf-modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1F1F22;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: all .6s;
+    transition-delay: .3s;
+  }
+
+  &__body {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    padding: 64px;
+    z-index: 60;
+    width: 100%;
+    max-width: 587px;;
+    overflow: auto;
+    transition: all .6s;
+    transition-delay: .9s;
+  }
+
+  &__close {
+    cursor: pointer;
+    @include base-box(40px);
+    background-image: url(../media/icon/close.svg);
+    @include base-background(contain);
+    position: absolute;
+    top: 64px;
+    right: 651px;
+    z-index: 100;
+    opacity: 0;
+    transition: all .6s;
+    transition-delay: 1.2s;
+  }
+
+  &--show {
+    opacity: 1;
+    visibility: visible;
+
+    &:after {
+      opacity: .5;
+    }
+
+    .conf-modal__body {
+      right: 0;
+    }
+
+    .conf-modal__close {
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
+    color: #1F1F22;
+    margin-bottom: 16px;
+  }
+
+  &__sub-title {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: #7D838A;
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    p {
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 24px;
+      color: #565B62;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__table {
+    margin-top: 48px;
+
+    .item {
+      width: 100%;
+      display: flex;
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &--title {
+        margin-bottom: 20px;
+      }
+
+      .left {
+        width: 191px;
+        min-width: 191px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #1F1F22;
+      }
+
+      .right {
+        font-size: 14px;
+        line-height: 24px;
+        color: #565B62;
+
+        &--title {
+          font-size: 16px;
+          line-height: 28px;
+          color: #1F1F22;
+        }
+      }
+    }
+  }
+}
