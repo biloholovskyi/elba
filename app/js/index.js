@@ -67,7 +67,6 @@ $(window).resize(() => {
   evSize();
 });
 
-
 let btnContainer = document.getElementsByClassName('.catalog-btn');
 let btns = document.getElementsByClassName('.acc-btn');
 
