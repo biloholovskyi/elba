@@ -3,6 +3,7 @@ import {startFullPage, fullPageSwitch, scriptScroll} from "./fullPage";
 import {evSize} from './eventVideo';
 import {toggleMenu} from "./mobileMenu";
 import './factory-slider';
+import {confHidden} from "./configuratorSidebar";
 
 $(document).ready(() => {
   startFullPage();
@@ -36,26 +37,9 @@ $(document).ready(() => {
   });
 
   document.addEventListener('scroll', () => {scriptScroll()})
-  // full page switch
-  // document.querySelectorAll('.fullPage').forEach((elem) => {
-  //   if (elem.addEventListener) {
-  //     if ('onwheel' in document) {
-  //       // IE9+, FF17+
-  //       elem.addEventListener("wheel", fullPageSwitch);
-  //     } else if ('onmousewheel' in fullPageSwitch) {
-  //       // устаревший вариант события
-  //       elem.addEventListener("mousewheel", fullPageSwitch);
-  //     } else {
-  //       // Firefox < 17
-  //       elem.addEventListener("MozMousePixelScroll", fullPageSwitch);
-  //     }
-  //   } else { // IE8-
-  //     elem.attachEvent("onmousewheel", fullPageSwitch);
-  //   }
-  // });
-  // full page switch end
 
   $('.header__mobile .menu').on('click', toggleMenu);
+  $('.option--visible').on('click', (e) => {confHidden(e)})
 });
 
 

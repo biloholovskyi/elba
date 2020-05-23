@@ -1,6 +1,10 @@
 import {shapeText} from "./shapeAnimations";
 
 const startFullPage = () => {
+  if($('.fullPage__box').length < 1) {
+    return
+  }
+
   // получить список всех экранов
   const fullPages = document.querySelectorAll('.fullPage');
 
@@ -94,6 +98,9 @@ const fullPageSwitch = (e) => {
 }
 
 const scriptScroll = () => {
+  if($('.fullPage__box').length < 1) {
+    return
+  }
   const fullPages = document.querySelectorAll('.fullPage');
   const page =  document.querySelector('.fullPage--active');
   let next = page.nextElementSibling;
