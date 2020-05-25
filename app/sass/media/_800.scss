@@ -57,4 +57,23 @@
     }
   }
   // home about end
+    // blog page
+  #blog-page {
+    .inner-content {
+      .inner-photo {
+        .text {
+          align-self: flex-start;
+          margin-top: 50px;
+        }
+      }
+     .inner-block {
+       .sublist {
+         margin-left: 20px;
+       }
+       h3 {
+         margin-top: 0;
+       }
+     }
+    }
+  }
 }
