@@ -76,4 +76,14 @@
      }
     }
   }
+// catalog page 
+    #catalog-page{
+      .filter-btn {
+        display: flex;
+      }
+      .aside-catalog {
+        display: none;
+      }
+    }
+ 
 }

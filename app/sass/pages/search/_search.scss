@@ -1,6 +1,13 @@
 .search {
 	background: #F8F8F8;
 	width: 100%;
+	.search-mobile {
+		display: none;
+	}
+	
+	.filter-wrap {
+		display: none;
+	}
 	.search-wrap {
 		display: flex;
 		justify-content: space-between;

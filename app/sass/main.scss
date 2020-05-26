@@ -79,7 +79,10 @@ button {
 /*pages*/
 //  catalog
 @import "pages/catalog/catalog"; 
-@import "pages/catalog/catalog-modal";    
+@import "pages/catalog/catalog-modal"; 
+@import "pages/catalog/_filter";
+@import "pages/catalog/catalog-modal"; 
+@import "pages/catalog/single-catalog";     
 /*pages*/
 //  SEARCH
 @import "pages/search/search";    

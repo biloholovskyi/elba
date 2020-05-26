@@ -18,7 +18,7 @@
   #news {
     .news-wrap {
       .news-link {
-          flex: 50%;
+          flex: 50%; 
       }
     }
   } 
@@ -36,4 +36,23 @@
       font-size: 48px;
     }
   }  
+// MODAL CATALOG 
+  .catalog-overlay {
+    .catalog-close {
+      right: 0;
+      top: -60px;
+    }
+    .catalog-modal {
+      padding: 20px 0;
+      .catalog-item {
+        .img-main{
+          margin-left: 20px;
+        }
+      }
+      .catalog-item.catalog-item:nth-child(2) {
+        padding-left: 20px;
+        
+      }
+    }
+  }
 }

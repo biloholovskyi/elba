@@ -1,41 +1,27 @@
 extends ../layout/main
 
 block variables
-	- const pageTitle = 'Catalog'
+	- const pageTitle = 'Filter'
 
 block content
-	include ../modules/header
 
-	#catalog-page.inner-page
+
+	#filter-page
+		.filter-nav
+			.m-container
+				.m-row
+					.m-col.m-col--15
+						.filter-wrap
+							a(href="./catalog.html") Filter
+								img(src="../media/icon/arrow-left.svg", alt="")
 		.m-container
 			.m-row
-				.m-col.m-col--3.m-col__lg--1.m-col__ms-display-none
-				.m-col.m-col--12.m-col__lg--14
-					h1 Catalog
-					a(href="./mobile-filter.html").filter-btn Filter
-						img(src="../media/icon/filter.svg", alt="icon")
-			.m-row
-				.m-col.m-col--3.m-col__lg--1.m-col__ms-display-none
-				.m-col.m-col--9.m-col__lg--10.m-col__ms--11.m-col__mxs--15
-					.catalog-wrap
-						.catalog-item
-							button.modalOpen open modal
-						.catalog-item
-							button.modalOpen open modal 
-						.catalog-item
-							button.modalOpen open modal
-						.catalog-item
-							button.modalOpen open modal
-						.catalog-item
-							button.modalOpen open modal 
-						.catalog-item
-							button.modalOpen open modal 	 		 
-				.m-col.m-col--3.m-col__lg--4.m-col__ms--4.m-col__mxs-display-none
+				.m-col.m-col--15
 					.aside-catalog
 						ul
 							li.dropdown
-								input(type="checkbox")
-								a(href="#" data-toggle="dropdown") Product type
+
+								h3  Product type
 								ul.dropdown-menu
 									li
 										label.radio
@@ -51,8 +37,8 @@ block content
 											span Tent
 
 							li.dropdown
-								input(type="checkbox")
-								a(href="#" data-toggle="dropdown") Elements
+
+								h3  Elements
 								ul.dropdown-menu
 									li
 										label.checklink
@@ -68,8 +54,8 @@ block content
 											span Handle
 
 							li.dropdown
-								input(type="checkbox")
-								a(href="#" data-toggle="dropdown") Materials
+
+								h3  Materials
 								ul.dropdown-menu
 									li
 										label.checklink
@@ -93,8 +79,8 @@ block content
 											span Materials_5
 
 							li.dropdown
-								input(type="checkbox")
-								a(href="#" data-toggle="dropdown") Color
+
+								h3  Color
 								ul.dropdown-menu.catalog-color
 									li
 										button.color-btn
@@ -126,8 +112,8 @@ block content
 
 
 							li.dropdown
-								input(type="checkbox")
-								a(href="#" data-toggle="dropdown") Collection
+
+								h3  Collection
 								ul.dropdown-menu
 									li
 										label.checklink
@@ -151,8 +137,8 @@ block content
 											span Collection_5
 
 							li.dropdown
-								input(type="checkbox")
-								a(href="#" data-toggle="dropdown") Motives
+
+								h3  Motives
 								ul.dropdown-menu#catalog-btn
 									li
 										button.acc-btn neo
@@ -171,16 +157,8 @@ block content
 									li
 										button.acc-btn Sky
 									li
-										button.acc-btn Jungle					 																
-
-
-
-
-			.m-row
-				.m-col.m-col--15
-					include ../modules/footer
-	include ../modules/catalog-modal		 
-
-
-
-
+										button.acc-btn Jungle
+		.btn-wrap
+			.btn-item
+				button Reset
+				button Apply
