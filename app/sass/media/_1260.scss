@@ -84,4 +84,22 @@
       }
     }
   }
+
+// blog page
+  #blog-page {
+    .inner-content {
+      h1 {
+        font-size: 45px;
+      }
+      .gallery {
+        align-items: center;
+        img {
+          margin-bottom: 20px!important;
+        }
+        .gallery-item {
+          align-self: center;
+        }
+      }
+    }
+  }
 }

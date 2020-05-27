@@ -4,11 +4,13 @@ $(document).ready(function(){
         $('.inner-inp').html(val);//Вставляем значение в тег с классом
         $('.visability-title').css('display', 'none');
         $('.hidden-title').fadeIn('slow').css('display', 'block');
+        $('.hidden-title-mobile').fadeIn('slow').css('display', 'block');
     });
 
     $(".reset").bind("click", function() {
         $("input[type=text]").val("");
         $('.visability-title').css('display', 'block');
         $('.hidden-title').fadeOut('slow').css('display', 'none');
+        $('.hidden-title-mobile').fadeOut('slow').css('display', 'none');
       });
 });

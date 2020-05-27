@@ -1,9 +1,13 @@
 .search
-	.m-container
-		.m-row
-			.m-col
-				.search-wrap
-					input(type="text" placeholder="I searching for...").search-inp
-					.search-btn--block
-						a.inner-btn.search-btn(href="#") Search
-						.search-close.reset
+  .m-container
+    .m-row
+      .m-col.m-col--15  
+        .search-mobile
+          .search-close.reset
+          p Search
+        .search-wrap
+          input(type="text" placeholder="I searching for...").search-inp
+          button.search-btn.search-btn--mobile
+          .search-btn--block
+            a.inner-btn.search-btn(href="#") Search
+            .search-close.reset

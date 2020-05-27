@@ -1,0 +1,51 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Detail'
+
+block content
+
+
+  #detail-page
+    .filter-nav
+      .m-container
+        .m-row
+          .m-col.m-col--15
+            .filter-wrap
+              a(href="./catalog.html") Detail
+                img(src="../media/icon/arrow-left.svg", alt="")
+    .m-container
+      .m-row
+        .m-col.m-col--15
+          .catalog-detail
+            h3 Elbag
+            h2 Little E - Lether / Cotton
+            #single-owl.owl-carousel.owl-theme
+              .item
+                .detail-slide
+                  img(src="../media/icon/modal-elem.svg", alt="image")
+              .item
+                .detail-slide
+                  img(src="../media/icon/modal-elem2.svg", alt="image")
+              .item
+                .detail-slide
+                  img(src="../media/image/list4.png", alt="image")
+              .item
+                .detail-slide
+                  img(src="../media/icon/modal-elem2.svg", alt="image")
+            p Le Little E (Little Elephant Bag) est le premier sac à main qui vous permet de découvrir toutes les facettes de la marque ELBA Concept.
+            h4 Elements
+            .detail-elem
+              img(src="../media/icon/modal-elem.svg", alt="icon")    
+              img(src="../media/icon/modal-elem2.svg", alt="icon")
+              img(src="../media/icon/modal-elem.svg", alt="icon")    
+              img(src="../media/icon/modal-elem2.svg", alt="icon")    
+            h5 Total:
+            .price 
+              p € 1,420.00
+              p.offer  1,420.00
+            p La livraison est offerte et les retours sont gratuits à partir de 300€ d’achat en France métropolitaine. 
+    .btn-wrap
+      .btn-item
+        button Buy now
+        button Add to cart        

@@ -1,6 +1,13 @@
 .search {
 	background: #F8F8F8;
 	width: 100%;
+	.search-mobile {
+		display: none;
+	}
+	
+	.filter-wrap {
+		display: none;
+	}
 	.search-wrap {
 		display: flex;
 		justify-content: space-between;
@@ -16,6 +23,7 @@
 			font-size: 24px;
 			line-height: 32px;
 			color: #000000;
+			width: 100%;
 
 			&::placeholder {
 				font-style: normal;
@@ -42,6 +50,7 @@
 	}
 }
 #search-page {
+	min-height: 100vh;
 	.visability-title {
 		font-style: normal;
 		font-weight: bold;

@@ -355,9 +355,16 @@
 // NEWS PAGE 
   #news {
     .aside-bar{
-      display: none;
+      display: none; 
     }
   }
+  // blog page
+  #blog-page {
+    .inner-btn{
+      font-size: 11px;
+    }
+  }
+
 }
 
 @keyframes img-anim-mobile {
