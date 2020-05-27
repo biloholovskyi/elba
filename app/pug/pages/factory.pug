@@ -1,58 +1,59 @@
 extends ../layout/main
 
 block variables
-	- const pageTitle = 'Our factory'
+  - const pageTitle = 'Our factory'
 
-		mixin asideNav(link,name)
-			li
-				a(href=link)=name 
+  mixin asideNav(link,name)
+    li
+      a(href=link)=name
 
 block content
-	include ../modules/header
+  include ../modules/header
+  include ../modules/modal-menu
 
-	#factory-page.inner-page
-		.m-container
-			.m-row
-				.m-col.m-col--3.m-col__lg--3.m-col__ms--2.m-col__mxs--1
-					include ../modules/aside-bar
-				.m-col.m-col--9.m-col__lg--10.m-col__ms--11.m-col__mxs--13.m-col__sm--15
-					.inner-content.factory-content
-						h1 Our Factory
-						img(src="./media/image/factory.png", alt="image")
-						.inner-block.factory-block
-							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
-						.inner-photo.factory-photo
-							.text
-								h3 Subtitle here
-							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.#[br]Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						.inner-photo.factory-photo
-							.text
-								h3 Subtitle here
-							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.#[br]Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						.inner-block.factory-block
-							h2 title
-							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.#[br]Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						#factory-owl.owl-carousel.owl-theme
-							.item
-								.factory-slide
-									img(src="../media/image/factory-slide.png", alt="image")
-							.item
-								.factory-slide
-									img(src="../media/image/factory-slide.png", alt="image")
-							.item
-								.factory-slide
-									img(src="../media/image/factory-slide.png", alt="image")
-							.item
-								.factory-slide
-									img(src="../media/image/factory-slide.png", alt="image")
+  #factory-page.inner-page
+    .m-container
+      .m-row
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--2.m-col__mxs--1
+          include ../modules/aside-bar
+        .m-col.m-col--9.m-col__lg--10.m-col__ms--11.m-col__mxs--13.m-col__sm--15
+          .inner-content.factory-content
+            h1 Our Factory
+            img(src="./media/image/factory.png", alt="image")
+            .inner-block.factory-block
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .inner-photo.factory-photo
+              .text
+                h3 Subtitle here
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.#[br]Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            .inner-photo.factory-photo
+              .text
+                h3 Subtitle here
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.#[br]Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            .inner-block.factory-block
+              h2 title
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.#[br]Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            #factory-owl.owl-carousel.owl-theme
+              .item
+                .factory-slide
+                  img(src="../media/image/factory-slide.png", alt="image")
+              .item
+                .factory-slide
+                  img(src="../media/image/factory-slide.png", alt="image")
+              .item
+                .factory-slide
+                  img(src="../media/image/factory-slide.png", alt="image")
+              .item
+                .factory-slide
+                  img(src="../media/image/factory-slide.png", alt="image")
 
-						.inner-block.factory-block
-							.text.slider-text
-								p Little description of slider located in this place
-							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. #[br]#[br]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  			
-				.m-col.m-col--3.m-col__lg--2.m-col__ms--2.m-col__mxs--1
+            .inner-block.factory-block
+              .text.slider-text
+                p Little description of slider located in this place
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. #[br]#[br]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        .m-col.m-col--3.m-col__lg--2.m-col__ms--2.m-col__mxs--1
 
 
-			.m-row
-				.m-col.m-col--15
-					include ../modules/footer 	
+      .m-row
+        .m-col.m-col--15
+          include ../modules/footer
