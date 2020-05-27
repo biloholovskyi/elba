@@ -4,16 +4,16 @@ block variables
   - const pageTitle = 'ELBA'
 
 block content
-  include ../modules/header
+  include ../modules/header-white
   include ../modules/modal-menu
   include ../modules/conf-modal
 
   .configurator
     .m-container.full-height
       .m-row.full-height
-        .m-col.m-col--3
+        .m-col.m-col--3.m-order__ms--2.m-col__ms--15
           include ../modules/left-sidebar
-        .m-col.m-col--8.full-height
+        .m-col.m-col--8.m-col__md--7.full-height.m-order__ms--first.m-col__ms--15
           .configurator__main.full-height
             .configurator__top
               .conf__title Elbag yourself
@@ -21,20 +21,20 @@ block content
             .configurator__content
               .conf__main-top
                 .text Complete your bag with more than #[span 4 elements] and get e reduction on the total!
-                .links
+                .links.conf-mobile-hidden
                   a.link(href='about') About this product
                   a.link(href='delivery') Delivery and returns
                   a.link(href='service') Service
 
 
-              img.conf__img(src='./media/image/big-bag.png' alt='elba')
+              img.conf__img.conf-mobile-hidden(src='./media/image/big-bag.png' alt='elba')
 
-              .conf__main-bottom
+              .conf__main-bottom.conf-mobile-hidden
                 .bot__info
                   .bot__total Total:
                   .bot__prices
                     .bot__price € 1,420.00
                     .bot__real-price 1,800.00
                 .bot__text La livraison est offerte et les retours sont gratuits à partir de 300€ d’achat en France métropolitaine.
-        .m-col.m-col--4
+        .m-col.m-col--4.m-col__md--5.m-order__ms--3.m-col__ms--15
           include ../modules/right-sidebar
