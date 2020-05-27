@@ -9,7 +9,7 @@ const startFullPage = () => {
   const fullPages = document.querySelectorAll('.fullPage');
 
   // сделать первый экран видимым
-  fullPages[0].classList.add('fullPage--active');
+  // fullPages[0].classList.add('fullPage--active');
 
   // новый скрипт
   let mrgTop = 0;
@@ -17,8 +17,9 @@ const startFullPage = () => {
   fullPages.forEach((page, index) => {
     const pageHeight = page.getBoundingClientRect().height.toString()
     mrgTopBody += +pageHeight;
+    mrgTop += +pageHeight;
     if(index > 0) {
-      mrgTop += +pageHeight;
+
     }
     page.setAttribute('data-height', mrgTop);
 

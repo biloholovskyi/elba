@@ -218,8 +218,10 @@
     }
 
     &--active {
+      z-index: 50;
+
       .fullPage {
-        z-index: 50 !important;
+        z-index: 51 !important;
         opacity: 1 !important;
       }
     }

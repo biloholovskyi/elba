@@ -8,6 +8,7 @@ import './accordion';
 import './modal-catalog';
 import './search';
 import './catalog-aside';
+import { scrollSwitch } from "./scrollScript";
 
 $(document).ready(() => {
   startFullPage();
@@ -40,7 +41,11 @@ $(document).ready(() => {
     items: 1
   });
 
-  document.addEventListener('scroll', () => {scriptScroll()})
+  document.addEventListener('scroll', () => {scrollSwitch()})
+
+  if($('.fullPage__box').length > 0) {
+    scrollSwitch();
+  }
 
   $('.header__mobile .menu').on('click', toggleMenu);
   $('.option--visible').on('click', (e) => {confHidden(e)})
@@ -65,6 +70,8 @@ $(document).ready(() => {
 
 $(window).resize(() => {
   evSize();
+  startFullPage();
+  scrollSwitch();
 });
 
 let btnContainer = document.getElementsByClassName('.catalog-btn');

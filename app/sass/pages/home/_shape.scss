@@ -13,7 +13,7 @@
   &__text {
     height: 100%;
     max-height: 100%;
-    transition: all .6s;
+    //transition: all .6s;
     margin-bottom: -85px;
     overflow: hidden;
     position: relative;
@@ -48,6 +48,7 @@
     position: relative;
     width: 581px;
     height: 581px;
+    transition: all .6s;
   }
 
   &__img {
@@ -117,7 +118,7 @@
     background-position: center;
     background-size: cover;
     opacity: 0;
-    //animation: .6s ease-in forwards circle-anim;
+    transition: .3s linear;
 
     &--1 {
       top: 0;
