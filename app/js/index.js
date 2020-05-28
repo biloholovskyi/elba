@@ -31,6 +31,16 @@ $(document).ready(() => {
       }
     }
   });
+
+  // list inner slider
+  $('.list__inner-slider').owlCarousel({
+    loop: false,
+    margin: 0,
+    item: 1,
+    autoWidth: true,
+    nav: false,
+    dots: true,
+  })
   
 
   // blog slider

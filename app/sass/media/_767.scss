@@ -18,9 +18,16 @@
     .img__block {
       padding: 20px;
       margin-bottom: 16px;
+      height: 124px;
 
       img {
         @include base-box(84px)
+      }
+
+      .list__inner-slider {
+        .inner__item {
+          max-height: 124px;
+        }
       }
     }
 
@@ -77,5 +84,23 @@
     .inner-content h1{
       font-size: 39px;
     }
-  }    
+  }
+
+  // catalog
+  .catalog-wrap {
+    justify-content: space-between;
+
+    .list__item {
+      max-width: calc(100% / 2 - 16px);
+
+      &:nth-child(3n+3) {
+        margin-right: 32px;
+      }
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+  }
+  // catalog end
 }
