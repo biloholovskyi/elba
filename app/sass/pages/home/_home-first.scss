@@ -57,7 +57,7 @@
         background: #FFFFFF;
         opacity: .7;
         z-index: 2;
-        animation: lineAnim 4s infinite ease;
+        animation: lineAnim 4s infinite linear;
       }
 
       .line__full {
@@ -90,6 +90,11 @@
     line-height: 88px;
     color: #FFFFFF;
     margin-bottom: 40px;
+    display: none;
+
+    &--active {
+      display: block;
+    }
   }
 
   &__desc {
@@ -99,6 +104,11 @@
     color: #FFFFFF;
     opacity: 0.7;
     margin-bottom: 40px;
+    display: none;
+
+    &--active {
+      display: block;
+    }
   }
 
   &__navigation {

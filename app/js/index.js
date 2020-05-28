@@ -9,10 +9,13 @@ import './modal-catalog';
 import './search';
 import './catalog-aside';
 import { scrollSwitch } from "./scrollScript";
+import { switchSlideFirst, autoSwitchFirst } from "./firstSlider";
 
-$(document).ready(() => {
+$(document).ready((e) => {
   startFullPage();
   evSize();
+
+  autoSwitchFirst(e);
 
   // collections slider
   $('.collections__slider').owlCarousel({
@@ -64,6 +67,7 @@ $(document).ready(() => {
   $('.order-new-element--main .new-item').on('click', (e) => {newMainElement(e)});
   $('.order-tabs .item').on('click', (e) => {switchTabs(e)});
   $('.configurator__main .conf__main-top .links .link, .conf-modal__close').on('click', (e) => toggleModal(e));
+  $('.home-first__nav .nav__item, .home-first__dots .dot').on('click', (e) => {switchSlideFirst(e)})
 
   $(document).on('click', (e) => {
     // close modal configurator
