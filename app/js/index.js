@@ -10,6 +10,7 @@ import './search';
 import './catalog-aside';
 import { scrollSwitch } from "./scrollScript";
 import { switchSlideFirst, autoSwitchFirst } from "./firstSlider";
+import { inspSlider } from "./inspiration";
 
 $(document).ready((e) => {
   startFullPage();
@@ -43,8 +44,7 @@ $(document).ready((e) => {
     autoWidth: true,
     nav: false,
     dots: true,
-  })
-  
+  });
 
   // blog slider
   $('.blog__slider').owlCarousel({
@@ -68,6 +68,7 @@ $(document).ready((e) => {
   $('.order-tabs .item').on('click', (e) => {switchTabs(e)});
   $('.configurator__main .conf__main-top .links .link, .conf-modal__close').on('click', (e) => toggleModal(e));
   $('.home-first__nav .nav__item, .home-first__dots .dot').on('click', (e) => {switchSlideFirst(e)})
+  $('.configurator__sidebar .conf__slider-nav .conf-slider__btn').on('click', (e) => {inspSlider(e)})
 
   $(document).on('click', (e) => {
     // close modal configurator
