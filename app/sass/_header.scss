@@ -78,6 +78,7 @@
       text-transform: uppercase;
       color: #1F1F22;
       margin-right: 48px;
+      transition: all .3s;
 
       &:last-child {
         margin-right: 0;
@@ -107,6 +108,11 @@
       border: 1px solid #E4E8EB;
       border-radius: 50%;
       cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        opacity: .7;
+      }
     }
   }
 

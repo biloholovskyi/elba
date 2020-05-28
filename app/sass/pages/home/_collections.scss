@@ -50,6 +50,11 @@
         background-repeat: no-repeat !important;
         background-size: 18px 8px !important;
         filter: invert(1);
+        transition: all .3s;
+
+        &:hover {
+          background-color: #F8F8F8;
+        }
       }
 
       .owl-prev {

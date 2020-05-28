@@ -128,6 +128,7 @@
       background-color: #fff;
       cursor: pointer;
       position: relative;
+      transition: all .3s;
 
       &::after {
         content: '';
@@ -139,6 +140,10 @@
         @include base-background(18px 8px);
         background-image: url(../media/icon/arrow.svg);
         filter: brightness(0);
+      }
+
+      &:hover {
+        background-color: #F8F8F8;
       }
     }
 
