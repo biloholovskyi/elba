@@ -1,4 +1,7 @@
 .configurator__sidebar {
+  overflow: hidden;
+  max-height: calc(100vh - 85px);
+
   .configurator__content {
     padding-top: 40px;
   }

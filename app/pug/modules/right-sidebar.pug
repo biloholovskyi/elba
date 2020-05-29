@@ -2,7 +2,7 @@
   .configurator__top
     .conf-sidebar__title#order-title Your order
 
-  .configurator__content
+  .configurator__content.conf-mobile-hidden
     .order-list
       .order-list__item
         img(src='./media/image/order1.png' alt='elba')
@@ -70,6 +70,7 @@
       .item.item--add + Add element
       .item.item--check Checkout
     .order-new-element.order-new-element--main
+      .order-mobile-head.conf-mobile-visible.order-head-cancel New element
       .order-list
         .new-item(data-type='body')
           img(src='./media/image/body.png' alt='body')
@@ -83,6 +84,7 @@
       .order-buttons
         .item.item--cancel Cancel
     .order-new-element.order-new-element--material.order-new-element--body
+      .order-mobile-head.conf-mobile-visible.order-head-type Select type
       .order-list
         .new-material
           img(src='./media/image/circle1.jpg' alt='body')
@@ -118,6 +120,7 @@
         .item.item--select Select type
         .item.item--continue Continue
     .order-new-element.order-new-element--material.order-new-element--tabs
+      .order-mobile-head.conf-mobile-visible.order-head-type Select type
       .order-tabs
         .item.item--active First
         .item Second
@@ -251,6 +254,7 @@
         .item.item--select Select type
         .item.item--continue Continue
     .order-new-element.order-new-element--material.order-new-element--straps
+      .order-mobile-head.conf-mobile-visible.order-head-type Select type
       .order-list
         .new-material
           img(src='./media/image/circle1.jpg' alt='body')
@@ -285,3 +289,79 @@
       .order-buttons
         .item.item--select Select type
         .item.item--continue Continue
+  .configurator__content.margin-left-right
+    .conf-mobile-slider.conf-mobile-visible.owl-carousel.owl-theme
+      .item__big
+        img(src='./media/image/slider-img-1.png' alt='elba')
+        .material Leather
+        .name Little E — Logo Max White & Black
+        .prices
+          .price 200€
+          .real-price 250€
+        .options
+          .option(style='background-image: url(./media/icon/visible.svg')
+          .option(style='background-image: url(./media/icon/edit.svg')
+          .option(style='background-image: url(./media/icon/trash.svg')
+
+      .item__big
+        img(src='./media/image/slider-img-1.png' alt='elba')
+        .material Leather
+        .name Little E — Logo Max White & Black
+        .prices
+          .price 200€
+          .real-price 250€
+        .options
+          .option(style='background-image: url(./media/icon/visible.svg')
+          .option(style='background-image: url(./media/icon/edit.svg')
+          .option(style='background-image: url(./media/icon/trash.svg')
+
+      .item__big
+        img(src='./media/image/slider-img-1.png' alt='elba')
+        .material Leather
+        .name Little E — Logo Max White & Black
+        .prices
+          .price 200€
+          .real-price 250€
+        .options
+          .option(style='background-image: url(./media/icon/visible.svg')
+          .option(style='background-image: url(./media/icon/edit.svg')
+          .option(style='background-image: url(./media/icon/trash.svg')
+
+      .item__big
+        img(src='./media/image/slider-img-1.png' alt='elba')
+        .material Leather
+        .name Little E — Logo Max White & Black
+        .prices
+          .price 200€
+          .real-price 250€
+        .options
+          .option(style='background-image: url(./media/icon/visible.svg')
+          .option(style='background-image: url(./media/icon/edit.svg')
+          .option(style='background-image: url(./media/icon/trash.svg')
+
+      .item__big
+        img(src='./media/image/slider-img-1.png' alt='elba')
+        .material Leather
+        .name Little E — Logo Max White & Black
+        .prices
+          .price 200€
+          .real-price 250€
+        .options
+          .option(style='background-image: url(./media/icon/visible.svg')
+          .option(style='background-image: url(./media/icon/edit.svg')
+          .option(style='background-image: url(./media/icon/trash.svg')
+
+  .conf-mobile-visible
+    .conf-mobile__text-info
+      .total Total:
+      .total-prices
+        .price € 1,420.00
+        .real-price 1,800.00
+      .total-text La livraison est offert et les retours sont gratuits à partir de 300€ d’achat en France métropolitaine.
+      .mobile-conf-links
+        .link + About this product
+        .link + Delivery and returns
+        .link + Service
+      .order-buttons
+        .item.item--add + Add element
+        .item.item--check Checkout

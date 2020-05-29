@@ -47,10 +47,29 @@ const toggleModal = (e) => {
   const header = $('.header');
   modal.toggleClass('conf-modal--show');
   if(modal.hasClass('conf-modal--show')) {
-    header.css('z-index', '1');
+    header.css('z-index', '1')
+    $('body').css({
+      'overflow': 'hidden'
+    });
   } else {
     header.css('z-index', '60');
+    $('body').css('overflow', 'visible');
   }
+}
+
+const closeMobileMain = () => {
+  $('.order-new-element').removeClass('order-new-element--show');
+}
+
+const closeMobileType = () => {
+  $('.order-new-element').removeClass('order-new-element--show');
+  $('.order-new-element--main').addClass('order-new-element--show');
+}
+
+const closeMobileModal = () => {
+  $('.conf-modal').removeClass('conf-modal--show');
+  $('.header').css('z-index', '60');
+  $('body').css('overflow', 'visible');
 }
 
 export {
@@ -59,5 +78,8 @@ export {
   newElement,
   newMainElement,
   switchTabs,
-  toggleModal
+  toggleModal,
+  closeMobileMain,
+  closeMobileType,
+  closeMobileModal
 }

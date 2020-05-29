@@ -8,6 +8,7 @@
   visibility: hidden;
   opacity: 0;
   transition: .3s;
+  overflow: hidden;
 
   &::after {
     content: '';

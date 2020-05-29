@@ -1,3 +1,16 @@
+@media (max-width: 1500px) {
+  .configurator__sidebar {
+    .order-list__item {
+      .info__options {
+        .option {
+          @include base-box(30px);
+          background-size: 16px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1260px) {
   .configurator__main {
     .conf__title {
@@ -125,14 +138,38 @@
   .configurator__top {
     height: 150px;
   }
+
+  .configurator__content {
+    max-height: calc(100vh - 150px - 33px);
+    height: calc(100vh - 150px);
+  }
+
+  .configurator__sidebar {
+    max-height: calc(100vh - 33px);
+  }
+
+  .configurator {
+    padding-bottom: 33px;
+  }
 }
 
 @media (max-width: 1060px) {
   .conf-mobile-hidden {
-    display: none !important;
+    visibility: hidden;
+    height: 0 !important;
+    overflow: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .conf-mobile-visible {
+    display: block !important;
   }
 
   .configurator {
+    padding-bottom: 0;
+    height: auto;
+
     .full-height {
       height: auto;
     }
@@ -167,6 +204,7 @@
 
   .configurator__sidebar {
     margin-top: 32px;
+    height: auto;
 
     .conf-sidebar__title {
       font-size: 14px;
@@ -176,5 +214,500 @@
     .configurator__content {
       padding-top: 16px;
     }
+  }
+
+  .margin-left-right {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+
+  .conf-mobile-slider {
+    padding-left: 24px;
+
+    .item {
+      display: flex;
+      width: 272px;
+
+      &__img-box {
+        background-color: #fff;
+        width: 124px;
+        min-width: 124px;
+        height: 124px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 24px;
+
+        img {
+          @include base-box(84px);
+          object-position: center;
+          object-fit: contain;
+        }
+      }
+
+      &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .price {
+          font-size: 12px;
+          line-height: 20px;
+          color: #7D838A;
+          margin-bottom: 8px;
+        }
+
+        .name {
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 20px;
+          color: #1F1F22;
+          margin-bottom: 16px;
+        }
+
+        .add-to-cart {
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 20px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #1F1F22;
+        }
+      }
+    }
+    
+    .item__big {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 50px;
+      max-width: 272px;
+
+      img {
+        @include base-box(128px);
+        display: block;
+        object-position: center;
+        object-fit: contain;
+        margin-bottom: 16px;
+      }
+
+      .material {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #1F1F22;
+        opacity: 0.3;
+        margin-bottom: 8px;
+      }
+
+      .name {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #1F1F22;
+        margin-bottom: 8px;
+      }
+
+      .prices {
+        display: flex;
+        margin-bottom: 24px;
+
+        .price {
+          font-size: 12px;
+          line-height: 20px;
+          color: #1F1F22;
+          margin-right: 12px;
+        }
+
+        .real-price {
+          font-size: 12px;
+          line-height: 20px;
+          text-decoration-line: line-through;
+          color: #7D838A;
+        }
+      }
+
+      .options {
+        display: flex;
+
+        .option {
+          @include base-box(48px);
+          @include base-background(20px);
+          border: 1px solid #E4E8EB;
+          border-radius: 50%;
+          margin-right: 16px;
+          cursor: pointer;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .conf-mobile-img {
+    display: block;
+    margin: 24px auto 10px;
+    width: 272px;
+    height: 272px;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .conf-mobile__text-info {
+    margin-top: 32px;
+
+    .total {
+      font-size: 14px;
+      line-height: 24px;
+      color: #565B62;
+    }
+
+    .total-prices {
+      display: flex;
+      align-items: flex-end;
+
+      .price {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 40px;
+        color: #1F1F22;
+        margin-right: 8px;
+      }
+
+      .real-price {
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration-line: line-through;
+        color: #7D838A;
+        margin-bottom: 7px;
+      }
+    }
+
+    .total-text {
+      margin-top: 24px;
+      font-size: 12px;
+      line-height: 20px;
+      color: #565B62;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #E4E8EB;
+    }
+
+    .mobile-conf-links {
+      padding: 24px 0 64px;
+
+      .link {
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #1F1F22;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .configurator__sidebar {
+    overflow: visible;
+
+    .order-list {
+      padding-bottom: 80px;
+    }
+
+    .order-new-element {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+
+      &--show {
+        visibility: visible;
+        z-index: 100;
+        opacity: 1;
+      }
+    }
+
+    .order-buttons {
+      .item:hover {
+
+      }
+    }
+  }
+
+  .order-mobile-head {
+    width: 100%;
+    height: 48px;
+    border-bottom: 1px solid #E4E8EB;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 48px;
+    color: #1F1F22;
+    padding: 0 24px 0 56px;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      @include base-box(24px);
+      @include base-background(contain);
+      background-image: url(../media/icon/back-arrow.svg);
+      display: block;
+      position: absolute;
+      top: 50%;
+      margin-top: -12px;
+      left: 24px;
+    }
+  }
+
+  .conf-modal__body {
+    right: 0;
+  }
+
+  .conf-modal--show {
+    .conf-modal__body {
+      max-width: 100%;
+      padding: 80px 24px 32px;
+      position: fixed;
+
+      .order-mobile-head {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      .conf-modal__title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 16px;
+      }
+
+      .conf-modal__sub-title {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 24px;
+      }
+
+      .conf-modal__text {
+        p {
+          font-size: 14px;
+          line-height: 24px;
+          margin-bottom: 25px;
+        }
+      }
+
+      .conf-modal__table {
+        margin-top: 32px;
+
+        &:last-child {
+          margin-top: 49px;
+        }
+
+        .item {
+          flex-direction: column;
+          margin-bottom: 16px;
+
+          .left {
+            width: 100%;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: #1F1F22;
+          }
+
+          .right {
+            font-size: 14px;
+            line-height: 24px;
+            color: #565B62;
+          }
+
+          .right--title {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 28px;
+            color: #1F1F22;
+          }
+
+          &--title {
+            margin-bottom: 24px;
+          }
+        }
+      }
+    }
+
+    .conf-modal__close {
+      display: none;
+    }
+  }
+}
+
+@media (max-height: 1000px) and (min-width: 1260px) {
+  .configurator__main {
+    .conf__title {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    .conf__main-top {
+      padding-top: 20px;
+
+      .text {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      .links {
+        margin-left: 5px;
+        max-width: calc(100% / 8 * 3);
+
+        .link {
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    .conf__img {
+      height: 224px;
+      width: 224px;
+    }
+
+    .conf__main-bottom {
+      .bot__total {
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      .bot__price {
+        font-size: 20px;
+        line-height: 32px;
+      }
+
+      .bot__real-price {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .bot__text {
+        font-size: 12px;
+        line-height: 20px;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .configurator__sidebar {
+    .conf-sidebar__title {
+      font-size: 24px;
+      line-height: 40px;
+    }
+
+    .configurator__content {
+      padding-top: 20px;
+    }
+
+    .conf__slider {
+      .item__img-box {
+        height: 120px;
+
+        img {
+          width: 82px;
+          height: 82px;
+        }
+      }
+
+      .item__info {
+        align-items: center;
+
+        .name {
+          font-size: 12px;
+          line-height: 16px;
+        }
+
+        .prices {
+          flex-direction: column;
+
+          .price {
+            font-size: 12px;
+            line-height: 16px;
+          }
+
+          .real-price {
+            font-size: 12px;
+            line-height: 16px;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .order-list__item {
+      img {
+        margin-right: 16px;
+      }
+
+      .info__name {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .info__price {
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      .info__options {
+        .option {
+          @include base-box(40px);
+        }
+      }
+    }
+  }
+
+  .configurator__top {
+    height: 150px;
+  }
+
+  .configurator__content {
+    max-height: calc(100vh - 150px - 33px);
+    height: calc(100vh - 150px);
+  }
+
+  .configurator__sidebar {
+    max-height: calc(100vh - 33px);
+  }
+
+  .configurator {
+    padding-bottom: 33px;
+  }
+}
+
+@media (max-height: 699px) and (min-width: 1060px) {
+  .configurator {
+    height: 100%;
+  }
+
+  .configurator__content {
+    height: 100%;
+    max-height: 515px;
+    min-height: 515px;
+  }
+
+  .configurator__sidebar {
+    max-height: calc(515px + 150px);
   }
 }
