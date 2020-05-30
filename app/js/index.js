@@ -1,7 +1,7 @@
 import 'normalize.css';
-import {startFullPage} from "./fullPage";
-import {evSize} from './eventVideo';
-import {toggleMenu} from "./mobileMenu";
+import { startFullPage } from "./fullPage";
+import { evSize } from './eventVideo';
+import { toggleMenu } from "./mobileMenu";
 import './factory-slider';
 import {
   confHidden,
@@ -18,14 +18,14 @@ import './accordion';
 import './modal-catalog';
 import './search';
 import './catalog-aside';
-import { scrollSwitch } from "./scrollScript";
+import { scrollSwitch, scrollAnim, bodyHeight } from "./scrollScript";
 import { switchSlideFirst, autoSwitchFirst } from "./firstSlider";
 import { inspSlider } from "./inspiration";
 
 $(document).ready((e) => {
-  startFullPage();
+  bodyHeight();
   evSize();
-
+  scrollAnim();
   autoSwitchFirst(e);
 
   // collections slider
@@ -73,11 +73,7 @@ $(document).ready((e) => {
     items: 1
   });
 
-  document.addEventListener('scroll', () => {scrollSwitch()})
-
-  if($('.fullPage__box').length > 0) {
-    scrollSwitch();
-  }
+  document.addEventListener('scroll', () => {scrollAnim()})
 
   $('.header__mobile .menu').on('click', toggleMenu);
   $('.option--visible').on('click', (e) => {confHidden(e)})
@@ -107,8 +103,8 @@ $(document).ready((e) => {
 
 $(window).resize(() => {
   evSize();
-  startFullPage();
-  scrollSwitch();
+  // startFullPage();
+  scrollAnim();
 });
 
 let btnContainer = document.getElementsByClassName('.catalog-btn');

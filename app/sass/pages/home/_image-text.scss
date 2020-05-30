@@ -72,6 +72,14 @@
     color: #1F1F22;
     white-space: nowrap;
     margin-bottom: 48px;
+    overflow: hidden;
+    height: 68px;
+    max-height: 68px;
+    width: max-content;
+
+    span {
+      display: block;
+    }
   }
 
   &__desc {
