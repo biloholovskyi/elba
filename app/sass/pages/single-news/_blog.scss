@@ -76,7 +76,7 @@
 				font-size: 28px;
 				line-height: 40px;
 				color: #000;
-				margin: 45px 0 64px;
+				margin: 45px 0 45px;
 				text-align: left;
 				width: 100%;
 				max-width: 557px;
@@ -97,19 +97,27 @@
 			.blog-list {
 				max-width: 557px;
 				margin: 32px 0 64px;
-
+				
 				.blog-item {
 					display: flex;
-
+					img.square {
+						width: 8px!important;
+						height: 8px!important;
+						margin-right: 48px;
+						margin-top: 8px;
+				}
 					.num {
 						font-style: normal;
 						font-weight: bold;
 						font-size: 16px;
 						line-height: 28px;
 						color: #1F1F22;
-						margin-right: 24px;
+						margin-right: 34px;
 					}
 				}
+			}
+			.block-square {
+				margin-top: 0!important;
 			}
 		}
 

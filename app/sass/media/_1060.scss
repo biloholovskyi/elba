@@ -364,7 +364,20 @@
       font-size: 11px;
     }
   }
-
+// footer
+  .footer {
+    .home-about {
+        .home-about__content {
+            .home-about__container {
+            }
+            .home-about__container:before {
+                content: '';
+                display: none;
+            }
+        }
+        
+    }
+  }
 }
 
 @keyframes img-anim-mobile {
