@@ -59,6 +59,13 @@
   // home about end
     // blog page
   #blog-page {
+    h1 {
+      margin: 0 0 34px;
+    }
+    .blog-back {
+      position: absolute;
+      top: 117px;
+    }
     .inner-content {
       .inner-photo {
         .text {

@@ -87,10 +87,11 @@
 
 // blog page
   #blog-page {
+    h1 {
+      font-size: 45px;
+    }
     .inner-content {
-      h1 {
-        font-size: 45px;
-      }
+     
       .gallery {
         align-items: center;
         img {
@@ -102,4 +103,23 @@
       }
     }
   }
+  // concept-page
+  #concept-page {
+    .inner-content {
+      .inner-block {
+        .concept-btn {
+          padding-left: 0;
+        }
+      }
+    }
+
+  }
+  // page materials
+  .materials-table {
+    .table-row {
+      & p:last-child {
+        margin-left: 40px!important;
+      }
+    }
+  } 
 }

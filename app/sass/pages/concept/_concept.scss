@@ -1,12 +1,27 @@
 #concept-page {
-    .inner-content {
-            .inner-photo {
-                .text {
-                        p {
-                            margin-bottom: 16px;
-                        }
-                }
-            }
+  .inner-content {
+    margin-bottom: 0;
+    .inner-photo {
+      .text {
+        p {
+          margin-bottom: 16px;
         }
-        
+      }
+    }
+
+    .inner-block {
+      .concept-btn {
+        align-self: flex-start;
+        padding-left: 294px;
+        margin-top: 60px;
+      }
+    }
+    .concept-block {
+      margin-bottom: 0;
+    }
+    .catalog-wrap {
+      margin-bottom: 180px;
+    }
+  }
+
 }

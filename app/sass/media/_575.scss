@@ -75,7 +75,7 @@
             }
             & p:last-child {
               font-size: 14px;
-              margin-left: 0;
+              margin-left: 0!important;
               margin-bottom: 15px;
             }
             
@@ -110,11 +110,16 @@
   } 
      // blog page
      #blog-page {
+      .blog-back {
+        top: 73px;
+      }
+      h1 {
+        margin-top: 20px;
+        font-size: 23px;
+        line-height: 38px;
+      }
       .inner-content {
-        h1 {
-          margin-top: 20px;
-          font-size: 23px;
-        }
+        
         .inner-photo {
           p {
             font-size: 14px;
