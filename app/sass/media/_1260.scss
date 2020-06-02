@@ -91,14 +91,20 @@
       font-size: 45px;
     }
     .inner-content {
-     
+      .blog-photo {
+        flex-direction: column;
+      }
       .gallery {
         align-items: center;
         img {
-          margin-bottom: 20px!important;
+          margin: 0 0 20px!important;
+          max-width: none;
         }
         .gallery-item {
           align-self: center;
+          max-height: none;
+          max-width: none;
+          width: 100%;
         }
       }
     }

@@ -21,6 +21,7 @@ import './catalog-aside';
 import { scrollSwitch, scrollAnim, bodyHeight } from "./scrollScript";
 import { switchSlideFirst, autoSwitchFirst } from "./firstSlider";
 import { inspSlider } from "./inspiration";
+import './sticky';
 
 $(document).ready((e) => {
   bodyHeight();
