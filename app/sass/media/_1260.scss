@@ -91,6 +91,12 @@
       font-size: 45px;
     }
     .inner-content {
+      .inner-photo {
+        .text {
+          max-width: 260px;
+          margin-top: 50px;  
+        }
+      }
       .blog-photo {
         flex-direction: column;
       }
