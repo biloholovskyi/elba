@@ -23,6 +23,7 @@ import { switchSlideFirst, autoSwitchFirst } from "./firstSlider";
 import { inspSlider } from "./inspiration";
 import './sticky';
 
+
 $(document).ready((e) => {
   bodyHeight();
   evSize();
@@ -104,9 +105,10 @@ $(document).ready((e) => {
     $('.sign_in-wrap').toggleClass('active', 1500);
   });
   // BASKET MODAL
-  $('.basket').on('click', function(){
-    $('.basket-wrap').toggleClass('active', 1500);
+  $('.basket').on('click', function(){ 
+    $('.basket-wrap').toggleClass('active');    
   });
+
 });
 
  

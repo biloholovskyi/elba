@@ -1,0 +1,46 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Create an account'
+
+    mixin asideNav(link,name)
+      li
+        a(href=link)=name 
+
+block content
+  include ../modules/header
+  include ../modules/modal-menu
+
+  #orders.inner-page 
+    .m-container
+      .m-row
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--2.m-col__mxs--1
+          include ../modules/aside-profile
+        .m-col.m-col--9.m-col__lg--10.m-col__ms--10.m-col__mxs--15
+          .inner-content
+            h1 My orders
+            .aside-catalog
+              ul
+                li.dropdown
+                  input(type="checkbox")
+                  a(href="#" data-toggle="dropdown")
+                    .order
+                      p 8-229-63794
+                      button During delivery
+                    .date 12.05.2020
+                    .price € 560.00
+                    .count 2
+                  ul.dropdown-menu
+                    li
+                      span Bag
+                    li
+                      span Backpack
+                    li
+                      span Tent
+ 
+        .m-col.m-col--3.m-col__lg--2.m-col__ms--1.m-col__mxs--1
+
+
+      .m-row
+        .m-col.m-col--15
+          include ../modules/footer   

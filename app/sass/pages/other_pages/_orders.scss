@@ -1,0 +1,99 @@
+#orders{
+  .inner-content{
+    .aside-catalog {
+      ul {
+        .dropdown{
+          padding: 32px 0;
+          border-bottom: 1px solid #D0D7DD;
+          a {
+            display: flex;
+            .order{
+              display: flex;
+              margin-right: 65px;
+              flex: 2;
+              p {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 28px;
+                color: #1F1F22;
+                margin-right: 8px;
+              }
+              button {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 20px;
+                color: #FFFFFF;
+                background: #B2B8BF;
+                border-radius: 4px;
+                padding: 4px 8px; 
+                border: none;
+              }
+            }
+            .date,
+            .price,
+            .count {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 28px;
+              color: #1F1F22; 
+              flex: 1;
+              // margin-right: 40px;
+            }
+            .date {
+              // margin-right: 100px;
+            }
+          }
+          [data-toggle="dropdown"] {
+        
+    
+            &:before {
+              position: absolute;
+              display: block;
+              content: '';
+              background-image: none;
+              width: 16px;
+              height: 2px;
+              background-color: #000;
+              top: 56px;
+              right: 10px;
+              transform: none;
+              transition: none;
+              padding: 0;
+            }
+          }
+
+          [data-toggle="dropdown"] {
+            &:after {
+              position: absolute;
+              display: block;
+              content: '';
+              background-image: none;
+              width: 2px;
+              height: 16px;
+              background-color: #000;
+              top: 49px;
+              right: 17px;
+              // transform: translateX(0);
+              transition: none; 
+              padding: 0;
+            }
+          }
+          &:checked + a[data-toggle="dropdown"] {
+            &:after {
+              transform: translateX(-1000px);
+              transition: transform .5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#orders .aside-catalog .dropdown>input[type=checkbox]:checked+a[data-toggle=dropdown]:after{
+  transform: scale(0);
+  transition: transform .5s;
+}
