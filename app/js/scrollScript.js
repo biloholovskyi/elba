@@ -1,967 +1,62 @@
-const scrollSwitch = () => {
-  const pages = $('.fullPage');
-  const dh = +pages.eq(0).attr('data-height');
-
-  if($(window).width() > 1060) {
-    $('.fullPage-wrapper').removeClass('fullPage-wrapper--active');
-  } else {
-    if(pageYOffset < dh * 7) {
-      $('.fullPage-wrapper').removeClass('fullPage-wrapper--active');
-    } else {
-      $('.fullPage-wrapper').addClass('fullPage-wrapper--active');
-    }
-  }
-
-  if(pageYOffset < dh) {
-    $('header').addClass('header--white');
-  } else {
-    $('header').removeClass('header--white');
-  }
-
-  if(pageYOffset < dh) {
-    hiddenAll(pages);
-
-    pages.eq(0).css({
-      'z-index': '51',
-      'opacity': '1'
-    })
-  } else if(pageYOffset < dh * 2) {
-    hiddenAll(pages);
-
-    const homeTextTitle = $('.home-text__title')
-    const homeTextDesc = $('.home-text__desc')
-
-    pages.eq(1).css({
-      'z-index': '51',
-      'opacity': '1'
-    });
-
-    // calc percent
-    const percent = (pageYOffset - dh) * 100 / dh;
-
-    let homeTextOpacity = `0.${(percent * 3).toFixed(0)}`;
-    if(+(percent * 3).toFixed(0) > 99) {
-      homeTextOpacity = 1;
-    }
-
-    if(+(percent * 3).toFixed(0) < 10) {
-      homeTextOpacity = 0.1;
-    }
-
-
-    let homeTextY = 100 - (percent * 2).toFixed(0);
-    let homeTextYDesc = homeTextY * .7;
-    if(+(percent * 2).toFixed(0) > 100) {
-      homeTextY = 0;
-    }
-
-    if(homeTextYDesc < 0) {
-      homeTextYDesc = 0;
-    }
-
-    if(percent > 50) {
-      homeTextOpacity = `0.${(100 - percent).toFixed(0)}`;
-
-      if((100 - percent).toFixed(0) < 10) {
-        homeTextOpacity = 0.1
-      }
-
-      homeTextY = (50 - percent).toFixed(0);
-      homeTextYDesc = homeTextY * .7;
-    }
-
-    homeTextTitle.css({
-      'opacity': homeTextOpacity,
-      'transform': 'translateY(' + homeTextY + 'px)'
-    });
-    homeTextDesc.css({
-      'opacity': homeTextOpacity,
-      'transform': 'translateY(' + homeTextYDesc + 'px)'
-    })
-  } else if(pageYOffset < dh * 3) {
-    hiddenAll(pages);
-
-    pages.eq(2).css({
-      'z-index': '51',
-      'opacity': '1'
-    });
-    const img1 = $('.image-text__img--1');
-    const img2 = $('.image-text__img--2');
-    const img3 = $('.image-text__img--3');
-
-    const imgTitle = $('.image-text__title');
-    const imgText = $('.image-text__desc');
-
-    img1.css('opacity', '0');
-    img2.css('opacity', '0');
-    img3.css('opacity', '0');
-
-    imgTitle.css({
-      'transform': 'translateY(100px)'
-    })
-
-    imgText.css({
-      'transform': 'translateY(100px)',
-    })
-
-    // calc percent
-    const percent = (pageYOffset - dh * 2) * 100 / dh;
-    let opacityImg = `0.${(percent * 2.5).toFixed(0)}`;
-    if((percent * 2.5).toFixed(0) > 99) {
-      opacityImg = 1
-    }
-
-    if(percent > 10) {
-      img1.css('opacity', opacityImg);
-      img2.css('opacity', opacityImg);
-      img3.css('opacity', opacityImg);
-    }
-
-    let imgTextOpacity = `0.${(percent * 3).toFixed(0)}`;
-    if(+(percent * 3).toFixed(0) > 99) {
-      imgTextOpacity = 1;
-    }
-
-    if(+(percent * 3).toFixed(0) < 10) {
-      imgTextOpacity = 0.1;
-    }
-
-    let transTitle = 100 - (percent * 2).toFixed(0);
-    let transDesc = transTitle * .6;
-    if(+(percent * 2).toFixed(0) > 100) {
-      transTitle = 0;
-    }
-
-    if(transDesc < 0) {
-      transDesc = 0;
-    }
-
-
-    if(percent > 50) {
-      imgTextOpacity = `0.${(100 - percent).toFixed(0)}`;
-
-      if((100 - percent).toFixed(0) < 10) {
-        imgTextOpacity = 0.1
-      }
-
-      transTitle = (50 - percent).toFixed(0);
-      transDesc = transTitle * .6;
-    }
-
-    imgTitle.css({
-      'transform': 'translateY(' + transTitle + 'px)',
-      'opacity': imgTextOpacity
-    })
-
-    imgText.css({
-      'transform': 'translateY(' + transDesc + 'px)',
-      'opacity': imgTextOpacity
-    })
-  } else if(pageYOffset < dh * 4) {
-    hiddenAll(pages);
-
-    pages.eq(3).css({
-      'z-index': '51',
-      'opacity': '1'
-    });
-    const img4 = $('.image-text__img--4');
-
-    const imgTitle = $('.image-text__title');
-    const imgText = $('.image-text__desc');
-
-    img4.css('opacity', '0');
-
-    imgTitle.css({
-      'transform': 'translateY(100px)'
-    })
-
-    imgText.css({
-      'transform': 'translateY(100px)',
-    })
-
-    // calc percent
-    const percent = (pageYOffset - dh * 3) * 100 / dh;
-    let opacityImg = `0.${(percent * 2.5).toFixed(0)}`;
-    if((percent * 2.5).toFixed(0) > 99) {
-      opacityImg = 1
-    }
-
-    if(percent > 10) {
-      img4.css('opacity', opacityImg);
-    }
-
-    let imgTextOpacity = `0.${(percent * 3).toFixed(0)}`;
-    if(+(percent * 3).toFixed(0) > 99) {
-      imgTextOpacity = 1;
-    }
-
-    if(+(percent * 3).toFixed(0) < 10) {
-      imgTextOpacity = 0.1;
-    }
-
-    let transTitle = 100 - (percent * 2).toFixed(0);
-    let transDesc = transTitle * .6;
-    if(+(percent * 2).toFixed(0) > 100) {
-      transTitle = 0;
-    }
-
-    if(transDesc < 0) {
-      transDesc = 0;
-    }
-
-
-    if(percent > 50) {
-      imgTextOpacity = `0.${(100 - percent).toFixed(0)}`;
-
-      if((100 - percent).toFixed(0) < 10) {
-        imgTextOpacity = 0.1
-      }
-
-      transTitle = (50 - percent).toFixed(0);
-      transDesc = transTitle * .6;
-    }
-
-    imgTitle.css({
-      'transform': 'translateY(' + transTitle + 'px)',
-      'opacity': imgTextOpacity
-    })
-
-    imgText.css({
-      'transform': 'translateY(' + transDesc + 'px)',
-      'opacity': imgTextOpacity
-    })
-  } else if(pageYOffset < dh * 5) {
-    hiddenAll(pages);
-
-    // shapeText();
-
-    pages.eq(4).css({
-      'z-index': '51',
-      'opacity': '1'
-    });
-
-    const shapeText = $('.shape__text');
-    const shapeImages = $('.shape__img');
-    const shapeCircle = $('.shape__circle');
-
-    shapeImages.each(function () {
-      $(this).css('opacity', '0');
-      $(this).css('transform', 'rotate(0)');
-    })
-
-    shapeCircle.each(function () {
-      $(this).css('opacity', '0');
-    })
-
-    shapeText.css('opacity', '0');
-    // calc percent
-    const percent = (pageYOffset - dh * 4) * 100 / dh;
-
-    if(percent > 2.5) {
-      shapeImages.eq(0).css({
-        'opacity': '1',
-        'transform': 'rotate(0)'
-      })
-    } else {
-      shapeImages.eq(0).css({
-        'opacity': '0',
-        'transform': 'rotate(0)'
-      })
-    }
-    if(percent > 2.5 * 2) {
-      shapeImages.eq(1).css({
-        'opacity': '1',
-        'transform': 'rotate(-22.5deg)'
-      })
-    } else {
-      shapeImages.eq(1).css({
-        'opacity': '0',
-        'transform': 'rotate(0)'
-      })
-    }
-    if(percent > 2.5 * 3) {
-      shapeImages.eq(2).css({
-        'opacity': '1',
-        'transform': 'rotate(-45deg)'
-      })
-    } else {
-      shapeImages.eq(2).css({
-        'opacity': '0',
-        'transform': 'rotate(0)'
-      })
-    }
-
-    if(percent > 2.5 * 4) {
-      shapeImages.eq(3).css({
-        'opacity': '1',
-        'transform': 'rotate(-67.5deg)'
-      })
-    } else {
-      shapeImages.eq(3).css({
-        'opacity': '0',
-        'transform': 'rotate(0)'
-      })
-    }
-
-    if(percent > 2.5 * 5) {
-      shapeImages.eq(4).css({
-        'opacity': '1',
-        'transform': 'rotate(-90deg)'
-      })
-    } else {
-      shapeImages.eq(4).css({
-        'opacity': '0',
-        'transform': 'rotate(0)'
-      })
-    }
-
-    if(percent > 2.5 * 6) {
-      shapeImages.eq(5).css({
-        'opacity': '1',
-        'transform': 'rotate(-112.5deg)'
-      })
-    } else {
-      shapeImages.eq(5).css({
-        'opacity': '0',
-        'transform': 'rotate(0)'
-      })
-    }
-
-    if(percent > 2.5 * 7) {
-      shapeImages.eq(6).css({
-        'opacity': '1',
-        'transform': 'rotate(-135deg)'
-      })
-    } else {
-      shapeImages.eq(6).css({
-        'opacity': '0',
-        'transform': 'rotate(0)'
-      })
-    }
-
-    if(percent > 2.5 * 8) {
-      shapeImages.eq(7).css({
-        'opacity': '1',
-        'transform': 'rotate(-157.5deg)'
-      })
-    } else {
-      shapeImages.eq(7).css({
-        'opacity': '0',
-        'transform': 'rotate(0)'
-      })
-    }
-
-    if(percent > 2.5 * 9) {
-      shapeCircle.eq(0).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 10) {
-      shapeCircle.eq(1).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 11) {
-      shapeCircle.eq(2).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 12) {
-      shapeCircle.eq(3).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 13) {
-      shapeCircle.eq(4).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 14) {
-      shapeCircle.eq(5).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 15) {
-      shapeCircle.eq(6).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 16) {
-      shapeCircle.eq(7).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 17) {
-      shapeCircle.eq(8).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 18) {
-      shapeCircle.eq(9).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 19) {
-      shapeCircle.eq(10).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 20) {
-      shapeCircle.eq(11).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 21) {
-      shapeCircle.eq(12).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 22) {
-      shapeCircle.eq(13).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 23) {
-      shapeCircle.eq(14).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 24) {
-      shapeCircle.eq(15).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    if(percent > 2.5 * 25) {
-      shapeCircle.eq(16).css({
-        'opacity': '1',
-      })
-    } else {
-      shapeCircle.eq(0).css({
-        'opacity': '0'
-      })
-    }
-
-    const paragraph = $('.shape__text p');
-    const padding = $('.shape__padding');
-    shapeText.css({
-      'opacity': '0',
-      'max-height': $(window).height() + 'px',
-    })
-    padding.css('height', paddingHeight + 'px');
-    const paddingHeight = $(window).height();
-    const smallPadding = $(window).height() / 2 - 60;
-    let opacity = 1;
-    paragraph.each(function () {
-      $(this).css('opacity', opacity);
-      opacity = opacity > 0 ? opacity - 0.3 : 0;
-    });
-
-    if(percent > 75) {
-      if($(window).width() > 1060) {
-        $('.shape__imgs').css('margin-left', 'calc(100% - 581px)');
-      } else {
-        $('.shape__imgs').css('margin-left', '0');
-      }
-
-
-
-      shapeText.css('overflow', 'auto');
-      shapeText.css('transition', 'all .3s');
-      shapeText.css('opacity', '1');
-      padding.css({
-        'transition': 'all .6s',
-        'height': smallPadding + 'px'
-      });
-    } else {
-      $('.shape__imgs').css('margin-left', '0');
-    }
-  } else if(pageYOffset < dh * 6) {
-    hiddenAll(pages);
-
-    // shapeText();
-
-    pages.eq(5).css({
-      'z-index': '51',
-      'opacity': '1'
-    });
-
-    const title = $('.collections .collect__nav-box .title');
-    const collection = $('.collect-slider__item');
-
-    title.css({
-      'transform': 'translateY(100px)'
-    })
-
-    collection.each(function () {
-      $(this).css({
-        'transform': 'translateY(100px)'
-      })
-    })
-
-    // calc percent
-    const percent = (pageYOffset - dh * 5) * 100 / dh;
-    let opacity = `0.${(percent * 2.5).toFixed(0)}`;
-    if((percent * 2.5).toFixed(0) > 99) {
-      opacity = 1
-    }
-
-    let imgOpacity = `0.${(percent * 3).toFixed(0)}`;
-    if(+(percent * 3).toFixed(0) > 99) {
-      imgOpacity = 1;
-    }
-
-    if(+(percent * 3).toFixed(0) < 10) {
-      imgOpacity = 0.1;
-    }
-
-    let transTitle = 100 - (percent * 2).toFixed(0);
-    let transImg = transTitle * .6;
-    if(+(percent * 2).toFixed(0) > 100) {
-      transTitle = 0;
-    }
-
-    if(transImg < 0) {
-      transImg = 0;
-    }
-
-
-    if(percent > 50) {
-      imgOpacity = `0.${(100 - percent).toFixed(0)}`;
-
-      if((100 - percent).toFixed(0) < 10) {
-        imgOpacity = 0.1
-      }
-
-      transTitle = (50 - percent).toFixed(0);
-      transImg = transTitle * .6;
-    }
-
-    title.css({
-      'transform': 'translateY(' + transTitle + 'px)',
-      'opacity': imgOpacity
-    })
-    collection.each(function (index = 1) {
-      index = index + 3.5;
-      transImg = transTitle * index;
-
-      if(transImg < 0) {
-        transImg = 0;
-      }
-      $(this).css({
-        'transform': 'translateY(' + transImg + 'px)',
-        'opacity': imgOpacity
-      })
-    })
-  } else if(pageYOffset < dh * 7) {
-    hiddenAll(pages);
-
-    pages.eq(6).css({
-      'z-index': '51',
-      'opacity': '1'
-    });
-
-    const col = $('.list__col');
-    const text = $('.list__text');
-
-    text.css({
-      'transform': 'translateY(100px)'
-    })
-
-    col.each(function () {
-      $(this).css({
-        'transform': 'translateY(100px)'
-      })
-    })
-
-    // calc percent
-    const percent = (pageYOffset - dh * 6) * 100 / dh;
-
-    let trans = 100 - (percent * 2).toFixed(0);
-    let transImg = trans * .6;
-    if(+(percent * 2).toFixed(0) > 100) {
-      trans = 0;
-    }
-
-    if(transImg < 0) {
-      transImg = 0;
-    }
-
-
-    if(percent > 50) {
-      trans = (50 - percent).toFixed(0);
-      transImg = trans * .6;
-    }
-
-    text.css({
-      'transform': 'translateY(' + trans + 'px)'
-    })
-    col.each(function (index = 1) {
-      index = index + 3.5 / percent;
-      transImg = trans * index;
-
-      if(transImg < 0) {
-        transImg = 0;
-      }
-      $(this).css({
-        'transform': 'translateY(' + transImg + 'px)'
-      })
-    })
-  } else if(pageYOffset < dh * 8) {
-    hiddenAll(pages);
-
-    pages.eq(7).css({
-      'z-index': '51',
-      'opacity': '1'
-    });
-
-    if($(window).width() > 1060) {
-      const title = $('.event__title');
-      const text = $('.event__desc');
-      const link = $('.text__bottom .arrow-link');
-
-      title.css({
-        'transform': 'translateY(100px)'
-      })
-      text.css({
-        'transform': 'translateY(100px)'
-      })
-      link.css({
-        'transform': 'translateY(100px)'
-      })
-
-      // calc percent
-      const percent = (pageYOffset - dh * 7) * 100 / dh;
-
-      let trans = 100 - (percent * 2).toFixed(0);
-      let transImg = trans * .6;
-      if(+(percent * 2).toFixed(0) > 100) {
-        trans = 0;
-      }
-
-      if(transImg < 0) {
-        transImg = 0;
-      }
-
-      let opacity = `0.${(percent * 3).toFixed(0)}`;
-      if(+(percent * 3).toFixed(0) > 99) {
-        opacity = 1;
-      }
-
-      if(+(percent * 3).toFixed(0) < 10) {
-        opacity = 0.1;
-      }
-
-      let transTitle = 100 - (percent * 2).toFixed(0);
-      let transDesc = transTitle * .6;
-      let transLink = transDesc * .6;
-      if(+(percent * 2).toFixed(0) > 100) {
-        transTitle = 0;
-      }
-
-      if(transDesc < 0) {
-        transDesc = 0;
-      }
-
-      if(transLink < 0) {
-        transLink = 0;
-      }
-
-
-      if(percent > 50) {
-        opacity = `0.${(100 - percent).toFixed(0)}`;
-
-        if((100 - percent).toFixed(0) < 10) {
-          opacity = 0.1
-        }
-
-        transTitle = (50 - percent).toFixed(0);
-        transDesc = transTitle * .6;
-        transLink = transDesc * .6;
-      }
-
-      title.css({
-        'transform': 'translateY(' + transTitle + 'px)',
-        'opacity': opacity
-      })
-
-      text.css({
-        'transform': 'translateY(' + transDesc + 'px)',
-        'opacity': opacity
-      })
-
-      link.css({
-        'transform': 'translateY(' + transLink + 'px)',
-        'opacity': opacity
-      })
-
-      if(percent > 80) {
-        $('.event__video-block').css({
-          'transform': 'translateY(' + transTitle * 2 + 'px)',
-          'transition': 'all .3s'
-        })
-      } else {
-        $('.event__video-block').css({
-          'transform': 'translateY(0px)',
-          'transition': 'all .3s'
-        })
-      }
-    }
-  } else if(pageYOffset < dh * 9) {
-    hiddenAll(pages);
-
-    pages.eq(8).css({
-      'z-index': '51',
-      'opacity': '1'
-    });
-
-    if($(window).width() > 1060) {
-      const title = $('.blog__title');
-      const item = $('.blog__list .list__row .item');
-
-      title.css({
-        'transform': 'translateY(100px)'
-      })
-
-      item.each(function () {
-        $(this).css({
-          'transform': 'translateY(100px)'
-        })
-      })
-
-      // calc percent
-      const percent = (pageYOffset - dh * 8) * 100 / dh;
-      let opacity = `0.${(percent * 2.5).toFixed(0)}`;
-      if((percent * 2.5).toFixed(0) > 99) {
-        opacity = 1
-      }
-
-      let imgOpacity = `0.${(percent * 3).toFixed(0)}`;
-      if(+(percent * 3).toFixed(0) > 99) {
-        imgOpacity = 1;
-      }
-
-      if(+(percent * 3).toFixed(0) < 10) {
-        imgOpacity = 0.1;
-      }
-
-      let transTitle = 100 - (percent * 2).toFixed(0);
-      let transImg = transTitle * .6;
-      if(+(percent * 2).toFixed(0) > 100) {
-        transTitle = 0;
-      }
-
-      if(transImg < 0) {
-        transImg = 0;
-      }
-
-
-      if(percent > 50) {
-        imgOpacity = `0.${(100 - percent).toFixed(0)}`;
-
-        if((100 - percent).toFixed(0) < 10) {
-          imgOpacity = 0.1
-        }
-
-        transTitle = (50 - percent).toFixed(0);
-        transImg = transTitle * .6;
-      }
-
-      title.css({
-        'transform': 'translateY(' + transTitle + 'px)',
-        'opacity': imgOpacity
-      })
-      item.each(function (index = 1) {
-        index = index + 3.5 / percent;
-        transImg = transTitle * index;
-        imgOpacity = imgOpacity / index * 1.5;
-
-        if(transImg < 0) {
-          transImg = 0;
-        }
-        $(this).css({
-          'transform': 'translateY(' + transImg + 'px)',
-          'opacity': imgOpacity
-        })
-      })
-    } else {
-      // $('.fullPage-wrapper').addClass('fullPage-wrapper--active');
-    }
-  } else if(pageYOffset < dh * 10) {
-    hiddenAll(pages);
-
-    pages.eq(9).css({
-      'z-index': '51',
-      'opacity': '1'
-    });
-
-    const top = $('.home-about__col .coll__top');
-    const center = $('.home-about__col .coll__center');
-    const bottom = $('.home-about__col .coll__bottom');
-
-    // calc percent
-    const percent = (pageYOffset - dh * 9) * 100 / dh;
-    let opacity = `0.${(percent * 2.5).toFixed(0)}`;
-    if((percent * 2.5).toFixed(0) > 99) {
-      opacity = 1
-    }
-
-    let trans = 100 - (percent * 2).toFixed(0);
-    if(+(percent * 2).toFixed(0) > 100) {
-      trans = 0;
-    }
-
-    // top.each(function (index = 1) {
-    //   index = index + 3.5 / percent;
-    //   trans = trans * index;
-    //   opacity = opacity / index * 1.5;
-    //
-    //   if(trans < 0) {
-    //     trans = 0;
-    //   }
-    //   $(this).css({
-    //     'transform': 'translateY(' + trans + 'px)',
-    //     'opacity': opacity
-    //   })
-    // })
-  } else {
-    hiddenAll(pages);
-  }
-}
-
 const scrollAnim = () => {
-  if($('.fullPage__box').length < 1) {
+  if ($('.fullPage__box').length < 1) {
     return
   }
-  console.log(pageYOffset);
+
+  if (pageYOffset > 200) {
+    $('.follow-us__link').addClass('follow-us__link--dark');
+    $('.header').removeClass('header--white');
+  } else {
+    $('.follow-us__link').removeClass('follow-us__link--dark');
+    $('.header').addClass('header--white');
+  }
+
   // first block
-  if(pageYOffset === 0) {
+  if (pageYOffset === 0) {
     const first = $('.home-first');
     first.css({
       'opacity': 1
     })
   }
-  if(pageYOffset > 0) {
+  if (pageYOffset > 0) {
     const n1 = 1;
     const n2 = 200;
-    const N = n2 - n1;
     const n = pageYOffset - n1;
     const p = n / (n2 - n1) * 100;
     const op1 = 1;
-    const op2 = 0;
     let op = op1 - (op1 * (p / 100));
 
-    if(op < 0.1) {
+    if (op < 0.1) {
       op = 0;
     }
 
-    if(op > 0.9) {
+    if (op > 0.9) {
       op = 1
     }
 
     const block = $('.home-first');
     block.css({
-      'opacity': op
+      'opacity': op,
+      'z-index': 51
     });
   }
   // second block title
-  if(pageYOffset > 200) {
+  if (pageYOffset > 200) {
     const n1 = 200;
     const n2 = 402;
     const n = pageYOffset - n1;
     const p = n / (n2 - n1) * 100;
-    const op1 = 0;
     const op2 = 1;
     const tr1 = 100;
-    const tr2 = 0;
     let op = op2 * (p / 100);
     let tr = tr1 - (tr1 * (p / 100));
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
       tr = 0;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
       tr = 100;
     }
@@ -970,7 +65,8 @@ const scrollAnim = () => {
     const block = $('.home-text').eq(0);
 
     block.css({
-      'opacity': 1
+      'opacity': 1,
+      'z-index': 52
     })
 
     title.css({
@@ -983,7 +79,8 @@ const scrollAnim = () => {
     const title = $('.home-text__title');
 
     block.css({
-      'opacity': 0
+      'opacity': 0,
+      'z-index': 50
     });
 
     title.css({
@@ -996,7 +93,7 @@ const scrollAnim = () => {
   }
 
   // second block desc
-  if(pageYOffset > 295) {
+  if (pageYOffset > 295) {
     const n1 = 295;
     const n2 = 511;
     const n = pageYOffset - n1;
@@ -1008,12 +105,12 @@ const scrollAnim = () => {
     let op = op2 * (p / 100);
     let tr = tr1 - (tr1 * (p / 100));
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
       tr = 0;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
       tr = 100;
     }
@@ -1033,7 +130,7 @@ const scrollAnim = () => {
   }
 
   // second block title hidden
-  if(pageYOffset > 1000) {
+  if (pageYOffset > 1000) {
     const n1 = 1000;
     const n2 = 1200;
     const n = pageYOffset - n1;
@@ -1045,12 +142,12 @@ const scrollAnim = () => {
     let op = op1 - (op1 * (p / 100));
     let tr = -tr2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 0;
       tr = -100;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 1;
       tr = 0;
     }
@@ -1064,7 +161,7 @@ const scrollAnim = () => {
   }
 
   // second block desc hidden
-  if(pageYOffset > 1100) {
+  if (pageYOffset > 1100) {
     const n1 = 1100;
     const n2 = 1300;
     const n = pageYOffset - n1;
@@ -1076,12 +173,12 @@ const scrollAnim = () => {
     let op = op1 - (op1 * (p / 100));
     let tr = -tr2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 0;
       tr = -100;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 1;
       tr = 0;
     }
@@ -1095,7 +192,7 @@ const scrollAnim = () => {
   }
 
   // image-text 1 img
-  if(pageYOffset > 1400) {
+  if (pageYOffset > 1400) {
     const n1 = 1400;
     const n2 = 1600;
     const n = pageYOffset - n1;
@@ -1104,11 +201,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1118,7 +215,8 @@ const scrollAnim = () => {
     const block = $('.image-text').eq(0);
 
     block.css({
-      'opacity': 1
+      'opacity': 1,
+      'z-index': 53
     });
 
     img1.css({
@@ -1134,12 +232,13 @@ const scrollAnim = () => {
     const block = $('.image-text').eq(0);
 
     block.css({
-      'opacity': 0
+      'opacity': 0,
+      'z-index': 50
     });
   }
 
   // image-text 1 title
-  if(pageYOffset > 1850) {
+  if (pageYOffset > 1850) {
     const n1 = 1850;
     const n2 = 2050;
     const n = pageYOffset - n1;
@@ -1148,11 +247,11 @@ const scrollAnim = () => {
     const tr2 = 0;
     let tr = tr1 - (tr1 * (p / 100));
 
-    if(p > 99) {
+    if (p > 99) {
       tr = 0;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       tr = 60;
     }
 
@@ -1172,7 +271,7 @@ const scrollAnim = () => {
   }
 
   // image-text 1 desc
-  if(pageYOffset > 1945) {
+  if (pageYOffset > 1945) {
     const n1 = 1945;
     const n2 = 2245;
     const n = pageYOffset - n1;
@@ -1184,12 +283,12 @@ const scrollAnim = () => {
     let op = op2 * (p / 100);
     let tr = tr1 - (tr1 * (p / 100));
 
-    if(p > 99) {
+    if (p > 99) {
       tr = 0;
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       tr = 60;
       op = 0;
     }
@@ -1210,7 +309,7 @@ const scrollAnim = () => {
   }
 
   // image-text 1 title hidden
-  if(pageYOffset > 2610) {
+  if (pageYOffset > 2610) {
     const n1 = 2610;
     const n2 = 2810;
     const n = pageYOffset - n1;
@@ -1219,11 +318,11 @@ const scrollAnim = () => {
     const tr2 = 60;
     let tr = tr2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       tr = 60;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       tr = 0;
     }
 
@@ -1236,7 +335,7 @@ const scrollAnim = () => {
   }
 
   // image-text 1 desc hidden
-  if(pageYOffset > 3005) {
+  if (pageYOffset > 3005) {
     const n1 = 3005;
     const n2 = 3205;
     const n = pageYOffset - n1;
@@ -1248,12 +347,12 @@ const scrollAnim = () => {
     let op = op1 - (op1 * (p / 100));
     let tr = tr2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       tr = 60;
       op = 0;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       tr = 0;
       op = 1;
     }
@@ -1267,20 +366,19 @@ const scrollAnim = () => {
   }
 
   // image-text 2 img
-  if(pageYOffset > 3205) {
+  if (pageYOffset > 3205) {
     const n1 = 3205;
     const n2 = 3410;
     const n = pageYOffset - n1;
     const p = n / (n2 - n1) * 100;
-    const op1 = 0;
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1291,7 +389,8 @@ const scrollAnim = () => {
     const block = $('.image-text').eq(1);
 
     block.css({
-      'opacity': 1
+      'opacity': 1,
+      'z-index': 54
     });
 
     img1.css({
@@ -1310,12 +409,13 @@ const scrollAnim = () => {
     const block = $('.image-text').eq(1);
 
     block.css({
-      'opacity': 0
+      'opacity': 0,
+      'z-index': 50
     });
   }
 
   // image-text 2 title
-  if(pageYOffset > 3410) {
+  if (pageYOffset > 3410) {
     const n1 = 3410;
     const n2 = 3595;
     const n = pageYOffset - n1;
@@ -1324,11 +424,11 @@ const scrollAnim = () => {
     const tr2 = 0;
     let tr = tr1 - (tr1 * (p / 100));
 
-    if(p > 99) {
+    if (p > 99) {
       tr = 0;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       tr = 60;
     }
 
@@ -1348,7 +448,7 @@ const scrollAnim = () => {
   }
 
   // image-text 2 desc
-  if(pageYOffset > 3505) {
+  if (pageYOffset > 3505) {
     const n1 = 3505;
     const n2 = 3690;
     const n = pageYOffset - n1;
@@ -1360,12 +460,12 @@ const scrollAnim = () => {
     let op = op2 * (p / 100);
     let tr = tr1 - (tr1 * (p / 100));
 
-    if(p > 99) {
+    if (p > 99) {
       tr = 0;
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       tr = 60;
       op = 0;
     }
@@ -1386,7 +486,7 @@ const scrollAnim = () => {
   }
 
   // image-text 2 title hidden
-  if(pageYOffset > 4150) {
+  if (pageYOffset > 4150) {
     const n1 = 4150;
     const n2 = 4326;
     const n = pageYOffset - n1;
@@ -1395,11 +495,11 @@ const scrollAnim = () => {
     const tr2 = 60;
     let tr = tr2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       tr = 60;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       tr = 0;
     }
 
@@ -1412,7 +512,7 @@ const scrollAnim = () => {
   }
 
   // image-text 2 desc hidden
-  if(pageYOffset > 4238) {
+  if (pageYOffset > 4238) {
     const n1 = 4238;
     const n2 = 4414;
     const n = pageYOffset - n1;
@@ -1424,12 +524,12 @@ const scrollAnim = () => {
     let op = op1 - (op1 * (p / 100));
     let tr = tr2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       tr = 60;
       op = 0;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       tr = 0;
       op = 1;
     }
@@ -1443,7 +543,7 @@ const scrollAnim = () => {
   }
 
   // img-text 2 hidden
-  if(pageYOffset > 4414) {
+  if (pageYOffset > 4414) {
     const n1 = 4414;
     const n2 = 4514;
     const n = pageYOffset - n1;
@@ -1452,11 +552,11 @@ const scrollAnim = () => {
     const op2 = 0;
     let op = op1 - (op1 * (p / 100));
 
-    if(p > 99) {
+    if (p > 99) {
       op = 0;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 1;
     }
 
@@ -1468,7 +568,7 @@ const scrollAnim = () => {
   }
 
   // shape shape-1
-  if(pageYOffset > 4614) {
+  if (pageYOffset > 4614) {
     const n1 = 4614;
     const n2 = 4714;
     const n = pageYOffset - n1;
@@ -1477,11 +577,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1494,7 +594,8 @@ const scrollAnim = () => {
     })
 
     block.css({
-      'opacity': 1
+      'opacity': 1,
+      'z-index': 55
     })
 
     shape.css({
@@ -1505,7 +606,8 @@ const scrollAnim = () => {
     const block = $('.shape');
 
     block.css({
-      'opacity': 0
+      'opacity': 0,
+      'z-index': 50
     })
 
     shape.css({
@@ -1514,7 +616,7 @@ const scrollAnim = () => {
   }
 
   // shape rotate all
-  if(pageYOffset > 4714) {
+  if (pageYOffset > 4714) {
     const n1 = 4714;
     const n2 = 4814;
     const n = pageYOffset - n1;
@@ -1537,7 +639,7 @@ const scrollAnim = () => {
     let rtf7 = -rt7 * (p / 100);
     let rtf8 = -rt8 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
       rtf2 = -22.5;
       rtf3 = -45;
@@ -1548,7 +650,7 @@ const scrollAnim = () => {
       rtf8 = -157.5;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
       rtf2 = 0;
       rtf3 = 0;
@@ -1635,7 +737,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 1
-  if(pageYOffset > 4914) {
+  if (pageYOffset > 4914) {
     const n1 = 4914;
     const n2 = 5014;
     const n = pageYOffset - n1;
@@ -1643,11 +745,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1665,7 +767,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 2
-  if(pageYOffset > 4934) {
+  if (pageYOffset > 4934) {
     const n1 = 4934;
     const n2 = 5034;
     const n = pageYOffset - n1;
@@ -1673,11 +775,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1695,7 +797,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 3
-  if(pageYOffset > 4954) {
+  if (pageYOffset > 4954) {
     const n1 = 4954;
     const n2 = 5054;
     const n = pageYOffset - n1;
@@ -1703,11 +805,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1725,7 +827,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 4
-  if(pageYOffset > 4974) {
+  if (pageYOffset > 4974) {
     const n1 = 4974;
     const n2 = 5074;
     const n = pageYOffset - n1;
@@ -1733,11 +835,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1755,7 +857,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 5
-  if(pageYOffset > 4994) {
+  if (pageYOffset > 4994) {
     const n1 = 4994;
     const n2 = 5094;
     const n = pageYOffset - n1;
@@ -1763,11 +865,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1785,7 +887,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 6
-  if(pageYOffset > 5014) {
+  if (pageYOffset > 5014) {
     const n1 = 5014;
     const n2 = 5114;
     const n = pageYOffset - n1;
@@ -1793,11 +895,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1815,7 +917,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 7
-  if(pageYOffset > 5034) {
+  if (pageYOffset > 5034) {
     const n1 = 5034;
     const n2 = 5134;
     const n = pageYOffset - n1;
@@ -1823,11 +925,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1845,7 +947,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 8
-  if(pageYOffset > 5054) {
+  if (pageYOffset > 5054) {
     const n1 = 5054;
     const n2 = 5154;
     const n = pageYOffset - n1;
@@ -1853,11 +955,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1875,7 +977,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 9
-  if(pageYOffset > 5074) {
+  if (pageYOffset > 5074) {
     const n1 = 5074;
     const n2 = 5174;
     const n = pageYOffset - n1;
@@ -1883,11 +985,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1905,7 +1007,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 10
-  if(pageYOffset > 5094) {
+  if (pageYOffset > 5094) {
     const n1 = 5094;
     const n2 = 5194;
     const n = pageYOffset - n1;
@@ -1913,11 +1015,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1935,7 +1037,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 11
-  if(pageYOffset > 5114) {
+  if (pageYOffset > 5114) {
     const n1 = 5114;
     const n2 = 5214;
     const n = pageYOffset - n1;
@@ -1943,11 +1045,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1965,7 +1067,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 12
-  if(pageYOffset > 5134) {
+  if (pageYOffset > 5134) {
     const n1 = 5134;
     const n2 = 5234;
     const n = pageYOffset - n1;
@@ -1973,11 +1075,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -1995,7 +1097,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 13
-  if(pageYOffset > 5154) {
+  if (pageYOffset > 5154) {
     const n1 = 5154;
     const n2 = 5254;
     const n = pageYOffset - n1;
@@ -2003,11 +1105,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -2025,7 +1127,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 14
-  if(pageYOffset > 5174) {
+  if (pageYOffset > 5174) {
     const n1 = 5174;
     const n2 = 5274;
     const n = pageYOffset - n1;
@@ -2033,11 +1135,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -2055,7 +1157,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 15
-  if(pageYOffset > 5194) {
+  if (pageYOffset > 5194) {
     const n1 = 5194;
     const n2 = 5294;
     const n = pageYOffset - n1;
@@ -2063,11 +1165,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -2085,7 +1187,7 @@ const scrollAnim = () => {
   }
 
   // shape circle 16
-  if(pageYOffset > 5214) {
+  if (pageYOffset > 5214) {
     const n1 = 5214;
     const n2 = 5314;
     const n = pageYOffset - n1;
@@ -2093,11 +1195,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -2115,7 +1217,7 @@ const scrollAnim = () => {
   }
 
   // shape left
-  if(pageYOffset > 5414) {
+  if (pageYOffset > 5414) {
     const n1 = 5414;
     const n2 = 5614;
     const n = pageYOffset - n1;
@@ -2123,11 +1225,11 @@ const scrollAnim = () => {
     const tr2 = 429;
     let tr = tr2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       tr = 429;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       tr = 0;
     }
 
@@ -2145,18 +1247,18 @@ const scrollAnim = () => {
   }
 
   // shape text
-  if(pageYOffset > 5523) {
+  if (pageYOffset > 5523) {
     const n1 = 5523;
     const n2 = 5814;
     const n = pageYOffset - n1;
     const p = n / (n2 - n1) * 100;
     let tr = 100 - p;
 
-    if(p > 99) {
+    if (p > 99) {
       tr = 0;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       tr = 100;
     }
 
@@ -2174,7 +1276,7 @@ const scrollAnim = () => {
   }
 
   // shape text
-  if(pageYOffset > 5814) {
+  if (pageYOffset > 5814) {
     const n1 = 5814;
     const n2 = 6014;
     const n = pageYOffset - n1;
@@ -2183,11 +1285,11 @@ const scrollAnim = () => {
     const op2 = 0;
     let op = op1 - (op1 * (p / 100));
 
-    if(p > 99) {
+    if (p > 99) {
       op = 0;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 1;
     }
 
@@ -2199,24 +1301,22 @@ const scrollAnim = () => {
   }
 
   // collection title
-  if(pageYOffset > 6114) {
+  if (pageYOffset > 6114) {
     const n1 = 6114;
     const n2 = 6320;
     const n = pageYOffset - n1;
     const p = n / (n2 - n1) * 100;
-    const op1 = 0;
     const op2 = 1;
     const tr1 = 60;
-    const tr2 = 0;
     let tr = tr1 - (tr1 * (p / 100));
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
       tr = 0;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
       tr = 60;
     }
@@ -2226,7 +1326,8 @@ const scrollAnim = () => {
     const items = $('.collections__slider .collect-slider__item');
 
     block.css({
-      'opacity': 1
+      'opacity': 1,
+      'z-index': 56
     });
 
     title.css({
@@ -2242,7 +1343,8 @@ const scrollAnim = () => {
     const title = $('.collections .collect__nav-box .title');
 
     block.css({
-      'opacity': 0
+      'opacity': 0,
+      'z-index': 50
     });
 
     title.css({
@@ -2252,7 +1354,7 @@ const scrollAnim = () => {
   }
 
   // collection nav
-  if(pageYOffset > 6221) {
+  if (pageYOffset > 6221) {
     const n1 = 6221;
     const n2 = 6427;
     const n = pageYOffset - n1;
@@ -2261,11 +1363,11 @@ const scrollAnim = () => {
     const op2 = 1;
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
     }
 
@@ -2283,7 +1385,7 @@ const scrollAnim = () => {
   }
 
   // collection items
-  if(pageYOffset > 6427) {
+  if (pageYOffset > 6427) {
     const items = $('.collections__slider .collect-slider__item');
     const length = items.length;
     let count = 0;
@@ -2299,12 +1401,12 @@ const scrollAnim = () => {
       let tr = tr2 - (tr2 * (p / 100));
       let op = op2 * (p / 100);
 
-      if(p > 99) {
+      if (p > 99) {
         op = 1;
         tr = 0;
       }
 
-      if(p < 1) {
+      if (p < 1) {
         op = 0;
         tr = 60;
       }
@@ -2326,7 +1428,7 @@ const scrollAnim = () => {
   }
 
   // collection title hidden
-  if(pageYOffset > 7700) {
+  if (pageYOffset > 7700) {
     const n1 = 7700;
     const n2 = 7905;
     const n = pageYOffset - n1;
@@ -2338,12 +1440,12 @@ const scrollAnim = () => {
     let tr = -tr2 * (p / 100);
     let op = op1 - (op1 * (p / 100));
 
-    if(p > 99) {
+    if (p > 99) {
       op = 0;
       tr = -60;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 1;
       tr = 0;
     }
@@ -2357,7 +1459,7 @@ const scrollAnim = () => {
   }
 
   // collection nav hidden
-  if(pageYOffset > 7804) {
+  if (pageYOffset > 7804) {
     const n1 = 7804;
     const n2 = 8009;
     const n = pageYOffset - n1;
@@ -2366,11 +1468,11 @@ const scrollAnim = () => {
     const op2 = 0;
     let op = op1 - (op1 * (p / 100));
 
-    if(p > 99) {
+    if (p > 99) {
       op = 0;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 1;
     }
 
@@ -2382,7 +1484,7 @@ const scrollAnim = () => {
   }
 
   // collection items hidden
-  if(pageYOffset > 8009) {
+  if (pageYOffset > 8009) {
     const items = $('.collections__slider .collect-slider__item');
     let count = 0;
     items.each(function () {
@@ -2397,12 +1499,12 @@ const scrollAnim = () => {
       let tr = -tr2 * (p / 100);
       let op = op1 - (op1 * (p / 100));
 
-      if(p > 99) {
+      if (p > 99) {
         op = 0;
         tr = -60;
       }
 
-      if(p < 1) {
+      if (p < 1) {
         op = 1;
         tr = 0;
       }
@@ -2416,85 +1518,968 @@ const scrollAnim = () => {
     });
   }
 
-  // list
-  if(pageYOffset > 9050) {
-    const n1 = 9050;
-    const n2 = 10656;
+  // list opacity col 1
+  if (pageYOffset > 8414) {
+    const n1 = 8414;
+    const n2 = 8614;
     const n = pageYOffset - n1;
     const p = n / (n2 - n1) * 100;
     const op1 = 0;
     const op2 = 1;
-    const tr2 = 654;
-    let tr = tr2 - (tr2 * (p / 100));
     let op = op2 * (p / 100);
 
-    if(p > 99) {
+    if (p > 99) {
       op = 1;
-      tr = 0;
     }
 
-    if(p < 1) {
+    if (p < 1) {
       op = 0;
-      tr = 654;
     }
 
     const block = $('.list');
     const col = $('.list__col');
-    const text = $('.list__text');
+    const link = $('.list__text .arrow-link');
+    const title = $('.list__text .title span');
+    const desc = $('.list__text .desc');
 
     block.css({
       'opacity': 1,
-      'z-index': 10000
+      'z-index': 57
     })
 
     col.css({
       'opacity': 0
     })
 
-    text.css({
+    title.css({
+      'transform': 'translateY(' + 30 + 'px)'
+    })
+
+    desc.css({
       'opacity': 0
     })
 
     col.eq(0).css({
       'opacity': op,
-      'transform': 'translateY(' + tr + 'px)'
+    });
+
+    link.css({
+      'opacity': op,
     })
   } else {
     const block = $('.list');
+    const link = $('.list__text .arrow-link');
 
     block.css({
+      'opacity': 0,
+      'z-index': 50
+    });
+
+    link.css({
+      'opacity': 0,
+    });
+  }
+
+  // list transition col 1
+  if (pageYOffset > 8414) {
+    const n1 = 8414;
+    const n2 = 9508;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const tr1 = $(window).height() - 412;
+    // const tr1 = 654;
+    let tr = tr1 - (tr1 * (p / 100));
+
+    if (p > 99) {
+      tr = 0;
+    }
+
+    if (p < 1) {
+      tr = $(window).height() - 412;
+    }
+
+    const block = $('.list');
+    const col = $('.list__col');
+    const text = $('.list__text');
+
+
+    col.eq(0).css({
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  } else {
+    const col = $('.list__col');
+    col.eq(0).css({
+      'transform': 'translateY(' + $(window).height() - 412 + 'px)'
+    })
+  }
+
+  // list transition col 1 - 2
+  if (pageYOffset > 9508) {
+    const col = $('.list__col');
+    const n1 = 9508;
+    const n2 = 10020;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const tr1 = (col.eq(0).height() - $(window).height()) * -1;
+    let tr = tr1 * (p / 100);
+
+    if (p > 99) {
+      tr = tr1;
+    }
+
+    col.eq(0).css({
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  }
+
+  // list text
+  if (pageYOffset > 8506) {
+    const n1 = 8506;
+    const n2 = 8719;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op2 = 1;
+    let op = op2 * (p / 100);
+    const tr1 = 50;
+    let tr = tr1 - (tr1 * (p / 100));
+
+    if (p > 99) {
+      op = 1;
+      tr = 0;
+    }
+
+    if (p < 1) {
+      op = 0;
+      tr = 50;
+    }
+
+    const desc = $('.list__text .desc');
+
+    desc.css({
+      'opacity': op,
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  } else {
+    const desc = $('.list__text .desc');
+
+    desc.css({
+      'opacity': 0,
+      'transform': 'translateY(' + 50 + 'px)'
+    })
+  }
+
+  // list title
+  if (pageYOffset > 8627) {
+    const n1 = 8627;
+    const n2 = 8840;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const tr1 = 30;
+    let tr = tr1 - (tr1 * (p / 100));
+
+    if (p > 99) {
+      tr = 0;
+    }
+
+    if (p < 1) {
+      tr = 50;
+    }
+
+    const title = $('.list__text .title span');
+
+    title.css({
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  } else {
+    const title = $('.list__text .title span');
+
+    title.css({
+      'transform': 'translateY(' + 30 + 'px)'
+    })
+  }
+
+  // list opacity col 2
+  if (pageYOffset > 8524) {
+    const n1 = 8524;
+    const n2 = 8737;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op1 = 0;
+    const op2 = 1;
+    let op = op2 * (p / 100);
+
+    if (p > 99) {
+      op = 1;
+    }
+
+    if (p < 1) {
+      op = 0;
+    }
+
+    const col = $('.list__col');
+
+    col.eq(1).css({
+      'opacity': op,
+    });
+  } else {
+    const col = $('.list__col');
+
+    col.eq(1).css({
+      'opacity': 0,
+    });
+  }
+
+  // list transition col 2
+  if (pageYOffset > 8524) {
+    const n1 = 8524;
+    const n2 = 9306;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const tr1 = $(window).height() - 612;
+    let tr = tr1 - (tr1 * (p / 100));
+
+    if (p > 99) {
+      tr = 0;
+    }
+
+    if (p < 1) {
+      tr = $(window).height() - 612;
+    }
+
+    const col = $('.list__col');
+
+    col.eq(1).css({
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  } else {
+    const col = $('.list__col');
+    col.eq(1).css({
+      'transform': 'translateY(' + $(window).height() - 612 + 'px)'
+    })
+  }
+
+  // list transition col 2 - 2
+  if (pageYOffset > 9306) {
+    const col = $('.list__col');
+    const n1 = 9306;
+    const n2 = 10020;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const tr1 = (col.eq(1).height() - $(window).height()) * -1;
+    let tr = tr1 * (p / 100);
+
+    if (p > 99) {
+      tr = tr1;
+    }
+
+    if (p < 1) {
+      // tr = 0;
+    }
+
+
+    col.eq(1).css({
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  }
+
+  // list opacity col 3
+  if (pageYOffset > 8627) {
+    const n1 = 8627;
+    const n2 = 8840;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op2 = 1;
+    let op = op2 * (p / 100);
+
+    if (p > 99) {
+      op = 1;
+    }
+
+    if (p < 1) {
+      op = 0;
+    }
+
+    const col = $('.list__col');
+
+    col.eq(2).css({
+      'opacity': op,
+    });
+  } else {
+    const col = $('.list__col');
+
+    col.eq(2).css({
+      'opacity': 0,
+    });
+  }
+
+  // list transition col 3
+  if (pageYOffset > 8627) {
+    const n1 = 8627;
+    const n2 = 9267;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const tr1 = $(window).height() - 822;
+    let tr = tr1 - (tr1 * (p / 100));
+
+    if (p > 99) {
+      tr = 0;
+    }
+
+    if (p < 1) {
+      tr = $(window).height() - 822;
+    }
+
+    const col = $('.list__col');
+
+    col.eq(2).css({
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  } else {
+    const col = $('.list__col');
+    col.eq(2).css({
+      'transform': 'translateY(' + $(window).height() - 822 + 'px)'
+    })
+  }
+
+  // list transition col 3 - 2
+  if (pageYOffset > 9267) {
+    const col = $('.list__col');
+    const n1 = 9267;
+    const n2 = 10020;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const tr1 = (col.eq(2).height() - $(window).height()) * -1;
+    let tr = tr1 * (p / 100);
+
+    if (p > 99) {
+      tr = tr1;
+    }
+
+    if (p < 1) {
+      // tr = 0;
+    }
+
+
+    col.eq(2).css({
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  }
+
+  // list hidden
+  if (pageYOffset > 10020) {
+    const n1 = 10020;
+    const n2 = 10279;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op1 = 1;
+    const tr1 = 260;
+    let tr = -tr1 * (p / 100);
+    let op = op1 - (op1 * (p / 100));
+
+    if (p > 99) {
+      tr = -260;
+      op = 0;
+    }
+
+    if (p < 1) {
+      op = 1;
+      tr = 0;
+    }
+
+    const block = $('.list');
+
+    block.css({
+      'opacity': op,
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  } else if (pageYOffset > 8414 && pageYOffset) {
+    const block = $('.list');
+
+    block.css({
+      'opacity': 1,
+      'transform': 'translateY(' + 0 + 'px)'
+    })
+  }
+
+  // event title
+  if (pageYOffset > 10502) {
+    const n1 = 10502;
+    const n2 = 10716;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op1 = 1;
+    const tr1 = 40;
+    let tr = tr1 - (tr1 * (p / 100));
+    let op = op1 * (p / 100);
+
+    if (p > 99) {
+      tr = 0;
+      op = 1;
+    }
+
+    if (p < 1) {
+      op = 0;
+      tr = 40;
+    }
+
+    const block = $('.event');
+    const title = $('.event__title');
+    const desc = $('.event__desc');
+    const link = $('.event__text .arrow-link');
+    const video = $('.event__video-block');
+
+    desc.css({
       'opacity': 0
+    })
+
+    link.css({
+      'opacity': 0
+    })
+
+    video.css({
+      'opacity': 0
+    })
+
+    block.css({
+      'opacity': 1,
+      'z-index': 58
+    });
+
+    title.css({
+      'opacity': op,
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  } else {
+    const block = $('.event');
+
+    block.css({
+      'opacity': 0,
+      'z-index': 50
+    });
+  }
+
+  // event text
+  if (pageYOffset > 10621) {
+    const n1 = 10621;
+    const n2 = 10835;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op1 = 1;
+    const tr1 = 40;
+    let tr = tr1 - (tr1 * (p / 100));
+    let op = op1 * (p / 100);
+
+    if (p > 99) {
+      tr = 0;
+      op = 1;
+    }
+
+    if (p < 1) {
+      op = 0;
+      tr = 40;
+    }
+
+    const desc = $('.event__desc');
+
+    desc.css({
+      'opacity': op,
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  } else {
+    const desc = $('.event__desc');
+
+    desc.css({
+      'opacity': 0,
+      'transform': 'translateY(' + 40 + 'px)'
+    })
+  }
+
+  // event link
+  if (pageYOffset > 10716) {
+    const n1 = 10716;
+    const n2 = 10930;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op1 = 1;
+    const tr1 = 40;
+    let tr = tr1 - (tr1 * (p / 100));
+    let op = op1 * (p / 100);
+
+    if (p > 99) {
+      tr = 0;
+      op = 1;
+    }
+
+    if (p < 1) {
+      op = 0;
+      tr = 40;
+    }
+
+    const link = $('.event__text .arrow-link');
+
+    link.css({
+      'opacity': op,
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  } else {
+    const link = $('.event__text .arrow-link');
+
+    link.css({
+      'opacity': 0,
+      'transform': 'translateY(' + 40 + 'px)'
+    })
+  }
+
+  // event video opacity
+  if (pageYOffset > 10835) {
+    const n1 = 10835;
+    const n2 = 11049;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op1 = 1;
+    const tr1 = 40;
+    let sc = ((1 - (1 * (p / 100))) * 0.1) + 1;
+    let tr = tr1 - (tr1 * (p / 100));
+    let op = op1 * (p / 100);
+
+    if (p > 99) {
+      tr = 0;
+      op = 1;
+      sc = 1;
+    }
+
+    if (p < 1) {
+      op = 0;
+      tr = 40;
+      sc = 1.1;
+    }
+
+    const video = $('.event__video-block');
+    const videoSmall = $('.event__video');
+
+    video.css({
+      'opacity': op,
+    })
+
+    videoSmall.css({
+      'transform': 'scale(' + sc + ')'
+    })
+  }
+
+  // event video small
+  if (pageYOffset > 10930) {
+    const n1 = 10930;
+    const n2 = 11144;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op1 = 1;
+    let op = op1 * (p / 100);
+
+    if (p > 99) {
+      op = 1;
+    }
+
+    if (p < 1) {
+      op = 0;
+    }
+
+    const video = $('.event__small');
+
+    video.css({
+      'opacity': op,
+    })
+  } else {
+    const video = $('.event__small');
+
+    video.css({
+      'opacity': 0,
+    })
+  }
+
+  // event video play
+  if (pageYOffset > 11049) {
+    const n1 = 11049;
+    const n2 = 11263;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op1 = 1;
+    let op = op1 * (p / 100);
+
+    if (p > 99) {
+      op = 1;
+    }
+
+    if (p < 1) {
+      op = 0;
+    }
+
+    const play = $('.event__video-block .play');
+
+    play.css({
+      'opacity': op,
+    })
+  } else {
+    const play = $('.event__video-block .play');
+
+    play.css({
+      'opacity': 0,
+    })
+  }
+
+  // event hidden
+  if (pageYOffset > 11751) {
+    const n1 = 11751;
+    const n2 = 11971;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op1 = 1;
+    const tr1 = 220;
+    let tr = -tr1 * (p / 100);
+    let op = op1 - (op1 * (p / 100));
+
+    if (p > 99) {
+      tr = -220;
+      op = 0;
+    }
+
+    if (p < 1) {
+      op = 1;
+      tr = 0;
+    }
+
+    const block = $('.event');
+
+    block.css({
+      'opacity': op,
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  } else if (pageYOffset > 10502 && pageYOffset) {
+    const block = $('.event');
+
+    block.css({
+      'opacity': 1,
+      'transform': 'translateY(' + 0 + 'px)'
+    })
+  }
+
+  // blog title
+  if (pageYOffset > 12152) {
+    const n1 = 12152;
+    const n2 = 12356;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op1 = 1;
+    const tr1 = 50;
+    let tr = tr1 - tr1 * (p / 100);
+    let op = op1 * (p / 100);
+
+    if (p > 99) {
+      tr = 0;
+      op = 1;
+    }
+
+    if (p < 1) {
+      op = 0;
+      tr = 50;
+    }
+
+    const block = $('.blog');
+    const title = $('.blog__title');
+
+    block.css({
+      'opacity': 1,
+      'z-index': 59
+    })
+
+    title.css({
+      'opacity': op,
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  } else {
+    const block = $('.blog');
+
+    block.css({
+      'opacity': 0,
+      'z-index': 50
+    })
+  }
+
+  // blog items
+  if (pageYOffset > 12356) {
+    const items = $('.blog__list .list__row .item');
+    const length = items.length;
+    let count = 0;
+    items.each(function () {
+      const index = count * 120;
+      const n1 = 12356 + index;
+      const n2 = 12563 + index;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      const op1 = 0;
+      const op2 = 1;
+      const tr2 = 30;
+      let tr = tr2 - (tr2 * (p / 100));
+      let op = op2 * (p / 100);
+
+      if (p > 99) {
+        op = 1;
+        tr = 0;
+      }
+
+      if (p < 1) {
+        op = 0;
+        tr = 30;
+      }
+
+      $(this).css({
+        'opacity': op,
+        'transform': 'translateY(' + tr + 'px)'
+      })
+
+      count++;
+    });
+  } else {
+    const items = $('.blog__list .list__row .item');
+
+    items.css({
+      'opacity': 0,
+      'transform': 'translateY(' + 30 + 'px)'
+    });
+  }
+
+  // blog hidden
+  if (pageYOffset > 13572) {
+    const n1 = 13572;
+    const n2 = 13770;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op1 = 1;
+    let op = op1 - (op1 * (p / 100));
+
+    if (p > 99) {
+      op = 0;
+    }
+
+    if (p < 1) {
+      op = 1;
+    }
+
+    const block = $('.blog');
+
+    block.css({
+      'opacity': op
+    })
+  } else if (pageYOffset > 12152 && pageYOffset) {
+    const block = $('.blog');
+
+    block.css({
+      'opacity': 1
+    })
+  }
+
+  // footer items
+  if (pageYOffset > 13888) {
+    const items = $('.home-about__big-block');
+    const length = items.length;
+    let count = 0;
+    const block = $('.home-about');
+    block.css({
+      'opacity': 1,
+      'z-index': 60
+    })
+    items.each(function () {
+      const index = count * 189;
+      const n1 = 13888 + index;
+      const n2 = 14077 + index;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      const op1 = 0;
+      const op2 = 1;
+      const tr2 = 50;
+      let tr = tr2 - (tr2 * (p / 100));
+      let op = op2 * (p / 100);
+
+      if (p > 99) {
+        op = 1;
+        tr = 0;
+      }
+
+      if (p < 1) {
+        op = 0;
+        tr = 50;
+      }
+
+      $(this).css({
+        'opacity': op,
+        'transform': 'translateY(' + tr + 'px)'
+      })
+
+      count++;
+    });
+  } else {
+    const items = $('.home-about__big-block');
+    const block = $('.home-about');
+    block.css({
+      'opacity': 0,
+      'z-index': 50
+    })
+
+    items.css({
+      'opacity': 0,
+      'transform': 'translateY(' + 50 + 'px)'
+    });
+  }
+
+  // footer line
+  if (pageYOffset > 14175) {
+    const n1 = 14175;
+    const n2 = 14364;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    let mw = p;
+
+    if (p > 99) {
+      mw = 100;
+    }
+
+    if (p < 1) {
+      mw = 0;
+    }
+
+    const line = $('.home-about__container .top-line');
+
+    line.css({
+      'max-width': mw + '%'
+    })
+
+  } else {
+    const line = $('.home-about__container .top-line');
+
+    line.css({
+      'max-width': 0 + '%'
+    })
+  }
+
+  // footer items 2
+  if (pageYOffset > 14175) {
+    const items = $('.home-about .coll__center');
+    const length = items.length;
+    let count = 0;
+
+    items.each(function () {
+      const index = count * 189;
+      const n1 = 14175 + index;
+      const n2 = 14364 + index;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      const op1 = 0;
+      const op2 = 1;
+      const tr2 = 15;
+      let tr = tr2 - (tr2 * (p / 100));
+      let op = op2 * (p / 100);
+
+      if (p > 99) {
+        op = 1;
+        tr = 0;
+      }
+
+      if (p < 1) {
+        op = 0;
+        tr = 15;
+      }
+
+      $(this).css({
+        'opacity': op,
+        'transform': 'translateY(' + tr + 'px)'
+      })
+
+      count++;
+    });
+  } else {
+    const items = $('.home-about .coll__center');
+
+    items.css({
+      'opacity': 0,
+      'transform': 'translateY(' + 15 + 'px)'
+    });
+  }
+
+  // footer line 2
+  if (pageYOffset > 14364) {
+    const n1 = 14364;
+    const n2 = 14553;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    let mw = p;
+
+    if (p > 99) {
+      mw = 100;
+    }
+
+    if (p < 1) {
+      mw = 0;
+    }
+
+    const line = $('.home-about__container .bot-line');
+
+    line.css({
+      'max-width': mw + '%'
+    })
+
+  } else {
+    const line = $('.home-about__container .bot-line');
+
+    line.css({
+      'max-width': 0 + '%'
+    })
+  }
+
+  // footer bot
+  if (pageYOffset > 14455) {
+    const n1 = 14455;
+    const n2 = 14644;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op1 = 1;
+    const tr1 = 30;
+    let tr = tr1 - tr1 * (p / 100);
+    let op = op1 * (p / 100);
+
+    if (p > 99) {
+      tr = 0;
+      op = 1;
+    }
+
+    if (p < 1) {
+      op = 0;
+      tr = 30;
+    }
+
+    const coop = $('.elba-coop');
+
+    coop.css({
+      'opacity': op,
+      'transform': 'translateY(' + tr + 'px)'
+    })
+  } else {
+    const coop = $('.elba-coop');
+
+    coop.css({
+      'opacity': 0,
+      'transform': 'translateY(' + 30 + 'px)'
     })
   }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const bodyHeight = () => {
-  if($('.fullPage__box').length < 1) {
+  if ($('.fullPage__box').length < 1) {
     return
   }
 
-  $('body').css('height', '16074px');
+  const height = $(window).height() + 14700;
+
+  $('body').css('height', height);
 }
 
 const hiddenAll = (pages) => {
@@ -2504,4 +2489,4 @@ const hiddenAll = (pages) => {
   })
 }
 
-export { scrollSwitch, scrollAnim, bodyHeight }
+export {scrollAnim, bodyHeight}

@@ -1,5 +1,4 @@
 import 'normalize.css';
-import { startFullPage } from "./fullPage";
 import { evSize } from './eventVideo';
 import { toggleMenu } from "./mobileMenu";
 import './factory-slider';
@@ -18,7 +17,7 @@ import './accordion';
 import './modal-catalog';
 import './search';
 import './catalog-aside';
-import { scrollSwitch, scrollAnim, bodyHeight } from "./scrollScript";
+import { scrollAnim, bodyHeight } from "./scrollScript";
 import { switchSlideFirst, autoSwitchFirst } from "./firstSlider";
 import { inspSlider } from "./inspiration";
 
@@ -45,6 +44,7 @@ $(document).ready((e) => {
       }
     }
   });
+
 
   // list inner slider
   $('.list__inner-slider').owlCarousel({

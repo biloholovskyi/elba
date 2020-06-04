@@ -52,8 +52,7 @@
     justify-content: center;
     position: relative;
 
-    &::after {
-      content: '';
+    .event__small {
       position: absolute;
       width: 232px;
       height: 232px;
