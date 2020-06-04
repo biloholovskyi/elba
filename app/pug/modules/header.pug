@@ -26,5 +26,8 @@ header.header
               a.nav__item(href='./news.html') News
           .header__right
             .small-icon(style='background-image: url(./media/icon/search.svg)' onclick="location.href='./search.html';")
-            .small-icon(style='background-image: url(./media/icon/profile.svg)')
-            .big-icon(style='background-image: url(./media/icon/cart.svg)' )
+            .small-icon.sign_in(style='background-image: url(./media/icon/profile.svg)')
+            .big-icon.basket(style='background-image: url(./media/icon/cart.svg)' )
+          include ../modules/sign_in-block
+          include ../modules/log_out
+          include ../modules/basket           

@@ -1,0 +1,164 @@
+#create_account,
+#sign_in_page,
+#profile,
+#address{
+  padding-top: 160px;
+  .account-title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 64px;
+    
+
+    h1 {
+      font-style: normal; 
+      font-weight: bold;
+      font-size: 56px;
+      line-height: 68px;
+      color: #1F1F22;
+      margin: 0;
+    }
+    h3 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 20px;
+      color: #1F1F22;
+      text-transform: uppercase; 
+    }
+  }
+  .account-back {
+    padding-left: 35px;
+    top: 135px;
+  }
+
+  .account-back:after {
+    left: 0;
+    transform: translateY(-50%) rotate(180deg);
+    
+  }
+  .inner-block {
+    h3 {
+      margin: 0;
+    }
+    .checkbox {
+      display: flex;
+      margin-bottom: 32px;
+      width: 100%;
+      max-width: 557px;
+      .option-input {
+        appearance: none;
+        position: relative;
+        height: 24px;
+        width: 24px;
+        transition: all 0.15s ease-out 0s;
+        background: #F8F8F8;
+        border: 1px solid #E4E8EB;
+        color: #fff;
+        cursor: pointer;
+        margin-right: 16px;
+        outline: none;
+        position: relative;
+        z-index: 10;
+        margin-left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+        border-radius: 2px;
+      }
+      .option-input:hover {
+        border: 1px solid #B2B8BF;
+      }
+
+      .option-input:checked {
+        background: #1F1F22;
+      }
+
+      .option-input:checked::before {
+        height: 8px;
+        width: 10px;
+        position: absolute;
+        content: '';
+        background-image: url(../../../media/icon/check.svg); 
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+    }
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 28px;
+      color: #7D838A;
+    }
+    
+  }
+  .inner-photo {
+    .btn-account {
+      flex: 2;
+      button {
+        width: 132px;
+        background: #1F1F22;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 20px;
+        padding: 14px 0;
+        color: #fff;
+        border: none;
+        align-self: flex-start;
+  
+      }
+    }
+    .text {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 28px;
+      color: #1F1F22;
+    }
+    input {
+      width: 100%;
+      max-width: 557px;
+      border: none;
+      border-bottom: 1px solid #565B62;
+      padding-bottom: 8px;
+      background-color: transparent;
+    }
+    input::placeholder {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 28px;
+      color: #1F1F22;
+    }
+    .birth-block {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 557px;
+      select {
+        flex: 130px;
+        margin-right: 32px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #1F1F22;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+        text-transform: uppercase;
+        option {
+         
+        }
+      }
+        
+    }
+  }
+  
+}

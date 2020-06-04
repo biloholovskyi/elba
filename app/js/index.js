@@ -99,7 +99,18 @@ $(document).ready((e) => {
       }
     }
   });
+  // MODAL SIGN IN
+  $('.sign_in').on('click', function(){
+    $('.sign_in-wrap').toggleClass('active', 1500);
+  });
+  // BASKET MODAL
+  $('.basket').on('click', function(){
+    $('.basket-wrap').toggleClass('active', 1500);
+  });
 });
+
+ 
+
 
 
 $(window).resize(() => {

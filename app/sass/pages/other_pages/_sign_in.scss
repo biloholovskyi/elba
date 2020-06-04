@@ -1,0 +1,276 @@
+.sign_in-wrap{
+  background: #FFFFFF;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
+  max-width: 393px;
+  position: absolute;
+  top: 72px;
+  right: 0;
+  padding: 0 32px 32px;
+  display: none;
+  transition: .5s;
+  animation-name: signIn;
+  animation-duration: .5s;
+  h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #1F1F22;
+    margin: 32px 0 16px;
+  }
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #7D838A;
+    margin-bottom: 16px;
+  }
+  button {
+    background: #1F1F22;
+    border: none;
+    width: 100%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    padding: 10px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  #sign_in {
+    input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #565B62;
+      padding-bottom: 8px;
+      padding-top: 11px;
+    }
+    input::placeholder {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 28px; 
+      color: #7D838A;
+    }
+    .inp-block {
+      display: flex;
+      position: relative;
+      border-bottom: 1px solid #565B62;
+      padding-bottom: 8px;
+      input {
+        padding-top: 27px;
+        padding-bottom: 0;
+      }
+      h3 {
+        align-self: flex-end;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+        color: #1F1F22;
+        cursor: pointer;
+      }
+      .option-input {
+        appearance: none;
+        position: relative;
+        height: 24px;
+        width: 24px;
+        transition: all 0.15s ease-out 0s;
+        background: #F8F8F8;
+        border: 1px solid #E4E8EB;
+        color: #fff;
+        cursor: pointer;
+        margin-right: 16px;
+        outline: none;
+        position: relative;
+        z-index: 10;
+        margin-left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+        margin-top: 32px;
+       border-radius: 2px;
+      }
+      .option-input:hover {
+        border: 1px solid #B2B8BF;
+      }
+
+      .option-input:checked {
+        background: #1F1F22;
+      }
+
+      .option-input:checked::before {
+        height: 8px;
+        width: 10px;
+        position: absolute;
+        content: '';
+        background-image: url(../../../media/icon/check.svg); 
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+    }
+    .inp-check {
+      margin-bottom: 24px;
+      border: none;
+      h3 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #7D838A;
+        cursor: default;
+      }
+    }
+  }
+}
+.sign_in-wrap.active {
+  display: block;
+  
+}
+// LOG OUT MODAL
+.log_out {
+  background: #FFFFFF;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
+  width: 393px;
+  padding: 32px 32px 0;
+  position: absolute;
+  top: 72px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  display: none;
+  h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #1F1F22;
+    margin-bottom: 32px;
+  }
+  a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1F1F22;
+    margin-bottom: 24px;
+  }
+  button {
+    border: 1px solid #1F1F22;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 10px 0;
+    color: #1F1F22;
+    background-color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 8px 0 32px;
+  }
+}
+
+
+// SIGN IN PAGE
+#sign_in_page {
+  .inner-content {
+    max-width: 750px;
+    margin: 0 auto;
+    .inner-photo {
+      margin-bottom: 50px;
+      // justify-content: space-between;
+      .text {
+        flex: none;
+        max-width: 232px;      
+      }
+      .inp-block {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        // max-width: 557px;
+        border-bottom: 1px solid #565b62;
+      }
+      input {
+        max-width: none;
+      }
+    }
+    .checkbox {
+      display: flex;
+      margin-bottom: 32px;
+      width: 100%;
+      max-width: 557px;
+      align-items: center;
+      h3 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #7D838A;
+      }
+      .option-input {
+        appearance: none;
+        position: relative;
+        height: 24px;
+        width: 24px;
+        transition: all 0.15s ease-out 0s;
+        background: #F8F8F8;
+        border: 1px solid #E4E8EB;
+        color: #fff;
+        cursor: pointer;
+        margin-right: 16px;
+        outline: none;
+        position: relative;
+        z-index: 10;
+        margin-left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+        border-radius: 2px;
+        padding-bottom: 0;
+      }
+      .option-input:hover {
+        border: 1px solid #B2B8BF;
+      }
+
+      .option-input:checked {
+        background: #1F1F22;
+      }
+
+      .option-input:checked::before {
+        height: 8px;
+        width: 10px;
+        position: absolute;
+        content: '';
+        background-image: url(../../../media/icon/check.svg); 
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+    }  
+  }
+}
+
+@keyframes signIn {
+  0% {
+  opacity: 0;
+  }
+  50%{
+    opacity: 0.8;
+  }
+  100%{
+    opacity: 1; 
+  }
+}

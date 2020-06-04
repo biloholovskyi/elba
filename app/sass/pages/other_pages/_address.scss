@@ -1,0 +1,163 @@
+#address {
+  .aside-bar {
+    padding-top: 142px;
+    position: static;
+  }
+  .inner-content {
+    max-width: 750px;
+    margin: 0 auto;
+    margin-bottom: 284px;
+    .inner-block h3,
+    .inner-block p {
+      max-width: 450px;
+    }
+    .inner-photo {
+      input {
+        max-width: 450px;
+      }
+      .btn-account {
+        max-width: 450px;
+          button {
+            padding: 14px 32px;
+            width: max-content;
+            margin-right: 16px;
+          }
+         button:last-child {
+          background-color: transparent;
+          color: #1F1F22;
+          border: 1px solid  #1F1F22;
+        }
+      }
+      .birth-block {
+        max-width: 450px;
+        & select:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    $radioSize: 24px;
+    $inputBorder: #D0D7DD;
+    $inputActive: #1F1F22;
+    .address-block {
+      .radio {
+        margin: 15px 0;
+        display: block;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        height: 120px;
+        align-items: center;
+        margin: 0;
+        border-bottom: 1px solid #D0D7DD;
+        input {
+          display: none;
+
+          & + span {
+            line-height: $radioSize;
+            height: $radioSize;
+            padding-left: $radioSize;
+            display: block;
+            position: relative;
+            margin-left: 2px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 28px;
+            color: #1F1F22;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            
+            &:not(:empty) {
+              padding-left: $radioSize + 18;
+            }
+
+            &:before,
+            &:after {
+              content: '';
+              width: $radioSize;
+              height: $radioSize;
+              display: block;
+              border-radius: 50%;
+              left: 0;
+              top: 0;
+              position: absolute;
+            }
+
+            &:before {
+              background: $inputBorder;
+              transition: background .2s ease, transform .4s cubic-bezier(.175, .885, .32, 2);
+            }
+
+            &:after {
+              background: #F8F8F8;
+              transform: scale(.88);
+              transition: transform .6s cubic-bezier(.175, .885, .32, 1.4);
+            }
+            &:hover:before {
+              background: #B2B8BF;
+             
+            }
+            .sub {
+              color: #7D838A!important;
+            }
+          }
+          
+          &:checked + span {
+            &:before {
+              transform: scale(1.04);
+              background: $inputActive;
+            }
+
+            &:after {
+              transform: scale(.4);
+              transition: transform .3s ease;
+            }
+            
+          }
+        }
+
+        &:hover {
+          input {
+            & + span {
+              &:before {
+                transform: scale(.92);
+              }
+
+              &:after {
+                transform: scale(.74);
+              }
+            }
+
+            &:checked + span {
+              &:after {
+                transform: scale(.4);
+              }
+            }
+          }
+        }
+        .add-btn {
+          button {
+            border: none;
+            background-color: transparent;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #1F1F22;
+          }
+        }
+        .add-btn button:last-child {
+          margin-left: 16px;
+          color: #C11030;
+        }
+      }
+    }
+    .address-block .radio:first-child {
+      border-top: 1px solid #D0D7DD;
+    }
+  }
+}

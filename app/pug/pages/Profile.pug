@@ -1,0 +1,98 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Create an account'
+
+    mixin asideNav(link,name)
+      li
+        a(href=link)=name 
+
+block content
+  include ../modules/header
+  include ../modules/modal-menu
+
+  #profile.inner-page
+    .m-container
+      .m-row
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--2.m-col__mxs--1
+          include ../modules/aside-profile
+        .m-col.m-col--9.m-col__lg--10.m-col__ms--10.m-col__mxs--15
+          .inner-content
+            .account-title
+              h1 Profile
+            .inner-block
+              h3 Personal information
+            .inner-photo
+              .text First name:
+              input(type="text" placeholder="Nikita")
+            .inner-photo
+              .text Last name:
+              input(type="text" placeholder="Pokatilov") 
+            .inner-photo
+              .text Birth date:
+              .birth-block
+                select
+                  option(value="01") 01
+                  option(value="02") 02
+                  option(value="03") 03
+                  option(value="04") 04
+                  option(value="05") 05
+                  option(value="06" selected) 06
+                  option(value="07") 07
+                  option(value="08") 08
+                  option(value="09") 09
+                  option(value="10") 10
+                select
+                  option(value="01") January
+                  option(value="02") February
+                  option(value="03") March
+                  option(value="04" selected) April
+                  option(value="05") May
+                  option(value="06") June
+                  option(value="07") July
+                  option(value="08") August
+                  option(value="09") September
+                  option(value="10") October
+                  option(value="09") November
+                  option(value="10") December
+                select
+                  option(value="01") 01
+                  option(value="02") 02
+                  option(value="03" selected) 1992
+                  option(value="04") 04
+                  option(value="05") 05
+                  option(value="06") 06
+                  option(value="07") 07
+                  option(value="08") 08
+                  option(value="09") 09
+                  option(value="10") 10    
+            .inner-photo
+              .text Email adress:
+              input(type="text" placeholder="Nikitapokatilov07@gmail.com") 
+            .inner-photo
+              .text Phone number:
+              input(type="text" placeholder="+7 (925) 123-45-67")
+            .inner-block
+              h3(style="margin-bottom: 32px") Password
+              p Your password should contain 6-20 case sensitive characters, at least one numeral, at least one alphabet,special characters allowed.
+            .inner-photo
+              .text Current password:
+              input(type="text")
+            .inner-photo
+              .text Password:
+              input(type="text")
+            .inner-photo
+              .text Confirm password:
+              input(type="text")   
+            .inner-photo
+              .text
+              .btn-account   
+                button SAVE CHANGES
+                button CANCEL                
+
+        .m-col.m-col--3.m-col__lg--2.m-col__ms--1.m-col__mxs--1
+
+
+      .m-row
+        .m-col.m-col--15
+          include ../modules/footer 	

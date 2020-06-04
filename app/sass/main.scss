@@ -86,6 +86,13 @@ button {
 /*pages*/
 //  SEARCH
 @import "pages/search/search";    
+/*pages*/
+//  other pages
+@import "pages/other_pages/sign_in.scss";  
+@import "pages/other_pages/account"; 
+@import "pages/other_pages/profile"; 
+@import "pages/other_pages/address";
+@import "pages/other_pages/basket";        
      
 
 

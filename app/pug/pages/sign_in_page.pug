@@ -1,0 +1,45 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Create an account'
+
+    mixin asideNav(link,name)
+      li
+        a(href=link)=name 
+
+block content
+  include ../modules/header
+  include ../modules/modal-menu
+
+  #sign_in_page.inner-page 
+    .m-container
+      .m-row
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--4.m-col__mxs--15
+          a.inner-btn.account-back(href="/") return
+        .m-col.m-col--9.m-col__lg--10.m-col__ms--10.m-col__mxs--15
+          .inner-content
+            .account-title
+              h1 Sign in
+              h3 Create an account
+            .inner-photo
+              .text Email adress:
+              input(type="text" placeholder="Nikitapokatilov07@gmail.com")
+            .inner-photo
+              .text Password:
+              .inp-block
+                input(type="password" placeholder="012-234" style="border: none")
+                h3 FORGOT?
+            .inner-photo
+              .text
+              .btn-wrap
+                .checkbox 
+                  input(type="checkbox" checked).option-input
+                  h3 Remember Me   
+            .inner-photo
+              .text
+              .btn-wrap
+                .btn-account   
+                  button SIGN IN 
+      .m-row
+        .m-col.m-col--15
+          include ../modules/footer         

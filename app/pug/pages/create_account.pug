@@ -1,0 +1,105 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Create an account'
+
+    mixin asideNav(link,name)
+      li
+        a(href=link)=name 
+
+block content
+  include ../modules/header
+  include ../modules/modal-menu
+
+  #create_account.inner-page
+    .m-container
+      .m-row
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--4.m-col__mxs--15
+          a.inner-btn.account-back(href="/") return
+        .m-col.m-col--9.m-col__lg--10.m-col__ms--10.m-col__mxs--15
+          .inner-content
+            .account-title
+              h1 Create an account
+              h3 sign in
+            .inner-block
+              h3 Personal information
+            .inner-photo
+              .text First name:
+              input(type="text" placeholder="Nikita")
+            .inner-photo
+              .text Last name:
+              input(type="text" placeholder="Pokatilov") 
+            .inner-photo
+              .text Birth date:
+              .birth-block
+                select
+                  option(value="01") 01
+                  option(value="02") 02
+                  option(value="03") 03
+                  option(value="04") 04
+                  option(value="05") 05
+                  option(value="06" selected) 06
+                  option(value="07") 07
+                  option(value="08") 08
+                  option(value="09") 09
+                  option(value="10") 10
+                select
+                  option(value="01") January
+                  option(value="02") February
+                  option(value="03") March
+                  option(value="04" selected) April
+                  option(value="05") May
+                  option(value="06") June
+                  option(value="07") July
+                  option(value="08") August
+                  option(value="09") September
+                  option(value="10") October
+                  option(value="09") November
+                  option(value="10") December
+                select
+                  option(value="01") 01
+                  option(value="02") 02
+                  option(value="03" selected) 1992
+                  option(value="04") 04
+                  option(value="05") 05
+                  option(value="06") 06
+                  option(value="07") 07
+                  option(value="08") 08
+                  option(value="09") 09
+                  option(value="10") 10    
+            .inner-photo
+              .text Email adress:
+              input(type="text" placeholder="Nikitapokatilov07@gmail.com") 
+            .inner-photo
+              .text Phone number:
+              input(type="text" placeholder="+7 (925) 123-45-67")
+            .inner-block
+              h3(style="margin-bottom: 32px") Password
+              p Your password should contain 6-20 case sensitive characters, at least one numeral, at least one alphabet,special characters allowed.
+            .inner-photo
+              .text Password:
+              input(type="text" placeholder="012-234")
+            .inner-photo
+              .text Confirm password:
+              input(type="text" placeholder="012-234") 
+            .inner-block
+              .checkbox
+                input(type="checkbox" checked).option-input
+                p By checking this box and clicking "Register" below, I acknowledge that I have read and agree to the Terms & Conditions and Privacy Policy 
+              .checkbox
+                input(type="checkbox" checked).option-input
+                p Yes, sign me up! By checking this box, I agree I want to receive news, offers, style tips and other promotional materials from and about Michael Kors, including by email, phone and mail to the contact information I am submitting. I consent to Michael Kors, its affiliates and service providers processing my personal data for these purposes and as described in the privacy policy. I understand that I can withdraw my consent at any time.
+              .checkbox
+                input(type="checkbox" checked).option-input
+                p Remember Me
+            .inner-photo
+              .text
+              .btn-account   
+                button Register                
+
+        .m-col.m-col--3.m-col__lg--2.m-col__ms--1.m-col__mxs--1
+
+
+      .m-row
+        .m-col.m-col--15
+          include ../modules/footer 	

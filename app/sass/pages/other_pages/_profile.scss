@@ -1,0 +1,38 @@
+#profile {
+  .aside-bar {
+    padding-top: 142px;
+    position: static;
+  }
+  .inner-content {
+    max-width: 750px;
+    margin: 0 auto;
+    .inner-block h3,
+    .inner-block p {
+      max-width: 450px;
+    }
+    .inner-photo {
+      input {
+        max-width: 450px;
+      }
+      .btn-account {
+        max-width: 450px;
+          button {
+            padding: 14px 32px;
+            width: max-content;
+            margin-right: 16px;
+          }
+         button:last-child {
+          background-color: transparent;
+          color: #1F1F22;
+          border: 1px solid  #1F1F22;
+        }
+      }
+      .birth-block {
+        max-width: 450px;
+        & select:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
