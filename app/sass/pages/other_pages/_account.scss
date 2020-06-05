@@ -1,8 +1,12 @@
 #create_account,
 #sign_in_page,
 #profile,
-#address{
+#address,
+#addPayment {
   padding-top: 160px;
+  .aside-bar {
+    position: static;
+}
   .account-title {
     display: flex;
     align-items: flex-end;
@@ -18,7 +22,7 @@
       color: #1F1F22;
       margin: 0;
     }
-    h3 {
+    a {
       font-style: normal;
       font-weight: bold;
       font-size: 12px;

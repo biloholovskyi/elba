@@ -1,0 +1,29 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Unsubscribe'
+
+    mixin asideNav(link,name)
+      li
+        a(href=link)=name 
+
+block content
+  include ../modules/header
+  include ../modules/modal-menu
+
+  #unsubscribe.inner-page 
+    .m-container
+      .m-row
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--2.m-col__mxs--1
+          .follow-us
+            a.follow-us__link.follow-us__link--dark(href='#') Follow us
+        .m-col.m-col--9.m-col__lg--10.m-col__ms--10.m-col__mxs--15
+        .m-col.m-col--3.m-col__lg--2.m-col__ms--1.m-col__mxs--1
+      .m-row
+        .m-col.m-col--15
+          .pageNotFound-wrap
+            .pageNotFound-content
+              img(src="../media/image/404.png", alt="image")
+              h2 Page not found
+              p The page you were looking for was not found or was deleted.#[br]But in our catalog there are a lot of beautiful bags.
+              button(onclick="location.href='./catalog.html';") Go to catalog

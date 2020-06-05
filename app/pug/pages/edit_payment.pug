@@ -1,0 +1,75 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Edit Methods'
+
+    mixin asideNav(link,name)
+      li
+        a(href=link)=name 
+
+block content
+  include ../modules/header
+  include ../modules/modal-menu
+
+  #addPayment.inner-page 
+    .m-container
+      .m-row
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--2.m-col__mxs--1
+          include ../modules/aside-profile
+        .m-col.m-col--9.m-col__lg--10.m-col__ms--10.m-col__mxs--15
+          .inner-content
+            h1 Payment Methods   
+            .inner-block
+              h3 Edit method
+            .inner-photo
+              .text Method type:
+              .method_type
+                button(value="") Credit card 
+                button Paypal
+                button UnionPay
+            .inner-photo
+              .text Receiver first name:
+              input(type="number")
+            .inner-photo
+              .text Until:
+              .birth-block
+                select
+                  option(value="01") 01
+                  option(value="02") 02
+                  option(value="03") 03
+                  option(value="04") 04
+                  option(value="05") 05
+                  option(value="06" selected) April
+                  option(value="07") 07
+                  option(value="08") 08
+                  option(value="09") 09
+                  option(value="10") 10
+                select
+                  option(value="01") 01
+                  option(value="02") 02
+                  option(value="03") 03
+                  option(value="04") 04
+                  option(value="05") 05
+                  option(value="06" selected) 2020
+                  option(value="07") 07
+                  option(value="08") 08
+                  option(value="09") 09
+                  option(value="10") 10 
+            .inner-photo
+              .text Cardholder:
+              input(type="text") 
+            .inner-photo
+              .text CVV/CVC: 
+              input(type="password") 
+            .inner-photo
+              .text
+              .btn-account   
+                button SAVE CHANGES
+                button CANCEL                
+
+        .m-col.m-col--3.m-col__lg--2.m-col__ms--1.m-col__mxs--1
+
+
+      .m-row
+        .m-col.m-col--15
+          include ../modules/footer 

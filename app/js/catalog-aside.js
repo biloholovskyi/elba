@@ -6,4 +6,9 @@ $(document).ready(function(){
         $(this).toggleClass('active');
     });
 
+    // PAYMENT PAGE
+    $('.method_type button').on('click', function(){
+        $(this).toggleClass('active');
+    });
+
 });

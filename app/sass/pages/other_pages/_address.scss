@@ -1,4 +1,5 @@
-#address {
+#address,
+#addPayment{
   .aside-bar {
     padding-top: 142px;
     position: static;
@@ -182,7 +183,8 @@
 
 // MODAL
 .pass-overlay,
-.dlt-Adress-overlay {
+.dlt-Adress-overlay,
+.welcome-overlay { 
   display: none;
   width: 100%;
   height: 100%;

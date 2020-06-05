@@ -37,7 +37,7 @@
               <div class="sign_in-wrap">
                 <h2>Create an account</h2>
                 <p>Create a ELBA account with your email address.</p>
-                <button>Create an account</button>
+                <button onclick="location.href='./create_account.html';">Create an account</button>
                 <h2>Sign in</h2>
                 <p>Sign in with your email and password.</p>
                 <form id="sign_in">
@@ -106,7 +106,7 @@
                     </div>
                   </div>
                 </div>
-                <button>Sign in</button>
+                <button>Continue</button>
               </div>
               <div class="basket-empty">
                 <h2>No items</h2>
@@ -140,7 +140,7 @@
                   <li><a href="./profile.html">Profile</a></li>
                   <li><a href="./address.html">Adresses</a></li>
                   <li><a href="./orders.html">My orders</a></li>
-                  <li><a href="">Payment Methods</a></li>
+                  <li><a href="./payment.html">Payment Methods</a></li>
                 </ul>
               </div>
             </div>
@@ -160,9 +160,354 @@
                       <div class="price">€ 560.00</div>
                       <div class="count">2</div></a>
                     <ul class="dropdown-menu">
-                      <li><span>Bag</span></li>
-                      <li><span>Backpack</span></li>
-                      <li><span>Tent</span></li>
+                      <li>
+                        <div class="main-block">
+                          <h3>Order list</h3>
+                          <div class="order-block">
+                            <div class="order-item"><img src="../media/icon/modal-elem.svg" alt="image">
+                              <div class="item-title">
+                                <h4>Body • Leather </h4>
+                                <h3>Little E — Logo Max White & Black </h3>
+                              </div>
+                              <div class="item-price">
+                                <p>€ 100.00</p>
+                                <p class="offer">€ 200.00</p>
+                              </div>
+                              <div class="items">
+                                <p>2</p>
+                              </div>
+                            </div>
+                            <div class="order-item"><img src="../media/icon/modal-elem.svg" alt="image">
+                              <div class="item-title">
+                                <h4>Body • Leather </h4>
+                                <h3>Little E — Logo Max White & Black </h3>
+                              </div>
+                              <div class="item-price">
+                                <p>€ 100.00</p>
+                                <p class="offer">€ 200.00</p>
+                              </div>
+                              <div class="items">
+                                <p>2</p>
+                              </div>
+                            </div>
+                            <div class="order-item"><img src="../media/icon/modal-elem.svg" alt="image">
+                              <div class="item-title">
+                                <h4>Body • Leather </h4>
+                                <h3>Little E — Logo Max White & Black </h3>
+                              </div>
+                              <div class="item-price">
+                                <p>€ 100.00</p>
+                                <p class="offer">€ 200.00</p>
+                              </div>
+                              <div class="items">
+                                <p>2</p>
+                              </div>
+                            </div>
+                            <div class="order-item"><img src="../media/icon/modal-elem.svg" alt="image">
+                              <div class="item-title">
+                                <h4>Body • Leather </h4>
+                                <h3>Little E — Logo Max White & Black </h3>
+                              </div>
+                              <div class="item-price">
+                                <p>€ 200.00</p>
+                              </div>
+                              <div class="items">
+                                <p>1 </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-block">
+                          <h3 class="delivery-title">Delivery data</h3>
+                          <div class="order-block">
+                            <div class="order-item">
+                              <p class="delivery-info">Receiver first name:</p>
+                              <p class="info">Olga</p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Receiver last name:</p>
+                              <p class="info">Malashkina</p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Company name:</p>
+                              <p class="info">Pokatilov</p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">ZIP-code:</p>
+                              <p class="info"> </p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Country:</p>
+                              <p class="info"></p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">City:</p>
+                              <p class="info">  </p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Region:</p>
+                              <p class="info"></p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Address:</p>
+                              <p class="info">6 rue Arsène Houssaye, 8ème </p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Phone number:</p>
+                              <p class="info">+7 (925) 123-45-67</p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Promo-code:</p>
+                              <p class="info"></p>
+                            </div>
+                            <div class="order-item">
+                              <button>Receipt of payment</button>
+                              <button>Cancel the order</button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <input type="checkbox"><a href="#" data-toggle="dropdown">
+                      <div class="order">
+                        <p>8-229-63794</p>
+                        <button class="btn-status-Prepering">Prepering</button>
+                      </div>
+                      <div class="date">12.05.2020</div>
+                      <div class="price">€ 560.00</div>
+                      <div class="count">2</div></a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <div class="main-block">
+                          <h3>Order list</h3>
+                          <div class="order-block">
+                            <div class="order-item"><img src="../media/icon/modal-elem.svg" alt="image">
+                              <div class="item-title">
+                                <h4>Body • Leather </h4>
+                                <h3>Little E — Logo Max White & Black </h3>
+                              </div>
+                              <div class="item-price">
+                                <p>€ 100.00</p>
+                                <p class="offer">€ 200.00</p>
+                              </div>
+                              <div class="items">
+                                <p>2</p>
+                              </div>
+                            </div>
+                            <div class="order-item"><img src="../media/icon/modal-elem.svg" alt="image">
+                              <div class="item-title">
+                                <h4>Body • Leather </h4>
+                                <h3>Little E — Logo Max White & Black </h3>
+                              </div>
+                              <div class="item-price">
+                                <p>€ 100.00</p>
+                                <p class="offer">€ 200.00</p>
+                              </div>
+                              <div class="items">
+                                <p>2</p>
+                              </div>
+                            </div>
+                            <div class="order-item"><img src="../media/icon/modal-elem.svg" alt="image">
+                              <div class="item-title">
+                                <h4>Body • Leather </h4>
+                                <h3>Little E — Logo Max White & Black </h3>
+                              </div>
+                              <div class="item-price">
+                                <p>€ 100.00</p>
+                                <p class="offer">€ 200.00</p>
+                              </div>
+                              <div class="items">
+                                <p>2</p>
+                              </div>
+                            </div>
+                            <div class="order-item"><img src="../media/icon/modal-elem.svg" alt="image">
+                              <div class="item-title">
+                                <h4>Body • Leather </h4>
+                                <h3>Little E — Logo Max White & Black </h3>
+                              </div>
+                              <div class="item-price">
+                                <p>€ 200.00</p>
+                              </div>
+                              <div class="items">
+                                <p>1 </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-block">
+                          <h3 class="delivery-title">Delivery data</h3>
+                          <div class="order-block">
+                            <div class="order-item">
+                              <p class="delivery-info">Receiver first name:</p>
+                              <p class="info">Olga</p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Receiver last name:</p>
+                              <p class="info">Malashkina</p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Company name:</p>
+                              <p class="info">Pokatilov</p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">ZIP-code:</p>
+                              <p class="info"> </p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Country:</p>
+                              <p class="info"></p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">City:</p>
+                              <p class="info">  </p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Region:</p>
+                              <p class="info"></p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Address:</p>
+                              <p class="info">6 rue Arsène Houssaye, 8ème </p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Phone number:</p>
+                              <p class="info">+7 (925) 123-45-67</p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Promo-code:</p>
+                              <p class="info"></p>
+                            </div>
+                            <div class="order-item">
+                              <button>Receipt of payment</button>
+                              <button>Cancel the order  </button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <input type="checkbox"><a href="#" data-toggle="dropdown">
+                      <div class="order">
+                        <p>8-229-63794</p>
+                        <button class="btn-status-Received">Prepering</button>
+                      </div>
+                      <div class="date">12.05.2020</div>
+                      <div class="price">
+                        <p>€ 1,420.00</p>
+                        <p class="offer">€ 1,220.00</p>
+                      </div>
+                      <div class="count">2</div></a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <div class="main-block">
+                          <h3>Order list</h3>
+                          <div class="order-block">
+                            <div class="order-item"><img src="../media/icon/modal-elem.svg" alt="image">
+                              <div class="item-title">
+                                <h4>Body • Leather </h4>
+                                <h3>Little E — Logo Max White & Black </h3>
+                              </div>
+                              <div class="item-price">
+                                <p>€ 100.00</p>
+                                <p class="offer">€ 200.00</p>
+                              </div>
+                              <div class="items">
+                                <p>2</p>
+                              </div>
+                            </div>
+                            <div class="order-item"><img src="../media/icon/modal-elem.svg" alt="image">
+                              <div class="item-title">
+                                <h4>Body • Leather </h4>
+                                <h3>Little E — Logo Max White & Black </h3>
+                              </div>
+                              <div class="item-price">
+                                <p>€ 100.00</p>
+                                <p class="offer">€ 200.00</p>
+                              </div>
+                              <div class="items">
+                                <p>2</p>
+                              </div>
+                            </div>
+                            <div class="order-item"><img src="../media/icon/modal-elem.svg" alt="image">
+                              <div class="item-title">
+                                <h4>Body • Leather </h4>
+                                <h3>Little E — Logo Max White & Black </h3>
+                              </div>
+                              <div class="item-price">
+                                <p>€ 100.00</p>
+                                <p class="offer">€ 200.00</p>
+                              </div>
+                              <div class="items">
+                                <p>2</p>
+                              </div>
+                            </div>
+                            <div class="order-item"><img src="../media/icon/modal-elem.svg" alt="image">
+                              <div class="item-title">
+                                <h4>Body • Leather </h4>
+                                <h3>Little E — Logo Max White & Black </h3>
+                              </div>
+                              <div class="item-price">
+                                <p>€ 200.00</p>
+                              </div>
+                              <div class="items">
+                                <p>1 </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-block">
+                          <h3 class="delivery-title">Delivery data</h3>
+                          <div class="order-block">
+                            <div class="order-item">
+                              <p class="delivery-info">Receiver first name:</p>
+                              <p class="info">Olga</p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Receiver last name:</p>
+                              <p class="info">Malashkina</p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Company name:</p>
+                              <p class="info">Pokatilov</p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">ZIP-code:</p>
+                              <p class="info"> </p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Country:</p>
+                              <p class="info"></p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">City:</p>
+                              <p class="info">  </p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Region:</p>
+                              <p class="info"></p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Address:</p>
+                              <p class="info">6 rue Arsène Houssaye, 8ème </p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Phone number:</p>
+                              <p class="info">+7 (925) 123-45-67</p>
+                            </div>
+                            <div class="order-item">
+                              <p class="delivery-info">Promo-code:</p>
+                              <p class="info"></p>
+                            </div>
+                            <div class="order-item">
+                              <button>Receipt of payment</button>
+                              <button>Cancel the order                                           </button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
                     </ul>
                   </li>
                 </ul>

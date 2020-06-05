@@ -1,0 +1,143 @@
+#payment{
+  .aside-bar {
+    position: static;
+  }
+  .inner-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    margin: 0 auto 196px;
+    .payment-wrap {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 64px;
+      .payment-item {
+        display: flex;
+        padding: 32px 0;
+        border-bottom: 1px solid #D0D7DD;
+        .paycaption {
+          flex: 1;
+          max-width: 250px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 24px;
+          text-transform: uppercase;
+          color: #B2B8BF;
+        }
+        & .paycaption:first-child {
+          flex: 2;
+          max-width: 300px;  
+        }
+        .payment-name {
+          flex: 2;
+          max-width: 300px;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 28px;
+          color: #1F1F22;
+
+        }
+        .empty {
+          visibility: hidden;
+        }
+        .card,
+        .card-data,
+        .payment-btn {
+          flex: 1;
+          max-width: 250px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 28px;
+          color: #1F1F22;
+        }
+        .card {
+          margin-right: 95px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 28px;
+          color: #1F1F22;
+        }
+        .payment-btn button:first-child {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 20px;
+          text-align: right;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #1F1F22;
+          border: none;
+          background-color: transparent;
+          margin-right: 16px;
+        }
+        .payment-btn button:last-child {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 20px;
+          text-align: right;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #7D838A;
+          border: none;
+          background-color: transparent;
+        }
+      }
+    }
+    .addNew {
+      max-width: 130px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background: #1F1F22;
+      border: none;
+      padding: 14px 30px;
+      margin: 0 auto;
+    }
+  }
+}
+
+// ADD METHOD PAGE
+
+#addPayment {
+  .inner-content {
+    margin-bottom: 196px;
+    .inner-photo {
+      .method_type {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 450px;
+        border-bottom: 1px solid #565b62;
+        button {
+          width: 153px;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 28px;
+          text-align: center;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #1F1F22;
+          border: none;
+          background-color: transparent;
+          padding-bottom: 8px;
+        }
+        button.active {
+          border-bottom: 2px solid #1F1F22;
+        }
+
+      }
+    }
+  }
+}

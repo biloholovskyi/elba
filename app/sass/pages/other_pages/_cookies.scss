@@ -1,0 +1,22 @@
+.cookies{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  background: #1F1F22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div,a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #7D838A;
+  }
+  a {
+    margin-left: 5px;
+    text-decoration: underline;
+  }
+}

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <title>Create an account</title>
+    <title>Payment Methods</title>
   </head>
   <body>
     <header class="header">
@@ -130,109 +130,60 @@
         </div>
       </div>
     </div>
-    <div class="inner-page" id="create_account">
+    <div class="inner-page" id="payment"> 
       <div class="m-container">
         <div class="m-row">
-          <div class="m-col m-col--3 m-col__lg--3 m-col__ms--4 m-col__mxs--15"><a class="inner-btn account-back" href="/">return</a></div>
+          <div class="m-col m-col--3 m-col__lg--3 m-col__ms--2 m-col__mxs--1">
+            <div class="aside-bar">
+              <div class="nav">
+                <ul>
+                  <li><a href="./profile.html">Profile</a></li>
+                  <li><a href="./address.html">Adresses</a></li>
+                  <li><a href="./orders.html">My orders</a></li>
+                  <li><a href="./payment.html">Payment Methods</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <div class="m-col m-col--9 m-col__lg--10 m-col__ms--10 m-col__mxs--15">
             <div class="inner-content">
-              <div class="account-title">
-                <h1>Create an account</h1><a href="./sign_in_page.html">sign in</a>
-              </div>
-              <div class="inner-block">
-                <h3>Personal information</h3>
-              </div>
-              <div class="inner-photo">
-                <div class="text">First name:</div>
-                <input type="text" placeholder="Nikita">
-              </div>
-              <div class="inner-photo">
-                <div class="text">Last name:</div>
-                <input type="text" placeholder="Pokatilov">
-              </div>
-              <div class="inner-photo">
-                <div class="text">Birth date:</div>
-                <div class="birth-block">
-                  <select>
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06" selected>06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                  </select>
-                  <select>
-                    <option value="01">January</option>
-                    <option value="02">February</option>
-                    <option value="03">March</option>
-                    <option value="04" selected>April</option>
-                    <option value="05">May</option>
-                    <option value="06">June</option>
-                    <option value="07">July</option>
-                    <option value="08">August</option>
-                    <option value="09">September</option>
-                    <option value="10">October</option>
-                    <option value="09">November</option>
-                    <option value="10">December</option>
-                  </select>
-                  <select>
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03" selected>1992</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10    </option>
-                  </select>
+              <h1>Payment Methods</h1>
+              <div class="payment-wrap">
+                <div class="payment-item">
+                  <h3 class="paycaption">Method</h3>
+                  <h3 class="paycaption">Data</h3>
+                  <h3 class="paycaption">Until</h3>
+                  <h3 class="empty">none</h3>
+                </div>
+                <div class="payment-item">
+                  <div class="payment-name">Credit Card</div>
+                  <div class="card">Visa •⁠•⁠•⁠•⁠  ⁠1234‬</div>
+                  <div class="card-data">09/2028</div>
+                  <div class="payment-btn">
+                    <button onclick="location.href='./edit_payment.html';">EDIT</button>
+                    <button>DELETE</button>
+                  </div>
+                </div>
+                <div class="payment-item">
+                  <div class="payment-name">UnionPay</div>
+                  <div class="card">Visa •⁠•⁠•⁠•⁠  ⁠1234‬</div>
+                  <div class="card-data">09/2028</div>
+                  <div class="payment-btn">
+                    <button onclick="location.href='./edit_payment.html';">EDIT</button>
+                    <button>DELETE</button>
+                  </div>
+                </div>
+                <div class="payment-item">
+                  <div class="payment-name">PayPal</div>
+                  <div class="card">nik •⁠•⁠•⁠•⁠  ⁠il.com‬</div>
+                  <div class="card-data">-</div>
+                  <div class="payment-btn">
+                    <button onclick="location.href='./edit_payment.html';">EDIT</button>
+                    <button>DELETE</button>
+                  </div>
                 </div>
               </div>
-              <div class="inner-photo">
-                <div class="text">Email adress:</div>
-                <input type="text" placeholder="Nikitapokatilov07@gmail.com">
-              </div>
-              <div class="inner-photo">
-                <div class="text">Phone number:</div>
-                <input type="text" placeholder="+7 (925) 123-45-67">
-              </div>
-              <div class="inner-block">
-                <h3 style="margin-bottom: 32px">Password</h3>
-                <p>Your password should contain 6-20 case sensitive characters, at least one numeral, at least one alphabet,special characters allowed.</p>
-              </div>
-              <div class="inner-photo">
-                <div class="text">Password:</div>
-                <input type="text" placeholder="012-234">
-              </div>
-              <div class="inner-photo">
-                <div class="text">Confirm password:</div>
-                <input type="text" placeholder="012-234">
-              </div>
-              <div class="inner-block">
-                <div class="checkbox">
-                  <input class="option-input" type="checkbox" checked>
-                  <p>By checking this box and clicking "Register" below, I acknowledge that I have read and agree to the Terms & Conditions and Privacy Policy </p>
-                </div>
-                <div class="checkbox">
-                  <input class="option-input" type="checkbox" checked>
-                  <p>Yes, sign me up! By checking this box, I agree I want to receive news, offers, style tips and other promotional materials from and about Michael Kors, including by email, phone and mail to the contact information I am submitting. I consent to Michael Kors, its affiliates and service providers processing my personal data for these purposes and as described in the privacy policy. I understand that I can withdraw my consent at any time.</p>
-                </div>
-                <div class="checkbox">
-                  <input class="option-input" type="checkbox" checked>
-                  <p>Remember Me</p>
-                </div>
-              </div>
-              <div class="inner-photo">
-                <div class="text"></div>
-                <div class="btn-account">  
-                  <button>Register                </button>
-                </div>
-              </div>
+              <button class="addNew" onclick="location.href='./add_method.html';">ADD NEW              </button>
             </div>
           </div>
           <div class="m-col m-col--3 m-col__lg--2 m-col__ms--1 m-col__mxs--1"></div>
