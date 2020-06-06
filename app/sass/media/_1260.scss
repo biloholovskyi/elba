@@ -134,4 +134,25 @@
       }
     }
   } 
+  // OTHER PAGE
+  #profile,
+  #address,
+  #edit_address {
+    .inner-content {
+      .inner-photo {
+        flex-direction: column;
+        .birth-block {
+          margin-top:  10px;
+        }
+      }
+    }
+  }
+  #address {
+    .select-styled {
+      padding-left: 0;
+    }
+    .inner-content {
+      margin-bottom: 100px;
+    }
+  }
 }

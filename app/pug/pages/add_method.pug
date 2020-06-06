@@ -33,28 +33,32 @@ block content
             .inner-photo
               .text Until:
               .birth-block
-                select
+                select#mounth
+                  option(value="hide") Month
+                  option(value="01") January
+                  option(value="02") February
+                  option(value="03") March
+                  option(value="04" selected) April
+                  option(value="05") May
+                  option(value="06") June
+                  option(value="07") July
+                  option(value="08") August
+                  option(value="09") September
+                  option(value="10") October
+                  option(value="09") November
+                  option(value="10") December
+                select#year
+                  option(value="hide") year 
                   option(value="01") 01
                   option(value="02") 02
-                  option(value="03") 03
+                  option(value="03" selected) 1992
                   option(value="04") 04
                   option(value="05") 05
-                  option(value="06" selected) April
+                  option(value="06") 06
                   option(value="07") 07
                   option(value="08") 08
                   option(value="09") 09
-                  option(value="10") 10
-                select
-                  option(value="01") 01
-                  option(value="02") 02
-                  option(value="03") 03
-                  option(value="04") 04
-                  option(value="05") 05
-                  option(value="06" selected) 2020
-                  option(value="07") 07
-                  option(value="08") 08
-                  option(value="09") 09
-                  option(value="10") 10 
+                  option(value="10") 10   
             .inner-photo
               .text Cardholder:
               input(type="text") 

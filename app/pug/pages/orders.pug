@@ -16,7 +16,7 @@ block content
       .m-row
         .m-col.m-col--3.m-col__lg--3.m-col__ms--2.m-col__mxs--1
           include ../modules/aside-profile
-        .m-col.m-col--9.m-col__lg--10.m-col__ms--10.m-col__mxs--15
+        .m-col.m-col--9.m-col__lg--10.m-col__ms--15.m-col__mxs--15
           .inner-content
             h1 My orders
             .aside-catalog
@@ -25,11 +25,16 @@ block content
                   input(type="checkbox")
                   a(href="#" data-toggle="dropdown")
                     .order
+                      p.order-mobile Order:
                       p 8-229-63794
                       button During delivery
                     .date 12.05.2020
+                      p.order-mobile Created:
                     .price € 560.00
+                      p.order-mobile Total price:
                     .count 2
+                      p.order-mobile  Elements:
+                    button(onclick="location.href='./order_mobile.html';").btn-mobile SHOW DETAILS  
                   ul.dropdown-menu
                     li
                       .main-block
@@ -114,11 +119,16 @@ block content
                   input(type="checkbox")
                   a(href="#" data-toggle="dropdown")
                     .order
+                      p.order-mobile Order:
                       p 8-229-63794
-                      button.btn-status-Prepering Prepering
+                      button.btn-status-Prepering During delivery
                     .date 12.05.2020
+                      p.order-mobile Created:
                     .price € 560.00
+                      p.order-mobile Total price:
                     .count 2
+                      p.order-mobile  Elements:
+                    button.btn-mobile SHOW DETAILS
                   ul.dropdown-menu
                     li
                       .main-block
@@ -203,13 +213,16 @@ block content
                   input(type="checkbox")
                   a(href="#" data-toggle="dropdown")
                     .order
+                      p.order-mobile Order:
                       p 8-229-63794
-                      button.btn-status-Received Prepering
+                      button.btn-status-Received During delivery
                     .date 12.05.2020
-                    .price
-                      p € 1,420.00
-                      p.offer € 1,220.00
+                      p.order-mobile Created:
+                    .price € 560.00
+                      p.order-mobile Total price:
                     .count 2
+                      p.order-mobile  Elements:
+                    button.btn-mobile SHOW DETAILS
                   ul.dropdown-menu
                     li
                       .main-block
@@ -290,9 +303,9 @@ block content
                           .order-item
                             button Receipt of payment
                             button Cancel the order                                           
-                     
-                        
- 
+
+
+
         .m-col.m-col--3.m-col__lg--2.m-col__ms--1.m-col__mxs--1
 
 

@@ -10,7 +10,9 @@ body,
 html {
   position: relative;
 }
-
+h1 {
+  text-transform: none; 
+}
 a,
 a:hover,
 a:focus,
@@ -98,7 +100,10 @@ button {
 @import "pages/other_pages/cookies";   
 @import "pages/other_pages/subscribe";  
 @import "pages/other_pages/unsubscribe";
-@import "pages/other_pages/404";            
+@import "pages/other_pages/404";  
+@import "pages/other_pages/checkout";  
+@import "pages/other_pages/select";
+@import "pages/other_pages/order_mobile";                
      
 
 

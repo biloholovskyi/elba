@@ -1,0 +1,199 @@
+#order_mobile {
+  padding-top: 64px;
+  .inner-content {
+    margin-bottom: 0;
+    h1 {
+      margin-bottom: 0;
+      border-bottom: 1px solid #E4E8EB;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      padding: 12px 0 12px 64px;
+      text-transform: none;
+      line-height: 24px;
+      font-size: 16px;}
+
+    .order_mobile {
+      h4 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase; 
+        color: #B2B8BF;
+      }
+      .order {
+        display: flex;
+        margin-bottom: 64px; 
+        p {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 32px;
+          color: #1F1F22;
+          margin-right: 37px;
+        }
+        button {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 20px;
+          color: #FFFFFF;
+          border-radius: 4px;
+          padding: 4px 8px; 
+          border: none;
+          letter-spacing: normal;
+        }
+      }
+
+      h3 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        color: #1F1F22;
+        margin-bottom: 16px;
+      }
+
+      .order-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFFFFF;
+        margin-bottom: 64px;
+        .order-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 24px;
+          justify-content: center;
+          padding: 12px;
+          img {
+            width: 66px;
+            height: 66px;
+            margin-bottom: 0;
+            margin-right: 30px;
+          }
+
+          .item-title {
+            max-width: 169px;
+            margin-right: 9px;
+
+            h4 {
+              font-style: normal;
+              font-weight: 500;
+              font-size: 10px;
+              line-height: 16px;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              color: #1F1F22;
+              opacity: 0.3;
+            }
+
+            h3 {
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 20px;
+              color: #1F1F22;
+            }
+          }
+
+          .item-price {
+            margin-right: 39px;
+            width: 80px;
+
+            p {
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 20px;
+              color: #1F1F22;
+            }
+
+            .offer {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 20px;
+              text-decoration-line: line-through;
+              color: #7D838A;
+              text-decoration: line-through;
+            }
+          }
+
+          .delivery-info {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            color: #7D838A;
+            width: 183px;
+          }
+
+          .info {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            color: #1F1F22;
+          }
+        }
+
+        .order-item button:first-child {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 20px;
+          display: flex;
+          align-items: center;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #1F1F22;
+          border: 1px solid #1F1F22;
+          background-color: transparent;
+          padding: 10px 32px;
+          margin-right: 16px;
+        }
+
+        .order-item button:last-child {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 20px;
+          display: flex;
+          align-items: center;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #C11030;
+          border: 1px solid #D0D7DD;
+          padding: 10px 32px;
+          background-color: transparent;
+        }
+
+        .order-item button:hover {
+          color: #565B62;
+          border: 1px solid #565B62;
+        }
+        
+      }
+      .order-block .order-item:last-child {
+        margin-bottom: 0; 
+      }
+      .main-block {
+        .delivery-title {
+          margin-bottom: 32px;
+        }
+        .order-block {
+          background-color: transparent;
+          align-items: flex-start;
+         .order-item {
+          padding: 0; 
+         }
+        }
+      }
+    }
+  }
+}

@@ -103,4 +103,91 @@
     }
   }
   // catalog end
+  // page orders
+  #orders {
+    .inner-content {
+      .aside-catalog {
+        .dropdown {
+          border-bottom: none!important;
+          margin-bottom: 24px;
+          background-color: #fff;
+          padding: 24px!important;
+          padding-top: 52px!important;
+          input {
+            display: none;
+          }
+        }
+        .dropdown a {
+          flex-direction: column;
+          .order {
+            display: flex;
+            .order-mobile {
+              margin-right: 30px;
+              width: 75px;
+              display: block;
+              margin-bottom: 16px;
+            }
+            button {
+              position: absolute;
+              top: 24px;
+              left: 24px;
+              font-size: 12px;
+              line-height: 20px;
+            }
+            p {
+              font-size: 14px;
+              line-height: 24px; 
+            }
+          }
+          .date {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 140px;
+            min-width: max-content!important; 
+            margin-bottom: 16px;
+            font-size: 14px;
+            line-height: 24px;
+          }
+          .price {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 174px;
+            max-width: none!important;
+            margin-bottom: 16px;
+            font-size: 14px;
+            line-height: 24px;
+          }
+          .count {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 107px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            line-height: 24px;
+          }
+          .btn-mobile {
+            display: block!important;
+          }
+          .order-mobile {
+            display: block!important;
+            margin-right: 30px;
+            width: 75px;
+          }
+        }
+        .dropdown a:after {
+          display: none!important;
+        }
+        .dropdown a:before {
+          display: none!important;
+        }
+      }
+    }
+  }
+  #orders .aside-catalog .dropdown>input[type=checkbox]:checked~.dropdown-menu {
+    display: none;
+  }
+  #orders .inner-content .aside-catalog ul .dropdown a .order {
+    margin-right: 0;
+  }
+  
 }

@@ -147,6 +147,11 @@
       color: #FFFFFF;
       padding: 14px 30px;
       border: none;
+      transition:  .4s;
+    }
+    button:hover {
+      color:  #fff!important;
+      background-color: #565B62!important;
     }
   }
 }

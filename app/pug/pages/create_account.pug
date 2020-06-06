@@ -25,14 +25,15 @@ block content
               h3 Personal information
             .inner-photo
               .text First name:
-              input(type="text" placeholder="Nikita")
+              input(type="text" placeholder="")
             .inner-photo
               .text Last name:
-              input(type="text" placeholder="Pokatilov") 
+              input(type="text" placeholder="") 
             .inner-photo
               .text Birth date:
               .birth-block
-                select
+                select#day
+                  option(value="hide") day
                   option(value="01") 01
                   option(value="02") 02
                   option(value="03") 03
@@ -43,7 +44,8 @@ block content
                   option(value="08") 08
                   option(value="09") 09
                   option(value="10") 10
-                select
+                select#mounth
+                  option(value="hide") Month
                   option(value="01") January
                   option(value="02") February
                   option(value="03") March
@@ -56,7 +58,8 @@ block content
                   option(value="10") October
                   option(value="09") November
                   option(value="10") December
-                select
+                select#year
+                  option(value="hide") year 
                   option(value="01") 01
                   option(value="02") 02
                   option(value="03" selected) 1992
@@ -69,19 +72,19 @@ block content
                   option(value="10") 10    
             .inner-photo
               .text Email adress:
-              input(type="text" placeholder="Nikitapokatilov07@gmail.com") 
+              input(type="text" placeholder="") 
             .inner-photo
               .text Phone number:
-              input(type="text" placeholder="+7 (925) 123-45-67")
+              input(type="text" placeholder="")
             .inner-block
               h3(style="margin-bottom: 32px") Password
               p Your password should contain 6-20 case sensitive characters, at least one numeral, at least one alphabet,special characters allowed.
             .inner-photo
               .text Password:
-              input(type="text" placeholder="012-234")
+              input(type="text" placeholder="")
             .inner-photo
               .text Confirm password:
-              input(type="text" placeholder="012-234") 
+              input(type="text" placeholder="") 
             .inner-block
               .checkbox
                 input(type="checkbox" checked).option-input

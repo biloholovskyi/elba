@@ -145,6 +145,10 @@
         padding: 10px 0;
         display: flex;
         justify-content: center;  
+        transition:  .4s;
+      }
+      button:hover {
+        background-color: #565B62;
       }
     }
     & .subscribe-item:last-child {
@@ -171,6 +175,11 @@
         button {
           max-width: 213px;
           padding: 10px 30px;
+          transition:  .4s;
+        }
+        button:hover {
+          color:  #fff!important;
+          background-color: #565B62!important;
         }
       }
     }

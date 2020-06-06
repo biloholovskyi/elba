@@ -42,6 +42,7 @@
     .busket-item {
       display: flex;
       margin-bottom: 14px;
+      cursor: pointer;
       img {
         width: 100px;
         height: 100px;
@@ -95,9 +96,13 @@
     text-transform: uppercase;
     color: #FFFFFF;
     width: 100%;
-    justify-content: center;
+    justify-content: center; 
     border: none;
     padding: 10px 0;
+    transition: .4s; 
+  }
+  button:hover {
+    background-color: #565B62; 
   }
 }
 .basket-wrap.active {
@@ -150,6 +155,10 @@
     justify-content: center;
     border: none;
     padding: 10px 0;
+    transition: .4s;
+  }
+  button:hover {
+    background-color: #565B62;  
   }
 }
 

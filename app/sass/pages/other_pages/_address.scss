@@ -1,5 +1,6 @@
 #address,
-#addPayment{
+#addPayment,
+#edit_address{
   .aside-bar {
     padding-top: 142px;
     position: static;
@@ -34,11 +35,17 @@
           color: #1F1F22;
           border: 1px solid #1F1F22;
         }
+        & button:last-child:hover {
+          color: #565B62;  
+          border: 1px solid #565B62;  
+        }
       }
 
       .birth-block {
         max-width: 450px;
-
+        .select {
+          width: 100%;
+        }
         & select:last-child {
           margin-right: 0;
         }
@@ -170,6 +177,7 @@
           margin-left: 16px;
           color: #C11030;
         }
+        
       }
     }
 
@@ -277,6 +285,14 @@
         background: #1F1F22;
         max-width: 100px;
         margin: 0 auto;
+        transition:  .4s;
+      }
+      button:hover {
+        background-color: #565B62;
+      }
+      & .modal-btn-block button:last-child:hover {
+        color: #565B62;  
+    border: 1px solid #565B62;  
       }
     }
   }

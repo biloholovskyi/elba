@@ -38,6 +38,10 @@
     padding: 10px 0;
     text-transform: uppercase;
     cursor: pointer;
+    transition: .4s;
+  }
+  button:hover {
+    background-color: #565B62;
   }
   #sign_in {
     input {
@@ -163,6 +167,10 @@
     text-transform: uppercase;
     color: #1F1F22;
     margin-bottom: 24px;
+    transition: .4s;
+  }
+  a:hover {
+    color: #565B62;
   }
   button {
     border: 1px solid #1F1F22;
@@ -176,6 +184,12 @@
     cursor: pointer;
     text-transform: uppercase;
     margin: 8px 0 32px;
+    transition: .4s;
+  }
+  button:hover {
+    color: #565B62;  
+    border: 1px solid #565B62;  
+    
   }
 }
 

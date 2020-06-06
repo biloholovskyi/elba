@@ -26,22 +26,15 @@ $(document).on('click', (e) => {
     }
   }
 
-  // const btnAcc =    $('.sign_in'),
-  //       accModal =  $('.sign_in-wrap');
-
-  //       if (!btnAcc.is(e.target) && btnAcc.has(e.target).length === 0) {
-  //         if (!accModal.is(e.target) && accModal.has(e.target).length === 0) {
-  //           $('.sign_in-wrap').hide().removeClass('active');
-  //         }
-  //       }
+ 
   
 });
 
-// $(document).mouseup(function(e) {
-//   var container = $(".active");
-//   if (!container.is(e.target) &&
-//     container.has(e.target).length === 0 &&
-//     !$(e.target).hasClass("btn")) {
-//     container.removeClass("active");
-//   }
-// });
+$(document).mouseup(function(e) {
+  var container = $(".active");
+  if (!container.is(e.target) &&
+    container.has(e.target).length === 0 &&
+    !$(e.target).hasClass("btn")) {
+    container.removeClass("active");
+  }
+});

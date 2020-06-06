@@ -23,6 +23,7 @@ import { switchSlideFirst, autoSwitchFirst } from "./firstSlider";
 import { inspSlider } from "./inspiration";
 import './sticky';
 import './modal-other';
+import './select';
 
 
 $(document).ready((e) => {

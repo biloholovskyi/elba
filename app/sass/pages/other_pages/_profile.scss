@@ -20,12 +20,17 @@
             padding: 14px 32px;
             width: max-content;
             margin-right: 16px;
+            transition: .4s;
           }
          button:last-child {
           background-color: transparent;
           color: #1F1F22;
           border: 1px solid  #1F1F22;
         }
+        button:last-child:hover {
+          color: #565B62;   
+          border: 1px solid #565B62;  
+         }
       }
       .birth-block {
         max-width: 450px;

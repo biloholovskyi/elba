@@ -1,4 +1,4 @@
-#orders{
+#orders {
   .aside-bar {
     position: static;
 }
@@ -20,7 +20,7 @@
                 font-size: 16px;
                 line-height: 28px;
                 color: #1F1F22;
-                margin-right: 8px;
+                margin-right: 37px; 
               }
               button {
                 font-style: normal;
@@ -40,6 +40,30 @@
                 background: #0EB757;
               }
               
+            }
+            .order-mobile {
+              font-style: normal;
+              font-weight: 500!important;
+              font-size: 14px!important;
+              line-height: 24px!important;
+              color: #7D838A!important;
+              display: none;
+            }
+            .btn-mobile {
+              font-style: normal;
+              font-weight: bold;
+              font-size: 12px;
+              line-height: 20px;
+              display: flex;
+              align-items: center;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              color: #1F1F22;
+              background-color: transparent;
+              border: 1px solid #1F1F22; 
+              display: none;
+              padding: 10px 60px;
+              margin-top: 16px;
             }
             .date,
             .price,
@@ -224,6 +248,10 @@
                 padding: 10px 32px;
                 background-color: transparent;
               }
+              .order-item button:hover {
+                color: #565B62;  
+                border: 1px solid #565B62;  
+              }
              }
            }
          }
@@ -240,4 +268,13 @@
 #orders .aside-catalog .dropdown>input[type=checkbox]:checked+a[data-toggle=dropdown]:before{
   transform: rotate(0);
   transition: transform .5s;
+}
+.btn-status-during {
+  background: #B2B8BF;
+}
+.btn-status-Prepering {
+  background: #FF9900;
+}
+.btn-status-Received {
+  background: #0EB757;
 }

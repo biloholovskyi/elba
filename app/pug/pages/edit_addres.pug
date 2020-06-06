@@ -11,7 +11,7 @@ block content
   include ../modules/header
   include ../modules/modal-menu
 
-  #address.inner-page 
+  #edit_address.inner-page 
     .m-container
       .m-row
         .m-col.m-col--3.m-col__lg--3.m-col__ms--2.m-col__mxs--1
@@ -23,29 +23,30 @@ block content
               h3(style="margin-top: 32px") Edit address
             .inner-photo
               .text Receiver last name:
-              input(type="text" placeholder="Malashkina")
+              input(type="text" placeholder="")
             .inner-photo
               .text Receiver first name:
-              input(type="text" placeholder="Olga")
+              input(type="text" placeholder="")
             .inner-photo
               .text Company name: (optional)
-              input(type="text" placeholder="Olala Incorporatedv") 
+              input(type="text" placeholder="") 
             .inner-photo
               .text Address:
-              input(type="text" placeholder="6 rue Arsène Houssaye, 8èm") 
+              input(type="text" placeholder="") 
             .inner-photo
               .text ZIP-code: 
-              input(type="text" placeholder="123-456")        
+              input(type="text" placeholder="")        
             .inner-photo
               .text Country:
               .birth-block
-                select
+                select#country
+                  option(value="hide") Country
                   option(value="01") 01
                   option(value="02") 02
                   option(value="03") 03
                   option(value="04") 04
                   option(value="05") 05
-                  option(value="06" selected) Russian Federation
+                  option(value="06" selected)  Russian Federation
                   option(value="07") 07
                   option(value="08") 08
                   option(value="09") 09
@@ -53,10 +54,10 @@ block content
                 
             .inner-photo
               .text City
-              input(type="text" placeholder="Moscov") 
+              input(type="text" placeholder="") 
             .inner-photo
               .text Phone number:
-              input(type="text" placeholder="+7 (925) 123-45-67")  
+              input(type="text" placeholder="")  
             .inner-photo
               .text
               .btn-account   

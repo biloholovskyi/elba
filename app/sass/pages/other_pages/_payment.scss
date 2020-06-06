@@ -103,13 +103,18 @@
       border: none;
       padding: 14px 30px;
       margin: 0 auto;
+      transition: .4s;
+    }
+    .addNew:hover {
+      background-color: #565B62;
     }
   }
 }
 
 // ADD METHOD PAGE
 
-#addPayment {
+#addPayment,
+#checkout {
   .inner-content {
     margin-bottom: 196px;
     .inner-photo {
@@ -140,4 +145,7 @@
       }
     }
   }
+}
+#addPayment .inner-content .inner-photo .birth-block .select {
+  width: 213px;
 }
