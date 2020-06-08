@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <title>Edit Methods</title>
+    <title>Checkout</title>
   </head>
   <body>
     <header class="header other_header">
@@ -130,28 +130,142 @@
         </div>
       </div>
     </div>
-    <div class="inner-page" id="addPayment"> 
+    <div class="inner-page" id="checkout"> 
       <div class="m-container">
         <div class="m-row">
-          <div class="m-col m-col--3 m-col__lg--3 m-col__ms--2 m-col__mxs--1">
-            <div class="aside-bar">
-              <div class="nav">
-                <ul>
-                  <li><a href="./profile.html">Profile</a></li>
-                  <li><a href="./address.html">Adresses</a></li>
-                  <li><a href="./orders.html">My orders</a></li>
-                  <li><a href="./payment.html">Payment Methods</a></li>
-                </ul>
+          <div class="m-col m-col--3 m-col__lg--3 m-col__ms--15 m-col__mxs--15"><a class="inner-btn account-back" href="/">Back to website</a></div>
+          <div class="m-col m-col--8 m-col__lg--8 m-col__ms--15 m-col__mxs--15"> 
+            <div class="inner-content">
+              <div class="account-title">
+                <h1>Checkout</h1>
+              </div>
+              <div class="inner-block">
+                <h3>Delivery address  </h3>
+              </div>
+              <div class="inner-photo">
+                <div class="text">Receiver last name:</div>
+                <input type="text" placeholder="">
+              </div>
+              <div class="inner-photo">
+                <div class="text">Receiver first name:</div>
+                <input type="text" placeholder="">
+              </div>
+              <div class="inner-photo">
+                <div class="text">Company name: (optional)</div>
+                <input type="text" placeholder="">
+              </div>
+              <div class="inner-photo">
+                <div class="text">Address:</div>
+                <input type="text" placeholder="">
+              </div>
+              <div class="inner-photo">
+                <div class="text">ZIP-code: </div>
+                <input type="text" placeholder="">
+              </div>
+              <div class="inner-photo">
+                <div class="text">Country:</div>
+                <div class="birth-block">
+                  <select id="country">
+                    <option value="hide">Country</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06" selected> Russian Federation</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+              </div>
+              <div class="inner-photo">
+                <div class="text">City</div>
+                <input type="text" placeholder="">
+              </div>
+              <div class="inner-photo">
+                <div class="text">Phone number:</div>
+                <input type="text" placeholder="">
+              </div>
+              <div class="inner-block">
+                <div class="checkbox">
+                  <input class="option-input" type="checkbox" checked>
+                  <p>Yes, sign me up! By checking this box, I agree I want to receive news, offers, style tips and other promotional materials from and about Michael Kors, including by email, phone and mail to the contact information I am submitting. I consent to Michael Kors, its affiliates and service providers processing my personal data for these purposes and as described in the privacy policy. I understand that I can withdraw my consent at any time.</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="m-col m-col--9 m-col__lg--10 m-col__ms--10 m-col__mxs--15">
             <div class="inner-content">
-              <div class="mobile-other-header"><a href="./payment.html">Payment Methods</a>
-              </div>
-              <h1>Payment Methods   </h1>
               <div class="inner-block">
-                <h3>Edit method</h3>
+                <h3>Billing address</h3>
+              </div>
+              <ul class="address-block checkout-block"> 
+                <li>
+                  <label class="radio">
+                    <input type="radio" name="r" value="1" checked><span>Same as delivery address</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="r" value="1" checked><span>Add an alternative   </span>
+                  </label>
+                </li>
+              </ul>
+              <div class="inner-photo">
+                <div class="text"></div>
+                <div class="method_type address-type">
+                  <button>Same as delivery address</button>
+                  <button>Add an alternative    </button>
+                </div>
+              </div>
+              <div class="inner-photo">
+                <div class="text">Receiver last name:</div>
+                <input type="text" placeholder="">
+              </div>
+              <div class="inner-photo">
+                <div class="text">Receiver first name:</div>
+                <input type="text" placeholder="">
+              </div>
+              <div class="inner-photo">
+                <div class="text">Company name: (optional)</div>
+                <input type="text" placeholder="">
+              </div>
+              <div class="inner-photo">
+                <div class="text">Address:</div>
+                <input type="text" placeholder="">
+              </div>
+              <div class="inner-photo">
+                <div class="text">ZIP-code: </div>
+                <input type="text" placeholder="">
+              </div>
+              <div class="inner-photo">
+                <div class="text">Country:</div>
+                <div class="birth-block">
+                  <select id="country">
+                    <option value="hide">Country</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06" selected> Russian Federation</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+              </div>
+              <div class="inner-photo">
+                <div class="text">City</div>
+                <input type="text" placeholder="">
+              </div>
+              <div class="inner-photo">
+                <div class="text">Phone number:</div>
+                <input type="text" placeholder="">
+              </div>
+            </div>
+            <div class="inner-content">
+              <div class="inner-block">
+                <h3>Payment Methods</h3>
               </div>
               <div class="inner-photo">
                 <div class="text">Method type:</div>
@@ -167,7 +281,7 @@
               </div>
               <div class="inner-photo">
                 <div class="text">Until:</div>
-                <div class="birth-block">
+                <div class="birth-block cardUntil">
                   <select id="mounth">
                     <option value="hide">Month</option>
                     <option value="01">January</option>
@@ -187,14 +301,14 @@
                     <option value="hide">year </option>
                     <option value="01">01</option>
                     <option value="02">02</option>
-                    <option value="03" selected>1992</option>
+                    <option value="03" selected>1992 </option>
                     <option value="04">04</option>
                     <option value="05">05</option>
                     <option value="06">06</option>
                     <option value="07">07</option>
                     <option value="08">08</option>
                     <option value="09">09</option>
-                    <option value="10">10   </option>
+                    <option value="10">10</option>
                   </select>
                 </div>
               </div>
@@ -206,16 +320,26 @@
                 <div class="text">CVV/CVC: </div>
                 <input type="password">
               </div>
-              <div class="inner-photo">
-                <div class="text"></div>
-                <div class="btn-account">  
-                  <button>SAVE CHANGES</button>
-                  <button onclick="location.href='./payment.html';">CANCEL                </button>
-                </div>
-              </div>
             </div>
           </div>
-          <div class="m-col m-col--3 m-col__lg--2 m-col__ms--1 m-col__mxs--1"></div>
+          <div class="m-col m-col--4 m-col__lg--4 m-col__ms--15 m-col__mxs--15">
+            <div class="paynow-wrap">
+              <div class="item">
+                <h3>Subtotal:</h3>
+                <div>€ 2,000.00</div>
+              </div>
+              <div class="item">
+                <h3>Shipping: *</h3>
+                <div>€ 0.00</div>
+              </div>
+              <div class="item">
+                <h4>Total:</h4>
+                <div style="font-weight: bold">€ 2,000.00</div>
+              </div>
+              <button style="background-color: #D0D7DD">PAY NOW</button>
+              <p>* The full shipping cost is calculated after the delivery point is indicated.     </p>
+            </div>
+          </div>
         </div>
         <div class="m-row">
           <div class="m-col m-col--15">

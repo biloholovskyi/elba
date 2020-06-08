@@ -53,6 +53,9 @@
       margin: 0;
       max-width: 450px;
     }
+    p {
+      
+    }
     .checkbox {
       display: flex;
       margin-bottom: 32px;
@@ -100,6 +103,21 @@
         align-items: center;
         
       }
+      p {
+        margin-bottom: 0!important;
+        a {
+          text-transform: none;
+          font-style: normal;
+         font-weight: normal;
+         font-size: 16px;
+         line-height: 28px;
+         color: #7D838A;
+         text-decoration: underline;
+         background-color: transparent;
+         padding: 0;
+         margin: 0;
+        }
+      }
     }
     p {
       font-style: normal;
@@ -108,6 +126,7 @@
       line-height: 28px;
       color: #7D838A;
       max-width: 450px;
+      
     }
     
   }
@@ -183,6 +202,7 @@
   }
   
 }
+
 #sign_in_page .inner-photo .btn-account button:hover {
   background: #565B62!important;
   color: #fff!important;

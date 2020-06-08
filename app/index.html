@@ -21,8 +21,8 @@
                 <div class="item"></div>
               </div>
               <div class="mobile-button" style="background-size: 14.62px; background-image: url(./media/icon/mobile-search.svg)" onclick="location.href='./search.html';"></div><a class="mobile__link" href="/"></a>
-              <div class="mobile-button" style="background-size: 15.56px; background-image: url(./media/icon/mobile-profile.svg)"></div>
-              <div class="mobile-button" style="background-size: 18px; background-image: url(./media/icon/mobile-cart.svg)"> </div>
+              <div class="mobile-button sign_in" style="background-size: 15.56px; background-image: url(./media/icon/mobile-profile.svg)"></div>
+              <div class="mobile-button basket" style="background-size: 18px; background-image: url(./media/icon/mobile-cart.svg)"> </div>
             </div>
             <div class="header__wrapper">
               <div class="header__left"><a class="header__logo" href="/"><img alt="elba" src="./media/icon/logo.png"></a>
@@ -34,90 +34,98 @@
                 <div class="small-icon sign_in" style="background-image: url(./media/icon/profile.svg)"></div>
                 <div class="big-icon basket" style="background-image: url(./media/icon/cart.svg)"></div>
               </div>
-              <div class="sign_in-wrap">
-                <h2>Create an account</h2>
-                <p>Create a ELBA account with your email address.</p>
-                <button onclick="location.href='./create_account.html';">Create an account</button>
-                <h2>Sign in</h2>
-                <p>Sign in with your email and password.</p>
-                <form id="sign_in">
-                  <input type="text" placeholder="Email adress" required>
-                  <div class="inp-block">
-                    <input type="password" placeholder="Password" style="border: none">
-                    <h3>FORGOT?</h3>
-                  </div>
-                  <div class="inp-block inp-check"> 
-                    <input class="option-input" type="checkbox" checked>
-                    <h3>Remember me </h3>
-                  </div>
-                </form>
-                <button>Sign in</button>
-              </div>
-              <div class="log_out">
-                <h3>Account</h3><a href="./profile.html">Profile</a><a href="./address.html">Shipping Addresses</a><a href="./orders.html">My orders</a><a href="./payment.html">Payment Methods</a>
-                <button>Logout      </button>
-              </div>
-              <div class="basket-wrap">
-                <div class="basket-title">
-                  <h2>Your order</h2>
-                  <p>€ 1,420.00</p>
-                </div>
-                <div class="basket-block"> 
-                  <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
-                    <div class="item">
-                      <h4>Leather</h4>
-                      <h3>Little E — Logo Max White & Black</h3>
-                      <p>€200</p>
-                    </div>
-                  </div>
-                  <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
-                    <div class="item">
-                      <h4>Leather</h4>
-                      <h3>Little E — Logo Max White & Black</h3>
-                      <p>€200</p>
-                    </div>
-                  </div>
-                  <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
-                    <div class="item">
-                      <h4>Leather</h4>
-                      <h3>Little E — Logo Max White & Black</h3>
-                      <p>€200 </p>
-                    </div>
-                  </div>
-                  <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
-                    <div class="item">
-                      <h4>Leather</h4>
-                      <h3>Little E — Logo Max White & Black</h3>
-                      <p>€200</p>
-                    </div>
-                  </div>
-                  <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
-                    <div class="item">
-                      <h4>Leather</h4>
-                      <h3>Little E — Logo Max White & Black</h3>
-                      <p>€200</p>
-                    </div>
-                  </div>
-                  <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
-                    <div class="item">
-                      <h4>Leather</h4>
-                      <h3>Little E — Logo Max White & Black</h3>
-                      <p>€200            </p>
-                    </div>
-                  </div>
-                </div>
-                <button>Continue</button>
-              </div>
-              <div class="basket-empty">
-                <h2>No items</h2>
-                <p>There are no products in your basket yet. Start adding and they will appear in this place.</p>
-                <button>Go to catalog</button>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </header>
+    <div class="modal-wrapper">
+      <div class="m-container" style="position: relative"> 
+        <div class="m-row">
+          <div class="m-col">            
+            <div class="sign_in-wrap">
+              <h2>Create an account</h2>
+              <p>Create a ELBA account with your email address.</p>
+              <button onclick="location.href='./create_account.html';">Create an account</button>
+              <h2>Sign in</h2>
+              <p>Sign in with your email and password.</p>
+              <form id="sign_in">
+                <input type="text" placeholder="Email adress" required>
+                <div class="inp-block">
+                  <input type="password" placeholder="Password" style="border: none">
+                  <h3>FORGOT?</h3>
+                </div>
+                <div class="inp-block inp-check"> 
+                  <input class="option-input" type="checkbox" checked>
+                  <h3>Remember me </h3>
+                </div>
+              </form>
+              <button>Sign in</button>
+            </div>
+            <div class="log_out">
+              <h3>Account</h3><a href="./profile.html">Profile</a><a href="./address.html">Shipping Addresses</a><a href="./orders.html">My orders</a><a href="./payment.html">Payment Methods</a>
+              <button>Logout      </button>
+            </div>
+            <div class="basket-wrap">
+              <div class="basket-title">
+                <h2>Your order</h2>
+                <p>€ 1,420.00</p>
+              </div>
+              <div class="basket-block"> 
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200</p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200</p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200 </p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200</p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200</p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200            </p>
+                  </div>
+                </div>
+              </div>
+              <button onclick="location.href='./youbag.html';">Continue</button>
+            </div>
+            <div class="basket-empty">
+              <h2>No items</h2>
+              <p>There are no products in your basket yet. Start adding and they will appear in this place.</p>
+              <button>Go to catalog</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="modal-menu">
       <div class="m-container">
         <div class="m-row">

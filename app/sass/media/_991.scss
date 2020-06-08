@@ -55,7 +55,8 @@
     padding: 16px 24px;
     display: inline-block;
     text-align: justify;
-
+    display: flex;
+    flex-direction: column;
     div,
     a {
       max-width: 300px;
@@ -109,4 +110,6 @@
   #sign_in_page .account-title h1 {
     font-size: 40px;
   }
+
+ 
 }

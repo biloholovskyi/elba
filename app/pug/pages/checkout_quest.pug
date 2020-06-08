@@ -23,23 +23,6 @@ block content
             .inner-block
               h3 Delivery address  
             .inner-photo
-              .text Template:
-              .birth-block
-                 select#mounth
-                  option(value="hide") Template:
-                  option(value="01") 1
-                  option(value="02") 2
-                  option(value="03") 3
-                  option(value="04" selected) none
-                  option(value="05") 4
-                  option(value="06") 5
-                  option(value="07") 6
-                  option(value="08") 
-                  option(value="09") 
-                  option(value="10") 
-                  option(value="09") 
-                  option(value="10")  
-            .inner-photo
               .text Receiver last name:
               input(type="text" placeholder="")
             .inner-photo
@@ -76,6 +59,10 @@ block content
             .inner-photo
               .text Phone number:
               input(type="text" placeholder="")
+            .inner-block
+              .checkbox
+                input(type="checkbox" checked).option-input
+                p Yes, sign me up! By checking this box, I agree I want to receive news, offers, style tips and other promotional materials from and about Michael Kors, including by email, phone and mail to the contact information I am submitting. I consent to Michael Kors, its affiliates and service providers processing my personal data for these purposes and as described in the privacy policy. I understand that I can withdraw my consent at any time.
           .inner-content
             .inner-block
               h3 Billing address
@@ -92,23 +79,6 @@ block content
               .method_type.address-type
                 button Same as delivery address
                 button Add an alternative    
-            .inner-photo
-              .text Template:
-              .birth-block
-                select#mounth
-                  option(value="hide") Template:
-                  option(value="01") 1
-                  option(value="02") 2
-                  option(value="03") 3
-                  option(value="04" selected) none
-                  option(value="05") 4
-                  option(value="06") 5
-                  option(value="07") 6
-                  option(value="08") 
-                  option(value="09") 
-                  option(value="10") 
-                  option(value="09") 
-                  option(value="10")  
             .inner-photo
               .text Receiver last name:
               input(type="text" placeholder="")
@@ -150,23 +120,6 @@ block content
             .inner-block
               h3 Payment Methods
             .inner-photo
-              .text Template:
-              .birth-block
-                select#mounth
-                  option(value="hide") Template:
-                  option(value="01") 1
-                  option(value="02") 2
-                  option(value="03") 3
-                  option(value="04" selected) none
-                  option(value="05") 4
-                  option(value="06") 5
-                  option(value="07") 6
-                  option(value="08") 
-                  option(value="09") 
-                  option(value="10") 
-                  option(value="09") 
-                  option(value="10")      
-            .inner-photo
               .text Method type:
               .method_type
                 button(value="") #[span Credit] card 
@@ -196,7 +149,7 @@ block content
                   option(value="hide") year 
                   option(value="01") 01
                   option(value="02") 02
-                  option(value="03" selected) 1992
+                  option(value="03" selected) 1992 
                   option(value="04") 04
                   option(value="05") 05
                   option(value="06") 06
@@ -221,7 +174,7 @@ block content
             .item
               h4 Total:
               div(style="font-weight: bold") € 2,000.00
-            button PAY NOW
+            button(style="background-color: #D0D7DD") PAY NOW
             p * The full shipping cost is calculated after the delivery point is indicated.     
 
 

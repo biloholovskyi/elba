@@ -90,17 +90,10 @@ $(document).ready((e) => {
   $('.configurator__sidebar .conf__slider-nav .conf-slider__btn').on('click', (e) => {inspSlider(e)})
   $('.order-head-cancel').on('click', closeMobileMain);
   $('.order-head-type').on('click', closeMobileType);
-  $('.order-head-modal').on('click', closeMobileModal);
+  $('.order-head-modal').on('click', closeMobileModal); 
 
   $(document).on('click', (e) => {
-    // close modal
-    const button = $('.dlt-click');
-    const overlay = $('.pass-modal');
-    if (!button.is(e.target) && button.has(e.target).length === 0) {
-      if (!overlay.is(e.target) && overlay.has(e.target).length === 0) {
-        $('.dlt-Adress-overlay').fadeOut('slow').css('display', 'none'); 
-      }
-    }
+   
     // close modal configurator
     const btn = $('.configurator__main .conf__main-top .links .link, .conf-modal__close, .conf-mobile__text-info .mobile-conf-links .link');
     const modal = $('.conf-modal__body');

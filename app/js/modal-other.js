@@ -14,6 +14,17 @@ $(document).ready(function(){
     $('.pass-close').on('click', function(){
       $('.dlt-Adress-overlay').fadeOut('slow').css('display', 'none');
     });
+
+  // modal pahe Your bag
+  $('.promocode').on('click', function(){
+    $(this).css('display', 'none');
+    $('.enter-promocod').fadeIn('slow').css('display', 'block');
+  });
+  $('.promocode-closes').on('click', function(){
+   
+    $('.promocode').css('display', 'block');
+    $('.enter-promocod').fadeOut('slow').css('display', 'none');
+  });
 });
 
 $(document).on('click', (e) => {
@@ -34,7 +45,8 @@ $(document).mouseup(function(e) {
   var container = $(".active");
   if (!container.is(e.target) &&
     container.has(e.target).length === 0 &&
-    !$(e.target).hasClass("btn")) {
+    !$(e.target).hasClass("sign_in")) {
     container.removeClass("active");
   }
 });
+

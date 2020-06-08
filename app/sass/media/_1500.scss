@@ -54,4 +54,26 @@
       }
     }
   }
+  // YOUR BAG PAGE
+  #yourbag{
+    .inner-content{
+      .cart-wrap {
+        .cart-item {
+          .cart-block{
+            .item-title{
+              margin-right: 38px;
+            }
+            .item-price {
+              width: 94px;
+              margin-right: 47px;
+            }
+            .subtotal {
+              margin-right: 16px;
+              width: 91px
+            }
+          }
+        }
+      }
+    }
+  }
 }

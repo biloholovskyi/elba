@@ -565,6 +565,9 @@
           }
         }
       }
+      .inner-photo .btn-account button {
+        margin-bottom: 0!important;
+      }
     }
   }
 
@@ -611,8 +614,21 @@
       }
     }
   }
-  #create_account .inner-content .inner-photo .birth-block .select .select-styled {
-    padding-left: 0;
+  
+  
+  #create_account .inner-content .inner-photo,
+  #profile .inner-content .inner-photo { 
+    .birth-block {
+      .select .select-styled {
+        padding-left: 0;
+      }
+    }
+    & .birth-block .select:nth-child(2) {
+      width: 100px; 
+    }
+    & .birth-block .select:nth-child(2) .select-styled:after {
+      right: 3px;
+    }
   }
   #edit_address {
     
@@ -672,6 +688,9 @@
             padding: 10px 24px;
           }
         }
+        input {
+          background: #f8f8f8; 
+        }
       }
     }
   }
@@ -710,6 +729,7 @@
           margin-bottom: 127px;
           font-size: 14px;
           line-height: 24px;
+          background: #f8f8f8; 
         }
 
         input::placeholder {
@@ -725,7 +745,47 @@
       }
     }
   }
-
+// page orders
+#orders {
+  .inner-content {
+    .aside-catalog {
+      .dropdown a {
+      
+        .order {
+         
+          .order-mobile {
+            margin-right: 30px!important;
+          }
+      
+          p {
+            font-size: 14px!important;
+            line-height: 24px!important; 
+            margin-right: 0!important;
+          }
+        }
+        .date {
+          font-size: 14px!important;
+            line-height: 24px!important; 
+        }
+        .price {
+          justify-content: flex-end;
+          font-size: 14px!important;
+          line-height: 24px!important; 
+        }
+        .count {
+          font-size: 14px!important;
+          line-height: 24px!important; 
+        }
+       
+        .order-mobile {
+         
+        }
+      }
+    
+    
+    }
+  }
+}
   #orders .inner-content .aside-catalog ul .dropdown a .btn-mobile {
     padding: 10px 55px;
   }
@@ -987,10 +1047,12 @@
       font-size: 16px;
       line-height: 24px;
       text-transform: none;
+      letter-spacing: normal;
     }
 
     .account-back:after {
       left: 24px;
+      
     }
 
     .inner-content {
@@ -1000,7 +1062,9 @@
           display: block;
         }
       }
-
+      .inner-block .checkbox {
+        display: none;
+      }
       .inner-photo {
         .birth-block {
           .select {
@@ -1200,5 +1264,36 @@
         display: none;
       }
     }
-  }     
+  } 
+  // YOUR BAG PAGE
+  #yourbag{
+  
+    .inner-content{
+      h1 {
+        font-size: 24px; 
+        line-height: 32px;
+        margin-bottom: 0;
+      }
+     
+    }
+    .payblock-btn button:first-child  { 
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-bottom: 0; 
+     }
+     .paynow-title {
+      margin: 64px auto 24px;
+    }
+     .payblock-btn {
+      margin-top: 24px;
+      
+       p {
+        margin-bottom: 65px;
+       }
+     }
+  }
+  .modal-wrapper  .m-container {
+    position: static!important;
+  }    
 }

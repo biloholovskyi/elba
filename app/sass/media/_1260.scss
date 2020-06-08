@@ -173,4 +173,33 @@
   #sign_in_page .account-title h1 {
     font-size: 44px;
   }
+  // YOUR BAG PAGE
+  #yourbag{
+    .account-back,
+    .follow-us {
+      display: none;  
+    }
+    .inner-content{
+      .cart-wrap {
+        .cart-item {
+          .cart-block{
+            .item-title{
+              margin-right: 11px;
+            }
+            .item-price {
+              width: 94px;
+              margin-right: 47px;
+            }
+            .subtotal {
+              margin-right: 16px;
+              width: 91px
+            }
+          }
+        }
+      }
+      .cart-wrap .cart-item .cartcaption:nth-child(3) {
+        width: 131px;
+      }
+    }
+  }
 }
