@@ -27,7 +27,7 @@
         }
         & .paycaption:first-child {
           flex: 2;
-          max-width: 300px;  
+          max-width: 267px;  
         }
         .payment-name {
           flex: 2;
@@ -73,6 +73,7 @@
           border: none;
           background-color: transparent;
           margin-right: 16px;
+          transition: .4s;
         }
         .payment-btn button:last-child {
           font-style: normal;
@@ -85,6 +86,7 @@
           color: #7D838A;
           border: none;
           background-color: transparent;
+          transition: .4s;
         }
       }
     }
@@ -108,6 +110,14 @@
     .addNew:hover {
       background-color: #565B62;
     }
+  }
+  .payment-mobile {
+    display: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #7D838A;
   }
 }
 
@@ -148,4 +158,7 @@
 }
 #addPayment .inner-content .inner-photo .birth-block .select {
   width: 213px;
+}
+#addPayment .inner-content .mobile-other-header {
+  display: none;
 }

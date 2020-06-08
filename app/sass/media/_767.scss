@@ -189,5 +189,14 @@
   #orders .inner-content .aside-catalog ul .dropdown a .order {
     margin-right: 0;
   }
-  
+   // modal pass recovery
+   .pass-overlay {
+    .pass-modal {
+      .pass-item {
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }

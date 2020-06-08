@@ -11,7 +11,8 @@
     img {
       object-fit: cover;
       object-position: center;
-      width: 664px;
+      max-width: 664px;
+      width: 100%;
       margin-bottom: 64px;
     }
     h2 {

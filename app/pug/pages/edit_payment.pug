@@ -5,10 +5,12 @@ block variables
 
     mixin asideNav(link,name)
       li
-        a(href=link)=name 
+        a(href=link)=name
+    mixin otherPage(link,name)
+      a(href=link)=name       
 
 block content
-  include ../modules/header
+  include ../modules/header_other
   include ../modules/modal-menu
 
   #addPayment.inner-page 
@@ -18,13 +20,15 @@ block content
           include ../modules/aside-profile
         .m-col.m-col--9.m-col__lg--10.m-col__ms--10.m-col__mxs--15
           .inner-content
+            .mobile-other-header
+              +otherPage('./payment.html', 'Payment Methods') 
             h1 Payment Methods   
             .inner-block
               h3 Edit method
             .inner-photo
               .text Method type:
               .method_type
-                button(value="") Credit card 
+                button(value="") #[span Credit] card 
                 button Paypal
                 button UnionPay
             .inner-photo

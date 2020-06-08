@@ -137,7 +137,9 @@
   // OTHER PAGE
   #profile,
   #address,
-  #edit_address {
+  #edit_address,
+  #addPayment,
+  #create_account {
     .inner-content {
       .inner-photo {
         flex-direction: column;
@@ -154,5 +156,21 @@
     .inner-content {
       margin-bottom: 100px;
     }
+  }
+  #addPayment .inner-photo .text {
+    margin-bottom: 10px;
+  }
+  #checkout {
+    .inner-content .inner-photo {
+      flex-direction: column;
+    }
+    .paynow-wrap p {
+      bottom: -71px;
+      left: 0;
+    }
+  }
+  #create_account .account-title h1,
+  #sign_in_page .account-title h1 {
+    font-size: 44px;
   }
 }

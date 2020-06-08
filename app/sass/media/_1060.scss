@@ -378,6 +378,52 @@
         
     }
   }
+ // CHECKOUT
+  #checkout {
+    .account-back {
+      position: absolute;
+      top: 0;
+      border-bottom: 1px solid #e4e8eb;
+      width: 100%;
+      left: 0;
+      padding-bottom: 12px;
+      padding-top: 12px;
+      padding-left: 64px;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: none;
+    }
+    .inner-photo {
+      input {
+        max-width: none!important; 
+      }
+      .birth-block {
+        max-width: none!important;
+      }
+      .method_type {
+        max-width: none!important;
+      }
+    }
+    .account-back:after {
+      left: 24px;
+    } 
+    .footer {
+      display: none;
+    }
+    .paynow-wrap {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    & .inner-content:last-child {
+      margin-bottom: 0;
+    }
+  }
+     // modal SIGN IN
+  .sign_in-wrap,
+  .basket-wrap,
+  .log_out { 
+    top: 48px;  
+  }
 }
 
 @keyframes img-anim-mobile {

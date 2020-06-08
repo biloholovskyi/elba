@@ -26,6 +26,8 @@
       h1 {
         font-size: 24px;
         margin-bottom: 15px;
+        line-height: 32px;
+        text-transform: none;
       }
 
       img {
@@ -453,11 +455,15 @@
       }
     }
   }
-
+  
   // PROFILE PAGE
   #profile,
   #address,
-  #edit_address {
+  #edit_address,
+  #addPayment,
+  #checkout,
+  #create_account,
+  #sign_in_page {
     padding-top: 80px;
 
     .inner-content {
@@ -480,6 +486,7 @@
 
           .select {
             width: 80px;
+           
           }
         }
 
@@ -520,6 +527,7 @@
           line-height: 24px;
           margin-bottom: 32px;
         }
+
       }
     }
 
@@ -528,8 +536,42 @@
     }
   }
 
+  #create_account .account-title a,
+  #sign_in_page .account-title a {
+    display: none;
+  }
+
+  #sign_in_page .inner-content {
+    .account-title h1 {
+      margin-bottom: 64px;
+    }
+
+    .inner-photo {
+      .inp-block {
+        h3 {
+          font-size: 12px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  #create_account {
+    .inner-content {
+      .inner-block {
+        .checkbox {
+          p {
+            max-width: 232px;
+          }
+        }
+      }
+    }
+  }
+
   #address,
-  #edit_address {
+  #edit_address,
+  #addPayment,
+  #checkout {
     .select-styled {
       padding-left: 0;
     }
@@ -569,8 +611,11 @@
       }
     }
   }
-
+  #create_account .inner-content .inner-photo .birth-block .select .select-styled {
+    padding-left: 0;
+  }
   #edit_address {
+    
     .inner-content {
       h1 {
         margin-bottom: 0;
@@ -631,6 +676,56 @@
     }
   }
 
+  // modal pass recovery
+  .pass-overlay {
+    padding: 0;
+    z-index: 10;
+
+    .pass-modal {
+      min-height: 100vh;
+      padding-top: 80px;
+      background: #f8f8f8;
+
+      .pass-close {
+        display: none;
+      }
+
+      .pass-item {
+        h3 {
+          margin-bottom: 32px;
+          font-size: 24px;
+          line-height: 32px;
+          text-align: left;
+        }
+
+        p {
+          text-align: left;
+          max-width: 224px;
+          line-height: 24px;
+          margin-bottom: 92px;
+          max-width: none;
+        }
+
+        input {
+          margin-bottom: 127px;
+          font-size: 14px;
+          line-height: 24px;
+        }
+
+        input::placeholder {
+          font-size: 14px;
+          line-height: 24px;
+        }
+
+        button {
+          width: 100%;
+          max-width: none;
+        }
+
+      }
+    }
+  }
+
   #orders .inner-content .aside-catalog ul .dropdown a .btn-mobile {
     padding: 10px 55px;
   }
@@ -656,6 +751,7 @@
         .order-block {
           .order-item {
             position: relative;
+
             .items {
               display: none;
             }
@@ -664,20 +760,445 @@
               position: absolute;
               bottom: 0;
               left: 106px;
+
               .offer {
                 display: none;
               }
             }
           }
         }
+
         .main-block {
           .order-block .order-item {
             display: flex;
             align-items: flex-start;
-            flex-direction: column; 
+            flex-direction: column;
+            width: 100%;
+
+            button {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+            }
+
+            & button:first-child {
+              margin-bottom: 12px;
+            }
           }
         }
       }
     }
   }
+
+  // payment page 
+  #payment {
+    .inner-content {
+      h1 {
+        font-size: 24px;
+        line-height: 32px;
+        text-transform: none;
+        margin-bottom: 64px;
+      }
+
+      .payment-wrap {
+        margin-bottom: 24px;
+
+        .payment-item {
+
+          .payment-name,
+          .card,
+          .card-data {
+            font-size: 14px;
+            line-height: 24px; 
+
+            span {
+              width: 116px;
+              font-size: 14px;
+            }
+          }
+
+          .card {
+            margin-right: 0;
+          }
+
+          .payment-btn {
+            button {
+              width: 100px;
+              text-align: center !important;
+              padding: 10px 3px;
+            }
+          }
+
+        }
+
+      }
+
+      .addNew {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        max-width: none;
+      }
+    }
+
+  }
+
+  #addPayment,
+  #checkout {
+    .inner-content {
+      .mobile-other-header {
+        margin-bottom: 0;
+        border-bottom: 1px solid #E4E8EB;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        padding: 12px 0 12px 64px;
+        text-transform: none;
+        line-height: 24px;
+        font-size: 16px;
+        display: block;
+
+        a {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 24px;
+          color: #1F1F22;
+        }
+
+        & a::before {
+          content: "";
+          background-image: url(../../media/icon/other-arrow.svg);
+          background-position: center;
+          background-size: cover;
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          left: 21px;
+        }
+      }
+
+      h1 {
+        display: none;
+      }
+
+      .inner-block {
+        h3 {
+          margin-top: 0 !important;
+        }
+      }
+
+      .inner-photo {
+        .method_type {
+          max-width: none;
+
+          button span {
+            display: none;
+          }
+        }
+
+        input {
+          max-width: none;
+        }
+
+        .birth-block {
+          max-width: none;
+
+          & .select:first-child {
+            margin-right: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  #unsubscribe {
+    .inner-content {
+      margin-bottom: 44px;
+
+      h1 {
+        margin-bottom: 32px;
+      }
+
+      .inner-block {
+        p {
+          margin-bottom: 0px;
+        }
+
+      }
+    }
+
+    .inner-block {
+      .address-block {
+        margin-bottom: 44px;
+      }
+
+      .address-block .radio input+span {
+        font-size: 14px !important;
+        line-height: 24px !important;
+      }
+
+      button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+
+  // 404
+  .pageNotFound-wrap {
+    .pageNotFound-content {
+      img {
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 32px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 74px;
+      }
+
+      button {
+        width: 100%;
+        max-width: none;
+        justify-content: center;
+      }
+    }
+  }
+
+  // CHECKOUT PAGE
+  #checkout {
+    .account-back {
+      position: absolute;
+      top: 0;
+      border-bottom: 1px solid #e4e8eb;
+      width: 100%;
+      left: 0;
+      padding-bottom: 12px;
+      padding-top: 12px;
+      padding-left: 64px;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: none;
+    }
+
+    .account-back:after {
+      left: 24px;
+    }
+
+    .inner-content {
+      .account-title {
+        h1 {
+          margin-bottom: 64px;
+          display: block;
+        }
+      }
+
+      .inner-photo {
+        .birth-block {
+          .select {
+            margin-right: 0px !important;
+          }
+
+        }
+
+        .cardUntil {
+          .select:first-child {
+            margin-right: 26px !important;
+          }
+        }
+
+        .method_type {
+          display: none;
+        }
+      }
+
+      .checkout-block {
+        display: block;
+
+        li {
+          list-style: none;
+
+          .radio {
+            border: none;
+            height: auto;
+
+            input+span {
+              font-size: 14px;
+            }
+          }
+
+          .radio:first-child {
+            border: none;
+          }
+        }
+      }
+    }
+
+    .paynow-wrap {
+      top: 0;
+
+      .item {
+
+        h3,
+        div {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+
+      p {
+        display: none;
+      }
+    }
+  }
+
+  #sign_in_page .inner-content .inner-photo .inp-block h3 {
+    font-size: 12px;
+  }
+
+  // modal SIGN IN
+  .sign_in-wrap {
+    min-height: 100vh;
+    width: 100%;
+    max-width: none;
+    background: #f8f8f8;
+
+    h2 {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    p {
+      margin-bottom: 24px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    button {
+      margin-bottom: 64px;
+    }
+
+    #sign_in {
+      input {
+        background: #f8f8f8;
+      }
+
+      .inp-block {
+        input {
+          background: #f8f8f8;
+        }
+      }
+    }
+  }
+  // LOG OUT MODAL
+  .log_out {
+    min-height: 100vh;
+    width: 100%;
+    max-width: none;
+    background: #f8f8f8;
+    top: 48px;
+    h3 {
+      margin-bottom: 95px;
+    }
+    a {
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25); 
+      padding-bottom: 16px;
+    }
+    button {
+      margin-top: 95px;
+      background-color: transparent; 
+    }
+  }
+
+  // BASKET MODAL
+  .basket-wrap,
+  .basket-empty {
+    min-height: 100vh;
+    width: 100%;
+    max-width: none;
+    background: #f8f8f8;
+    top: 48px;
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .basket-title {
+      border: none;
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    .basket-block {
+      background-color: #fff;
+      margin-bottom: 0;
+      .busket-item {
+        margin: 6px 0;
+      }
+    }
+  }
+  .basket-empty {
+    p {
+      margin-bottom: 296px;
+    }
+  }
+  .other_header {
+    display: none;
+  }
+  #edit_address,
+  #order_mobile {
+    .inner-content {
+      .mobile-other-header {
+        margin-bottom: 0;
+        border-bottom: 1px solid #E4E8EB;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        padding: 12px 0 12px 64px;
+        text-transform: none;
+        line-height: 24px;
+        font-size: 16px;
+        display: block;
+
+        a {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 24px;
+          color: #1F1F22;
+        }
+
+        & a::before {
+          content: "";
+          background-image: url(../../media/icon/other-arrow.svg);
+          background-position: center;
+          background-size: cover;
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          left: 21px;
+        }
+      }
+
+      h1 {
+        display: none;
+      }
+    }
+  }     
 }

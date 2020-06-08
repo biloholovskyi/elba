@@ -8,15 +8,15 @@ block variables
         a(href=link)=name 
 
 block content
-  include ../modules/header
+  include ../modules/header_other
   include ../modules/modal-menu
 
-  #checkout.inner-page
+  #checkout.inner-page 
     .m-container
       .m-row
-        .m-col.m-col--3.m-col__lg--3.m-col__ms--4.m-col__mxs--15
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--15.m-col__mxs--15
           a.inner-btn.account-back(href="/") Back to website
-        .m-col.m-col--8.m-col__lg--10.m-col__ms--10.m-col__mxs--15 
+        .m-col.m-col--8.m-col__lg--8.m-col__ms--15.m-col__mxs--15 
           .inner-content
             .account-title
               h1 Checkout
@@ -79,6 +79,14 @@ block content
           .inner-content
             .inner-block
               h3 Billing address
+            ul.address-block.checkout-block 
+              li
+                label.radio
+                  input(type="radio" name="r" value="1" checked)
+                  span Same as delivery address
+                label.radio
+                  input(type="radio" name="r" value="1" checked)
+                  span Add an alternative   
             .inner-photo
               .text
               .method_type.address-type
@@ -161,7 +169,7 @@ block content
             .inner-photo
               .text Method type:
               .method_type
-                button(value="") Credit card 
+                button(value="") #[span Credit] card 
                 button Paypal
                 button UnionPay
             .inner-photo
@@ -202,7 +210,7 @@ block content
             .inner-photo
               .text CVV/CVC: 
               input(type="password")     
-        .m-col.m-col--4.m-col__lg--2.m-col__ms--1.m-col__mxs--1
+        .m-col.m-col--4.m-col__lg--4.m-col__ms--15.m-col__mxs--15
           .paynow-wrap
             .item
               h3 Subtotal:

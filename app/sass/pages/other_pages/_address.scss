@@ -1,6 +1,7 @@
 #address,
 #addPayment,
-#edit_address{
+#edit_address,
+#checkout {
   .aside-bar {
     padding-top: 142px;
     position: static;
@@ -9,11 +10,11 @@
   .inner-content {
     max-width: 750px;
     margin: 0 auto;
-    margin-bottom: 284px;
+    margin-bottom: 196px;
 
     .inner-block h3,
     .inner-block p {
-      max-width: 450px;
+      max-width: 450px;   
     }
 
     .inner-photo {
@@ -33,19 +34,22 @@
         button:last-child {
           background-color: transparent;
           color: #1F1F22;
-          border: 1px solid #1F1F22;
+          border: 1px solid #1F1F22;  
         }
+
         & button:last-child:hover {
-          color: #565B62;  
-          border: 1px solid #565B62;  
+          color: #565B62;
+          border: 1px solid #565B62; 
         }
       }
 
       .birth-block {
         max-width: 450px;
+
         .select {
           width: 100%;
         }
+
         & select:last-child {
           margin-right: 0;
         }
@@ -54,7 +58,7 @@
 
     $radioSize: 24px;
     $inputBorder: #D0D7DD;
-    $inputActive: #1F1F22;
+    $inputActive: #1F1F22;   
 
     .address-block {
       .radio {
@@ -177,7 +181,7 @@
           margin-left: 16px;
           color: #C11030;
         }
-        
+
       }
     }
 
@@ -192,7 +196,7 @@
 // MODAL
 .pass-overlay,
 .dlt-Adress-overlay,
-.welcome-overlay { 
+.welcome-overlay {
   display: none;
   width: 100%;
   height: 100%;
@@ -230,6 +234,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       h3 {
         font-style: normal;
         font-weight: 600;
@@ -250,6 +255,7 @@
         max-width: 500px;
         margin-bottom: 35px;
       }
+
       input {
         border: none;
         width: 300px;
@@ -264,6 +270,7 @@
         text-align: center;
         color: #1F1F22;
       }
+
       input::placeholder {
         font-style: normal;
         font-weight: normal;
@@ -272,6 +279,7 @@
         text-align: center;
         color: #1F1F22;
       }
+
       button {
         font-style: normal;
         font-weight: bold;
@@ -285,36 +293,41 @@
         background: #1F1F22;
         max-width: 100px;
         margin: 0 auto;
-        transition:  .4s;
+        transition: .4s;
       }
+
       button:hover {
         background-color: #565B62;
       }
+
       & .modal-btn-block button:last-child:hover {
-        color: #565B62;  
-    border: 1px solid #565B62;  
+        color: #565B62;
+        border: 1px solid #565B62;
       }
     }
   }
 }
 
-.dlt-Adress-overlay{
-  .pass-modal{
+.dlt-Adress-overlay {
+  .pass-modal {
     .pass-item {
       .modal-btn-block {
         display: flex;
         justify-content: center;
+
         button {
           max-width: none;
           margin: 0;
         }
+
         & button:first-child {
           margin-right: 17px;
         }
+
         & button:last-child {
-         background-color: #fff;
-         border: 1px solid #1F1F22;
-         color: #1F1F22;
+          background-color: #fff;
+          border: 1px solid #1F1F22;
+          color: #1F1F22;
         }
       }
     }

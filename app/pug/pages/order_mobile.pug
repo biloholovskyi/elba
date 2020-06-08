@@ -2,11 +2,13 @@
 extends ../layout/main
 
 block variables
-  - const pageTitle = 'Create an account'
+  - const pageTitle = 'Orders'
 
     mixin asideNav(link,name)
       li
-        a(href=link)=name 
+        a(href=link)=name
+    mixin otherPage(link,name)
+      a(href=link)=name      
 
 block content
   #order_mobile.inner-page 
@@ -14,6 +16,8 @@ block content
       .m-row
         .m-col.m-col--15
           .inner-content
+            .mobile-other-header
+              +otherPage('./orders.html', 'My Orders')
             h1 My orders
             .order_mobile
               h4 Order:

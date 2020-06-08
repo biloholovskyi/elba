@@ -1,21 +1,73 @@
 @media screen and (max-width: 1199px) {
+
   // MODAL CATALOG
   .catalog-overlay {
     .catalog-close {
       right: 0;
       top: -60px;
     }
+
     .catalog-modal {
       padding: 20px 0;
+
       .catalog-item {
-        .img-main{
+        .img-main {
           margin-left: 20px;
         }
       }
+
       .catalog-item.catalog-item:nth-child(2) {
         padding-left: 20px;
 
       }
     }
   }
+
+  // subscribe modal
+  .subscribe-overlay {
+    .subscribe-modal .subscribe-item:nth-child(2) {
+      display: none !important;
+    }
+
+    .subscribe-close {
+      filter: invert(1);
+      width: 20px !important;
+      height: 20px !important;
+      top: 28px !important;
+      right: 24px !important;
+    }
+
+    .subscribe-item {
+      padding: 25px !important;
+
+      h4 {
+        display: none;
+      }
+
+      h3 {
+        font-size: 20px !important;
+        line-height: 32px !important;
+      }
+
+      input {
+        padding-bottom: 12px !important;
+      }
+
+      .inner-block {
+        display: none;
+      }
+
+      button {
+        width: 100% !important;
+        max-width: none !important;
+      }
+    }
+  }
+
+  #create_account .account-title h1,
+  #sign_in_page .account-title h1 {
+    font-size: 48px;
+  }
+
+ 
 }

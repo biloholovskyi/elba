@@ -48,7 +48,7 @@
       width: 100%;
       border: none;
       border-bottom: 1px solid #565B62;
-      padding-bottom: 8px;
+      padding-bottom: 12px;
       padding-top: 11px;
     }
     input::placeholder {
@@ -212,10 +212,23 @@
         width: 100%;
         // max-width: 557px;
         border-bottom: 1px solid #565b62;
+        h3 {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+          letter-spacing: 0.1em;
+          text-transform: uppercase; 
+          color: #1F1F22;
+          cursor: pointer;
+        }
       }
       input {
         max-width: none;
       }
+      
     }
     .checkbox {
       display: flex;
