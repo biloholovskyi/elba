@@ -414,6 +414,27 @@ const scrollAnim = () => {
     });
   }
 
+  // img-text 2 img video
+  if (pageYOffset > 3205) {
+    const video = $('.image-text__img--4')[0];
+    const n1 = 3205;
+    const n2 = 4514;
+    const n = pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const dr1 = video.duration;
+    let dr = dr1 * (p / 100);
+
+    if (p > 99) {
+      dr = dr1;
+    }
+
+    if (p < 1) {
+      dr = 0;
+    }
+
+    video.currentTime = dr;
+  }
+
   // image-text 2 title
   if (pageYOffset > 3410) {
     const n1 = 3410;
