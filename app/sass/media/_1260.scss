@@ -23,7 +23,7 @@
 
   // event
   .event__video-block{
-    &::after {
+    .event__small {
       width: 156px;
       height: 156px;
       margin-top: -78px;

@@ -2,6 +2,11 @@
   // home about
   .home-about__content {
     padding-bottom: 24px;
+
+    .bot-line,
+    .top-line {
+      display: none;
+    }
   }
 
   .home-about__col {
@@ -27,6 +32,7 @@
   }
 
   .home-about__container{
+    padding-top: 80px;
     &::after {
       display: none;
     }
@@ -37,6 +43,7 @@
   }
 
   .home-about {
+    height: max-content;
     .about__mobile-bottom {
       display: block;
 

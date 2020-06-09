@@ -1222,11 +1222,17 @@ const scrollAnim = () => {
     const n2 = 5614;
     const n = pageYOffset - n1;
     const p = n / (n2 - n1) * 100;
-    const tr2 = 429;
+    let tr2 = 429;
+    if($(window).width() < 1501) {
+      tr2 = 349;
+    }
     let tr = tr2 * (p / 100);
 
     if (p > 99) {
       tr = 429;
+      if($(window).width() < 1501) {
+        tr = 349;
+      }
     }
 
     if (p < 1) {
@@ -1238,12 +1244,36 @@ const scrollAnim = () => {
     imgs.css({
       'transform': 'translateX(' + tr + 'px)',
     });
+    if($(window).width() < 1501) {
+      imgs.css({
+        'transform': 'translateX(' + tr + 'px) scale(.5)'
+      });
+    }
+
+    if($(window).width() < 1061) {
+      imgs.css({
+        'transform': 'translateX(' + 0 + 'px) scale(.5)'
+      });
+    }
   } else {
     const imgs = $('.shape__imgs');
 
     imgs.css({
       'transform': 'translateX(0)',
     });
+
+
+    if($(window).width() < 1501) {
+      imgs.css({
+        'transform': 'translateX(' + 0 + 'px) scale(.5)'
+      });
+    }
+
+    if($(window).width() < 1061) {
+      imgs.css({
+        'transform': 'translateX(' + 0 + 'px) scale(.5)'
+      });
+    }
   }
 
   // shape text
@@ -1518,351 +1548,463 @@ const scrollAnim = () => {
     });
   }
 
-  // list opacity col 1
-  if (pageYOffset > 8414) {
-    const n1 = 8414;
-    const n2 = 8614;
-    const n = pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    const op1 = 0;
-    const op2 = 1;
-    let op = op2 * (p / 100);
+  if($(window).width() > 760) {
+    // list opacity col 1
+    if (pageYOffset > 8414) {
+      const n1 = 8414;
+      const n2 = 8614;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      const op1 = 0;
+      const op2 = 1;
+      let op = op2 * (p / 100);
 
-    if (p > 99) {
-      op = 1;
+      if (p > 99) {
+        op = 1;
+      }
+
+      if (p < 1) {
+        op = 0;
+      }
+
+      const block = $('.list');
+      const col = $('.list__col');
+      const link = $('.list__text .arrow-link');
+      const title = $('.list__text .title span');
+      const desc = $('.list__text .desc');
+
+      block.css({
+        'opacity': 1,
+        'z-index': 57
+      })
+
+      col.css({
+        'opacity': 0
+      })
+
+      title.css({
+        'transform': 'translateY(' + 30 + 'px)'
+      })
+
+      desc.css({
+        'opacity': 0
+      })
+
+      col.eq(0).css({
+        'opacity': op,
+      });
+
+      link.css({
+        'opacity': op,
+      })
+    } else {
+      const block = $('.list');
+      const link = $('.list__text .arrow-link');
+
+      block.css({
+        'opacity': 0,
+        'z-index': 50
+      });
+
+      link.css({
+        'opacity': 0,
+      });
     }
 
-    if (p < 1) {
-      op = 0;
+    // list transition col 1
+    if (pageYOffset > 8414) {
+      const n1 = 8414;
+      const n2 = 9508;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      let tr1 = $(window).height() - 412;
+      if($(window).width() < 1061) {
+        tr1 = $(window).height() - 412;
+      }
+      let tr = tr1 - (tr1 * (p / 100));
+
+      if (p > 99) {
+        tr = 0;
+      }
+
+      if (p < 1) {
+        tr = $(window).height() - 412;
+      }
+
+      const block = $('.list');
+      const col = $('.list__col');
+      const text = $('.list__text');
+
+
+      col.eq(0).css({
+        'transform': 'translateY(' + tr + 'px)'
+      })
+    } else {
+      const col = $('.list__col');
+      col.eq(0).css({
+        'transform': 'translateY(' + $(window).height() - 412 + 'px)'
+      })
     }
 
-    const block = $('.list');
-    const col = $('.list__col');
-    const link = $('.list__text .arrow-link');
-    const title = $('.list__text .title span');
-    const desc = $('.list__text .desc');
+    // list transition col 1 - 2
+    if (pageYOffset > 9508) {
+      const col = $('.list__col');
+      const n1 = 9508;
+      const n2 = 10020;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      const tr1 = (col.eq(0).height() - $(window).height()) * -1;
+      let tr = tr1 * (p / 100);
 
-    block.css({
-      'opacity': 1,
-      'z-index': 57
-    })
+      if (p > 99) {
+        tr = tr1;
+      }
 
-    col.css({
-      'opacity': 0
-    })
+      col.eq(0).css({
+        'transform': 'translateY(' + tr + 'px)'
+      })
+    }
 
-    title.css({
-      'transform': 'translateY(' + 30 + 'px)'
-    })
+    // list text
+    if (pageYOffset > 8506) {
+      const n1 = 8506;
+      const n2 = 8719;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      const op2 = 1;
+      let op = op2 * (p / 100);
+      const tr1 = 50;
+      let tr = tr1 - (tr1 * (p / 100));
 
-    desc.css({
-      'opacity': 0
-    })
+      if (p > 99) {
+        op = 1;
+        tr = 0;
+      }
 
-    col.eq(0).css({
-      'opacity': op,
-    });
+      if (p < 1) {
+        op = 0;
+        tr = 50;
+      }
 
-    link.css({
-      'opacity': op,
-    })
+      const desc = $('.list__text .desc');
+
+      desc.css({
+        'opacity': op,
+        'transform': 'translateY(' + tr + 'px)'
+      })
+    } else {
+      const desc = $('.list__text .desc');
+
+      desc.css({
+        'opacity': 0,
+        'transform': 'translateY(' + 50 + 'px)'
+      })
+    }
+
+    // list title
+    if (pageYOffset > 8627) {
+      const n1 = 8627;
+      const n2 = 8840;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      const tr1 = 30;
+      let tr = tr1 - (tr1 * (p / 100));
+
+      if (p > 99) {
+        tr = 0;
+      }
+
+      if (p < 1) {
+        tr = 50;
+      }
+
+      const title = $('.list__text .title span');
+
+      title.css({
+        'transform': 'translateY(' + tr + 'px)'
+      })
+    } else {
+      const title = $('.list__text .title span');
+
+      title.css({
+        'transform': 'translateY(' + 30 + 'px)'
+      })
+    }
+
+    // list opacity col 2
+    if (pageYOffset > 8524) {
+      const n1 = 8524;
+      const n2 = 8737;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      const op1 = 0;
+      const op2 = 1;
+      let op = op2 * (p / 100);
+
+      if (p > 99) {
+        op = 1;
+      }
+
+      if (p < 1) {
+        op = 0;
+      }
+
+      const col = $('.list__col');
+
+      col.eq(1).css({
+        'opacity': op,
+      });
+    } else {
+      const col = $('.list__col');
+
+      col.eq(1).css({
+        'opacity': 0,
+      });
+    }
+
+    // list transition col 2
+    if (pageYOffset > 8524) {
+      const n1 = 8524;
+      const n2 = 9306;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      let tr1 = $(window).height() - 612;
+      if($(window).width() < 1061) {
+        tr1 = $(window).height() - 412;
+      }
+      let tr = tr1 - (tr1 * (p / 100));
+
+      if (p > 99) {
+        tr = 0;
+      }
+
+      if (p < 1) {
+        tr = $(window).height() - 612;
+        if($(window).width() < 1061) {
+          tr = $(window).height() - 412;
+        }
+      }
+
+      const col = $('.list__col');
+
+      col.eq(1).css({
+        'transform': 'translateY(' + tr + 'px)'
+      })
+    } else {
+      const col = $('.list__col');
+      col.eq(1).css({
+        'transform': 'translateY(' + $(window).height() - 612 + 'px)'
+      })
+    }
+
+    // list transition col 2 - 2
+    if (pageYOffset > 9306) {
+      const col = $('.list__col');
+      const n1 = 9306;
+      const n2 = 10020;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      const tr1 = (col.eq(1).height() - $(window).height()) * -1;
+      let tr = tr1 * (p / 100);
+
+      if (p > 99) {
+        tr = tr1;
+      }
+
+      if (p < 1) {
+        // tr = 0;
+      }
+
+
+      col.eq(1).css({
+        'transform': 'translateY(' + tr + 'px)'
+      })
+    }
+
+    // list opacity col 3
+    if (pageYOffset > 8627) {
+      const n1 = 8627;
+      const n2 = 8840;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      const op2 = 1;
+      let op = op2 * (p / 100);
+
+      if (p > 99) {
+        op = 1;
+      }
+
+      if (p < 1) {
+        op = 0;
+      }
+
+      const col = $('.list__col');
+
+      col.eq(2).css({
+        'opacity': op,
+      });
+    } else {
+      const col = $('.list__col');
+
+      col.eq(2).css({
+        'opacity': 0,
+      });
+    }
+
+    // list transition col 3
+    if (pageYOffset > 8627) {
+      const n1 = 8627;
+      const n2 = 9267;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      let tr1 = $(window).height() - 822;
+      if($(window).width() < 1061) {
+        tr1 = $(window).height() - 412;
+      }
+      let tr = tr1 - (tr1 * (p / 100));
+
+      if (p > 99) {
+        tr = 0;
+      }
+
+      if (p < 1) {
+        tr = $(window).height() - 822;
+        if($(window).width() < 1061) {
+          tr = $(window).height() - 412;
+        }
+      }
+
+      const col = $('.list__col');
+
+      col.eq(2).css({
+        'transform': 'translateY(' + tr + 'px)'
+      })
+    } else {
+      const col = $('.list__col');
+      col.eq(2).css({
+        'transform': 'translateY(' + $(window).height() - 822 + 'px)'
+      })
+    }
+
+    // list transition col 3 - 2
+    if (pageYOffset > 9267) {
+      const col = $('.list__col');
+      const n1 = 9267;
+      const n2 = 10020;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      const tr1 = (col.eq(2).height() - $(window).height()) * -1;
+      let tr = tr1 * (p / 100);
+
+      if (p > 99) {
+        tr = tr1;
+      }
+
+      if (p < 1) {
+        // tr = 0;
+      }
+
+
+      col.eq(2).css({
+        'transform': 'translateY(' + tr + 'px)'
+      })
+    }
   } else {
-    const block = $('.list');
-    const link = $('.list__text .arrow-link');
+    // list opacity col 1
+    if (pageYOffset > 8414) {
+      const n1 = 8414;
+      const n2 = 8614;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      const op2 = 1;
+      let op = op2 * (p / 100);
 
-    block.css({
-      'opacity': 0,
-      'z-index': 50
-    });
+      if (p > 99) {
+        op = 1;
+      }
 
-    link.css({
-      'opacity': 0,
-    });
-  }
+      if (p < 1) {
+        op = 0;
+      }
 
-  // list transition col 1
-  if (pageYOffset > 8414) {
-    const n1 = 8414;
-    const n2 = 9508;
-    const n = pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    const tr1 = $(window).height() - 412;
-    // const tr1 = 654;
-    let tr = tr1 - (tr1 * (p / 100));
+      const block = $('.list');
+      const col = $('.list__col');
+      const link = $('.list__text .arrow-link');
+      const title = $('.list__text .title span');
+      const desc = $('.list__text .desc');
 
-    if (p > 99) {
-      tr = 0;
+      block.css({
+        'opacity': 1,
+        'z-index': 57
+      })
+
+      col.css({
+        'opacity': 0
+      })
+
+      title.css({
+        'transform': 'translateY(' + 30 + 'px)'
+      })
+
+      desc.css({
+        'opacity': 0
+      })
+
+      col.css({
+        'opacity': op,
+      });
+
+      link.css({
+        'opacity': op,
+      })
+    } else {
+      const block = $('.list');
+      const link = $('.list__text .arrow-link');
+
+      block.css({
+        'opacity': 0,
+        'z-index': 50
+      });
+
+      link.css({
+        'opacity': 0,
+      });
     }
 
-    if (p < 1) {
-      tr = $(window).height() - 412;
+    // list transition col 1
+    if (pageYOffset > 8414) {
+      const n1 = 8414;
+      const n2 = 9508;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      let tr1 = $(window).height() - 212;
+      if($(window).width() < 1061) {
+        tr1 = $(window).height() - 212;
+      }
+      let tr = tr1 - (tr1 * (p / 100));
+
+      if (p > 99) {
+        tr = 0;
+      }
+
+      if (p < 1) {
+        tr = $(window).height() - 212;
+      }
+
+      const block = $('.list');
+      const col = $('.list__col');
+      const text = $('.list__text');
+
+
+      col.css({
+        'transform': 'translateY(' + tr + 'px)'
+      })
+    } else {
+      const col = $('.list__col');
+      col.css({
+        'transform': 'translateY(' + $(window).height() - 212 + 'px)'
+      })
     }
-
-    const block = $('.list');
-    const col = $('.list__col');
-    const text = $('.list__text');
-
-
-    col.eq(0).css({
-      'transform': 'translateY(' + tr + 'px)'
-    })
-  } else {
-    const col = $('.list__col');
-    col.eq(0).css({
-      'transform': 'translateY(' + $(window).height() - 412 + 'px)'
-    })
-  }
-
-  // list transition col 1 - 2
-  if (pageYOffset > 9508) {
-    const col = $('.list__col');
-    const n1 = 9508;
-    const n2 = 10020;
-    const n = pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    const tr1 = (col.eq(0).height() - $(window).height()) * -1;
-    let tr = tr1 * (p / 100);
-
-    if (p > 99) {
-      tr = tr1;
-    }
-
-    col.eq(0).css({
-      'transform': 'translateY(' + tr + 'px)'
-    })
-  }
-
-  // list text
-  if (pageYOffset > 8506) {
-    const n1 = 8506;
-    const n2 = 8719;
-    const n = pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    const op2 = 1;
-    let op = op2 * (p / 100);
-    const tr1 = 50;
-    let tr = tr1 - (tr1 * (p / 100));
-
-    if (p > 99) {
-      op = 1;
-      tr = 0;
-    }
-
-    if (p < 1) {
-      op = 0;
-      tr = 50;
-    }
-
-    const desc = $('.list__text .desc');
-
-    desc.css({
-      'opacity': op,
-      'transform': 'translateY(' + tr + 'px)'
-    })
-  } else {
-    const desc = $('.list__text .desc');
-
-    desc.css({
-      'opacity': 0,
-      'transform': 'translateY(' + 50 + 'px)'
-    })
-  }
-
-  // list title
-  if (pageYOffset > 8627) {
-    const n1 = 8627;
-    const n2 = 8840;
-    const n = pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    const tr1 = 30;
-    let tr = tr1 - (tr1 * (p / 100));
-
-    if (p > 99) {
-      tr = 0;
-    }
-
-    if (p < 1) {
-      tr = 50;
-    }
-
-    const title = $('.list__text .title span');
-
-    title.css({
-      'transform': 'translateY(' + tr + 'px)'
-    })
-  } else {
-    const title = $('.list__text .title span');
-
-    title.css({
-      'transform': 'translateY(' + 30 + 'px)'
-    })
-  }
-
-  // list opacity col 2
-  if (pageYOffset > 8524) {
-    const n1 = 8524;
-    const n2 = 8737;
-    const n = pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    const op1 = 0;
-    const op2 = 1;
-    let op = op2 * (p / 100);
-
-    if (p > 99) {
-      op = 1;
-    }
-
-    if (p < 1) {
-      op = 0;
-    }
-
-    const col = $('.list__col');
-
-    col.eq(1).css({
-      'opacity': op,
-    });
-  } else {
-    const col = $('.list__col');
-
-    col.eq(1).css({
-      'opacity': 0,
-    });
-  }
-
-  // list transition col 2
-  if (pageYOffset > 8524) {
-    const n1 = 8524;
-    const n2 = 9306;
-    const n = pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    const tr1 = $(window).height() - 612;
-    let tr = tr1 - (tr1 * (p / 100));
-
-    if (p > 99) {
-      tr = 0;
-    }
-
-    if (p < 1) {
-      tr = $(window).height() - 612;
-    }
-
-    const col = $('.list__col');
-
-    col.eq(1).css({
-      'transform': 'translateY(' + tr + 'px)'
-    })
-  } else {
-    const col = $('.list__col');
-    col.eq(1).css({
-      'transform': 'translateY(' + $(window).height() - 612 + 'px)'
-    })
-  }
-
-  // list transition col 2 - 2
-  if (pageYOffset > 9306) {
-    const col = $('.list__col');
-    const n1 = 9306;
-    const n2 = 10020;
-    const n = pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    const tr1 = (col.eq(1).height() - $(window).height()) * -1;
-    let tr = tr1 * (p / 100);
-
-    if (p > 99) {
-      tr = tr1;
-    }
-
-    if (p < 1) {
-      // tr = 0;
-    }
-
-
-    col.eq(1).css({
-      'transform': 'translateY(' + tr + 'px)'
-    })
-  }
-
-  // list opacity col 3
-  if (pageYOffset > 8627) {
-    const n1 = 8627;
-    const n2 = 8840;
-    const n = pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    const op2 = 1;
-    let op = op2 * (p / 100);
-
-    if (p > 99) {
-      op = 1;
-    }
-
-    if (p < 1) {
-      op = 0;
-    }
-
-    const col = $('.list__col');
-
-    col.eq(2).css({
-      'opacity': op,
-    });
-  } else {
-    const col = $('.list__col');
-
-    col.eq(2).css({
-      'opacity': 0,
-    });
-  }
-
-  // list transition col 3
-  if (pageYOffset > 8627) {
-    const n1 = 8627;
-    const n2 = 9267;
-    const n = pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    const tr1 = $(window).height() - 822;
-    let tr = tr1 - (tr1 * (p / 100));
-
-    if (p > 99) {
-      tr = 0;
-    }
-
-    if (p < 1) {
-      tr = $(window).height() - 822;
-    }
-
-    const col = $('.list__col');
-
-    col.eq(2).css({
-      'transform': 'translateY(' + tr + 'px)'
-    })
-  } else {
-    const col = $('.list__col');
-    col.eq(2).css({
-      'transform': 'translateY(' + $(window).height() - 822 + 'px)'
-    })
-  }
-
-  // list transition col 3 - 2
-  if (pageYOffset > 9267) {
-    const col = $('.list__col');
-    const n1 = 9267;
-    const n2 = 10020;
-    const n = pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    const tr1 = (col.eq(2).height() - $(window).height()) * -1;
-    let tr = tr1 * (p / 100);
-
-    if (p > 99) {
-      tr = tr1;
-    }
-
-    if (p < 1) {
-      // tr = 0;
-    }
-
-
-    col.eq(2).css({
-      'transform': 'translateY(' + tr + 'px)'
-    })
   }
 
   // list hidden
@@ -2277,26 +2419,209 @@ const scrollAnim = () => {
     })
   }
 
-  // footer items
-  if (pageYOffset > 13888) {
-    const items = $('.home-about__big-block');
-    const length = items.length;
-    let count = 0;
-    const block = $('.home-about');
-    block.css({
-      'opacity': 1,
-      'z-index': 60
-    })
-    items.each(function () {
-      const index = count * 189;
-      const n1 = 13888 + index;
-      const n2 = 14077 + index;
+  if($(window).width() > 800) {
+    // footer items
+    if (pageYOffset > 13888) {
+      const items = $('.home-about__big-block');
+      const length = items.length;
+      let count = 0;
+      const block = $('.home-about');
+      block.css({
+        'opacity': 1,
+        'z-index': 60
+      })
+      items.each(function () {
+        const index = count * 189;
+        const n1 = 13888 + index;
+        const n2 = 14077 + index;
+        const n = pageYOffset - n1;
+        const p = n / (n2 - n1) * 100;
+        const op1 = 0;
+        const op2 = 1;
+        const tr2 = 50;
+        let tr = tr2 - (tr2 * (p / 100));
+        let op = op2 * (p / 100);
+
+        if (p > 99) {
+          op = 1;
+          tr = 0;
+        }
+
+        if (p < 1) {
+          op = 0;
+          tr = 50;
+        }
+
+        $(this).css({
+          'opacity': op,
+          'transform': 'translateY(' + tr + 'px)'
+        })
+
+        count++;
+      });
+    } else {
+      const items = $('.home-about__big-block');
+      const block = $('.home-about');
+      block.css({
+        'opacity': 0,
+        'z-index': 50
+      })
+
+      items.css({
+        'opacity': 0,
+        'transform': 'translateY(' + 50 + 'px)'
+      });
+    }
+
+    // footer line
+    if (pageYOffset > 14175) {
+      const n1 = 14175;
+      const n2 = 14364;
       const n = pageYOffset - n1;
       const p = n / (n2 - n1) * 100;
-      const op1 = 0;
+      let mw = p;
+
+      if (p > 99) {
+        mw = 100;
+      }
+
+      if (p < 1) {
+        mw = 0;
+      }
+
+      const line = $('.home-about__container .top-line');
+
+      line.css({
+        'max-width': mw + '%'
+      })
+
+    } else {
+      const line = $('.home-about__container .top-line');
+
+      line.css({
+        'max-width': 0 + '%'
+      })
+    }
+
+    // footer items 2
+    if (pageYOffset > 14175) {
+      const items = $('.home-about .coll__center');
+      const length = items.length;
+      let count = 0;
+
+      items.each(function () {
+        const index = count * 189;
+        const n1 = 14175 + index;
+        const n2 = 14364 + index;
+        const n = pageYOffset - n1;
+        const p = n / (n2 - n1) * 100;
+        const op1 = 0;
+        const op2 = 1;
+        const tr2 = 15;
+        let tr = tr2 - (tr2 * (p / 100));
+        let op = op2 * (p / 100);
+
+        if (p > 99) {
+          op = 1;
+          tr = 0;
+        }
+
+        if (p < 1) {
+          op = 0;
+          tr = 15;
+        }
+
+        $(this).css({
+          'opacity': op,
+          'transform': 'translateY(' + tr + 'px)'
+        })
+
+        count++;
+      });
+    } else {
+      const items = $('.home-about .coll__center');
+
+      items.css({
+        'opacity': 0,
+        'transform': 'translateY(' + 15 + 'px)'
+      });
+    }
+
+    // footer line 2
+    if (pageYOffset > 14364) {
+      const n1 = 14364;
+      const n2 = 14553;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      let mw = p;
+
+      if (p > 99) {
+        mw = 100;
+      }
+
+      if (p < 1) {
+        mw = 0;
+      }
+
+      const line = $('.home-about__container .bot-line');
+
+      line.css({
+        'max-width': mw + '%'
+      })
+
+    } else {
+      const line = $('.home-about__container .bot-line');
+
+      line.css({
+        'max-width': 0 + '%'
+      })
+    }
+
+    // footer bot
+    if (pageYOffset > 14455) {
+      const n1 = 14455;
+      const n2 = 14644;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
+      const op1 = 1;
+      const tr1 = 30;
+      let tr = tr1 - tr1 * (p / 100);
+      let op = op1 * (p / 100);
+
+      if (p > 99) {
+        tr = 0;
+        op = 1;
+      }
+
+      if (p < 1) {
+        op = 0;
+        tr = 30;
+      }
+
+      const coop = $('.elba-coop');
+
+      coop.css({
+        'opacity': op,
+        'transform': 'translateY(' + tr + 'px)'
+      })
+    } else {
+      const coop = $('.elba-coop');
+
+      coop.css({
+        'opacity': 0,
+        'transform': 'translateY(' + 30 + 'px)'
+      })
+    }
+  } else {
+    // footer
+    if (pageYOffset > 13888) {
+      const n1 = 13888;
+      const n2 = 14364;
+      const n = pageYOffset - n1;
+      const p = n / (n2 - n1) * 100;
       const op2 = 1;
-      const tr2 = 50;
-      let tr = tr2 - (tr2 * (p / 100));
+      let tr1 = $(window).height() - 212;
+      let tr = tr1 - (tr1 * (p / 100));
       let op = op2 * (p / 100);
 
       if (p > 99) {
@@ -2306,168 +2631,51 @@ const scrollAnim = () => {
 
       if (p < 1) {
         op = 0;
-        tr = 50;
+        tr = $(window).height() - 212;
       }
 
-      $(this).css({
+      const block = $('.home-about');
+      const items = $('.home-about__big-block');
+      const coop = $('.elba-coop');
+      const items2 = $('.home-about .coll__center');
+
+      block.css({
         'opacity': op,
+        'z-index': 60,
         'transform': 'translateY(' + tr + 'px)'
       })
 
-      count++;
-    });
-  } else {
-    const items = $('.home-about__big-block');
-    const block = $('.home-about');
-    block.css({
-      'opacity': 0,
-      'z-index': 50
-    })
+      items.removeAttr('style');
+      items2.removeAttr('style');
+      coop.removeAttr('style');
+    } else {
+      const block = $('.home-about');
 
-    items.css({
-      'opacity': 0,
-      'transform': 'translateY(' + 50 + 'px)'
-    });
-  }
-
-  // footer line
-  if (pageYOffset > 14175) {
-    const n1 = 14175;
-    const n2 = 14364;
-    const n = pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    let mw = p;
-
-    if (p > 99) {
-      mw = 100;
+      block.css({
+        'opacity': 0,
+        'z-index': 50,
+        // 'transform': 'translateY(' + $(window).height() - 212 + 'px)'
+      })
     }
 
-    if (p < 1) {
-      mw = 0;
-    }
-
-    const line = $('.home-about__container .top-line');
-
-    line.css({
-      'max-width': mw + '%'
-    })
-
-  } else {
-    const line = $('.home-about__container .top-line');
-
-    line.css({
-      'max-width': 0 + '%'
-    })
-  }
-
-  // footer items 2
-  if (pageYOffset > 14175) {
-    const items = $('.home-about .coll__center');
-    const length = items.length;
-    let count = 0;
-
-    items.each(function () {
-      const index = count * 189;
-      const n1 = 14175 + index;
-      const n2 = 14364 + index;
+    // list transition col 1 - 2
+    if (pageYOffset > 14364) {
+      const block = $('.home-about');
+      const n1 = 14364;
+      const n2 = 14644;
       const n = pageYOffset - n1;
       const p = n / (n2 - n1) * 100;
-      const op1 = 0;
-      const op2 = 1;
-      const tr2 = 15;
-      let tr = tr2 - (tr2 * (p / 100));
-      let op = op2 * (p / 100);
+      const tr1 = (block.height() - $(window).height()) * -1;
+      let tr = tr1 * (p / 100);
 
       if (p > 99) {
-        op = 1;
-        tr = 0;
+        tr = tr1;
       }
 
-      if (p < 1) {
-        op = 0;
-        tr = 15;
-      }
-
-      $(this).css({
-        'opacity': op,
+      block.css({
         'transform': 'translateY(' + tr + 'px)'
       })
-
-      count++;
-    });
-  } else {
-    const items = $('.home-about .coll__center');
-
-    items.css({
-      'opacity': 0,
-      'transform': 'translateY(' + 15 + 'px)'
-    });
-  }
-
-  // footer line 2
-  if (pageYOffset > 14364) {
-    const n1 = 14364;
-    const n2 = 14553;
-    const n = pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    let mw = p;
-
-    if (p > 99) {
-      mw = 100;
     }
-
-    if (p < 1) {
-      mw = 0;
-    }
-
-    const line = $('.home-about__container .bot-line');
-
-    line.css({
-      'max-width': mw + '%'
-    })
-
-  } else {
-    const line = $('.home-about__container .bot-line');
-
-    line.css({
-      'max-width': 0 + '%'
-    })
-  }
-
-  // footer bot
-  if (pageYOffset > 14455) {
-    const n1 = 14455;
-    const n2 = 14644;
-    const n = pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    const op1 = 1;
-    const tr1 = 30;
-    let tr = tr1 - tr1 * (p / 100);
-    let op = op1 * (p / 100);
-
-    if (p > 99) {
-      tr = 0;
-      op = 1;
-    }
-
-    if (p < 1) {
-      op = 0;
-      tr = 30;
-    }
-
-    const coop = $('.elba-coop');
-
-    coop.css({
-      'opacity': op,
-      'transform': 'translateY(' + tr + 'px)'
-    })
-  } else {
-    const coop = $('.elba-coop');
-
-    coop.css({
-      'opacity': 0,
-      'transform': 'translateY(' + 30 + 'px)'
-    })
   }
 }
 

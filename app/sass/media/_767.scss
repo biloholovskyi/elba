@@ -15,6 +15,10 @@
     max-width: calc(100% / 2 - 24px);
     margin-bottom: 24px;
 
+    &:last-child {
+      display: none;
+    }
+
     .img__block {
       padding: 20px;
       margin-bottom: 16px;
