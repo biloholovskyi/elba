@@ -102,3 +102,17 @@
 .custom-scroll-bar {
 
 }
+// form validate classes 
+.error{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #C11030;
+  transform: translateY(61px);
+  position: absolute;
+}
+input.input-pass.field {
+  border-bottom: 1px solid #C11030!important;
+  // margin-bottom: 14px!important;
+}

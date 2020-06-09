@@ -210,7 +210,8 @@
   padding: 0 10px;
 
   // visibility: hidden;
-  .pass-close {
+  .pass-close,
+  .dlt-close {
     background: url(../../../media/icon/modal-close.svg);
     background-position: center;
     background-size: cover;
@@ -219,10 +220,11 @@
     height: 40px;
     top: 0;
     right: -60px;
-    cursor: pointer;
+    cursor: pointer; 
   }
 
-  .pass-modal {
+  .pass-modal,
+  .dlt-modal {
     display: flex;
     max-height: 512px;
     max-width: 980px;
@@ -230,7 +232,8 @@
     padding: 64px;
     position: relative;
 
-    .pass-item {
+    .pass-item,
+    .dlt-item {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -289,7 +292,7 @@
         text-transform: uppercase;
         color: #fff;
         padding: 10px 32px;
-        border: 1px solid #1F1F22;
+        border: 1px solid #1F1F22; 
         background: #1F1F22;
         max-width: 100px;
         margin: 0 auto;
@@ -309,11 +312,11 @@
 }
 
 .dlt-Adress-overlay {
-  .pass-modal {
-    .pass-item {
+  .dlt-modal {
+    .dlt-item {
       .modal-btn-block {
         display: flex;
-        justify-content: center;
+        justify-content: center; 
 
         button {
           max-width: none;
@@ -326,7 +329,7 @@
 
         & button:last-child {
           background-color: #fff;
-          border: 1px solid #1F1F22;
+          border: 1px solid #1F1F22; 
           color: #1F1F22;
         }
       }

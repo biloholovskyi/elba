@@ -62,11 +62,13 @@
     .inp-block {
       display: flex;
       position: relative;
-      border-bottom: 1px solid #565B62;
+      // border-bottom: 1px solid #565B62;
       padding-bottom: 8px;
       input {
         padding-top: 27px;
         padding-bottom: 0;
+        border-bottom: 1px solid #565B62;
+        padding-bottom: 12px;
       }
       h3 {
         align-self: flex-end;
@@ -76,7 +78,10 @@
         line-height: 24px;
         color: #1F1F22;
         cursor: pointer;
+        border-bottom: 1px solid #565B62;
+        padding-bottom: 12px;
       }
+      
       .option-input {
         appearance: none;
         position: relative;
@@ -98,6 +103,7 @@
         padding-top: 0;
         margin-top: 32px;
        border-radius: 2px;
+       padding-bottom: 0;
       }
       .option-input:hover {
         border: 1px solid #B2B8BF;
@@ -124,6 +130,7 @@
     .inp-check {
       margin-bottom: 24px;
       border: none;
+      padding-bottom: 0;
       h3 {
         font-style: normal;
         font-weight: normal;
@@ -131,6 +138,8 @@
         line-height: 24px;
         color: #7D838A;
         cursor: default;
+        border: none;
+        padding-bottom: 0;
       }
     }
   }

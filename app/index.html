@@ -49,18 +49,18 @@
               <button onclick="location.href='./create_account.html';">Create an account</button>
               <h2>Sign in</h2>
               <p>Sign in with your email and password.</p>
-              <form id="sign_in">
-                <input type="text" placeholder="Email adress" required>
+              <form class="mainForm" name="formSign" id="sign_in">
+                <input class="field" type="text" placeholder="Email adress">
                 <div class="inp-block">
-                  <input type="password" placeholder="Password" style="border: none">
-                  <h3>FORGOT?</h3>
+                  <input class="input-pass field" type="password" placeholder="Password">
+                  <h3 class="forgot">FORGOT?</h3>
                 </div>
                 <div class="inp-block inp-check"> 
                   <input class="option-input" type="checkbox" checked>
                   <h3>Remember me </h3>
                 </div>
+                <button class="validateBtn" type="submit">Sign in</button>
               </form>
-              <button>Sign in</button>
             </div>
             <div class="log_out">
               <h3>Account</h3><a href="./profile.html">Profile</a><a href="./address.html">Shipping Addresses</a><a href="./orders.html">My orders</a><a href="./payment.html">Payment Methods</a>

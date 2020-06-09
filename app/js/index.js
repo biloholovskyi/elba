@@ -103,13 +103,41 @@ $(document).ready((e) => {
       }
     }
   });
-  
+
+ 
 
 });
 
  
+//  VALID FORM
+var form = document.querySelector('.mainForm');
+var validateBtn = form.querySelector('.validateBtn');
+var inp = form.querySelector('.input-pass');
+var fields = form.querySelectorAll('.field');
 
 
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  var errors = form.querySelectorAll('.error');
+  
+  for (var i = 0; i < errors.length; i++) {
+    errors[i].remove();
+  }
+
+  for (var i = 0; i < fields.length; i++) {
+    if (!fields[i].value) {
+      console.log('Error name', fields[i]);
+      var error = document.createElement('div');
+      error.className='error',
+      error.style.color = 'red',
+      error.innerHTML = 'Error name',
+      form[i].parentElement.insertBefore(error, fields[i]);
+    }
+  }
+});
+// end validate
 
 $(window).resize(() => {
   evSize();

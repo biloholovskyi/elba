@@ -114,26 +114,29 @@
   #materials-page {
     .inner-content {
       .materials-table {
+        width: 100%;
+        overflow: auto;
+        margin-top: 32px;
+        margin-bottom: 32px;
         .caption {
-          display: none;
+          width: 650px;
         }
-
+        .caption h4:nth-child(1) {
+          max-width: 198px;
+        }
+        .caption h4:nth-child(2) {
+          max-width: 306px;
+        }
+        .caption h4:nth-child(3) {
+         margin-left: 40px;
+        }
         .table-row {
-          flex-direction: column;
-
+          width: 650px;
           h3 {
-            margin-bottom: 15px;
+            max-width: 198px;
           }
-
-          p {
-            font-size: 14px;
-            margin-bottom: 15px;
-          }
-
-          & p:last-child {
-            font-size: 14px;
-            margin-left: 0 !important;
-            margin-bottom: 15px;
+          .second-desc {
+            max-width: 306px;
           }
 
         }
@@ -657,11 +660,11 @@
   // modal  delete address
   .dlt-Adress-overlay {
 
-    .pass-modal {
+    .dlt-modal {
       max-width: 272px;
       padding: 24px;
 
-      .pass-close {
+      .dlt-close {
         width: 20px;
         height: 20px;
         top: 28px;
@@ -669,7 +672,7 @@
         filter: invert(1);
       }
 
-      .pass-item {
+      .dlt-item {
         h3 {
           font-size: 20px;
           line-height: 32px;

@@ -35,24 +35,32 @@
                 <div class="big-icon basket" style="background-image: url(./media/icon/cart.svg)"></div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="modal-wrapper">
+      <div class="m-container" style="position: relative"> 
+        <div class="m-row">
+          <div class="m-col">            
             <div class="sign_in-wrap">
               <h2>Create an account</h2>
               <p>Create a ELBA account with your email address.</p>
               <button onclick="location.href='./create_account.html';">Create an account</button>
               <h2>Sign in</h2>
               <p>Sign in with your email and password.</p>
-              <form id="sign_in">
-                <input type="text" placeholder="Email adress" required>
+              <form class="mainForm" name="formSign" id="sign_in">
+                <input class="field" type="text" placeholder="Email adress">
                 <div class="inp-block">
-                  <input type="password" placeholder="Password" style="border: none">
-                  <h3>FORGOT?</h3>
+                  <input class="input-pass field" type="password" placeholder="Password">
+                  <h3 class="forgot">FORGOT?</h3>
                 </div>
                 <div class="inp-block inp-check"> 
                   <input class="option-input" type="checkbox" checked>
                   <h3>Remember me </h3>
                 </div>
+                <button class="validateBtn" type="submit">Sign in</button>
               </form>
-              <button>Sign in</button>
             </div>
             <div class="log_out">
               <h3>Account</h3><a href="./profile.html">Profile</a><a href="./address.html">Shipping Addresses</a><a href="./orders.html">My orders</a><a href="./payment.html">Payment Methods</a>
@@ -117,7 +125,7 @@
           </div>
         </div>
       </div>
-    </header>
+    </div>
     <div class="modal-menu">
       <div class="m-container">
         <div class="m-row">
@@ -233,7 +241,7 @@
               <div class="inner-photo">
                 <div class="text"></div>
                 <div class="btn-account">  
-                  <button>Register                </button>
+                  <button type="submit">Register                </button>
                 </div>
               </div>
             </div>
@@ -305,9 +313,20 @@
                             <button class="subs__submit"></button>
                           </form>
                         </div>
-                        <div class="elba-coop">ELBACONCEPT©2020. All right reserved.     </div>
+                        <div class="elba-coop">ELBACONCEPT©2020. All right reserved.</div>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pass-overlay">
+                <div class="pass-modal">
+                  <div class="pass-close"></div>
+                  <div class="pass-item">
+                    <h3>Password recovery</h3>
+                    <p>Please indicate the email address to which the account is registered and we will send you instructions to restore access to your account.</p>
+                    <input type="text" placeholder="Example@gmail.com">
+                    <button>SEND              </button>
                   </div>
                 </div>
               </div>

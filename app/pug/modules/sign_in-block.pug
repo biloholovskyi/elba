@@ -4,13 +4,13 @@
   button(onclick="location.href='./create_account.html';") Create an account
   h2 Sign in
   p Sign in with your email and password.
-  form#sign_in
-    input(type="text" placeholder="Email adress" required)
+  form(name="formSign")#sign_in.mainForm
+    input(type="text" placeholder="Email adress").field
     .inp-block
-      input(type="password" placeholder="Password" style="border: none")
-      h3 FORGOT?
+      input(type="password" placeholder="Password").input-pass.field
+      h3.forgot FORGOT?
     .inp-block.inp-check  
       input(type="checkbox" checked).option-input
       h3 Remember me 
-  button Sign in
+    button(type="submit").validateBtn Sign in
   
