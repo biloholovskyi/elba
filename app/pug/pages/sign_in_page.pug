@@ -21,25 +21,26 @@ block content
             .account-title
               h1 Sign in
               a(href="./create_account.html") Create an account
-            .inner-photo
-              .text Email adress:
-              input(type="text" placeholder="")
-            .inner-photo
-              .text Password:
-              .inp-block
-                input(type="password" placeholder="" style="border: none")
-                h3.forgot FORGOT?
-            .inner-photo
-              .text
-              .btn-wrap
-                .checkbox 
-                  input(type="checkbox" checked).option-input
-                  h3 Remember Me   
-            .inner-photo
-              .text
-              .btn-wrap
-                .btn-account   
-                  button SIGN IN 
+            form.mainForm
+              .inner-photo
+                .text Email adress:
+                input(type="text" placeholder="")
+              .inner-photo
+                .text Password:
+                .inp-block
+                  input(type="password" placeholder="" )
+                  h3.forgot FORGOT?
+              .inner-photo
+                .text
+                .btn-wrap
+                  .checkbox 
+                    input(type="checkbox" checked).option-input
+                    h3 Remember Me   
+              .inner-photo
+                .text
+                .btn-wrap
+                  .btn-account   
+                    button(type="submit") SIGN IN 
       .m-row
         .m-col.m-col--15
           include ../modules/footer         

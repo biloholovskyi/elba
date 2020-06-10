@@ -89,7 +89,14 @@
         background-repeat: no-repeat;
         cursor: pointer;
       }
-
+      .mobile-close-modal {
+        background-image: url(../../media/icon/Close-Mobile.svg);
+        background-position: center;
+        background-size: cover;
+        width: 24px;
+        height: 24px; 
+        display: none;
+      }
       .mobile__link {
         display: block;
         width: 26px;

@@ -1,7 +1,9 @@
 $(document).ready(function(){
     // MODAL SIGN IN
     $('.sign_in').on('click', function(){
+      // $(this).hide();
       $('.sign_in-wrap').toggleClass('active');
+      
     });
     // BASKET MODAL
     $('.basket').on('click', function(){ 
@@ -27,7 +29,7 @@ $(document).ready(function(){
   });
   // FORGOT
  $('.forgot').on('click', function(){
-  $('.pass-overlay').fadeIn('slow').css('display', 'flex');
+  $('.pass-overlay').fadeIn().css('display', 'flex');
  });
 
  $('.pass-close').on('click', function(){
@@ -55,16 +57,24 @@ $(document).on('click', (e) => {
     }
   }
 
+  
+
  
   
 });
 
-$(document).mouseup(function(e) {
-  let container = $(".active");
-  if (!container.is(e.target) &&
-    container.has(e.target).length === 0 &&
-    !$(e.target).hasClass("active")) {
-    container.removeClass("active");
+
+
+$(document).mouseup(function (e){
+  var div = $(".sign_in, .sign_in-wrap");
+  if (!div.is(e.target)
+    && div.has(e.target).length === 0) {
+    div.removeClass('active');
+  }
+
+  var div = $(".basket, .basket-wrap");
+  if (!div.is(e.target)
+    && div.has(e.target).length === 0) {
+    div.removeClass('active');
   }
 });
-

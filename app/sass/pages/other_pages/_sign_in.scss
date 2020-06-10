@@ -231,9 +231,12 @@
           display: flex;
           align-items: center;
           letter-spacing: 0.1em;
-          text-transform: uppercase; 
+          text-transform: uppercase;  
           color: #1F1F22;
           cursor: pointer;
+        }
+        input {
+          border: none;
         }
       }
       input {
