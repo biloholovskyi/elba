@@ -7,5 +7,4 @@ $(document).ready(function() {
 function my_func(){
     $('#accordeon .hidden').not($(this).next());
     $(this).next().toggleClass("active");
-
 }

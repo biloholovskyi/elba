@@ -9,7 +9,7 @@ const selectMaterial = (e) => {
 
 const newElement = (e) => {
   const main = $('.order-new-element--main');
-  const title = $('#order-title');
+  const title = $('#order-title .title');
   main.toggleClass('order-new-element--show');
   if(main.hasClass('order-new-element--show')) {
     title.html('New element');

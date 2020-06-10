@@ -34,8 +34,8 @@
     width: 100%;
     max-width: 587px;;
     overflow: auto;
-    transition: all .6s;
-    transition-delay: .9s;
+    transition: all .5s;
+    transition-delay: .5s;
   }
 
   &__close {
@@ -49,7 +49,7 @@
     z-index: 100;
     opacity: 0;
     transition: all .6s;
-    transition-delay: 1.2s;
+    transition-delay: 5s;
   }
 
   &--show {

@@ -23,6 +23,7 @@ import { inspSlider } from "./inspiration";
 import './sticky';
 import './modal-other';
 import './select';
+import { hoverSlider } from "./listInnerSlider";
 
 
 $(document).ready((e) => {
@@ -47,17 +48,6 @@ $(document).ready((e) => {
         autoWidth: true
       }
     }
-  });
-
-
-  // list inner slider
-  $('.list__inner-slider').owlCarousel({
-    loop: false,
-    margin: 0,
-    item: 1,
-    autoWidth: true,
-    nav: false,
-    dots: true,
   });
 
   // conf mobile slider
@@ -90,7 +80,8 @@ $(document).ready((e) => {
   $('.configurator__sidebar .conf__slider-nav .conf-slider__btn').on('click', (e) => {inspSlider(e)})
   $('.order-head-cancel').on('click', closeMobileMain);
   $('.order-head-type').on('click', closeMobileType);
-  $('.order-head-modal').on('click', closeMobileModal); 
+  $('.order-head-modal').on('click', closeMobileModal);
+  $('.list__inner-slider .list-inner__nav .item').on('mouseover', (e) => hoverSlider(e))
 
   $(document).on('click', (e) => {
    

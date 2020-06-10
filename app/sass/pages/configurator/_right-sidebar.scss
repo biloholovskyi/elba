@@ -59,6 +59,10 @@
             &--hidden {
               background-image: url(../media/icon/hidden.svg) !important;
             }
+
+            &:hover {
+              opacity: .7;
+            }
           }
         }
 
@@ -129,10 +133,6 @@
       border-top: 1px solid #E4E8EB;
       transition: all .3s;
 
-      &--add {
-
-      }
-
       &--check {
         color: #fff;
         background: #1F1F22;
@@ -146,6 +146,18 @@
       &:hover {
         background-color: #565B62;
         color: #fff;
+      }
+
+      &--add {
+        &:hover {
+          color: #565B62;
+          background-color: #fff;
+        }
+      }
+
+      &.disabled {
+        color: #B2B8BF;
+        cursor: default;
       }
     }
   }
