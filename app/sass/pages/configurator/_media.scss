@@ -192,12 +192,16 @@
     }
 
     .conf__main-top {
-      padding-right: 24px;
+      padding-right: 0;
 
       .text {
         padding-right: 0;
         font-size: 14px;
         line-height: 20px;
+      }
+
+      .links {
+        max-width: 0;
       }
     }
   }
@@ -207,8 +211,8 @@
     height: auto;
 
     .conf-sidebar__title {
-      font-size: 14px;
-      line-height: 20px;
+      font-size: 16px;
+      line-height: 28px;
     }
 
     .configurator__content {
@@ -226,7 +230,7 @@
 
     .item {
       display: flex;
-      width: 272px;
+      width: calc(100vw - 48px);
 
       &__img-box {
         background-color: #fff;
@@ -282,7 +286,7 @@
       flex-direction: column;
       align-items: center;
       padding: 24px 50px;
-      max-width: 272px;
+      width: calc(100vw - 48px);
 
       img {
         @include base-box(128px);
@@ -400,7 +404,7 @@
     }
 
     .mobile-conf-links {
-      padding: 24px 0 64px;
+      padding: 24px 0 24px;
 
       .link {
         margin-bottom: 8px;
@@ -437,12 +441,21 @@
         z-index: 100;
         opacity: 1;
       }
+
+      &--main {
+        .order-list {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
     }
 
     .order-buttons {
-      .item:hover {
-
-      }
+      width: auto;
+      position: relative;
+      margin-left: -32px;
+      margin-right: -32px;
     }
   }
 
@@ -469,10 +482,15 @@
       margin-top: -12px;
       left: 24px;
     }
+
+    &--no-border {
+      border-bottom: none;
+    }
   }
 
   .conf-modal__body {
     right: 0;
+    transition: all 0s;
   }
 
   .conf-modal--show {

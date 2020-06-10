@@ -432,6 +432,10 @@ const scrollAnim = () => {
       dr = 0;
     }
 
+    if(isNaN(dr)) {
+      dr = 0.1;
+    }
+
     video.currentTime = dr;
   }
 

@@ -13,8 +13,24 @@ const newElement = (e) => {
   main.toggleClass('order-new-element--show');
   if(main.hasClass('order-new-element--show')) {
     title.html('New element');
+    if($(window).width() < 1061) {
+      $('.configurator__sidebar .order-buttons').css({
+        'width': '100%',
+        'position': 'absolute',
+        'margin-left': '0',
+        'margin-right': '0'
+      });
+    }
   } else {
     title.html('Your order');
+    if($(window).width() < 1061) {
+      $('.configurator__sidebar .order-buttons').css({
+        'width': 'auto',
+        'position': 'relative',
+        'margin-left': '-32px',
+        'margin-right': '-32px'
+      });
+    }
   }
 }
 

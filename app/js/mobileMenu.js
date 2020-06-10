@@ -4,4 +4,12 @@ const toggleMenu = () => {
   $('body').toggleClass('stop-scroll');
 }
 
-export {toggleMenu}
+const innerMobileMenu = () => {
+  $('.modal-menu--inner').css('z-index', 60);
+}
+
+const closeInnerMobileMenu = () => {
+  $('.modal-menu--inner').css('z-index', -1);
+}
+
+export {toggleMenu, innerMobileMenu, closeInnerMobileMenu}

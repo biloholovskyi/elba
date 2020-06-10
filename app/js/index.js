@@ -1,6 +1,6 @@
 import 'normalize.css';
 import { evSize } from './eventVideo';
-import { toggleMenu } from "./mobileMenu";
+import { toggleMenu, innerMobileMenu, closeInnerMobileMenu } from "./mobileMenu";
 import './factory-slider';
 import {
   confHidden,
@@ -24,6 +24,7 @@ import './sticky';
 import './modal-other';
 import './select';
 import { hoverSlider } from "./listInnerSlider";
+import { collectionHeight } from "./collectionHeight";
 
 
 $(document).ready((e) => {
@@ -31,6 +32,10 @@ $(document).ready((e) => {
   evSize();
   scrollAnim();
   autoSwitchFirst(e);
+
+  if($('.collect-slider__item').length > 0) {
+    collectionHeight();
+  }
 
   // collections slider
   $('.collections__slider').owlCarousel({
@@ -81,7 +86,9 @@ $(document).ready((e) => {
   $('.order-head-cancel').on('click', closeMobileMain);
   $('.order-head-type').on('click', closeMobileType);
   $('.order-head-modal').on('click', closeMobileModal);
-  $('.list__inner-slider .list-inner__nav .item').on('mouseover', (e) => hoverSlider(e))
+  $('.list__inner-slider .list-inner__nav .item').on('mouseover', (e) => hoverSlider(e));
+  $('.modal-menu__nav .item--inner').on('click', innerMobileMenu);
+  $('.modal-menu__back').on('click', closeInnerMobileMenu);
 
   $(document).on('click', (e) => {
    
@@ -132,7 +139,9 @@ form.addEventListener('submit', function (event) {
 
 $(window).resize(() => {
   evSize();
-  // startFullPage();
+  if($('.collect-slider__item').length > 0) {
+    collectionHeight();
+  }
   scrollAnim();
 });
 
