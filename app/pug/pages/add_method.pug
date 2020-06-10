@@ -1,0 +1,83 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Payment Methods'
+
+    mixin asideNav(link,name) 
+      li
+        a(href=link)=name 
+    mixin otherPage(link,name)
+      a(href=link)=name     
+
+block content
+  include ../modules/header_other
+  include ../modules/modal-menu 
+
+  #addPayment.inner-page 
+    .m-container
+      .m-row
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--2.m-col__mxs--1
+          include ../modules/aside-profile
+        .m-col.m-col--9.m-col__lg--11.m-col__ms--15.m-col__mxs--15
+          .inner-content
+            .mobile-other-header
+              +otherPage('./payment.html', 'Payment Methods')  
+            h1 Payment Methods   
+            .inner-block
+              h3 New method
+            .inner-photo
+              .text Method type:
+              .method_type
+                button(value="") #[span Credit] card 
+                button Paypal
+                button UnionPay
+            .inner-photo
+              .text Receiver first name:
+              input(type="number")
+            .inner-photo
+              .text Until:
+              .birth-block
+                select#mounth
+                  option(value="hide") Month
+                  option(value="01") January
+                  option(value="02") February
+                  option(value="03") March
+                  option(value="04" selected) April
+                  option(value="05") May
+                  option(value="06") June
+                  option(value="07") July
+                  option(value="08") August
+                  option(value="09") September
+                  option(value="10") October
+                  option(value="09") November
+                  option(value="10") December
+                select#year
+                  option(value="hide") year 
+                  option(value="01") 01
+                  option(value="02") 02
+                  option(value="03" selected) 1992
+                  option(value="04") 04
+                  option(value="05") 05
+                  option(value="06") 06
+                  option(value="07") 07
+                  option(value="08") 08
+                  option(value="09") 09
+                  option(value="10") 10   
+            .inner-photo
+              .text Cardholder:
+              input(type="text") 
+            .inner-photo
+              .text CVV/CVC: 
+              input(type="password") 
+            .inner-photo
+              .text
+              .btn-account   
+                button ADD METHOD
+                button CANCEL                
+
+        .m-col.m-col--3.m-col__lg--1.m-col__ms--1.m-col__mxs--1
+
+
+      .m-row
+        .m-col.m-col--15
+          include ../modules/footer 

@@ -1,0 +1,230 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Checkout' 
+
+    mixin asideNav(link,name)
+      li
+        a(href=link)=name 
+
+block content
+  include ../modules/header_other
+  include ../modules/modal-menu
+
+  #checkout.inner-page 
+    .m-container
+      .m-row
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--15.m-col__mxs--15
+          a.inner-btn.account-back(href="/") Back to website
+        .m-col.m-col--8.m-col__lg--8.m-col__ms--15.m-col__mxs--15 
+          .inner-content
+            .account-title
+              h1 Checkout
+            .inner-block
+              h3 Delivery address  
+            .inner-photo
+              .text Template:
+              .birth-block
+                 select#mounth
+                  option(value="hide") Template:
+                  option(value="01") 1
+                  option(value="02") 2
+                  option(value="03") 3
+                  option(value="04" selected) none
+                  option(value="05") 4
+                  option(value="06") 5
+                  option(value="07") 6
+                  option(value="08") 
+                  option(value="09") 
+                  option(value="10") 
+                  option(value="09") 
+                  option(value="10")  
+            .inner-photo
+              .text Receiver last name:
+              input(type="text" placeholder="")
+            .inner-photo
+              .text Receiver first name:
+              input(type="text" placeholder="")
+            .inner-photo
+              .text Company name: (optional)
+              input(type="text" placeholder="") 
+            .inner-photo
+              .text Address:
+              input(type="text" placeholder="") 
+            .inner-photo
+              .text ZIP-code: 
+              input(type="text" placeholder="")        
+            .inner-photo
+              .text Country:
+              .birth-block
+                select#country
+                  option(value="hide") Country
+                  option(value="01") 01
+                  option(value="02") 02
+                  option(value="03") 03
+                  option(value="04") 04
+                  option(value="05") 05
+                  option(value="06" selected)  Russian Federation
+                  option(value="07") 07
+                  option(value="08") 08
+                  option(value="09") 09
+                  option(value="10") 10
+                
+            .inner-photo
+              .text City
+              input(type="text" placeholder="") 
+            .inner-photo
+              .text Phone number:
+              input(type="text" placeholder="")
+          .inner-content
+            .inner-block
+              h3 Billing address
+            ul.address-block.checkout-block 
+              li
+                label.radio
+                  input(type="radio" name="r" value="1" checked)
+                  span Same as delivery address
+                label.radio
+                  input(type="radio" name="r" value="1" checked)
+                  span Add an alternative   
+            .inner-photo
+              .text
+              .method_type.address-type
+                button Same as delivery address
+                button Add an alternative    
+            .inner-photo
+              .text Template:
+              .birth-block
+                select#mounth
+                  option(value="hide") Template:
+                  option(value="01") 1
+                  option(value="02") 2
+                  option(value="03") 3
+                  option(value="04" selected) none
+                  option(value="05") 4
+                  option(value="06") 5
+                  option(value="07") 6
+                  option(value="08") 
+                  option(value="09") 
+                  option(value="10") 
+                  option(value="09") 
+                  option(value="10")  
+            .inner-photo
+              .text Receiver last name:
+              input(type="text" placeholder="")
+            .inner-photo
+              .text Receiver first name:
+              input(type="text" placeholder="")
+            .inner-photo
+              .text Company name: (optional)
+              input(type="text" placeholder="") 
+            .inner-photo
+              .text Address:
+              input(type="text" placeholder="") 
+            .inner-photo
+              .text ZIP-code: 
+              input(type="text" placeholder="")        
+            .inner-photo
+              .text Country:
+              .birth-block
+                select#country
+                  option(value="hide") Country
+                  option(value="01") 01
+                  option(value="02") 02
+                  option(value="03") 03
+                  option(value="04") 04
+                  option(value="05") 05
+                  option(value="06" selected)  Russian Federation
+                  option(value="07") 07
+                  option(value="08") 08
+                  option(value="09") 09
+                  option(value="10") 10
+                
+            .inner-photo
+              .text City
+              input(type="text" placeholder="") 
+            .inner-photo
+              .text Phone number:
+              input(type="text" placeholder="")
+          .inner-content
+            .inner-block
+              h3 Payment Methods
+            .inner-photo
+              .text Template:
+              .birth-block
+                select#mounth
+                  option(value="hide") Template:
+                  option(value="01") 1
+                  option(value="02") 2
+                  option(value="03") 3
+                  option(value="04" selected) none
+                  option(value="05") 4
+                  option(value="06") 5
+                  option(value="07") 6
+                  option(value="08") 
+                  option(value="09") 
+                  option(value="10") 
+                  option(value="09") 
+                  option(value="10")      
+            .inner-photo
+              .text Method type:
+              .method_type
+                button(value="") #[span Credit] card 
+                button Paypal
+                button UnionPay
+            .inner-photo
+              .text Receiver first name:
+              input(type="number")
+            .inner-photo
+              .text Until:
+              .birth-block.cardUntil
+                select#mounth
+                  option(value="hide") Month
+                  option(value="01") January
+                  option(value="02") February
+                  option(value="03") March
+                  option(value="04" selected) April
+                  option(value="05") May
+                  option(value="06") June
+                  option(value="07") July
+                  option(value="08") August
+                  option(value="09") September
+                  option(value="10") October
+                  option(value="09") November
+                  option(value="10") December
+                select#year
+                  option(value="hide") year 
+                  option(value="01") 01
+                  option(value="02") 02
+                  option(value="03" selected) 1992
+                  option(value="04") 04
+                  option(value="05") 05
+                  option(value="06") 06
+                  option(value="07") 07
+                  option(value="08") 08
+                  option(value="09") 09
+                  option(value="10") 10
+            .inner-photo
+              .text Cardholder:
+              input(type="text") 
+            .inner-photo
+              .text CVV/CVC: 
+              input(type="password")     
+        .m-col.m-col--4.m-col__lg--4.m-col__ms--15.m-col__mxs--15
+          .paynow-wrap
+            .item
+              h3 Subtotal:
+              div € 2,000.00
+            .item
+              h3 Shipping: *
+              div € 0.00
+            .item
+              h4 Total:
+              div(style="font-weight: bold") € 2,000.00
+            button PAY NOW
+            p * The full shipping cost is calculated after the delivery point is indicated.     
+
+
+      .m-row
+        .m-col.m-col--15
+          include ../modules/footer 	

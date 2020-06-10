@@ -1,0 +1,322 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Checkout'
+
+    mixin asideNav(link,name)
+      li
+        a(href=link)=name 
+
+block content
+  include ../modules/header
+  include ../modules/modal-menu
+
+  #yourbag.inner-page 
+    .m-container
+      .m-row
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--15.m-col__mxs--15.m-col__md--15 
+          a.inner-btn.account-back(href="/") Back to catalog 
+          .follow-us
+            a.follow-us__link.follow-us__link--dark(href='#') Follow us 
+        .m-col.m-col--8.m-col__lg--8.m-col__ms--15.m-col__mxs--15.m-col__md--11 
+          .inner-content
+            h1 Your bag
+            .cart-wrap
+              .cart-item
+                h3.cartcaption.empty none
+                h3.cartcaption Product
+                h3.cartcaption Price
+                h3.cartcaption Quantity
+                h3.cartcaption Subtotal
+                h3.cartcaption.empty none
+                .line  
+              .cart-item
+                .cart-block
+                  img(src="../media/icon/modal-elem.svg", alt="image")
+                  .item-title
+                    h4 Body • Leather 
+                    h3 Little E — Logo Max White & Black 
+                  .item-price
+                    p € 200.00
+                    p.offer € 200.00
+                  .quantity
+                    div -
+                    p 2
+                    div +
+                  .subtotal
+                    p € 400.00   
+                  img.dlt-item(src="../media/icon/delete.svg", alt="image")
+                .line
+                .card-mobile
+                  img(src="../media/icon/modal-elem.svg", alt="image")
+                  .second-section
+                    .middle
+                      .item-title
+                        h4 Leather 
+                        h3 Little E — Logo Max White & Black 
+                      img.dlt-item(src="../media/icon/delete-mobile.svg", alt="image")
+                    .last-section
+                      .item-price
+                        p.offer € 200
+                        p € 400
+                      .quantity-mobile
+                        select#quantity
+                          option(value="hide") 1
+                          option(value="01") 1
+                          option(value="02") 2
+                          option(value="03") 3
+                          option(value="04") 4
+                          option(value="05") 5
+                          option(value="06") 6
+                          option(value="07") 7
+                          option(value="08") 8
+                          option(value="09") 9
+                          option(value="10") 0  
+
+              .cart-item
+                .cart-block
+                  img(src="../media/icon/modal-elem.svg", alt="image")
+                  .item-title
+                    h4 Body • Leather 
+                    h3 Little E — Logo Max White & Black 
+                  .item-price
+                    p € 200.00
+                    p.offer € 200.00
+                  .quantity
+                    div -
+                    p 2
+                    div +
+                  .subtotal
+                    p € 400.00   
+                  img.dlt-item(src="../media/icon/delete.svg", alt="image")
+                .line
+                .card-mobile
+                  img(src="../media/icon/modal-elem.svg", alt="image")
+                  .second-section
+                    .middle
+                      .item-title
+                        h4 Leather 
+                        h3 Little E — Logo Max White & Black 
+                      img.dlt-item(src="../media/icon/delete-mobile.svg", alt="image")
+                    .last-section
+                      .item-price
+                        p.offer € 200
+                        p € 400
+                      .quantity-mobile
+                        select#quantity
+                          option(value="hide") 1
+                          option(value="01") 1
+                          option(value="02") 2
+                          option(value="03") 3
+                          option(value="04") 4
+                          option(value="05") 5
+                          option(value="06") 6
+                          option(value="07") 7
+                          option(value="08") 8
+                          option(value="09") 9
+                          option(value="10") 0 
+              .cart-item
+                .cart-block
+                  img(src="../media/icon/modal-elem.svg", alt="image")
+                  .item-title
+                    h4 Body • Leather 
+                    h3 Little E — Logo Max White & Black 
+                  .item-price
+                    p € 200.00
+                    p.offer € 200.00
+                  .quantity
+                    div -
+                    p 2
+                    div +
+                  .subtotal
+                    p € 400.00   
+                  img.dlt-item(src="../media/icon/delete.svg", alt="image")
+                .line
+                .card-mobile
+                  img(src="../media/icon/modal-elem.svg", alt="image")
+                  .second-section
+                    .middle
+                      .item-title
+                        h4 Leather 
+                        h3 Little E — Logo Max White & Black 
+                      img.dlt-item(src="../media/icon/delete-mobile.svg", alt="image")
+                    .last-section
+                      .item-price
+                        p.offer € 200
+                        p € 400
+                      .quantity-mobile
+                        select#quantity
+                          option(value="hide") 1
+                          option(value="01") 1
+                          option(value="02") 2
+                          option(value="03") 3
+                          option(value="04") 4
+                          option(value="05") 5
+                          option(value="06") 6
+                          option(value="07") 7
+                          option(value="08") 8
+                          option(value="09") 9
+                          option(value="10") 0 
+              .cart-item
+                .cart-block
+                  img(src="../media/icon/modal-elem.svg", alt="image")
+                  .item-title
+                    h4 Body • Leather 
+                    h3 Little E — Logo Max White & Black 
+                  .item-price
+                    p € 200.00
+                    p.offer € 200.00
+                  .quantity
+                    div -
+                    p 2
+                    div +
+                  .subtotal
+                    p € 400.00   
+                  img.dlt-item(src="../media/icon/delete.svg", alt="image")
+                .line
+                .card-mobile
+                  img(src="../media/icon/modal-elem.svg", alt="image")
+                  .second-section
+                    .middle
+                      .item-title
+                        h4 Leather 
+                        h3 Little E — Logo Max White & Black 
+                      img.dlt-item(src="../media/icon/delete-mobile.svg", alt="image")
+                    .last-section
+                      .item-price
+                        p.offer € 200
+                        p € 400
+                      .quantity-mobile
+                        select#quantity
+                          option(value="hide") 1
+                          option(value="01") 1
+                          option(value="02") 2
+                          option(value="03") 3
+                          option(value="04") 4
+                          option(value="05") 5
+                          option(value="06") 6
+                          option(value="07") 7
+                          option(value="08") 8
+                          option(value="09") 9
+                          option(value="10") 0 
+              .cart-item
+                .cart-block
+                  img(src="../media/icon/modal-elem.svg", alt="image")
+                  .item-title
+                    h4 Body • Leather 
+                    h3 Little E — Logo Max White & Black 
+                  .item-price
+                    p € 200.00
+                    p.offer € 200.00
+                  .quantity
+                    div -
+                    p 2
+                    div +
+                  .subtotal
+                    p € 400.00   
+                  img.dlt-item(src="../media/icon/delete.svg", alt="image")
+                .line
+                .card-mobile
+                  img(src="../media/icon/modal-elem.svg", alt="image")
+                  .second-section
+                    .middle
+                      .item-title
+                        h4 Leather 
+                        h3 Little E — Logo Max White & Black 
+                      img.dlt-item(src="../media/icon/delete-mobile.svg", alt="image")
+                    .last-section
+                      .item-price
+                        p.offer € 200
+                        p € 400
+                      .quantity-mobile
+                        select#quantity
+                          option(value="hide") 1
+                          option(value="01") 1
+                          option(value="02") 2
+                          option(value="03") 3
+                          option(value="04") 4
+                          option(value="05") 5
+                          option(value="06") 6
+                          option(value="07") 7
+                          option(value="08") 8
+                          option(value="09") 9
+                          option(value="10") 0 
+              
+
+        .m-col.m-col--4.m-col__lg--4.m-col__ms--15.m-col__mxs--15.m-col__md--4
+          h2.paynow-title Order summary
+          .paynow-wrap
+            
+            .item
+              h3 Subtotal:
+              div € 2,000.00
+            .item
+              h3 Discount
+              div € 0.00
+            .item
+              h3 Shipping: *
+              div € 0.00
+            .item.promo
+              h3 Promo code:
+              div -20%    
+            .item
+              h4 Total:
+              div(style="font-weight: bold") € 2,000.00
+          .payblock-btn  
+            button(onclick="location.href='./checkout.html';") CHECKOUT
+            button.promocode I HAVE A PROMOCODE
+            .enter-promocod
+              h3 Enter promocode
+              .promocod-closes
+              input(type="text" placeholder="Enter promo code")
+              button APPLY
+            p * The full shipping cost is calculated after the delivery point is indicated.
+  //- MODAL  
+  .sign-in2-overlay
+    .sign-in2-modal
+      .sign-in2-close
+      .sign-in2-item
+        h2 Sign in
+        p Sign in with your email and password.
+        form#sign_in
+          input(type="text" placeholder="Email adress" required)
+          .inp-block
+            input(type="password" placeholder="Password" style="border: none")
+            h3.forgot FORGOT?
+          .inp-block.inp-check  
+            input(type="checkbox" checked).option-input
+            h3 Remember me 
+        button Join
+        h4 Create an account
+        p A 10% reduction is offered with the first purchase
+        button(onclick="location.href='./create_account.html';") Register now
+      .sign-in2-item
+        h2 Continue as a guest
+        p You can create an account after checkout for a faster experience next time.
+        button(onclick="") Checkout as guest
+
+  .sign-in3-overlay
+    .sign-in2-modal
+      .sign-in2-close
+      .sign-in2-item
+        h2 Sign in
+        p Sign in with your email and password.
+        form#sign_in
+          input(type="text" placeholder="Email adress" required)
+          .inp-block
+            input(type="password" placeholder="Password" style="border: none")
+            h3.forgot FORGOT?
+          .inp-block.inp-check  
+            input(type="checkbox" checked).option-input
+            h3 Remember me 
+        button Join
+      .sign_img
+        p A 10% reduction is offered with the first purchase
+        button(onclick="location.href='./create_account.html';") REGISTER NOW 
+      .sign-in2-item
+        h2 Continue as a guest
+        p You can create an account after checkout for a faster experience next time.
+        button(onclick="location.href='';") Checkout as guest                             
+
+
+      

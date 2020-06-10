@@ -1,5 +1,7 @@
 #catalog-page,
-#filter-page {
+#filter-page,
+#create_account,
+#orders {
   .filter-btn {
     font-style: normal;
     font-weight: bold;
@@ -52,7 +54,7 @@
     .dropdown {
       position: relative;
       list-style: none;
-      margin-bottom: 25px;
+      margin-bottom: 12px;
 
       a {
         text-decoration: none;
@@ -72,13 +74,18 @@
         &:before {
           position: absolute;
           display: block;
-          content: '\25BC';
-          font-size: 0.7em;
+          content: '';
+          background-image: url(../../../media/icon/acc-arrow.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 8px;
+          height: 8px;
           color: #000;
           top: 13px;
           right: 10px;
           transform: rotate(0deg);
           transition: transform .5s;
+          padding: 6px 0;
         }
       }
 
@@ -92,11 +99,11 @@
         li {
           padding: 0;
           $radioSize: 24px;
-          $inputBorder: #E4E8EB;
+          $inputBorder: #D0D7DD;
           $inputActive: #1F1F22;
 
           .radio {
-            margin: 16px 0;
+            margin: 15px 0;
             display: block;
             cursor: pointer;
 
@@ -117,7 +124,7 @@
                 color: #565b62;
 
                 &:not(:empty) {
-                  padding-left: $radioSize + 8;
+                  padding-left: $radioSize + 13;
                 }
 
                 &:before,
@@ -138,9 +145,13 @@
                 }
 
                 &:after {
-                  background: #fff;
-                  transform: scale(.78);
+                  background: #F8F8F8;
+                  transform: scale(.88);
                   transition: transform .6s cubic-bezier(.175, .885, .32, 1.4);
+                }
+                &:hover:before {
+                  background: #B2B8BF;
+                 
                 }
               }
 
@@ -154,6 +165,7 @@
                   transform: scale(.4);
                   transition: transform .3s ease;
                 }
+                
               }
             }
 
@@ -176,7 +188,11 @@
                 }
               }
             }
+            
           }
+         .last-radio {
+           margin-bottom: 10px;
+         }
 
           .checklink {
             margin: 16px 0;
@@ -191,7 +207,7 @@
               height: 24px;
               width: 24px;
               transition: all 0.15s ease-out 0s;
-              background: #fff;
+              background: #F8F8F8;
               border: 1px solid #E4E8EB;
               color: #fff;
               cursor: pointer;
@@ -199,10 +215,13 @@
               outline: none;
               position: relative;
               z-index: 10;
-              margin-left: 6px;
+              margin-left: 0px;
               display: flex;
               align-items: center;
               justify-content: center;
+            }
+            .option-input:hover {
+              border: 1px solid #B2B8BF;
             }
 
             .option-input:checked {
@@ -210,10 +229,13 @@
             }
 
             .option-input:checked::before {
-              height: 24px;
-              width: 24px;
+              height: 8px;
+              width: 10px;
               position: absolute;
-              content: '✔';
+              content: '';
+              background-image: url(../../../media/icon/check.svg);
+              background-position: center;
+              background-size: cover;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -262,11 +284,13 @@
       & > #catalog-btn li .acc-btn.active {
         background: #1F1F22;
         color: #fff;
+        border: none;
       }
 
       & > #catalog-btn li .acc-btn:hover {
         background: #1F1F22;
         color: #fff;
+        border: none;
       }
 
       & > .catalog-color {
@@ -279,6 +303,7 @@
             height: 40px;
             border: none;
             border-radius: 50%;
+            background-color: transparent;
 
             img {
               position: absolute;
@@ -330,7 +355,7 @@
 }
 
 
-// TEST block
+// catalog block
 .catalog-wrap {
   display: flex;
   flex-wrap: wrap;

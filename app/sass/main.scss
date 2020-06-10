@@ -10,7 +10,9 @@ body,
 html {
   position: relative;
 }
-
+h1 {
+  text-transform: none; 
+}
 a,
 a:hover,
 a:focus,
@@ -86,6 +88,23 @@ button {
 /*pages*/
 //  SEARCH
 @import "pages/search/search";    
+/*pages*/
+//  other pages
+@import "pages/other_pages/sign_in.scss";  
+@import "pages/other_pages/account"; 
+@import "pages/other_pages/profile"; 
+@import "pages/other_pages/address";
+@import "pages/other_pages/basket";
+@import "pages/other_pages/orders"; 
+@import "pages/other_pages/payment"; 
+@import "pages/other_pages/cookies";   
+@import "pages/other_pages/subscribe";  
+@import "pages/other_pages/unsubscribe";
+@import "pages/other_pages/404";  
+@import "pages/other_pages/checkout";  
+@import "pages/other_pages/select";
+@import "pages/other_pages/order_mobile";
+@import "pages/other_pages/yourbag";                 
      
 
 

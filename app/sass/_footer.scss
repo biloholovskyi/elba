@@ -1,5 +1,27 @@
 .footer {
-    .home-about {
-        background: #F8F8F8;
+  margin-top: 64px;
+  .home-about {
+    background: #F8F8F8;
+
+    .home-about__content {
+      .home-about__container {
+        .coll__center {
+          padding-top: 65px;
+        }
+      }
+
+      .home-about__container:before {
+        content: '';
+        height: 1px;
+        width: calc(100% - (100% / 15 * 3) - 6px);
+        background: #000;
+        opacity: .1;
+        right: 0;
+        bottom: 365px;
+        z-index: 10;
+        position: absolute;
+      }
     }
+
+  }
 }

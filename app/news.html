@@ -21,24 +21,111 @@
                 <div class="item"></div>
               </div>
               <div class="mobile-button" style="background-size: 14.62px; background-image: url(./media/icon/mobile-search.svg)" onclick="location.href='./search.html';"></div><a class="mobile__link" href="/"></a>
-              <div class="mobile-button" style="background-size: 15.56px; background-image: url(./media/icon/mobile-profile.svg)"></div>
-              <div class="mobile-button" style="background-size: 18px; background-image: url(./media/icon/mobile-cart.svg)"></div>
+              <div class="mobile-button sign_in" style="background-size: 15.56px; background-image: url(./media/icon/mobile-profile.svg)"></div>
+              <div class="mobile-button basket" style="background-size: 18px; background-image: url(./media/icon/mobile-cart.svg)"></div>
             </div>
-            <div class="header__wrapper">
+            <div class="header__wrapper"> 
               <div class="header__left"><a class="header__logo" href="/"><img alt="elba" src="./media/icon/logo.png"></a>
                 <div class="header__lang"><a class="item" href="#">EN</a><a class="item item--active" href="#">FR</a></div>
-                <div class="header__nav"><a class="nav__item" href="./catalog.html">Shop</a><a class="nav__item" href="./concept.html">Concept</a><a class="nav__item" href="./philosophy.html">Univers</a><a class="nav__item" href="./news.html">News</a></div>
+                <div class="header__nav"><a class="nav__item" href="./catalog.html">Shop</a><a class="nav__item" href="./concept.html">Concept</a><a class="nav__item" href="./philosophy.html">Univers </a><a class="nav__item" href="./news.html">News</a></div>
               </div>
               <div class="header__right">
                 <div class="small-icon" style="background-image: url(./media/icon/search.svg)" onclick="location.href='./search.html';"></div>
-                <div class="small-icon" style="background-image: url(./media/icon/profile.svg)"></div>
-                <div class="big-icon" style="background-image: url(./media/icon/cart.svg)"></div>
+                <div class="small-icon sign_in" style="background-image: url(./media/icon/profile.svg)"></div>
+                <div class="big-icon basket" style="background-image: url(./media/icon/cart.svg)"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </header>
+    <div class="modal-wrapper">
+      <div class="m-container" style="position: relative"> 
+        <div class="m-row">
+          <div class="m-col">            
+            <div class="sign_in-wrap">
+              <h2>Create an account</h2>
+              <p>Create a ELBA account with your email address.</p>
+              <button onclick="location.href='./create_account.html';">Create an account</button>
+              <h2>Sign in</h2>
+              <p>Sign in with your email and password.</p>
+              <form class="mainForm" name="formSign" id="sign_in">
+                <input class="field" type="text" placeholder="Email adress">
+                <div class="inp-block">
+                  <input class="input-pass field" type="password" placeholder="Password">
+                  <h3 class="forgot">FORGOT?</h3>
+                </div>
+                <div class="inp-block inp-check"> 
+                  <input class="option-input" type="checkbox" checked>
+                  <h3>Remember me </h3>
+                </div>
+                <button class="validateBtn" type="submit">Sign in</button>
+              </form>
+            </div>
+            <div class="log_out">
+              <h3>Account</h3><a href="./profile.html">Profile</a><a href="./address.html">Shipping Addresses</a><a href="./orders.html">My orders</a><a href="./payment.html">Payment Methods</a>
+              <button>Logout      </button>
+            </div>
+            <div class="basket-wrap">
+              <div class="basket-title">
+                <h2>Your order</h2>
+                <p>€ 1,420.00</p>
+              </div>
+              <div class="basket-block"> 
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200</p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200</p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200 </p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200</p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200</p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200            </p>
+                  </div>
+                </div>
+              </div>
+              <button onclick="location.href='./youbag.html';">Continue</button>
+            </div>
+            <div class="basket-empty">
+              <h2>No items</h2>
+              <p>There are no products in your basket yet. Start adding and they will appear in this place.</p>
+              <button>Go to catalog</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="modal-menu">
       <div class="m-container">
         <div class="m-row">
@@ -172,7 +259,51 @@
                   </div>
                 </div>
               </div>
+              <div class="pass-overlay">
+                <div class="pass-modal">
+                  <div class="pass-close"></div>
+                  <div class="pass-item">
+                    <h3>Password recovery</h3>
+                    <p>Please indicate the email address to which the account is registered and we will send you instructions to restore access to your account.</p>
+                    <input type="text" placeholder="Example@gmail.com">
+                    <button>SEND              </button>
+                  </div>
+                </div>
+              </div>
             </footer>
+            <div class="subscribe-overlay">
+              <div class="subscribe-modal">
+                <div class="subscribe-close"></div>
+                <div class="subscribe-item"><img src="../media/image/subscribe.png" alt="image"></div>
+                <div class="subscribe-item">
+                  <h4>Subscribe</h4>
+                  <h3>Let's stay in touch</h3>
+                  <p>A 10% reduction is offered with the first purchase.</p>
+                  <input type="text" placeholder="First name">
+                  <input type="text" placeholder="second name">
+                  <input type="text" placeholder="E-mail">
+                  <div class="inner-block">
+                    <div class="checkbox">
+                      <input class="option-input" type="checkbox" checked>
+                      <p>By checking this box and clicking "Register" below, I acknowledge that I have read and agree to the Terms & Conditions and Privacy Policy </p>
+                    </div>
+                  </div>
+                  <button>SUBSCRIBE </button>
+                </div>
+              </div>
+            </div>
+            <div class="welcome-overlay">
+              <div class="pass-modal"> 
+                <div class="pass-close"></div>
+                <div class="pass-item">
+                  <h3> Welcome to our comunity!</h3>
+                  <p> We are glad that you are in our ranks. We will send you<br> a unique code on your first purchase!</p>
+                  <div class="modal-btn-block">
+                    <button onclick="location.href='./catalog.html';">Continue shopping          </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

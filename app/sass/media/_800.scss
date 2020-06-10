@@ -66,20 +66,25 @@
   // home about end
     // blog page
   #blog-page {
+    h1 {
+      margin: 0 0 34px;
+    }
+    .blog-back {
+      position: absolute;
+      top: 117px;
+    }
     .inner-content {
       .inner-photo {
         .text {
           align-self: flex-start;
-          margin-top: 50px;
+          margin-top: 50px; 
         }
       }
      .inner-block {
        .sublist {
          margin-left: 20px;
        }
-       h3 {
-         margin-top: 0;
-       }
+      
      }
     }
   }
@@ -92,5 +97,119 @@
         display: none;
       }
     }
- 
+    #address .inner-content .address-block .radio input+span {
+      font-size: 14px;
+    } 
+  // payment page 
+  #payment {
+    .inner-content {
+      margin-bottom: 32px;
+      .payment-wrap {
+        .payment-item {
+          flex-direction: column;
+          background-color: #fff;
+          margin-bottom: 16px;
+          border: none;
+          padding: 32px 24px;
+          .paycaption {
+            display: none;
+          }
+          .payment-mobile {
+            display: block;
+          }
+          .payment-name,
+          .card,
+          .card-data {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 16px;
+            span {
+              width: 124px;
+              font-size: 16px;
+            }
+          }
+          .payment-btn {
+            button { 
+              border: 1px solid #1F1F22!important;
+              padding: 10px 32px;
+            }
+            button:hover {
+              color: #565B62!important;
+              border: 1px solid #565B62!important;
+            }
+          }
+          .payment-btn button:last-child {
+            color: #C11030;
+            border: 1px solid #B2B8BF;
+          }
+        }
+        & .payment-item:first-child {
+          display: none;
+        }
+      }
+    }
+    .footer {
+      display: none; 
+    }
+  }
+  #create_account .account-back,
+  #sign_in_page .account-back {
+    display: none;
+  }  
+
+  // modal pass recovery
+  .pass-overlay {
+
+    .pass-modal {
+    
+      .pass-close {
+        width: 20px;
+        height: 20px;
+        top: 28px;
+        right: 24px;
+        filter: invert(1);
+      }
+
+    }
+  }
+  #order_mobile {
+    .inner-content {
+      .mobile-other-header {
+        margin-bottom: 0;
+        border-bottom: 1px solid #E4E8EB;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        padding: 12px 0 12px 64px;
+        text-transform: none;
+        line-height: 24px;
+        font-size: 16px;
+        display: block;
+
+        a {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 24px;
+          color: #1F1F22;
+        }
+
+        & a::before {
+          content: "";
+          background-image: url(../../media/icon/other-arrow.svg);
+          background-position: center;
+          background-size: cover;
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          left: 21px;
+        }
+      }
+
+      h1 {
+        display: none;
+      }
+    }
+  } 
 }

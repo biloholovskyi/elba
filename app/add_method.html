@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Payment Methods</title>
+  </head>
+  <body>
+    <header class="header other_header">
+      <div class="m-container">
+        <div class="m-row">
+          <div class="m-col">
+            <div class="header__mobile">
+              <div class="menu">
+                <div class="item"></div>
+                <div class="item"></div>
+              </div>
+              <div class="mobile-button" style="background-size: 14.62px; background-image: url(./media/icon/mobile-search.svg)" onclick="location.href='./search.html';"></div><a class="mobile__link" href="/"></a>
+              <div class="mobile-button sign_in" style="background-size: 15.56px; background-image: url(./media/icon/mobile-profile.svg)"></div>
+              <div class="mobile-button basket" style="background-size: 18px; background-image: url(./media/icon/mobile-cart.svg)"></div>
+            </div>
+            <div class="header__wrapper"> 
+              <div class="header__left"><a class="header__logo" href="/"><img alt="elba" src="./media/icon/logo.png"></a>
+                <div class="header__lang"><a class="item" href="#">EN</a><a class="item item--active" href="#">FR</a></div>
+                <div class="header__nav"><a class="nav__item" href="./catalog.html">Shop</a><a class="nav__item" href="./concept.html">Concept</a><a class="nav__item" href="./philosophy.html">Univers </a><a class="nav__item" href="./news.html">News</a></div>
+              </div>
+              <div class="header__right">
+                <div class="small-icon" style="background-image: url(./media/icon/search.svg)" onclick="location.href='./search.html';"></div>
+                <div class="small-icon sign_in" style="background-image: url(./media/icon/profile.svg)"></div>
+                <div class="big-icon basket" style="background-image: url(./media/icon/cart.svg)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="modal-wrapper">
+      <div class="m-container" style="position: relative"> 
+        <div class="m-row">
+          <div class="m-col">            
+            <div class="sign_in-wrap">
+              <h2>Create an account</h2>
+              <p>Create a ELBA account with your email address.</p>
+              <button onclick="location.href='./create_account.html';">Create an account</button>
+              <h2>Sign in</h2>
+              <p>Sign in with your email and password.</p>
+              <form class="mainForm" name="formSign" id="sign_in">
+                <input class="field" type="text" placeholder="Email adress">
+                <div class="inp-block">
+                  <input class="input-pass field" type="password" placeholder="Password">
+                  <h3 class="forgot">FORGOT?</h3>
+                </div>
+                <div class="inp-block inp-check"> 
+                  <input class="option-input" type="checkbox" checked>
+                  <h3>Remember me </h3>
+                </div>
+                <button class="validateBtn" type="submit">Sign in</button>
+              </form>
+            </div>
+            <div class="log_out">
+              <h3>Account</h3><a href="./profile.html">Profile</a><a href="./address.html">Shipping Addresses</a><a href="./orders.html">My orders</a><a href="./payment.html">Payment Methods</a>
+              <button>Logout      </button>
+            </div>
+            <div class="basket-wrap">
+              <div class="basket-title">
+                <h2>Your order</h2>
+                <p>€ 1,420.00</p>
+              </div>
+              <div class="basket-block"> 
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200</p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200</p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200 </p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200</p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200</p>
+                  </div>
+                </div>
+                <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                  <div class="item">
+                    <h4>Leather</h4>
+                    <h3>Little E — Logo Max White & Black</h3>
+                    <p>€200            </p>
+                  </div>
+                </div>
+              </div>
+              <button onclick="location.href='./youbag.html';">Continue</button>
+            </div>
+            <div class="basket-empty">
+              <h2>No items</h2>
+              <p>There are no products in your basket yet. Start adding and they will appear in this place.</p>
+              <button>Go to catalog</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-menu">
+      <div class="m-container">
+        <div class="m-row">
+          <div class="m-col">
+            <div class="modal-menu__title">ELBA concept</div>
+            <div class="modal-menu__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
+            <div class="modal-menu__nav"><a class="item" href="/">Main page</a><a class="item" href="/catalog.html">Shop</a><a class="item" href="/concept.html">Concept</a><a class="item" href="/philosophy.html">Univers</a><a class="item" href="/news.html">News</a></div>
+            <div class="modal-menu__langs"><a class="item" href="#">English</a><a class="item item--active" href="#">French</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="inner-page" id="addPayment"> 
+      <div class="m-container">
+        <div class="m-row">
+          <div class="m-col m-col--3 m-col__lg--3 m-col__ms--2 m-col__mxs--1">
+            <div class="aside-bar">
+              <div class="nav">
+                <ul>
+                  <li><a href="./profile.html">Profile</a></li>
+                  <li><a href="./address.html">Adresses</a></li>
+                  <li><a href="./orders.html">My orders</a></li>
+                  <li><a href="./payment.html">Payment Methods</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="m-col m-col--9 m-col__lg--11 m-col__ms--15 m-col__mxs--15">
+            <div class="inner-content">
+              <div class="mobile-other-header"><a href="./payment.html">Payment Methods</a>
+              </div>
+              <h1>Payment Methods   </h1>
+              <div class="inner-block">
+                <h3>New method</h3>
+              </div>
+              <div class="inner-photo">
+                <div class="text">Method type:</div>
+                <div class="method_type">
+                  <button value=""><span>Credit</span> card </button>
+                  <button>Paypal</button>
+                  <button>UnionPay</button>
+                </div>
+              </div>
+              <div class="inner-photo">
+                <div class="text">Receiver first name:</div>
+                <input type="number">
+              </div>
+              <div class="inner-photo">
+                <div class="text">Until:</div>
+                <div class="birth-block">
+                  <select id="mounth">
+                    <option value="hide">Month</option>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04" selected>April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="09">November</option>
+                    <option value="10">December</option>
+                  </select>
+                  <select id="year">
+                    <option value="hide">year </option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03" selected>1992</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10   </option>
+                  </select>
+                </div>
+              </div>
+              <div class="inner-photo">
+                <div class="text">Cardholder:</div>
+                <input type="text">
+              </div>
+              <div class="inner-photo">
+                <div class="text">CVV/CVC: </div>
+                <input type="password">
+              </div>
+              <div class="inner-photo">
+                <div class="text"></div>
+                <div class="btn-account">  
+                  <button>ADD METHOD</button>
+                  <button>CANCEL                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m-col m-col--3 m-col__lg--1 m-col__ms--1 m-col__mxs--1"></div>
+        </div>
+        <div class="m-row">
+          <div class="m-col m-col--15">
+            <footer class="footer">
+              <div class="home-about">
+                <div class="home-about__content">
+                  <div class="m-container full-height home-about__container">
+                    <div class="m-row full-height">
+                      <div class="m-col m-col--3 m-col__ms-display-none">
+                        <div class="follow-us"><a class="follow-us__link follow-us__link--dark" href="#">Follow us</a></div>
+                      </div>
+                      <div class="m-col m-col--4 m-col__ms--5 m-col__mxs--15">
+                        <div class="home-about__col">
+                          <div class="coll__top">
+                            <div class="home-about__big-block"><img src="./media/icon/payment.svg" alt="elba">
+                              <div class="name">Payment security</div>
+                              <div class="desc">All payments are protected by the <br>standard of 256 bit encryption</div>
+                            </div>
+                          </div>
+                          <div class="coll__center"><a class="home-about__link" href="#">Garanties</a><a class="home-about__link" href="#">Livraisons & Retour</a><a class="home-about__link" href="#">CGV</a><a class="home-about__link" href="#">Paiements</a></div>
+                          <div class="coll__bottom">
+                            <div class="elba-coop">ELBACONCEPT©2020. All right reserved.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="m-col m-col--4 m-col__ms--5 m-col__mxs--15">
+                        <div class="home-about__col">
+                          <div class="coll__top">
+                            <div class="home-about__big-block"><img src="./media/icon/fast.svg" alt="elba">
+                              <div class="name">Fast shipping</div>
+                              <div class="desc">Delivery in 2 to 5 working days <br> Excluding personalized Elbag</div>
+                            </div>
+                          </div>
+                          <div class="coll__center"><a class="home-about__link" href="#">Contact</a><a class="home-about__link" href="#">Adresses des boutiQues</a></div>
+                          <div class="coll__bottom"></div>
+                        </div>
+                      </div>
+                      <div class="m-col m-col--4 m-col__ms--5 m-col__mxs--15 home-about__border">
+                        <div class="home-about__col">
+                          <div class="coll__top">
+                            <div class="home-about__big-block"><img src="./media/icon/money.svg" alt="elba">
+                              <div class="name">Money Back Guarantee</div>
+                              <div class="desc">Free return within 30 days <br> Excluding personalized Elbag</div>
+                            </div>
+                          </div>
+                          <div class="coll__center">
+                            <div class="subs__title">Get 10% Off your first order</div>
+                            <div class="subs__desc">Get an discount on the first order of your bag</div>
+                            <form class="subs__form">
+                              <input class="subs__input" type="email" placeholder="Enter your Email">
+                              <button class="subs__submit"></button>
+                            </form>
+                          </div>
+                          <div class="coll__bottom"></div>
+                        </div>
+                      </div>
+                      <div class="m-col m-col__mxs--15 about__mobile-bottom">
+                        <div class="links"><a class="home-about__link" href="#">Garanties</a><a class="home-about__link" href="#">Livraisons & Retour</a><a class="home-about__link" href="#">CGV</a><a class="home-about__link" href="#">Paiements</a><a class="home-about__link" href="#">Contact</a><a class="home-about__link" href="#">Adresses des boutiQues</a></div>
+                        <div class="subs home-about__border">
+                          <div class="subs__title">Get 10% Off your first order</div>
+                          <div class="subs__desc">Get an discount on the first order of your bag</div>
+                          <form class="subs__form">
+                            <input class="subs__input" type="email" placeholder="Enter your Email">
+                            <button class="subs__submit"></button>
+                          </form>
+                        </div>
+                        <div class="elba-coop">ELBACONCEPT©2020. All right reserved.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pass-overlay">
+                <div class="pass-modal">
+                  <div class="pass-close"></div>
+                  <div class="pass-item">
+                    <h3>Password recovery</h3>
+                    <p>Please indicate the email address to which the account is registered and we will send you instructions to restore access to your account.</p>
+                    <input type="text" placeholder="Example@gmail.com">
+                    <button>SEND              </button>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="buildjs/owl.carousel.js"></script>
+    <script src="buildjs/index.js"></script>
+  </body>
+</html>

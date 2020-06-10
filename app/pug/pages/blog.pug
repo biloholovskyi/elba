@@ -1,122 +1,132 @@
 extends ../layout/main
 
 block variables
-    - const pageTitle = 'blog'
+	- const pageTitle = 'blog'
 
-        mixin asideNav(link,name)
-            li
-                a(href=link)=name 
+		mixin asideNav(link,name)
+			li
+				a(href=link)=name 
 
 block content
-    include ../modules/header
-    include ../modules/modal-menu
+	include ../modules/header
+	include ../modules/modal-menu
 
-    #blog-page.inner-page
-        .m-container
-            .m-row
-                .m-col.m-col--3.m-col__lg--3.m-col__ms--4.m-col__mxs--15
-                    a.inner-btn(href="/news.html") Back to articles
-                .m-col.m-col--9.m-col__lg--10.m-col__ms--10.m-col__mxs--15
-                    .inner-content
-                        h1 Title of the blog/news page
-                        img(src="./media/image/factory.png", alt="image")
-                        .inner-photo
-                            .text
-                                img(src="../media/icon/blog-icon.svg", alt="icon")
-                                h3 The positions held by the participants in relation to the tasks set.
-                            p Thus, the strengthening and development of the structure plays an important role in the formation of participatory systems. Comrades! the beginning of the daily work on the formation of the position allows you to perform important tasks for the development of a system of personnel training, meets the immediate needs.Equally, a new model of organizational activity requires the definition and clarification of the positions held by participants in relation to the tasks set. Comrades! constant quantitative growth and the scope of our activity require us to analyze development models. Ideological considerations of a higher order, as well as consultation with a broad asset largely determines the creation of a personnel training system, meets urgent needs.#[br]#[br] Ideological considerations of a higher order, as well as constant information and propaganda support of our activities, is an interesting experiment in testing the system of personnel training that meets pressing needs. Comrades! Strengthening and development of the structure entails the process of implementation and modernization of the positions held by participants in relation to the tasks set. The significance of these problems is so obvious that the beginning of daily work on the formation of positions contributes to the preparation and implementation of the positions held by the participants in relation to the tasks set. The diverse and rich experience of the frame and place of personnel training entails the process of implementation and modernization of the forms of development. The task of the organization, especially the framework and place of training, contributes to the preparation and implementation of development forms.
-                        .inner-block
-                            h3 Subtitle
-                            p Thus, the strengthening and development of the structure plays an important role in the formation of participatory systems. Comrades! the beginning of the daily work on the formation of the position allows you to perform important tasks for the development of a system of personnel training, meets the immediate needs.
-                            h4 For example
-                            ul.sublist
-                                li
-                                    p Equally, a new model of organizational activity requires the definition and clarification of the positions held by participants in relation to the tasks set
-                                li
-                                    p Equally, a new model of organizational activity requires the definition and clarification of the positions held by participants in relation to the tasks set
-                                li
-                                    p Equally, a new model of organizational activity requires the definition and clarification of the positions held by participants in relation to the tasks set
-                        #blog-owl.owl-carousel.owl-theme
-                            .item
-                                .factory-slide
-                                    img(src="../media/image/factory-slide.png", alt="image")
-                            .item
-                                .factory-slide
-                                    img(src="../media/image/factory-slide.png", alt="image")
-                            .item
-                                .factory-slide
-                                    img(src="../media/image/factory-slide.png", alt="image")
-                            .item
-                                .factory-slide
-                                    img(src="../media/image/factory-slide.png", alt="image")
+	#blog-page.inner-page
+		.m-container
+			.m-row
+				.m-col.m-col--3.m-col__ms--4
+				.m-col.m-col--12.m-col__ms--11.m-col__mxs--15
+					h1 Title of the blog/news page
+			.m-row
+				.m-col.m-col--3.m-col__lg--3.m-col__ms--4.m-col__mxs--15
+					a.inner-btn.blog-back(href="/news.html") Back to articles
+				.m-col.m-col--9.m-col__lg--10.m-col__ms--10.m-col__mxs--15
+					.inner-content
+						img(src="./media/image/factory.png", alt="image")
+						.inner-photo
+							.text
+								img(src="../media/icon/blog-icon.svg", alt="icon")
+								h3 The positions held by the participants in relation to the tasks set.
+							p Thus, the strengthening and development of the structure plays an important role in the formation of participatory systems. Comrades! the beginning of the daily work on the formation of the position allows you to perform important tasks for the development of a system of personnel training, meets the immediate needs.Equally, a new model of organizational activity requires the definition and clarification of the positions held by participants in relation to the tasks set. Comrades! constant quantitative growth and the scope of our activity require us to analyze development model#[br]#[br] Ideological considerations of a higher order, as well as constant information and propaganda support of our activities, is an interesting experiment in testing the system of personnel training that meets pressing needs. Comrades! Strengthening and development of the structure entails the process of implementation and modernization of the positions held by participants in relation to the tasks set. 
+						.inner-block
+							p Thus, the strengthening and development of the structure plays an important role in the formation of participatory systems. Comrades! the beginning of the daily work on the formation of the position allows you to perform important tasks for the development of a system of personnel training, meets the immediate needs.
+							h3 Subtitle
+							p Thus, the strengthening and development of the structure plays an important role in the formation of participatory systems. Comrades! the beginning of the daily work on the formation of the position allows you to perform important tasks for the development of a system of personnel training, meets the immediate needs.
+							h4 For example
+							.blog-list.block-square
+								.blog-item
+									img(src="./media/icon/square.svg", alt="icon").square
+									p Equally, a new model of organizational activity requires the definition and clarification of the positions held by participants in relation to the tasks set.
+								.blog-item
+									img(src="./media/icon/square.svg", alt="icon").square
+									p Equally, a new model of organizational activity requires the definition and clarification of the positions held by participants in relation to the tasks set.
+								.blog-item
+									img(src="./media/icon/square.svg", alt="icon").square
+									p Equally, a new model of organizational activity requires the definition and clarification of the positions held by participants in relation to the tasks set.   
+						#blog-owl.owl-carousel.owl-theme
+							.item
+								.factory-slide
+									img(src="../media/image/factory-slide.png", alt="image")
+							.item
+								.factory-slide
+									img(src="../media/image/factory-slide.png", alt="image")
+							.item
+								.factory-slide
+									img(src="../media/image/factory-slide.png", alt="image")
+							.item
+								.factory-slide
+									img(src="../media/image/factory-slide.png", alt="image")
 
-                        .inner-block
-                            .text.slider-text
-                                p Little description of slider located in this place
-                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. #[br]#[br]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  			
-                        .inner-photo.blog-photo
-                            .text
-                                h3 Subtitle here
-                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. #[br]Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						.inner-block
+							.text.slider-text
+								p Little description of slider located in this place
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. #[br]#[br]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  			
+						.inner-photo.blog-photo
+							.text
+								h3 Subtitle here
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. #[br]Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-                        .inner-photo.blog-photo
-                            .text
-                                h3 Subtitle here
-                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. #[br]Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						.inner-photo.blog-photo.blog-photo2
+							.text
+								h3 Subtitle here
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. #[br]Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-                        .inner-photo.gallery
-                            .gallery-item
-                                img(src="../media/image/blog_photo1.png", alt="")
-                            img(src="../media/image/blog_photo.png", alt="" style='margin: 0 15px')
-                            img(src="../media/image/blog_photo2.png", alt="")
-                        .inner-block
-                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. #[br]#[br]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            h4 For example
-                            p  Thus, the strengthening and development of the structure plays an important role in the formation of participatory systems.
-                            .blog-list
-                                .blog-item
-                                    p.num 01.
-                                    p Equally, a new model of organizational activity requires the definition and clarification of the positions held by participants in relation to the tasks set.
-                                .blog-item
-                                    p.num 02.
-                                    p Equally, a new model of organizational activity requires the definition and clarification of the positions held by participants in relation to the tasks set.
-                                .blog-item
-                                    p.num 03.
-                                    p Equally, a new model of organizational activity requires the definition and clarification of the positions held by participants in relation to the tasks set.   
+						.inner-photo.gallery
+							.gallery-item
+								img(src="../media/image/blog_photo1.png", alt="")
+							img(src="../media/image/blog_photo.png", alt="" style='margin: 0 15px')
+							img(src="../media/image/blog_photo2.png", alt="")
+						.inner-block
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. #[br]#[br]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+							h4 For example
+							p  Thus, the strengthening and development of the structure plays an important role in the formation of participatory systems.
+							.blog-list
+								.blog-item
+									p.num 01.
+									p Equally, a new model of organizational activity requires the definition and clarification of the positions held by participants in relation to the tasks set.
+								.blog-item
+									p.num 02.
+									p Equally, a new model of organizational activity requires the definition and clarification of the positions held by participants in relation to the tasks set.
+								.blog-item
+									p.num 03.
+									p Equally, a new model of organizational activity requires the definition and clarification of the positions held by participants in relation to the tasks set.   
 
-                        .share_on
-                            .name
-                                h3 Share on:
-                            .social
-                                a(href="#") Facebook
-                                a(href="#") Twitter
-                            .share-icon
-                                a(href="#")
-                                    img(src="../media/icon/share-icon.svg", alt="icon")
+						.share_on
+							.name
+								h3 Share on:
+							.social
+								a(href="#") Facebook
+								a(href="#") Twitter
+							.share-icon
+								a(href="#")
+									img(src="../media/icon/share-icon.svg", alt="icon")
 
-                        h2 You may also like
-                        .blog-wrap
-                            a(href="./blog.html").news-link
-                                .news-content
-                                    img(src="./media/image/news.png", alt="image")
-                                    h3 Title of the page
-                                    p Inspiration by the ocean and warm sand.The combination of aquamarine and beige.
-                        
-                            a(href="#").news-link
-                                .news-content
-                                    img(src="./media/image/blog2.jpg", alt="image")
-                                    h3 Title of the page
-                                    p Inspiration by the ocean and warm sand.The combination of aquamarine and beige.
-                        
-                            a(href="#").news-link
-                                .news-content
-                                    img(src="./media/image/blog3.jpg", alt="image")
-                                    h3 Title of the page
-                                    p Inspiration by the ocean and warm sand.The combination of aquamarine and beige.                    
+						h2 You may also like
+						.blog-wrap
+							#single-news-owl.owl-carousel.owl-theme
+								.item 
+									a(href="./blog.html").news-link
+										.news-content
+											img(src="./media/image/news.png", alt="image")
+											h3 Title of the page
+											p Inspiration by the ocean and warm sand.The combination of aquamarine and beige.
+								.item 
+									a(href="#").news-link
+										.news-content
+											img(src="./media/image/blog2.jpg", alt="image")
+											h3 Title of the page
+											p Inspiration by the ocean and warm sand.The combination of aquamarine and beige.
+								.item
+									a(href="#").news-link
+										.news-content
+											img(src="./media/image/blog3.jpg", alt="image")
+											h3 Title of the page
+											p Inspiration by the ocean and warm sand.The combination of aquamarine and beige.                    
 
-                .m-col.m-col--3.m-col__lg--2.m-col__ms--1.m-col__mxs--1
+				.m-col.m-col--3.m-col__lg--2.m-col__ms--1.m-col__mxs--1
 
 
-            .m-row
-                .m-col.m-col--15
-                    include ../modules/footer 	
+			.m-row
+				.m-col.m-col--15
+					include ../modules/footer
+					include ../modules/cookies 	

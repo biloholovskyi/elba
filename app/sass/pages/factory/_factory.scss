@@ -21,10 +21,27 @@
 					font-size: 28px;
 					line-height: 40px;
 					color: #000;
-					margin: 0 0 64px;
+					margin: 32px 0 64px;
 					text-align: left;
 					width: 100%;
 					max-width: 557px;
+				}
+			}
+			.inner-block {
+				.slider-text {
+					align-self: flex-start;
+					max-width: 263px;
+					flex: 1;
+					transform: translateY(-110px);
+					position: absolute;
+					p {
+						font-family: Inter;
+						font-style: normal;
+						font-weight: normal;
+						font-size: 14px;
+						line-height: 24px;
+						color: #7D838A;
+					}
 				}
 			}
 	}

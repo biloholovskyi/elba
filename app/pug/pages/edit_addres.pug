@@ -1,0 +1,94 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Edit address'
+
+    mixin asideNav(link,name)
+      li
+        a(href=link)=name
+    mixin otherPage(link,name)
+      a(href=link)=name     
+
+block content
+  include ../modules/header_other
+  include ../modules/modal-menu
+
+  #edit_address.inner-page 
+    .m-container
+      .m-row
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--2.m-col__mxs--1
+          include ../modules/aside-profile
+        .m-col.m-col--9.m-col__lg--10.m-col__ms--10.m-col__mxs--15
+          .inner-content
+            .mobile-other-header
+              +otherPage('./address.html', 'Addresses') 
+            h1 Addresses   
+            .inner-block
+              h3(style="margin-top: 32px") Edit address
+            .inner-photo
+              .text Receiver last name:
+              input(type="text" placeholder="")
+            .inner-photo
+              .text Receiver first name:
+              input(type="text" placeholder="")
+            .inner-photo
+              .text Company name: (optional)
+              input(type="text" placeholder="") 
+            .inner-photo
+              .text Address:
+              input(type="text" placeholder="") 
+            .inner-photo
+              .text ZIP-code: 
+              input(type="text" placeholder="")        
+            .inner-photo
+              .text Country:
+              .birth-block
+                select#country
+                  option(value="hide") Country
+                  option(value="01") 01
+                  option(value="02") 02
+                  option(value="03") 03
+                  option(value="04") 04
+                  option(value="05") 05
+                  option(value="06" selected)  Russian Federation
+                  option(value="07") 07
+                  option(value="08") 08
+                  option(value="09") 09
+                  option(value="10") 10
+                
+            .inner-photo
+              .text City
+              input(type="text" placeholder="") 
+            .inner-photo
+              .text Phone number:
+              input(type="text" placeholder="")  
+            .inner-photo
+              .text
+              .btn-account   
+                button SAVE CHANGES
+                button CANCEL                
+
+        .m-col.m-col--3.m-col__lg--2.m-col__ms--1.m-col__mxs--1
+
+
+      .m-row
+        .m-col.m-col--15
+          include ../modules/footer
+         	  
+  .pass-overlay
+    .pass-modal
+      .pass-close
+      .pass-item
+        h3 Password recovery
+        p Please indicate the email address to which the account is registered and we will send you instructions to restore access to your account.
+        input(type="text" placeholder="Example@gmail.com")
+        button SEND
+  .dlt-Adress-overlay
+    .pass-modal
+      .pass-close
+      .pass-item
+        h3  Delete adresses
+        p Are you sure you want to delete the delivery address? Undo this action will be impossible.
+        .modal-btn-block
+          button DELETE
+          button CANCEL      

@@ -1,0 +1,54 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Unsubscribe'
+
+    mixin asideNav(link,name)
+      li
+        a(href=link)=name 
+
+block content
+  include ../modules/header
+  include ../modules/modal-menu
+
+  #unsubscribe.inner-page 
+    .m-container
+      .m-row
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--2.m-col__mxs--1
+          .follow-us
+              a.follow-us__link.follow-us__link--dark(href='#') Follow us
+        .m-col.m-col--9.m-col__lg--10.m-col__ms--10.m-col__mxs--15
+          .inner-content
+            h1 Unsubscribe
+            .inner-block
+              p We are very sorry that you want to unsubscribe from the newsletter. Please indicate the reason you are leaving us?
+        .m-col.m-col--3.m-col__lg--2.m-col__ms--1.m-col__mxs--1
+      .m-row
+        .m-col.m-col--6.m-col__lg--6.m-col__ms--10.m-col__mxs--15
+        .m-col.m-col--6.m-col__lg--6.m-col__ms--10.m-col__mxs--15
+          .inner-block
+            .address-block
+              label.radio
+                input(type="radio" name="r" value="1" checked)
+                span I get emails too often
+              label.radio
+                input(type="radio" name="r" value="2")
+                span I'm not interested in promotional offers
+              label.radio
+                input(type="radio" name="r" value="3")
+                span I want to unsubscribe for 2 weeks
+              label.radio
+                input(type="radio" name="r" value="4")
+                span  None of the above
+            button Unsubscribe        
+        .m-col.m-col--3.m-col__lg--2.m-col__ms--1.m-col__mxs--1
+
+
+
+      //- .m-row
+      //-   .m-col.m-col--15
+      //-     include ../modules/footer
+
+
+
+

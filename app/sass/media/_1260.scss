@@ -87,18 +87,118 @@
 
 // blog page
   #blog-page {
+    h1 {
+      font-size: 45px;
+    }
     .inner-content {
-      h1 {
-        font-size: 45px;
+      .inner-photo {
+        .text {
+          max-width: 260px;
+          margin-top: 50px;  
+        }
+      }
+      .blog-photo {
+        flex-direction: column;
       }
       .gallery {
         align-items: center;
         img {
-          margin-bottom: 20px!important;
+          margin: 0 0 20px!important;
+          max-width: none;
         }
         .gallery-item {
           align-self: center;
+          max-height: none;
+          max-width: none;
+          width: 100%;
         }
+      }
+    }
+  }
+  // concept-page
+  #concept-page {
+    .inner-content {
+      .inner-block {
+        .concept-btn {
+          padding-left: 0;
+        }
+      }
+    }
+
+  }
+  // page materials
+  .materials-table {
+    .table-row {
+      & p:last-child {
+        margin-left: 40px!important;
+      }
+    }
+  } 
+  // OTHER PAGE
+  #profile,
+  #address,
+  #edit_address,
+  #addPayment,
+  #create_account {
+    .inner-content {
+      .inner-photo {
+        flex-direction: column;
+        .birth-block {
+          margin-top:  10px;
+        }
+      }
+    }
+  }
+  #address {
+    .select-styled {
+      padding-left: 0;
+    }
+    .inner-content {
+      margin-bottom: 100px;
+    }
+  }
+  #addPayment .inner-photo .text {
+    margin-bottom: 10px;
+  }
+  #checkout {
+    .inner-content .inner-photo {
+      flex-direction: column;
+    }
+    .paynow-wrap p {
+      bottom: -71px;
+      left: 0;
+    }
+  }
+  #create_account .account-title h1,
+  #sign_in_page .account-title h1 {
+    font-size: 44px;
+  }
+  // YOUR BAG PAGE
+  #yourbag{
+    .account-back,
+    .follow-us {
+      display: none;  
+    }
+    .inner-content{
+      .cart-wrap {
+        .cart-item {
+          .cart-block{
+            .item-title{
+              margin-right: 11px;
+            }
+            .item-price {
+              width: 94px;
+              margin-right: 47px;
+            }
+            .subtotal {
+              margin-right: 16px;
+              width: 91px
+            }
+          }
+        }
+      }
+      .cart-wrap .cart-item .cartcaption:nth-child(3) {
+        width: 131px;
       }
     }
   }

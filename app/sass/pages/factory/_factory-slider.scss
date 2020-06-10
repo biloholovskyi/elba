@@ -34,6 +34,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: .4s;
             span {
                 display: none;
             }
@@ -51,6 +52,14 @@
         .owl-prev:after {
             content: "";
             transform: rotate(180deg);
+        }
+        .owl-next:hover {
+            background: transparent;
+            opacity: .6;
+        }
+        .owl-prev:hover {
+            background: transparent;
+            opacity: .6;
         }
     }
     .owl-dots {

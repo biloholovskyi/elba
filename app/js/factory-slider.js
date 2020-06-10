@@ -20,4 +20,20 @@ $(document).ready(function(){
         nav: false,
         items: 1
       });
+
+      $('#single-news-owl').owlCarousel({
+        margin: 10,
+        loop: true,
+        nav: false,
+        dots: false,
+        items: 3,
+          responsive:{
+            0:{
+              items: 1
+            },
+            991:{
+              items: 3
+            }
+        }
+      });
 });

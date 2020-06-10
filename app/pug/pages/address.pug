@@ -1,0 +1,105 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Create an account'
+
+    mixin asideNav(link,name)
+      li
+        a(href=link)=name 
+
+block content
+  include ../modules/header
+  include ../modules/modal-menu
+
+  #address.inner-page 
+    .m-container
+      .m-row
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--2.m-col__mxs--1
+          include ../modules/aside-profile
+        .m-col.m-col--9.m-col__lg--10.m-col__ms--10.m-col__mxs--15
+          .inner-content
+            h1 Addresses
+            .inner-block
+              h3(style="margin-bottom: 32px") Already added
+              p By setting the checkbox opposite one of the addresses you can make it standard when placing an order on the site.
+            .address-block
+              label.radio
+                input(type="radio" name="r" value="1")
+                span Tomara, 6 rue Arsène Houssaye, 8ème #[span.sub Paris, France]
+                .add-btn
+                  button(onclick="location.href='./edit_addres.html';") EDIT
+                  button.dlt-click DELETE
+              label.radio
+                input(type="radio" name="r" value="2" checked)
+                span Jared, 18 Rue Bayard #[span.sub Brest, France]
+                .add-btn
+                  button(onclick="location.href='./edit_addres.html';") EDIT
+                  button.dlt-click DELETE 
+              label.radio
+                input(type="radio" name="r" value="3")
+                span Anna, 50 Bedford Square, Bloomsbury, WC1B 3DP #[span.sub London, Great Britain]
+                .add-btn
+                  button(onclick="location.href='./edit_addres.html';") EDIT
+                  button.dlt-click DELETE        
+            .inner-block
+              h3(style="margin-top: 32px") Add new address
+            .inner-photo
+              .text Receiver last name:
+              input(type="text" placeholder="")
+            .inner-photo
+              .text Receiver first name:
+              input(type="text" placeholder="")
+            .inner-photo
+              .text Company name: (optional)
+              input(type="text" placeholder="") 
+            .inner-photo
+              .text Address:
+              input(type="text" placeholder="") 
+            .inner-photo
+              .text ZIP-code: 
+              input(type="text" placeholder="")        
+            .inner-photo
+              .text Country:
+              .birth-block
+                select#country
+                  option(value="hide") Country
+                  option(value="01") 01
+                  option(value="02") 02
+                  option(value="03") 03
+                  option(value="04") 04
+                  option(value="05") 05
+                  option(value="06" selected)  Russian Federation
+                  option(value="07") 07
+                  option(value="08") 08
+                  option(value="09") 09
+                  option(value="10") 10
+                
+            .inner-photo
+              .text City
+              input(type="text" placeholder="") 
+            .inner-photo
+              .text Phone number:
+              input(type="text" placeholder="")  
+            .inner-photo
+              .text
+              .btn-account   
+                button ADD ADDRESS
+                button CANCEL                
+
+        .m-col.m-col--3.m-col__lg--2.m-col__ms--1.m-col__mxs--1
+
+
+      .m-row
+        .m-col.m-col--15
+          include ../modules/footer
+         	  
+  
+  .dlt-Adress-overlay
+    .dlt-modal
+      .dlt-close
+      .dlt-item
+        h3  Delete adresses
+        p Are you sure you want to delete the delivery address? Undo this action will be impossible.
+        .modal-btn-block
+          button DELETE
+          button CANCEL      

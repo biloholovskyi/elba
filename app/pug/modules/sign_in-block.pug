@@ -1,0 +1,16 @@
+.sign_in-wrap
+  h2 Create an account
+  p Create a ELBA account with your email address.
+  button(onclick="location.href='./create_account.html';") Create an account
+  h2 Sign in
+  p Sign in with your email and password.
+  form(name="formSign")#sign_in.mainForm
+    input(type="text" placeholder="Email adress").field
+    .inp-block
+      input(type="password" placeholder="Password").input-pass.field
+      h3.forgot FORGOT?
+    .inp-block.inp-check  
+      input(type="checkbox" checked).option-input
+      h3 Remember me 
+    button(type="submit").validateBtn Sign in
+  

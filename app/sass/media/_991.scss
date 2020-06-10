@@ -1,4 +1,5 @@
 @media screen and (max-width: 991px) {
+
   // home about
   .home-about__big-block {
     .name {
@@ -13,27 +14,102 @@
     font-size: 14px;
     line-height: 38px;
   }
+
   // home about
   // NEWS PAGE 
   #news {
     .news-wrap {
       .news-link {
-          flex: 50%; 
+        flex: 50%;
       }
     }
-  } 
+  }
+
   // blog page
   #blog-page {
-    .inner-content {
-     h1 {
+    h1 {
       font-size: 36px;
-     }
     }
+
+    .inner-content {}
   }
-// TERMS PAGE
+
+  // TERMS PAGE
   #terms-page {
-    .inner-content h1{
+    .inner-content h1 {
       font-size: 48px;
     }
   }
+
+  // modal  delete address
+  .dlt-Adress-overlay {
+    .dlt-modal {
+      max-width: 500px;
+      padding: 32px;
+    }
+  }
+
+  // COOKIES
+  .cookies {
+    height: 132px;
+    padding: 16px 24px;
+    display: inline-block;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    div,
+    a {
+      max-width: 300px;
+      margin: 0 auto;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    a {
+      margin-left: 0px;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;  
+    }
+  }
+
+  // welcome modal
+  .welcome-overlay {
+    .pass-modal{
+      padding: 24px 24px 32px;
+      .pass-close {
+        filter: invert(1);
+        width: 20px!important;
+        height: 20px!important;
+        top: 37px!important;
+        right: 24px!important; 
+      }
+      .pass-item {
+       h3 {
+        text-align: left;
+        font-size: 20px;
+        line-height: 28px;
+       }
+       p {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: left;
+       }
+       .modal-btn-block {
+         button {
+           width: 100%;
+           max-width: none;
+         }
+       }
+      }
+    }
+  }
+  #create_account .account-title h1,
+  #sign_in_page .account-title h1 {
+    font-size: 40px;
+  }
+
+ 
 }

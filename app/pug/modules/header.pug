@@ -8,9 +8,9 @@ header.header
             .item
           .mobile-button(style='background-size: 14.62px; background-image: url(./media/icon/mobile-search.svg)' onclick="location.href='./search.html';")
           a.mobile__link(href='/')
-          .mobile-button(style='background-size: 15.56px; background-image: url(./media/icon/mobile-profile.svg)')
-          .mobile-button(style='background-size: 18px; background-image: url(./media/icon/mobile-cart.svg)')
-        .header__wrapper
+          .mobile-button.sign_in(style='background-size: 15.56px; background-image: url(./media/icon/mobile-profile.svg)')
+          .mobile-button.basket(style='background-size: 18px; background-image: url(./media/icon/mobile-cart.svg)')
+        .header__wrapper 
           .header__left
             a.header__logo(href='/')
               img(alt='elba' src='./media/icon/logo.png')
@@ -22,9 +22,17 @@ header.header
             .header__nav
               a.nav__item(href='./catalog.html') Shop
               a.nav__item(href='./concept.html') Concept
-              a.nav__item(href='./philosophy.html') Univers
+              a.nav__item(href='./philosophy.html') Univers 
               a.nav__item(href='./news.html') News
           .header__right
             .small-icon(style='background-image: url(./media/icon/search.svg)' onclick="location.href='./search.html';")
-            .small-icon(style='background-image: url(./media/icon/profile.svg)')
-            .big-icon(style='background-image: url(./media/icon/cart.svg)' )
+            .small-icon.sign_in(style='background-image: url(./media/icon/profile.svg)')
+            .big-icon.basket(style='background-image: url(./media/icon/cart.svg)' )
+.modal-wrapper
+  .m-container(style="position: relative") 
+    .m-row
+      .m-col             
+        include ../modules/sign_in-block 
+        include ../modules/log_out
+        include ../modules/basket
+                            

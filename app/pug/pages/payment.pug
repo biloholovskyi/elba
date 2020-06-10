@@ -1,0 +1,57 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'Payment Methods'
+
+    mixin asideNav(link,name)
+      li
+        a(href=link)=name 
+
+block content
+  include ../modules/header
+  include ../modules/modal-menu
+
+  #payment.inner-page 
+    .m-container
+      .m-row
+        .m-col.m-col--3.m-col__lg--3.m-col__ms--2.m-col__mxs--1
+          include ../modules/aside-profile
+        .m-col.m-col--9.m-col__lg--11.m-col__ms--15.m-col__mxs--15
+          .inner-content
+            h1 Payment Methods
+            .payment-wrap
+              .payment-item
+                h3.paycaption Method
+                h3.paycaption Data
+                h3.paycaption Until
+                h3.empty none
+              .payment-item
+                .payment-name #[span.payment-mobile Method:] Credit Card
+                .card #[span.payment-mobile Data:] Visa •⁠•⁠•⁠•⁠  ⁠1234‬
+                .card-data #[span.payment-mobile Until:] 09/2028
+                .payment-btn
+                  button(onclick="location.href='./edit_payment.html';") EDIT
+                  button DELETE
+              .payment-item
+                .payment-name #[span.payment-mobile Method:] UnionPay
+                .card #[span.payment-mobile Data:] Visa •⁠•⁠•⁠•⁠  ⁠1234‬
+                .card-data #[span.payment-mobile Until:] 09/2028
+                .payment-btn
+                  button(onclick="location.href='./edit_payment.html';") EDIT
+                  button DELETE
+              .payment-item
+                .payment-name #[span.payment-mobile Method:] PayPal
+                .card #[span.payment-mobile Data:] Visa •⁠•⁠•⁠•⁠  ⁠1234‬
+                .card-data #[span.payment-mobile Until:] -
+                .payment-btn
+                  button(onclick="location.href='./edit_payment.html';") EDIT
+                  button DELETE
+            button(onclick="location.href='./add_method.html';").addNew ADD NEW              
+                    
+
+        .m-col.m-col--3.m-col__lg--1.m-col__ms--1.m-col__mxs--1
+
+
+      .m-row
+        .m-col.m-col--15
+          include ../modules/footer

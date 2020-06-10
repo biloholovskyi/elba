@@ -20,6 +20,10 @@ import './catalog-aside';
 import { scrollAnim, bodyHeight } from "./scrollScript";
 import { switchSlideFirst, autoSwitchFirst } from "./firstSlider";
 import { inspSlider } from "./inspiration";
+import './sticky';
+import './modal-other';
+import './select';
+
 
 $(document).ready((e) => {
   bodyHeight();
@@ -86,9 +90,10 @@ $(document).ready((e) => {
   $('.configurator__sidebar .conf__slider-nav .conf-slider__btn').on('click', (e) => {inspSlider(e)})
   $('.order-head-cancel').on('click', closeMobileMain);
   $('.order-head-type').on('click', closeMobileType);
-  $('.order-head-modal').on('click', closeMobileModal);
+  $('.order-head-modal').on('click', closeMobileModal); 
 
   $(document).on('click', (e) => {
+   
     // close modal configurator
     const btn = $('.configurator__main .conf__main-top .links .link, .conf-modal__close, .conf-mobile__text-info .mobile-conf-links .link');
     const modal = $('.conf-modal__body');
@@ -98,8 +103,41 @@ $(document).ready((e) => {
       }
     }
   });
+
+ 
+
 });
 
+ 
+//  VALID FORM
+var form = document.querySelector('.mainForm');
+var validateBtn = form.querySelector('.validateBtn');
+var inp = form.querySelector('.input-pass');
+var fields = form.querySelectorAll('.field');
+
+
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  var errors = form.querySelectorAll('.error');
+  
+  for (var i = 0; i < errors.length; i++) {
+    errors[i].remove();
+  }
+
+  for (var i = 0; i < fields.length; i++) {
+    if (!fields[i].value) {
+      console.log('Error name', fields[i]);
+      var error = document.createElement('div');
+      error.className='error',
+      error.style.color = 'red',
+      error.innerHTML = 'Error name',
+      form[i].parentElement.insertBefore(error, fields[i]);
+    }
+  }
+});
+// end validate
 
 $(window).resize(() => {
   evSize();
@@ -117,3 +155,5 @@ for (let i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+
