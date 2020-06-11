@@ -37,6 +37,23 @@ $(document).ready((e) => {
     collectionHeight();
   }
 
+  Array.from(document.querySelectorAll('.poster-hover-effect')).forEach((el) => {
+    const img1 = $(el).attr('data-src-1');
+    const img2 = $(el).attr('data-src-2');
+    new hoverEffect({
+      parent: el,
+      intensity: el.dataset.intensity || undefined,
+      speedIn: el.dataset.speedin || undefined,
+      speedOut: el.dataset.speedout || undefined,
+      easing: el.dataset.easing || undefined,
+      hover: el.dataset.hover || undefined,
+      image1: img1,
+      image2: img2,
+      displacementImage: '../media/displacement/14.jpg'
+    });
+
+  });
+
   // collections slider
   $('.collections__slider').owlCarousel({
     margin: 16,
@@ -155,5 +172,7 @@ for (let i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+
 
 

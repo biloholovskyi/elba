@@ -13,6 +13,7 @@ const collectionHeight = () => {
   const link = $('.collect-slider__item .arrow-link').height();
   let h = $(window).height() - header - +pb - title - +posterM - color - +colorM - title2 - +title2M - desc - +descM - link - 24;
   img.css('height', h + 'px');
+  // $('.collect-slider__item canvas').css('height', h + 'px');
   img.css('max-height', h + 'px');
 }
 
