@@ -28,6 +28,7 @@ $(document).on('click', function (e) {
   if (!btn.is(e.target) && btn.has(e.target).length === 0) {
     if (!modal.is(e.target) && modal.has(e.target).length === 0) {
       $('.catalog-overlay').hide();
+      $('body').css({'overflow': 'visible'});
     }
   }
 });

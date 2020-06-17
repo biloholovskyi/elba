@@ -49,9 +49,8 @@ $(document).ready((e) => {
       hover: el.dataset.hover || undefined,
       image1: img1,
       image2: img2,
-      displacementImage: '../media/displacement/14.jpg'
+      displacementImage: '../media/displacement/4.jpg'
     });
-
   });
 
   // collections slider
