@@ -1,4 +1,5 @@
 import 'normalize.css';
+import 'jquery-touchswipe';
 import { evSize } from './eventVideo';
 import { toggleMenu, innerMobileMenu, closeInnerMobileMenu } from "./mobileMenu";
 import './factory-slider';
@@ -107,7 +108,7 @@ $(document).ready((e) => {
   $('.modal-menu__back').on('click', closeInnerMobileMenu);
 
   $(document).on('click', (e) => {
-   
+
     // close modal configurator
     const btn = $('.configurator__main .conf__main-top .links .link, .conf-modal__close, .conf-mobile__text-info .mobile-conf-links .link');
     const modal = $('.conf-modal__body');
@@ -118,11 +119,24 @@ $(document).ready((e) => {
     }
   });
 
- 
-
+  if($(window).width() < 1061) {
+    $(function(e) {
+      //Enable swiping...
+      $(".home-first").swipe( {
+        //Generic swipe handler for all directions
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+          console.log("You swiped " + direction);
+          const status = direction === 'left' ? 'next' : 'prev';
+          switchSlideFirst(e, false, status);
+        },
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        threshold:0
+      });
+    });
+  }
 });
 
- 
+
 //  VALID FORM
 var form = document.querySelector('.mainForm');
 var validateBtn = form.querySelector('.validateBtn');
@@ -135,7 +149,7 @@ form.addEventListener('submit', function (event) {
   event.preventDefault();
 
   var errors = form.querySelectorAll('.error');
-  
+
   for (var i = 0; i < errors.length; i++) {
     errors[i].remove();
   }

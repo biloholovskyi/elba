@@ -15,7 +15,8 @@ const scrollAnim = () => {
   if (pageYOffset === 0) {
     const first = $('.home-first');
     first.css({
-      'opacity': 1
+      'opacity': 1,
+      'z-index': 51
     })
   }
   if (pageYOffset > 0) {

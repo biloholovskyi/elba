@@ -1,4 +1,4 @@
-const switchSlideFirst = (e, auto = false) => {
+const switchSlideFirst = (e, auto = false, swipe = false) => {
   let status;
   const eventCurrent = !auto ? $(e.currentTarget) : false;
   if(eventCurrent && eventCurrent.hasClass('next') && !auto) {
@@ -13,6 +13,10 @@ const switchSlideFirst = (e, auto = false) => {
 
   if(eventCurrent && eventCurrent.hasClass('dot')) {
     status = 'dot';
+  }
+
+  if(swipe) {
+    status = swipe;
   }
 
   const currentTitle = $('.home-first__title--active');
