@@ -129,18 +129,10 @@ button {
 @import "media/360";
 
 
-// test
-
-.test-poster {
-  width: 300px;
-  height: 500px;
-  margin-bottom: 50px;
-  margin-top: 50px;
-  margin-left: 20px;
-
-  canvas {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
+.basket-wrap {
+  .basket-block {
+    .busket-item {
+      min-width: 361px;
+    }
   }
 }
