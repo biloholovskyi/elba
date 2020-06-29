@@ -1,4 +1,13 @@
 const switchSlideFirst = (e, auto = false, swipe = false) => {
+  const stop = $('.home-first').attr('stop');
+  if(stop) {
+    return
+  } else {
+    $('.home-first').attr('stop', 'stop');
+    setTimeout(() => {
+      $('.home-first').removeAttr('stop');
+    }, 1000)
+  }
   let status;
   const eventCurrent = !auto ? $(e.currentTarget) : false;
   if(eventCurrent && eventCurrent.hasClass('next') && !auto) {
