@@ -19,41 +19,33 @@ const switchSlideFirst = (e, auto = false, swipe = false) => {
     status = swipe;
   }
 
-  const currentTitle = $('.home-first__title--active');
-  const currentDesc = $('.home-first__desc--active');
-  const titles = $('.home-first__title');
-  const desc = $('.home-first__desc');
-  let nextTitle = null;
-  let nextDesc = null;
+  const current = $('.home-first__slid--active');
+  const all = $('.home-first__slid');
+  let next = null;
 
   if(status === 'next') {
-    nextTitle = currentTitle.next('.home-first__title').length > 0 ? currentTitle.next('.home-first__title') : titles.eq(0);
-    nextDesc = currentDesc.next('.home-first__desc').length > 0 ? currentDesc.next('.home-first__desc') : desc.eq(0);
+    next = current.next('.home-first__slid').length > 0 ? current.next('.home-first__slid') : all.eq(0);
   } else {
-    nextTitle = currentTitle.prev('.home-first__title').length > 0 ? currentTitle.prev('.home-first__title') : titles.last();
-    nextDesc = currentDesc.prev('.home-first__desc').length > 0 ? currentDesc.prev('.home-first__desc') : desc.last();
+    next = current.prev('.home-first__slid').length > 0 ? current.prev('.home-first__slid') : all.last();
   }
 
   if(status === 'dot') {
     const index = eventCurrent.index();
-    nextTitle = titles.eq(index);
-    nextDesc = desc.eq(index);
+    next = all.eq(index);
   }
 
-  const number = nextTitle.index() + 1;
+  const number = next.index() + 1;
   $('.home-first__video-line .first').html('0' + number);
   const dots = $('.home-first__dots .dot');
   dots.removeClass('dot--active');
   dots.eq(number - 1).addClass('dot--active');
 
   const safe = $('.wrapp--safe');
-  safe.css('min-height', safe.height() + 'px');
+  safe.css('min-height', all.eq(0).height() + 'px');
 
-  titles.fadeOut(100).removeClass('home-first__title--active');
-  desc.fadeOut(100).removeClass('home-first__desc--active');
+  all.fadeOut(100).removeClass('home-first__slid--active');
   setTimeout(() => {
-    nextTitle.fadeIn('slow').addClass('home-first__title--active');
-    nextDesc.fadeIn('slow').addClass('home-first__desc--active');
+    next.fadeIn('slow').addClass('home-first__slid--active');
   }, 100)
 }
 

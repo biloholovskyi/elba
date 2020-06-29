@@ -6,7 +6,7 @@
 
   .collections__slider {
     .collect-slider__item {
-      width: 100%;
+      //width: 100%;
 
       .poster {
         height: 212px;
@@ -83,6 +83,12 @@
 
     .coll__center {
       height: 130px;
+    }
+  }
+
+  .home-about__container {
+    .top-line {
+      display: none;
     }
   }
   // home about end
