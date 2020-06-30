@@ -52,12 +52,15 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
         height: 100%;
         background: #FFFFFF;
         opacity: .7;
         z-index: 2;
-        animation: lineAnim 4s infinite linear;
+        width: 0%;
+
+        &--anim {
+          animation: lineAnim 4s infinite linear;
+        }
       }
 
       .line__full {

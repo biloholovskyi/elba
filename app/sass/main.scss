@@ -9,10 +9,12 @@
 body,
 html {
   position: relative;
+
+  h1 {
+    text-transform: none;
+  }
 }
-h1 {
-  text-transform: none; 
-}
+
 a,
 a:hover,
 a:focus,
@@ -135,4 +137,8 @@ button {
       min-width: 361px;
     }
   }
+}
+
+.list__follow-us--absolute {
+  position: absolute;
 }

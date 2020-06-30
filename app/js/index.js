@@ -135,7 +135,7 @@ $(document).ready((e) => {
   if($(window).width() < 1061) {
     $(function(e) {
       //Enable swiping...
-      $(".home-first").swipe( {
+      $("body").swipe( {
         //Generic swipe handler for all directions
         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
           console.log("You swiped " + direction);

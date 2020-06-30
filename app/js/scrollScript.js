@@ -5,9 +5,11 @@ const scrollAnim = () => {
 
   if (pageYOffset > 200) {
     $('.follow-us__link').addClass('follow-us__link--dark');
+    $('.follow-us__links').addClass('follow-us__links--dark');
     $('.header').removeClass('header--white');
   } else {
     $('.follow-us__link').removeClass('follow-us__link--dark');
+    $('.follow-us__links').removeClass('follow-us__links--dark');
     $('.header').addClass('header--white');
   }
 
@@ -437,7 +439,9 @@ const scrollAnim = () => {
       dr = 0.1;
     }
 
+    video.play();
     video.currentTime = dr;
+    video.pause();
   }
 
   // image-text 2 title
@@ -2668,7 +2672,8 @@ const scrollAnim = () => {
       block.css({
         'opacity': op,
         'z-index': 60,
-        'transform': 'translateY(' + tr + 'px)'
+        'transform': 'translateY(' + tr + 'px)',
+        'min-height': '1351px'
       })
 
       items.removeAttr('style');

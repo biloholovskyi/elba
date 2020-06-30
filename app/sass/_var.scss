@@ -10,9 +10,60 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #FFFFFF;
+    transition: all .3s;
 
     &--dark {
       color: #1F1F22;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+    a {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-right: 32px;
+      display: block;
+      width: max-content;
+      transition: all .3s;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        color: #7D838A;
+      }
+    }
+
+    &--dark {
+      a {
+        color: #1F1F22;
+      }
+    }
+  }
+
+  &:hover {
+    .follow-us__links {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .follow-us__link {
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }

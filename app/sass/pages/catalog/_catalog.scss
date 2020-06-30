@@ -1,3 +1,11 @@
+.catalog__title-fix {
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 68px;
+  color: #1F1F22;
+  margin-bottom: 64px;
+}
+
 #catalog-page,
 #filter-page,
 #create_account,
@@ -284,13 +292,13 @@
       & > #catalog-btn li .acc-btn.active {
         background: #1F1F22;
         color: #fff;
-        border: none;
+        border: 1px solid transparent;
       }
 
       & > #catalog-btn li .acc-btn:hover {
         background: #1F1F22;
         color: #fff;
-        border: none;
+        border: 1px solid transparent;
       }
 
       & > .catalog-color {

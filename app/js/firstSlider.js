@@ -1,11 +1,19 @@
+let firstInterval = null;
+
 const switchSlideFirst = (e, auto = false, swipe = false) => {
   const stop = $('.home-first').attr('stop');
   if(stop) {
     return
   } else {
+    clearInterval(firstInterval);
     $('.home-first').attr('stop', 'stop');
+    $('.home-first__video-line .line__progress').removeClass('line__progress--anim');
     setTimeout(() => {
       $('.home-first').removeAttr('stop');
+      firstInterval = setInterval((e) => {
+        switchSlideFirst(e, true)
+      }, 4000);
+      $('.home-first__video-line .line__progress').addClass('line__progress--anim');
     }, 1000)
   }
   let status;
@@ -59,7 +67,8 @@ const switchSlideFirst = (e, auto = false, swipe = false) => {
 }
 
 const autoSwitchFirst = (e) => {
-  setInterval((e) => {
+  $('.home-first__video-line .line__progress').addClass('line__progress--anim');
+  firstInterval = setInterval((e) => {
     switchSlideFirst(e, true)
   }, 4000)
 }
