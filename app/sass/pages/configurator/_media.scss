@@ -228,6 +228,14 @@
   .conf-mobile-slider {
     padding-left: 24px;
 
+    &--no-padding {
+      padding-left: 0;
+
+      .owl-stage {
+        margin-left: 24px;
+      }
+    }
+
     .item {
       display: flex;
       width: calc(100vw - 48px);
@@ -491,6 +499,11 @@
   .conf-modal__body {
     right: 0;
     transition: all 0s;
+
+    .order-mobile-head {
+      position: fixed;
+      background: #fff;
+    }
   }
 
   .conf-modal--show {
@@ -500,7 +513,7 @@
       position: fixed;
 
       .order-mobile-head {
-        position: absolute;
+        position: fixed;
         width: 100%;
         top: 0;
         left: 0;

@@ -88,10 +88,15 @@
      }
     }
   }
-// catalog page 
+// catalog page
+  .catalog-overlay {
+    display: none !important;
+  }
     #catalog-page{
       .filter-btn {
         display: flex;
+        width: 100%;
+        max-width: 100%;
       }
       .aside-catalog {
         display: none;

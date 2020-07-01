@@ -27,6 +27,16 @@ button {
   cursor: pointer;
 }
 
+@import "normalize";
+
+input {
+  border-radius: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
 /*settings*/
 @import "mixins";
 @import "fonts";
@@ -112,6 +122,38 @@ button {
 
 // configurator
 @import "pages/configurator/configurator";
+
+.see-detail--fix {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #1F1F22;
+  margin: 0 0 32px;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    content: '';
+    @include base-box(24px);
+    background-image: url(../media/icon/plus-fix.svg);
+    @include base-background(contain);
+    display: block;
+    margin-right: 8px;
+  }
+}
+
+#detail-page {
+  .btn-wrap {
+    .btn-item {
+      button {
+        &:last-child {
+          background: #1F1F22;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
 
 .basket-wrap {
   .basket-block {

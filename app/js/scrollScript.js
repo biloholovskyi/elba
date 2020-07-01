@@ -1313,16 +1313,27 @@ const scrollAnim = () => {
     const n = pageYOffset - n1;
     const p = n / (n2 - n1) * 100;
     let tr = 100 - p;
+    let op = 1.1 - (1 * (p / 100));
 
     if (p > 99) {
       tr = 0;
+      op = 0.1;
     }
 
     if (p < 1) {
       tr = 100;
+      op = 1
     }
 
     const text = $('.shape__text');
+
+    if($(window).width() > 1500) {
+      op = 1;
+    }
+
+    $('.shape__imgs').css({
+      'opacity': op
+    });
 
     text.css({
       'transform': 'translateY(' + tr + '%)',

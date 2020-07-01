@@ -1052,7 +1052,7 @@
   // CHECKOUT PAGE
   #checkout {
     .account-back {
-      position: absolute;
+      position: fixed;
       top: 0;
       border-bottom: 1px solid #e4e8eb;
       width: 100%;
@@ -1064,6 +1064,8 @@
       line-height: 24px;
       text-transform: none;
       letter-spacing: normal;
+      background-color: #f8f8f8;
+      z-index: 100;
     }
 
     .account-back:after {
@@ -1201,8 +1203,14 @@
 
   // BASKET MODAL
   .basket-wrap {
+    .basket-title {
+      margin-bottom: 0;
+      padding-bottom: 16px;
+    }
+
     .basket-block {
       min-width: 100%;
+      height: calc(100vh - 200px);
     }
   }
   .basket-wrap,
@@ -1233,7 +1241,7 @@
       background-color: #fff;
       margin-bottom: 0;
       .busket-item {
-        margin: 6px 0;
+        margin: 12px 0;
         min-width: auto;
       }
     }

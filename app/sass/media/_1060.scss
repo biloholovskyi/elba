@@ -192,9 +192,13 @@
 
   // list
   .list {
-    //height: auto;
-    //overflow: auto;
-    //padding-top: 80px;
+    max-height: max-content;
+    height: max-content;
+
+    &__content {
+      max-height: max-content;
+      height: max-content;
+    }
   }
 
   .list__text-fixed {
