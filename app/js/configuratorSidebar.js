@@ -27,8 +27,8 @@ const newElement = (e) => {
       $('.configurator__sidebar .order-buttons').css({
         'width': 'auto',
         'position': 'relative',
-        'margin-left': '-32px',
-        'margin-right': '-32px'
+        'margin-left': '-24px',
+        'margin-right': '-24px'
       });
     }
   }
