@@ -59,17 +59,31 @@
     .inner-content{
       .cart-wrap {
         .cart-item {
+          .cartcaption{
+            &:nth-child(2) {
+              width: 120px;
+            }
+
+            &:nth-child(3) {
+              margin-right: 20px;
+            }
+
+            &:nth-child(4) {
+              margin-right: 30px;
+            }
+          }
           .cart-block{
             .item-title{
-              margin-right: 38px;
+              width: 120px;
             }
             .item-price {
-              width: 94px;
-              margin-right: 47px;
+              margin-right: 20px;
             }
             .subtotal {
-              margin-right: 16px;
-              width: 91px
+              margin-right: 20px;
+            }
+            .quantity {
+              margin-right: 30px;
             }
           }
         }

@@ -18,6 +18,11 @@
     }
 
     .inner-photo {
+      .text {
+        span {
+          color: #7d838a;
+        }
+      }
       input {
         max-width: 450px;
       }

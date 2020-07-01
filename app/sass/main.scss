@@ -106,12 +106,36 @@ button {
 @import "pages/other_pages/checkout";  
 @import "pages/other_pages/select";
 @import "pages/other_pages/order_mobile";
-@import "pages/other_pages/yourbag";                 
+@import "pages/other_pages/yourbag";
      
 
 
 // configurator
 @import "pages/configurator/configurator";
+
+.basket-wrap {
+  .basket-block {
+    min-width: 361px;
+
+    .busket-item {
+      min-width: 361px;
+
+      .item {
+        h4 {
+          margin-bottom: 4px;
+        }
+
+        h3 {
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}
+
+.list__follow-us--absolute {
+  position: absolute;
+}
 
 /*media*/
 @import "media/h970";
@@ -129,16 +153,3 @@ button {
 @import "media/650";
 @import "media/575";
 @import "media/360";
-
-
-.basket-wrap {
-  .basket-block {
-    .busket-item {
-      min-width: 361px;
-    }
-  }
-}
-
-.list__follow-us--absolute {
-  position: absolute;
-}

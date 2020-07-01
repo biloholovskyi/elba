@@ -1,4 +1,6 @@
 #yourbag {
+  padding-bottom: 80px;
+
   .account-back {
     padding-left: 35px;
     top: 135px;
@@ -7,8 +9,9 @@
   .account-back:after {
     left: 0;
     transform: translateY(-50%) rotate(180deg);
-    
+
   }
+
   .paynow-title {
     margin-top: 40px;
     margin-bottom: 81px;
@@ -18,6 +21,7 @@
     line-height: 40px;
     color: #1F1F22;
   }
+
   .paynow-wrap {
     width: 100%;
     display: flex;
@@ -27,19 +31,21 @@
     background-color: #fff;
     padding: 32px 32px 0;
     height: auto;
+
     .item {
       display: flex;
       justify-content: space-between;
       margin-bottom: 16px;
-     
+
       h3 {
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
         line-height: 28px;
         color: #565B62;
-       
+
       }
+
       div {
         font-style: normal;
         font-weight: 500;
@@ -48,13 +54,14 @@
         text-align: right;
         color: #1F1F22;
       }
-      
+
     }
+
     & .item:nth-child(3) {
-      border-bottom: 1px solid #D0D7DD; 
+      border-bottom: 1px solid #D0D7DD;
       padding-bottom: 24px;
     }
-    
+
     p {
       position: absolute;
       bottom: -56px;
@@ -64,12 +71,14 @@
       line-height: 20px;
       color: #7D838A;
     }
-    
+
   }
+
   .promo {
     border-bottom: 1px solid #d0d7dd;
     padding-bottom: 24px;
   }
+
   .payblock-btn {
     button {
       font-style: normal;
@@ -94,10 +103,12 @@
       transition: .4s;
       margin-bottom: 24px;
     }
+
     button:hover {
       background-color: #565B62;
     }
-    .promocode { 
+
+    .promocode {
       bottom: -78px;
       font-style: normal;
       font-weight: bold;
@@ -109,28 +120,32 @@
       text-transform: uppercase;
       color: #1F1F22;
       border: 1px solid #1F1F22;
-      background-color: transparent; 
+      background-color: transparent;
       transition: .4s;
     }
+
     .promocode:hover {
       color: #565B62;
       border: 1px solid #565B62;
       transition: .4s;
       background-color: transparent;
     }
+
     p {
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
       line-height: 20px;
-      color: #7D838A;  
+      color: #7D838A;
     }
+
     .enter-promocod {
       padding: 32px;
       position: relative;
       border: 1px solid #D0D7DD;
       margin-bottom: 24px;
       display: none;
+
       h3 {
         font-style: normal;
         font-weight: bold;
@@ -139,6 +154,7 @@
         color: #1F1F22;
         margin-bottom: 24px;
       }
+
       .promocod-closes {
         background: url(../../../media/icon/modal-close.svg);
         background-position: center;
@@ -151,6 +167,7 @@
         cursor: pointer;
         filter: invert(1);
       }
+
       input {
         background-color: transparent;
         border: none;
@@ -158,14 +175,16 @@
         padding-bottom: 8px;
         margin-bottom: 32px;
       }
+
       input::placeholder {
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
         line-height: 28px;
         color: #7D838A;
-       
+
       }
+
       button {
         bottom: -78px;
         font-style: normal;
@@ -178,8 +197,9 @@
         text-transform: uppercase;
         color: #1F1F22;
         border: 1px solid #1F1F22;
-        background-color: transparent; 
+        background-color: transparent;
       }
+
       button:hover {
         color: #565B62;
         border: 1px solid #565B62;
@@ -188,9 +208,11 @@
       }
     }
   }
+
   .inner-content {
     max-width: 710px;
     margin: 0 auto;
+
     h1 {
       font-style: normal;
       font-weight: bold;
@@ -198,44 +220,54 @@
       line-height: 68px;
       color: #000000;
     }
+
     .cart-wrap {
       display: flex;
       flex-direction: column;
+
       .cart-item {
         display: flex;
         position: relative;
         padding-bottom: 24px;
         padding-top: 24px;
+
         .cartcaption {
           font-style: normal;
           font-weight: 500;
           font-size: 12px;
           line-height: 24px;
-          text-transform: uppercase; 
+          text-transform: uppercase;
           color: #B2B8BF;
           text-transform: uppercase;
+
+          &:nth-child(1) {
+            width: 99px;
+          }
+
+          &:nth-child(2) {
+            width: 165px;
+            margin-right: 30px;
+          }
+
+          &:nth-child(3) {
+            width: 65px;
+            margin-right: 30px;
+          }
+
+          &:nth-child(4) {
+            width: 138px;
+            margin-right: 58px;
+          }
         }
-        & .cartcaption:nth-child(1) {
-          width: 95px;
-        }
-        & .cartcaption:nth-child(2) {
-          width: 164px;
-        }
-        & .cartcaption:nth-child(3) {
-          width: 110px;
-        }
-        & .cartcaption:nth-child(4) {
-          width: 171px;
-        }
-        & .cartcaption:nth-child(1) {
-          width: 95px;
-        }
+
         .empty {
           visibility: hidden;
         }
+
         .cart-block {
           display: flex;
           align-items: center;
+
           img {
             width: 68px;
             height: 68px;
@@ -244,9 +276,11 @@
             margin-bottom: 0;
             margin-right: 31px;
           }
+
           .item-title {
-            max-width: 169px;
-            margin-right: 9px;
+            width: 165px;
+            margin-right: 30px;
+
             h4 {
               font-style: normal;
               font-weight: 500;
@@ -257,6 +291,7 @@
               color: #1F1F22;
               opacity: 0.3;
             }
+
             h3 {
               font-style: normal;
               font-weight: 500;
@@ -265,10 +300,12 @@
               color: #1F1F22;
             }
           }
+
           .item-price,
           .subtotal {
-            margin-right: 39px;
-            width: 80px;
+            margin-right: 30px;
+            width: 65px;
+
             p {
               font-style: normal;
               font-weight: 500;
@@ -276,6 +313,7 @@
               line-height: 20px;
               color: #1F1F22;
             }
+
             .offer {
               font-style: normal;
               font-weight: normal;
@@ -283,29 +321,34 @@
               line-height: 20px;
               text-decoration-line: line-through;
               color: #7D838A;
-              text-decoration: line-through; 
+              text-decoration: line-through;
             }
           }
+
           .dlt-item {
             width: 24px;
-            height: 24px; 
+            height: 24px;
           }
+
           .quantity {
             display: flex;
             align-items: center;
-            justify-content: center; 
-            margin-right: 50px;
-           p {
-            font-style: normal; 
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
-            text-align: center;
-            color: #1F1F22;
-            margin: 0 15px;
-           }
+            justify-content: center;
+            width: 138px;
+            margin-right: 58px;
+
+            p {
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+              text-align: center;
+              color: #1F1F22;
+              margin: 0 15px;
+            }
+
             div {
-              color:  #1F1F22;
+              color: #1F1F22;
               width: 40px;
               height: 40px;
               border: 1px solid #B2B8BF;
@@ -317,20 +360,18 @@
             }
           }
         }
+
         .card-mobile {
           display: none;
         }
+
         .line {
           border-bottom: 1px solid #d0d7dd;
           position: absolute;
           bottom: 0;
-          width: 100%;
+          width: calc(100% - 156px);
           height: 1px;
-          max-width: 556px;
-          margin: 0 auto;
-          left: 50%;
-          transform: translateX(-50%);
-          
+          right: 56px;
         }
       }
     }
@@ -351,13 +392,15 @@
   justify-content: center;
   align-items: center;
   padding: 0 10px;
-  .sign-in2-modal{
+
+  .sign-in2-modal {
     padding: 64px;
     display: flex;
     max-width: 980px;
     position: relative;
     background-color: #fff;
-    .sign-in2-close{
+
+    .sign-in2-close {
       background: url(../../../media/icon/modal-close.svg);
       background-position: center;
       background-size: cover;
@@ -368,9 +411,11 @@
       right: -60px;
       cursor: pointer;
     }
+
     .sign-in2-item {
       flex: 1;
-      h2,h4 {
+
+      h2, h4 {
         font-style: normal;
         font-weight: 600;
         font-size: 28px;
@@ -378,9 +423,11 @@
         color: #1F1F22;
         margin: 0px 0 16px;
       }
+
       h4 {
         margin-top: 52px;
       }
+
       p {
         font-style: normal;
         font-weight: normal;
@@ -389,6 +436,7 @@
         color: #7D838A;
         margin-bottom: 32px;
       }
+
       button {
         background: #1F1F22;
         border: none;
@@ -403,9 +451,11 @@
         cursor: pointer;
         transition: .4s;
       }
+
       button:hover {
         background-color: #565B62;
       }
+
       #sign_in {
         input {
           width: 100%;
@@ -414,22 +464,26 @@
           padding-bottom: 12px;
           padding-top: 11px;
         }
+
         input::placeholder {
           font-style: normal;
           font-weight: normal;
           font-size: 16px;
-          line-height: 28px; 
+          line-height: 28px;
           color: #7D838A;
         }
+
         .inp-block {
           display: flex;
           position: relative;
           border-bottom: 1px solid #565B62;
           padding-bottom: 8px;
+
           input {
             padding-top: 27px;
             padding-bottom: 0;
           }
+
           h3 {
             align-self: flex-end;
             font-style: normal;
@@ -439,6 +493,7 @@
             color: #1F1F22;
             cursor: pointer;
           }
+
           .option-input {
             appearance: none;
             position: relative;
@@ -459,33 +514,36 @@
             justify-content: center;
             padding-top: 0;
             margin-top: 32px;
-           border-radius: 2px;
+            border-radius: 2px;
           }
+
           .option-input:hover {
             border: 1px solid #B2B8BF;
           }
-    
+
           .option-input:checked {
             background: #1F1F22;
           }
-    
+
           .option-input:checked::before {
             height: 8px;
             width: 10px;
             position: absolute;
             content: '';
-            background-image: url(../../../media/icon/check.svg); 
+            background-image: url(../../../media/icon/check.svg);
             background-position: center;
             background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
           }
         }
+
         .inp-check {
           margin-bottom: 24px;
           border: none;
+
           h3 {
             font-style: normal;
             font-weight: normal;
@@ -495,11 +553,13 @@
             cursor: default;
           }
         }
-      } 
+      }
     }
+
     & .sign-in2-item:last-child {
       margin-left: 128px;
     }
+
     .sign_img {
       background-image: url(../../../media/image/promo.svg);
       background-position: center;
@@ -512,6 +572,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
       p {
         font-style: normal;
         font-weight: 600;
@@ -521,6 +582,7 @@
         max-width: 220px;
         margin-right: 32px;
       }
+
       button {
         font-style: normal;
         font-weight: bold;
@@ -539,9 +601,10 @@
     }
   }
 }
+
 .sign-in3-overlay {
-  .sign-in2-modal{
-    .sign-in2-item{
+  .sign-in2-modal {
+    .sign-in2-item {
       margin-bottom: 128px;
     }
   }

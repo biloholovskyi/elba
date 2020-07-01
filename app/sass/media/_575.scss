@@ -1200,6 +1200,11 @@
   }
 
   // BASKET MODAL
+  .basket-wrap {
+    .basket-block {
+      min-width: 100%;
+    }
+  }
   .basket-wrap,
   .basket-empty {
     min-height: 100vh;
