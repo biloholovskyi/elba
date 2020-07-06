@@ -419,12 +419,11 @@ const scrollAnim = () => {
 
   // img-text 2 img video
   if (pageYOffset > 3205) {
-    const video = $('.image-text__img--4')[0];
     const n1 = 3205;
     const n2 = 4514;
     const n = pageYOffset - n1;
     const p = n / (n2 - n1) * 100;
-    const dr1 = video.duration;
+    const dr1 = 85;
     let dr = dr1 * (p / 100);
 
     if (p > 99) {
@@ -436,12 +435,78 @@ const scrollAnim = () => {
     }
 
     if(isNaN(dr)) {
-      dr = 0.1;
+      dr = 0;
+    }
+    let nameDr = dr < 10 ? 'test2_new_00' + dr.toFixed(0) + '.jpg' : 'test2_new_0' + dr.toFixed(0) + '.jpg';
+    if(dr === 10) {
+      nameDr = 'test2_new_010.jpg';
     }
 
-    video.play();
-    video.currentTime = dr;
-    video.pause();
+    const canvasImg = document.getElementById('video-scroll-canvas-img');
+    let currentImg = canvasImg.src;
+    currentImg = currentImg.split('.jpg')[0]
+    currentImg = currentImg.split('/');
+    currentImg = currentImg[currentImg.length - 1];
+    currentImg = currentImg.split('0')[1];
+    const lengthCanvas = +dr.toFixed(0) - +currentImg;
+    let indexImg = currentImg;
+    if(lengthCanvas > 0) {
+      for(let i = 0; i < lengthCanvas; i++) {
+        let nameDr = indexImg < 10 ? 'test2_new_00' + indexImg + '.jpg' : 'test2_new_0' + indexImg + '.jpg';
+        if(indexImg === 10) {
+          nameDr = 'test2_new_010.jpg';
+        }
+        canvasImg.src = './media/test2_new_000/' + nameDr;
+        indexImg++;
+      }
+    } else if(lengthCanvas < 0) {
+      for(let i = 0; i < lengthCanvas * -1; i++) {
+        let nameDr = indexImg < 10 ? 'test2_new_00' + indexImg + '.jpg' : 'test2_new_0' + indexImg + '.jpg';
+        if(indexImg === 10) {
+          nameDr = 'test2_new_010.jpg';
+        }
+        canvasImg.src = './media/test2_new_000/' + nameDr;
+        indexImg--;
+      }
+    }
+
+
+
+    // if(crTime < dr) {
+    //
+    //   // clearInterval(playInterval);
+    //   // // video.play();
+    //   // playInterval = setInterval(() => {
+    //   //   video.currentTime = video.currentTime + .1;
+    //   //   console.log(`cr = ${video.currentTime} dr = ${dr}`);
+    //   //   if(video.currentTime > dr) {
+    //   //     // video.pause();
+    //   //     clearInterval(playInterval);
+    //   //   }
+    //   // })
+    // }
+    // while(newCrTime < dr) {
+    //   video.currentTime = newCrTime;
+    //   newCrTime += .1;
+    // }
+
+    // if(crTime < dr) {
+    //   clearInterval(playInterval);
+    //   playInterval = setInterval(() => {
+    //     newCrTime = newCrTime + .1;
+    //    // video.play();
+    //    video.currentTime = newCrTime;
+    //    // video.pause();
+    //     console.log(newCrTime);
+    //   },100);
+    //
+    //   if(newCrTime > dr || newCrTime === dr) {
+    //     clearInterval(playInterval);
+    //   }
+    // }
+    // video.play();
+    // video.currentTime = dr;
+    // video.pause();
   }
 
   // image-text 2 title

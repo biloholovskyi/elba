@@ -78,11 +78,23 @@
         margin-bottom: 32px;
         object-position: center;
         object-fit: cover;
+        position: relative;
+        overflow: hidden;
+
+        .poster-hover-img-1,
+        .poster-hover-img-2 {
+          position: absolute;
+          width: 100%;
+          top: 0;
+          left: 0;
+        }
 
         canvas {
-          width: 100% !important;
-          height: 100% !important;
-          object-fit: cover;
+          position: relative;
+          z-index: 2;
+          //width: 100% !important;
+          //height: 100% !important;
+          //object-fit: cover;
         }
       }
 
