@@ -162,3 +162,27 @@
 #addPayment .inner-content .mobile-other-header {
   display: none;
 }
+
+#addPayment {
+  .inner-content {
+    .inner-block {
+      margin-bottom: 32px;
+    }
+
+    .inner-photo {
+      margin-bottom: 48px;
+
+      &:last-child {
+        padding-top: 16px;
+      }
+
+      input {
+        height: 40px;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        color: #1F1F22;
+      }
+    }
+  }
+}

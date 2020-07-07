@@ -28,47 +28,15 @@ block content
             .inner-photo
               .text Method type:
               .method_type
-                button(value="") #[span Credit] card 
+                button(value="").active Stripe
                 button Paypal
                 button UnionPay
             .inner-photo
-              .text Receiver first name:
-              input(type="number")
-            .inner-photo
-              .text Until:
-              .birth-block
-                select#mounth
-                  option(value="hide") Month
-                  option(value="01") January
-                  option(value="02") February
-                  option(value="03") March
-                  option(value="04" selected) April
-                  option(value="05") May
-                  option(value="06") June
-                  option(value="07") July
-                  option(value="08") August
-                  option(value="09") September
-                  option(value="10") October
-                  option(value="09") November
-                  option(value="10") December
-                select#year
-                  option(value="hide") year 
-                  option(value="01") 01
-                  option(value="02") 02
-                  option(value="03" selected) 1992
-                  option(value="04") 04
-                  option(value="05") 05
-                  option(value="06") 06
-                  option(value="07") 07
-                  option(value="08") 08
-                  option(value="09") 09
-                  option(value="10") 10   
-            .inner-photo
-              .text Cardholder:
+              .text Card number:
               input(type="text") 
             .inner-photo
-              .text CVV/CVC: 
-              input(type="password") 
+              .text MM / YY / CVC
+              input(type="text")
             .inner-photo
               .text
               .btn-account   
