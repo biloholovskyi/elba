@@ -1,6 +1,6 @@
  $(document).ready(function () {
    var h_hght = 150; // высота шапки
-   var h_mrg = 0; // отступ когда шапка уже не видна
+   var h_mrg = 150; // отступ когда шапка уже не видна
 
    $(function () {
 

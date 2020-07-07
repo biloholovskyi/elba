@@ -115,7 +115,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 73px 0;
     margin-bottom: 24px;
     position: relative;
     cursor: pointer;
@@ -199,9 +198,10 @@
 
     img {
       display: block;
-      @include base-box(140px);
+      width: 100%;
+      height: 100%;
       object-position: center;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 

@@ -20,13 +20,8 @@
     }
 
     .img__block {
-      padding: 20px;
       margin-bottom: 16px;
       height: 124px;
-
-      img {
-        @include base-box(84px)
-      }
 
       .list__inner-slider {
         .inner__item {

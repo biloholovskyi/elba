@@ -10,8 +10,8 @@
 
 	.inner-btn {
 		padding-left: 35px;
-        top: 100px;
-        position: sticky;
+        top: 290px;
+        position: fixed;
 
 		&:after {
 			left: 0;
@@ -31,7 +31,7 @@
 		}
 
 		.inner-photo {
-			justify-content: flex-end;
+			justify-content: space-between;
 
 			p {
 				flex: 2;
