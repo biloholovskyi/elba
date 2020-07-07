@@ -1325,5 +1325,33 @@
   }
   .modal-wrapper  .m-container {
     position: static!important;
-  }    
+  }
+
+  // success
+  .success-main-page__content {
+    padding-bottom: 32px;
+  }
+
+  .success-main-page__btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .success-main-page__desc {
+    margin-bottom: 50px;
+  }
+
+  .success-main-page__title {
+    margin-bottom: 32px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .success-main-page__img {
+    margin-bottom: 48px;
+    width: 96px;
+    height: 96px;
+  }
+  // success end
 }

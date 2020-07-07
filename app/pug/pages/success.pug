@@ -1,0 +1,33 @@
+extends ../layout/main
+
+block variables
+    - const pageTitle = 'Success'
+
+    mixin asideNav(link,name)
+        li
+            a(href=link)=name
+
+block content
+    include ../modules/header
+    include ../modules/modal-menu
+
+    .success-main-page
+        .m-container.full-height
+            .m-row.full-height
+                .m-col.m-col--3
+                    .list__follow-us.list__follow-us--absolute
+                        .follow-us.m-container
+                            a.follow-us__link.follow-us__link--dark(href='#') Follow us
+                            .follow-us__links.follow-us__links--dark
+                                a.link(href='#' target='_blank') FB
+                                a.link(href='#' target='_blank') TW
+                                a.link(href='#' target='_blank') INST
+        .m-container.success-container
+            .m-row
+                .m-col.m-col--3.m-col__ms-display-none
+                .m-col.m-col--12.m-col__ms--15
+                    .success-main-page__content
+                        img.success-main-page__img(alt='success' src='./media/image/success.png')
+                        .success-main-page__title Thanks for your order
+                        .success-main-page__desc You can familiarize yourself with the status of your order in your account. #[br] In the near future, our manager will contact you to confirm the details.
+                        a(href='#').success-main-page__btn Go to catalog
