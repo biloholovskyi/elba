@@ -190,7 +190,7 @@ $(document).ready((e) => {
         displacementImage: '../media/displacement/14.jpg'
       });
     });
-  }, 300)
+  }, 1300)
 
   setTimeout(() => {
     let minHeight = 0;
@@ -206,7 +206,7 @@ $(document).ready((e) => {
       $(el).children('canvas').css('width', width + 'px');
     });
     $('.collect-slider__item .poster').css('max-height', minHeight + 'px');
-  }, 400)
+  }, 2000)
 });
 
 
