@@ -50,9 +50,10 @@ $(document).ready((e) => {
     $('#detail-page').css('display', 'none');
   })
 
+  console.log($('.list__item'));
+
   if($(window).width() < 801) {
     $('.list__item').on('click', function () {
-      console.log('aloha');
       $('body').css({
         'overflow': 'hidden'
       });
@@ -161,16 +162,15 @@ $(document).ready((e) => {
   if($(window).width() < 1061 && $('.home-first').length > 0) {
     $(function(e) {
       //Enable swiping...
-      $("body").swipe( {
-        //Generic swipe handler for all directions
-        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-          console.log("You swiped " + direction);
-          const status = direction === 'left' ? 'next' : 'prev';
-          switchSlideFirst(e, false, status);
-        },
-        //Default is 75px, set to 0 for demo so any distance triggers swipe
-        threshold:0
-      });
+      // $("body").swipe( {
+      //   //Generic swipe handler for all directions
+      //   swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      //     const status = direction === 'left' ? 'next' : 'prev';
+      //     // switchSlideFirst(e, false, status);
+      //   },
+      //   //Default is 75px, set to 0 for demo so any distance triggers swipe
+      //   threshold:0
+      // });
     });
   }
 
