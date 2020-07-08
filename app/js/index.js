@@ -51,7 +51,8 @@ $(document).ready((e) => {
   })
 
   if($(window).width() < 801) {
-    $('.list__item .price').on('click', function () {
+    $('.list__item').on('click', function () {
+      console.log('aloha');
       $('body').css({
         'overflow': 'hidden'
       });

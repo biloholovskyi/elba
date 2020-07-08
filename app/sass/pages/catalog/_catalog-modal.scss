@@ -31,6 +31,7 @@
     background-color: #fff;
     padding: 64px 0;
     position: relative;
+    height: 490px;
 
     .catalog-item {
       // flex: 50%;
@@ -43,13 +44,37 @@
         margin-bottom: 8px;
       }
 
-      h2 {
+      &__link-fix {
         font-style: normal;
         font-weight: 600;
         font-size: 28px;
         line-height: 40px;
         color: #000000;
         margin-bottom: 16px;
+        display: block;
+      }
+
+      .fix-catalog-item {
+        margin-top: 16px;
+        margin-bottom: 24px;
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: #1F1F22;
+        position: relative;
+        padding-left: 32px;
+        
+        &::before {
+          content: '';
+          @include base-box(24px);
+          @include base-background(contain);
+          background-image: url(../media/icon/plus-fix.svg);
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
       }
 
       p {
@@ -179,7 +204,7 @@
 
     & .catalog-item:last-child {
       flex: 60%;
-      overflow: auto;
+      height: max-content;
     }
   }
 }
