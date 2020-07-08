@@ -180,6 +180,61 @@ input[type="search"] {
   //position: absolute;
 }
 
+.scroll-block-custom {
+  overflow: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background: #E5E5E5;
+    border-radius: 8px;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s;
+    //border-right: 8px solid transparent;
+    background-clip: padding-box;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin: 0 30px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #898989;
+    border-radius: 8px;
+    visibility: visible;
+    transition: all .3s;
+    //border-right: 8px solid transparent;
+    background-clip: padding-box;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
+
+.inner-photo {
+  .text {
+    .opacity-span {
+      opacity: .3;
+    }
+  }
+}
+
+
+#checkout {
+  .account-back {
+    top: 300px;
+    position: fixed;
+  }
+}
+
 /*media*/
 @import "media/h970";
 @import "media/h810";
