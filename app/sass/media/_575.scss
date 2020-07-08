@@ -358,7 +358,7 @@
       }
 
       input {
-        width: 216px;
+        width: 100%;
         border-bottom: 1px solid #1F1F22;
         padding-bottom: 8px;
         margin-right: 16px;
@@ -380,6 +380,7 @@
 
       .search-btn--mobile {
         width: 40px;
+        min-width: 40px;
         height: 40px;
         background: #D0D7DD;
         transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -1211,10 +1212,13 @@
 
     .basket-block {
       min-width: 100%;
-      height: calc(100vh - 192px);
-      padding-right: 8px;
-      padding-top: 8px;
-      padding-bottom: 8px;
+      height: calc(100vh - 200px);
+
+      .scroll-block-custom {
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
     }
   }
   .basket-wrap,
@@ -1248,13 +1252,20 @@
       .busket-item {
         padding: 12px 0;
         min-width: auto;
-        margin-right: -8px;
-        margin-left: 0;
-        margin-top: 0;
-        margin-bottom: 0;
+        margin: 0;
+        justify-content: space-between;
 
-        &:first-child {
-          margin-top: -8px;
+        img {
+          @include base-box(88px);
+          margin-right: 12px;
+        }
+
+        .item {
+          h3 {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 20px;
+          }
         }
       }
     }
@@ -1310,6 +1321,7 @@
   } 
   // YOUR BAG PAGE
   #yourbag{
+    padding-bottom: 20px;
   
     .inner-content{
       h1 {
@@ -1320,7 +1332,7 @@
      
     }
     .payblock-btn button:first-child  { 
-      position: absolute;
+      position: fixed;
       bottom: 0;
       left: 0;
       margin-bottom: 0; 

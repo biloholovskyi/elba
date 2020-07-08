@@ -5,7 +5,7 @@ const toggleMenu = () => {
 }
 
 const innerMobileMenu = () => {
-  $('.modal-menu--inner').css('z-index', 60);
+  $('.modal-menu--inner').css('z-index', 70);
 }
 
 const closeInnerMobileMenu = () => {

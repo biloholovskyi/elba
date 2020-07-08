@@ -22,12 +22,23 @@ $(document).ready(function () {
 });
 
 $(document).on('click', function (e) {
-  let modal = $('.catalog-modal');
-  let btn = $('.price__quick');
+  let modal = $('.catalog-modal, .sign_in-wrap, .basket-empty, .basket-wrap, .log_out');
+  let btn = $('.price__quick, .sign_in, .basket, .filter-btn');
 
   if (!btn.is(e.target) && btn.has(e.target).length === 0) {
     if (!modal.is(e.target) && modal.has(e.target).length === 0) {
       $('.catalog-overlay').hide();
+      $('body').css({'overflow': 'visible'});
+    }
+  }
+});
+
+$(document).on('click', function (e) {
+  let modal = $('.catalog-modal, .sign_in-wrap, .basket-empty, .basket-wrap, .log_out');
+  let btn = $('.sign_in, .basket, .filter-btn');
+
+  if (!btn.is(e.target) && btn.has(e.target).length === 0) {
+    if (!modal.is(e.target) && modal.has(e.target).length === 0) {
       $('body').css({'overflow': 'visible'});
     }
   }

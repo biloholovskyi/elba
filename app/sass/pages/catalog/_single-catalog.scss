@@ -5,8 +5,13 @@
 	}
 	.catalog-detail {
 		#single-owl {
+
+          .owl-stage-outer {
+            overflow: visible !important;
+          }
 			margin-bottom: 64px;
 			.item {
+              background-color: #fff;
 				.detail-slide {
 					max-width: 500px;
 					margin: 0 auto;

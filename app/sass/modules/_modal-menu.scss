@@ -13,7 +13,7 @@
   &__back {
     position: fixed;
     width: 100%;
-    top: 49px;
+    top: 0;
     left: 0;
     z-index: 64;
     font-weight: bold;
@@ -37,7 +37,7 @@
   }
 
   &--inner {
-    padding: 104px 0 32px;
+    padding: 80px 0 32px;
     z-index: -1;
   }
 

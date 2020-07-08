@@ -15,8 +15,8 @@ $(document).ready(function(){
       });
 
       $('#single-owl').owlCarousel({
-        margin: 10,
-        loop: true,
+        margin: 11,
+        loop: false,
         nav: false,
         items: 1
       });

@@ -37,7 +37,6 @@ $(document).ready((e) => {
 
   $('#catalog-page .filter-btn').on('click', function () {
     $('body').css({
-      'height': '100vh',
       'overflow': 'hidden'
     });
     $('#filter-page').css('display', 'block');
@@ -45,7 +44,6 @@ $(document).ready((e) => {
 
   $('.filter-back').on('click', function () {
     $('body').css({
-      'height': 'auto',
       'overflow': 'visible'
     });
     $('#filter-page').css('display', 'none');
@@ -55,7 +53,6 @@ $(document).ready((e) => {
   if($(window).width() < 801) {
     $('.list__item .price').on('click', function () {
       $('body').css({
-        'height': '100vh',
         'overflow': 'hidden'
       });
       $('#detail-page').css('display', 'block');
@@ -76,7 +73,9 @@ $(document).ready((e) => {
   }
 
   if($('.collect-slider__item').length > 0) {
-    collectionHeight();
+    setTimeout(() => {
+      collectionHeight();
+    }, 2000)
   }
 
   // collections slider
@@ -131,6 +130,11 @@ $(document).ready((e) => {
   $('.list__inner-slider .list-inner__nav .item').on('mouseover', (e) => hoverSlider(e));
   $('.modal-menu__nav .item--inner').on('click', innerMobileMenu);
   $('.modal-menu__back').on('click', closeInnerMobileMenu);
+
+  $('.promocod-closes').on('click', function () {
+    $('.enter-promocod').fadeOut('fast');
+    $('.promocode').fadeIn('fast');
+  })
 
   $(document).on('click', (e) => {
 

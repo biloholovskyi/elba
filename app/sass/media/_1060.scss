@@ -276,6 +276,7 @@
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 24px;
+    justify-content: space-between;
   }
 
   .event__mobile-title {
@@ -289,6 +290,7 @@
 
   .event__video-block {
     width: 272px;
+    margin: 0 auto;
 
     .play {
       width: 40px;
@@ -328,7 +330,7 @@
 
   // blog
   .blog__content {
-    padding-bottom: 94px;
+    padding-bottom: 32px;
   }
 
   .blog__title {
@@ -456,6 +458,10 @@
   .basket-wrap,
   .log_out { 
     top: 48px;  
+  }
+
+  .fix-close-img {
+    background-image: url(../media/icon/close-modal.svg) !important;
   }
 }
 

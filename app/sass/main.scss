@@ -144,7 +144,13 @@ input[type="search"] {
 }
 
 #detail-page {
+  padding-bottom: 72px;
   .btn-wrap {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #f8f8f8;
     .btn-item {
       button {
         &:last-child {

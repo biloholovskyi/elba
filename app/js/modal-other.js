@@ -1,24 +1,26 @@
-$(document).ready(function(){
+$(document).ready(function(e){
     // MODAL SIGN IN
-    $('.sign_in').on('click', function(){
+    $('.sign_in').on('click', function(e){
       // $(this).hide();
       $('.sign_in-wrap').toggleClass('active');
-      
+      fix(e);
     });
     // BASKET MODAL
-    $('.basket').on('click', function(){ 
-      $('.basket-wrap').toggleClass('active');    
+    $('.basket').on('click', function(e){
+      $('.basket-wrap').toggleClass('active');
+      fix(e);
     });
     // MODAL DLT ADDRESS
-    $('.dlt-click').on('click', function(){
+    $('.dlt-click').on('click', function(e){
       $('.dlt-Adress-overlay').fadeIn('slow').css('display', 'flex');
+
     });
-    $('.dlt-close').on('click', function(){
+    $('.dlt-close').on('click', function(e){
       $('.dlt-Adress-overlay').fadeOut('slow').css('display', 'none');
     });
 
   // modal pahe Your bag
-  $('.promocode').on('click', function(){
+  $('.promocode').on('click', function(e){
     $(this).css('display', 'none');
     $('.enter-promocod').fadeIn('slow').css('display', 'block');
   });
@@ -78,3 +80,14 @@ $(document).mouseup(function (e){
     div.removeClass('active');
   }
 });
+
+
+const fix = (e) => {
+  if($(e.currentTarget).hasClass('fix-close-img')) {
+    $(e.currentTarget).removeClass('fix-close-img');
+    $('body').css('overflow', 'visible');
+  } else {
+    $(e.currentTarget).addClass('fix-close-img');
+    $('body').css('overflow', 'hidden');
+  }
+}
