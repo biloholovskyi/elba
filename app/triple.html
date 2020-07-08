@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>ELBA</title>
+  </head>
+  <body>
+    <header class="header header--white">
+      <div class="m-container">
+        <div class="m-row">
+          <div class="m-col">
+            <div class="header__mobile">
+              <div class="menu">
+                <div class="item"></div>
+                <div class="item"></div>
+              </div>
+              <div class="mobile-button" style="background-size: 14.62px; background-image: url(./media/icon/mobile-search.svg)" onclick="location.href='./search.html';"></div><a class="mobile__link" href="/"></a>
+              <div class="mobile-button sign_in" style="background-size: 15.56px; background-image: url(./media/icon/mobile-profile.svg)"></div>
+              <div class="mobile-button basket" style="background-size: 18px; background-image: url(./media/icon/mobile-cart.svg)"> </div>
+            </div>
+            <div class="header__wrapper">
+              <div class="header__left"><a class="header__logo" href="/"><img alt="elba" src="./media/icon/logo.png"></a>
+                <div class="header__lang"><a class="item" href="#">EN</a><a class="item item--active" href="#">FR</a></div>
+                <div class="header__nav"><a class="nav__item" href="./catalog.html">Shop</a><a class="nav__item" href="./concept.html">Concept</a><a class="nav__item" href="./philosophy.html">Univers</a><a class="nav__item" href="./news.html">News</a></div>
+              </div>
+              <div class="header__right">
+                <div class="small-icon" style="background-image: url(./media/icon/search.svg)" onclick="location.href='./search.html';"></div>
+                <div class="small-icon sign_in" style="background-image: url(./media/icon/profile.svg)"></div>
+                <div class="big-icon basket" style="background-image: url(./media/icon/cart.svg)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="modal-wrapper">
+      <div class="m-container" style="position: relative"> 
+        <div class="m-row">
+          <div class="m-col">            
+            <div class="sign_in-wrap">
+              <h2>Create an account</h2>
+              <p>Create a ELBA account with your email address.</p>
+              <button onclick="location.href='./create_account.html';">Create an account</button>
+              <h2>Sign in</h2>
+              <p>Sign in with your email and password.</p>
+              <form class="mainForm" name="formSign" id="sign_in">
+                <input class="field" type="text" placeholder="Email adress">
+                <div class="inp-block">
+                  <input class="input-pass field" type="password" placeholder="Password">
+                  <h3 class="forgot">FORGOT?</h3>
+                </div>
+                <div class="inp-block inp-check"> 
+                  <input class="option-input" type="checkbox" checked>
+                  <h3>Remember me </h3>
+                </div>
+                <button class="validateBtn" type="submit">Sign in</button>
+              </form>
+            </div>
+            <div class="log_out">
+              <h3>My account</h3><a href="./profile.html">Profile</a><a href="./address.html">Shipping Addresses</a><a href="./orders.html">My orders</a><a href="./payment.html">Payment Methods</a>
+              <button>Logout      </button>
+            </div>
+            <div class="basket-wrap">
+              <div class="basket-title">
+                <h2>Your order</h2>
+                <p>€ 1,420.00</p>
+              </div>
+              <div class="basket-block">
+                <div class="scroll-block-custom">
+                  <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                    <div class="item">
+                      <h4>Leather</h4>
+                      <h3>Little E — Logo Max White & Black</h3>
+                      <p>€200</p>
+                    </div>
+                  </div>
+                  <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                    <div class="item">
+                      <h4>Leather</h4>
+                      <h3>Little E — Logo Max White & Black</h3>
+                      <p>€200</p>
+                    </div>
+                  </div>
+                  <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                    <div class="item">
+                      <h4>Leather</h4>
+                      <h3>Little E — Logo Max White & Black</h3>
+                      <p>€200</p>
+                    </div>
+                  </div>
+                  <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                    <div class="item">
+                      <h4>Leather</h4>
+                      <h3>Little E — Logo Max White & Black</h3>
+                      <p>€200</p>
+                    </div>
+                  </div>
+                  <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                    <div class="item">
+                      <h4>Leather</h4>
+                      <h3>Little E — Logo Max White & Black</h3>
+                      <p>€200</p>
+                    </div>
+                  </div>
+                  <div class="busket-item"><img src="../media/icon/modal-elem.svg" alt="icon">
+                    <div class="item">
+                      <h4>Leather</h4>
+                      <h3>Little E — Logo Max White & Black</h3>
+                      <p>€200</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button onclick="location.href='./youbag.html';">Continue</button>
+            </div>
+            <div class="basket-empty">
+              <h2>No items</h2>
+              <p>There are no products in your basket yet. Start adding and they will appear in this place.</p>
+              <button>Go to catalog</button>
+            </div>
+            <div class="pass-overlay">
+              <div class="pass-modal">
+                <div class="pass-close"></div>
+                <div class="pass-item">
+                  <h3>Password recovery</h3>
+                  <p>Please indicate the email address to which the account is registered and we will send you instructions to restore access to your account.</p>
+                  <input type="text" placeholder="Example@gmail.com">
+                  <button>SEND               </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-menu">
+      <div class="m-container">
+        <div class="m-row">
+          <div class="m-col">
+            <div class="modal-menu__title">ELBA concept</div>
+            <div class="modal-menu__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
+            <div class="modal-menu__nav"><a class="item" href="/">Main page</a><a class="item" href="/catalog.html">Shop</a><a class="item" href="/concept.html">Concept</a>
+              <div class="item item--inner">Univers</div><a class="item" href="/news.html">News</a>
+            </div>
+            <div class="modal-menu__langs"><a class="item" href="#">English</a><a class="item item--active" href="#">French</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-menu modal-menu--inner">
+      <div class="modal-menu__back">Univers</div>
+      <div class="m-container">
+        <div class="m-row">
+          <div class="m-col">
+            <div class="modal-menu__nav"><a class="item" href="/philosophy.html">Our Philosophy</a><a class="item" href="/comunity.html">OUR Comunity</a><a class="item" href="/factory.html">Our Factory</a><a class="item" href="/materials.html">Our materials</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="catalog-overlay">
+      <div class="catalog-modal">
+        <div class="catalog-close"></div>
+        <div class="catalog-item">
+          <div class="img-block"><img class="small-img" src="../media/icon/modal-gallery5.png" alt="image"><img class="small-img" src="../media/icon/modal-gallery2.png" alt="image"><img class="small-img" src="../media/icon/modal-gallery3.png" alt="image"><img class="small-img" src="../media/icon/modal-gallery.png" alt="image"><img class="small-img" src="../media/icon/modal-gallery3.png" alt="image"></div><img class="img-main" src="#" alt="">
+        </div>
+        <div class="catalog-item">
+          <h3>Elbag</h3>
+          <h2>Little E - Lether / Cotton</h2>
+          <p>Le Little E (Little Elephant Bag) est le premier sac à main qui vous permet de découvrir toutes les facettes de la marque ELBA Concept.</p>
+          <h4>Elements</h4>
+          <div class="modal-elem"><a href="#"><img src="../media/icon/modal-elem.svg" alt="icon"></a><a href="#">   <img src="../media/icon/modal-elem2.svg" alt="icon"></a><a href="#"><img src="../media/icon/modal-elem.svg" alt="icon"></a><a href="#">   <img src="../media/icon/modal-elem2.svg" alt="icon"></a></div>
+          <h5>price</h5>
+          <div class="price"> 
+            <p>€ 1,420.00</p>
+            <p class="offer"> 1,420.00</p>
+          </div>
+          <div class="button-modal"><a href="#">Add and continue</a><a href="#">Buy now</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="fullPage__box">
+      <div class="m-container full-height">
+        <div class="m-row full-height">
+          <div class="m-col m-col--3">
+            <div class="list__follow-us">
+              <div class="follow-us m-container"><a class="follow-us__link follow-us__link--dark" href="#">Follow us</a>
+                <div class="follow-us__links"><a class="link" href="#" target="_blank">FB</a><a class="link" href="#" target="_blank">TW</a><a class="link" href="#" target="_blank">INST</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- home first-->
+      <div class="fullPage home-first" id="fullPageData">
+        <video class="home-first__video" src="./media/video/test.mp4" playsinline muted autoplay loop preload=""></video>
+        <div class="home-first__top">
+          <div class="m-container">
+            <div class="m-row">
+              <div class="m-col">
+                <div class="home-first__video-line">
+                  <div class="first">01</div>
+                  <div class="line">
+                    <div class="line__progress"></div>
+                    <div class="line__full"></div>
+                  </div>
+                  <div class="last">04</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-first__content">
+          <div class="home-first__dots">
+            <div class="dot dot--active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="m-container">
+            <div class="m-row">
+              <div class="m-col m-col--3"></div>
+              <div class="m-col m-col--10 m-col__ms--15 wrapp--safe">
+                <div class="home-first__slid home-first__slid--active">
+                  <h3 class="home-first__title home-first__title--active">Create your <br> own style</h3>
+                  <div class="home-first__desc">Welcome to «elbag yourself» the elbag customization tool <br> the best way to achieve the bag of your dream</div><a class="home-first__link arrow-link" href="#">Discover</a>
+                </div>
+                <div class="home-first__slid">
+                  <h3 class="home-first__title">2Create your <br> own style</h3>
+                  <div class="home-first__desc">2Welcome to «elbag yourself» the elbag customization tool <br> the best way to achieve the bag of your dream</div><a class="home-first__link arrow-link" href="#">Discover</a>
+                </div>
+                <div class="home-first__slid">
+                  <h3 class="home-first__title">3Create your <br> own style</h3>
+                  <div class="home-first__desc">3Welcome to «elbag yourself» the elbag customization tool <br> the best way to achieve the bag of your dream</div><a class="home-first__link arrow-link" href="#">Discover</a>
+                </div>
+                <div class="home-first__slid">
+                  <h3 class="home-first__title">4Create your <br> own style</h3>
+                  <div class="home-first__desc">4Welcome to «elbag yourself» the elbag customization tool <br> the best way to achieve the bag of your dream</div><a class="home-first__link arrow-link" href="#">Discover</a>
+                </div>
+              </div>
+              <div class="m-col m-col--2">
+                <div class="home-first__navigation">
+                  <div class="home-first__nav">
+                    <div class="nav__item prev"></div>
+                    <div class="nav__item next"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- home text-->
+      <div class="fullPage home-text">
+        <div class="home-text__content">
+          <div class="m-container full-height">
+            <div class="m-row full-height">
+              <div class="m-col m-col--3"></div>
+              <div class="m-col m-col--9 m-col__ms--15 full-height">
+                <div class="home-text__center">
+                  <h3 class="home-text__title">Create your own look</h3>
+                  <div class="home-text__desc">Only you yourself know what exactly you need. We just create tools for this. Do not limit yourself in your choice. Create, combine, experiment. Create your own style</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image text 1-->
+      <div class="fullPage image-text">
+        <div class="image-text__content full-height">
+          <div class="m-container full-height">
+            <div class="m-row full-height">
+              <div class="m-col m-col--3 m-col__ms-display-none"></div>
+              <div class="m-col m-col--2 m-col__ms--7 full-height">
+                <div class="image-text__imgs image-text__imgs--double"><img class="image-text__img image-text__img--1" src="./media/image/img-1.png"><img class="image-text__img image-text__img--2" src="./media/image/img-2.png"></div>
+              </div>
+              <div class="m-col m-col--4 m-col__ms--8 full-height">
+                <div class="image-text__imgs image-text__imgs--single"><img class="image-text__img image-text__img--3" src="./media/image/img-3.png"></div>
+              </div>
+              <div class="m-col m-col--5 m-col__ms--15 full-height">
+                <div class="image-text__text">
+                  <div class="image-text__title"><span>Select everything</span></div>
+                  <div class="image-text__desc">
+                    <p>Choose several combinations to stay unique and vibrant in any situation.</p>
+                    <p>It does not matter what situations occur during the day. Whether it's a date, playing sports, or meeting friends.</p>
+                    <p>Are you ready for any situation with ELBA bags?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image text 2-->
+      <div class="fullPage image-text">
+        <div class="image-text__content full-height">
+          <div class="m-container full-height">
+            <div class="m-row full-height">
+              <div class="m-col m-col--3 m-col__ms-display-none"></div>
+              <div class="m-col m-col--6 m-col__ms--15 full-height">
+                <div class="image-text__imgs image-text__imgs--big image-text__imgs--big-2"><img class="image-text__img image-text__img--4" alt="canvas" src="./media/test2_new__000/test2_new_000.jpg" id="video-scroll-canvas-img"></div>
+              </div>
+              <div class="m-col m-col--5 m-col__ms--15 full-height">
+                <div class="image-text__text">
+                  <div class="image-text__title"><span>Just 10 seconds</span></div>
+                  <div class="image-text__desc">
+                    <p>Choose the shape of the bag. With one set, you can coordinately change the shape of the bag in 5 seconds.</p>
+                    <p>The minimum storage space will allow you to change as soon as such a need arose.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- shape-->
+      <div class="fullPage shape">
+        <div class="shape__content full-height">
+          <div class="m-container full-height">
+            <div class="m-row full-height">
+              <div class="m-col m-col--3"></div>
+              <div class="m-col m-col--5 m-col__ms--15">
+                <div class="shape__text-wrapper">
+                  <div class="shape__text shape__text--active">
+                    <div class="shape__padding"></div>
+                    <p>We believe in the power of the individual. old soul, young at heart, a stunning spectrum of color.</p>
+                    <p>Born this way, identify another way, you love who you love. From here, from there, from a distant planet.</p>
+                    <p>Free spirit, firmly grounded, rebellious, harmonious. shaped by your past, driven by your future. no box can hold you.</p>
+                    <p>No label can define you. You are one and you are everything.</p>
+                    <p>Long live the individual.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="m-col m-col--7">
+                <div class="shape__wrapper m-container">
+                  <div class="shape__imgs"><img class="shape__img shape__img--1" src="./media/image/shape1.png"><img class="shape__img shape__img--2" src="./media/image/shape2.png"><img class="shape__img shape__img--3" src="./media/image/shape3.png"><img class="shape__img shape__img--4" src="./media/image/shape4.png"><img class="shape__img shape__img--5" src="./media/image/shape5.png"><img class="shape__img shape__img--6" src="./media/image/shape6.png"><img class="shape__img shape__img--7" src="./media/image/shape7.png"><img class="shape__img shape__img--8" src="./media/image/shape4.png">
+                    <div class="shape__circle shape__circle--1"></div>
+                    <div class="shape__circle shape__circle--2"></div>
+                    <div class="shape__circle shape__circle--3"></div>
+                    <div class="shape__circle shape__circle--4"></div>
+                    <div class="shape__circle shape__circle--5"></div>
+                    <div class="shape__circle shape__circle--6"></div>
+                    <div class="shape__circle shape__circle--7"></div>
+                    <div class="shape__circle shape__circle--8"></div>
+                    <div class="shape__circle shape__circle--9"></div>
+                    <div class="shape__circle shape__circle--10"></div>
+                    <div class="shape__circle shape__circle--11"></div>
+                    <div class="shape__circle shape__circle--12"></div>
+                    <div class="shape__circle shape__circle--13"></div>
+                    <div class="shape__circle shape__circle--14"></div>
+                    <div class="shape__circle shape__circle--15"></div>
+                    <div class="shape__circle shape__circle--16"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- collections-->
+      <div class="fullPage collections">
+        <div class="collections__content full-height">
+          <div class="m-container full-height">
+            <div class="m-row full-height">
+              <div class="m-col m-col--3"></div>
+              <div class="m-col m-col--12 m-col__ms--15">
+                <div class="collections__slider-box collections__slider-box--active">
+                  <div class="collect__nav-box">
+                    <div class="title">Our collections</div>
+                  </div>
+                  <div class="collections__slider owl-carousel">
+                    <div class="collect-slider__item">
+                      <div class="poster poster-hover-effect" data-src-1="../media/time/2.jpg" data-src-2="../media/image/collect3.jpg"><img class="poster-hover-img-1" src="../media/time/2.jpg"></div>
+                      <div class="color-list">
+                        <div class="color-list__item" style="background: #0097AB"></div>
+                        <div class="color-list__item" style="background: #E7D9B6"></div>
+                        <div class="color-list__item" style="background: #C1E6FF"></div>
+                      </div>
+                      <div class="title">Miami</div>
+                      <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div><a class="arrow-link arrow-link--dark" href="#">Discover</a>
+                    </div>
+                    <div class="collect-slider__item">
+                      <div class="poster poster-hover-effect" data-src-1="../media/image/collect1.jpg" data-src-2="../media/image/collect2.jpg"><img class="poster-hover-img-1" src="../media/image/collect1.jpg"></div>
+                      <div class="color-list">
+                        <div class="color-list__item" style="background: #3E7AD6"></div>
+                        <div class="color-list__item" style="background: #FFA7AC"></div>
+                        <div class="color-list__item" style="background: #5E23AA"></div>
+                      </div>
+                      <div class="title">Paris</div>
+                      <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div><a class="arrow-link arrow-link--dark" href="#">Discover</a>
+                    </div>
+                    <div class="collect-slider__item">
+                      <div class="poster poster-hover-effect" data-src-1="../media/image/collect3.jpg" data-src-2="../media/image/collect4.jpg"><img class="poster-hover-img-1" src="../media/image/collect3.jpg"></div>
+                      <div class="color-list">
+                        <div class="color-list__item" style="background: #FDB14B"></div>
+                        <div class="color-list__item" style="background: #E2DED7"></div>
+                        <div class="color-list__item" style="background: #813B01"></div>
+                      </div>
+                      <div class="title">Zimbabwe</div>
+                      <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div><a class="arrow-link arrow-link--dark" href="#">Discover</a>
+                    </div>
+                    <div class="collect-slider__item">
+                      <div class="poster poster-hover-effect" data-src-1="../media/image/collect2.jpg" data-src-2="../media/image/collect1.jpg"><img class="poster-hover-img-1" src="../media/image/collect2.jpg"></div>
+                      <div class="color-list">
+                        <div class="color-list__item" style="background: #006703"></div>
+                        <div class="color-list__item" style="background: #394E49"></div>
+                        <div class="color-list__item" style="background: #C1E6FF"></div>
+                      </div>
+                      <div class="title">Jungle</div>
+                      <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div><a class="arrow-link arrow-link--dark" href="#">Discover</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- list-->
+      <div class="fullPage list">
+        <div class="list__content full-height">
+          <div class="m-container full-height">
+            <div class="m-row full-height">
+              <div class="m-col m-col--3"></div>
+              <div class="m-col m-col--9 m-col__ms--15">
+                <div class="list__mobile-title">Best sellers</div>
+                <div class="list__col-wrapper triple">
+                  <div class="list__col list__col--first">
+                    <div class="list__item">
+                      <div class="img__block">
+                        <div class="list__inner-slider">
+                          <div class="list-inner__nav">
+                            <div class="item active"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                          </div><img class="inner__item active" src="./media/image/collect1.jpg" alt="elba"><img class="inner__item" src="./media/image/list-inner.jpg" alt="elba"><img class="inner__item" src="./media/image/list-inner.jpg" alt="elba"><img class="inner__item" src="./media/image/collect2.jpg" alt="elba">
+                        </div><img src="./media/image/list1.png" alt="elba">
+                      </div>
+                      <div class="name">Little E — Logo Max <br> White & Black</div>
+                      <div class="price">€295.00
+                        <div class="price__quick">Quick order</div>
+                      </div>
+                    </div>
+                    <div class="list__item">
+                      <div class="img__block">
+                        <div class="list__inner-slider">
+                          <div class="list-inner__nav">
+                            <div class="item active"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                          </div><img class="inner__item active" src="./media/image/collect1.jpg" alt="elba"><img class="inner__item" src="./media/image/list-inner.jpg" alt="elba"><img class="inner__item" src="./media/image/list-inner.jpg" alt="elba"><img class="inner__item" src="./media/image/collect2.jpg" alt="elba">
+                        </div><img src="./media/image/list1.png" alt="elba">
+                      </div>
+                      <div class="name">Little E — Logo Max <br> White & Black</div>
+                      <div class="price">€295.00
+                        <div class="price__quick">Quick order</div>
+                      </div>
+                    </div>
+                    <div class="owl-carousel owl-theme list__slider__mobile">
+                      <div class="list__item">
+                        <div class="img__block">
+                          <div class="list__inner-slider">
+                            <div class="list-inner__nav">
+                              <div class="item active"></div>
+                              <div class="item"></div>
+                              <div class="item"></div>
+                              <div class="item"></div>
+                            </div><img class="inner__item active" src="./media/image/collect1.jpg" alt="elba"><img class="inner__item" src="./media/image/list-inner.jpg" alt="elba"><img class="inner__item" src="./media/image/list-inner.jpg" alt="elba"><img class="inner__item" src="./media/image/collect2.jpg" alt="elba">
+                          </div><img src="./media/image/list1.png" alt="elba">
+                        </div>
+                        <div class="name">Little E — Logo Max <br> White & Black</div>
+                        <div class="price">€295.00
+                          <div class="price__quick">Quick order</div>
+                        </div>
+                      </div>
+                      <div class="list__item">
+                        <div class="img__block">
+                          <div class="list__inner-slider">
+                            <div class="list-inner__nav">
+                              <div class="item active"></div>
+                              <div class="item"></div>
+                              <div class="item"></div>
+                              <div class="item"></div>
+                            </div><img class="inner__item active" src="./media/image/collect1.jpg" alt="elba"><img class="inner__item" src="./media/image/list-inner.jpg" alt="elba"><img class="inner__item" src="./media/image/list-inner.jpg" alt="elba"><img class="inner__item" src="./media/image/collect2.jpg" alt="elba">
+                          </div><img src="./media/image/list1.png" alt="elba">
+                        </div>
+                        <div class="name">Little E — Logo Max <br> White & Black</div>
+                        <div class="price">€295.00
+                          <div class="price__quick">Quick order</div>
+                        </div>
+                      </div>
+                      <div class="list__item">
+                        <div class="img__block">
+                          <div class="list__inner-slider">
+                            <div class="list-inner__nav">
+                              <div class="item active"></div>
+                              <div class="item"></div>
+                              <div class="item"></div>
+                              <div class="item"></div>
+                            </div><img class="inner__item active" src="./media/image/collect1.jpg" alt="elba"><img class="inner__item" src="./media/image/list-inner.jpg" alt="elba"><img class="inner__item" src="./media/image/list-inner.jpg" alt="elba"><img class="inner__item" src="./media/image/collect2.jpg" alt="elba">
+                          </div><img src="./media/image/list1.png" alt="elba">
+                        </div>
+                        <div class="name">Little E — Logo Max <br> White & Black</div>
+                        <div class="price">€295.00
+                          <div class="price__quick">Quick order</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list__col list__col--second">
+                    <div class="list__item">
+                      <div class="img__block">
+                        <div class="list__inner-slider">
+                          <div class="list-inner__nav">
+                            <div class="item active"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                          </div><img class="inner__item active" src="./media/image/collect1.jpg" alt="elba"><img class="inner__item" src="./media/image/list-inner.jpg" alt="elba"><img class="inner__item" src="./media/image/list-inner.jpg" alt="elba"><img class="inner__item" src="./media/image/collect2.jpg" alt="elba">
+                        </div><img src="./media/image/list1.png" alt="elba">
+                      </div>
+                      <div class="double-price-wrapp">
+                        <div class="name">Little E — Logo Max <br> White & Black</div>
+                        <div class="price">€295.00
+                          <div class="price__quick">Quick order</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><a class="arrow-link arrow-link--dark list__arrow-mobile" href="#">Show all</a>
+                </div>
+              </div>
+              <div class="m-col m-col--3">
+                <div class="list__text-fixed">
+                  <div class="list__text">
+                    <div class="title"><span>Best sellers</span></div>
+                    <div class="desc">We are anxiously creating each model so that you can be brighter and more unique.</div><a class="arrow-link arrow-link--dark" href="#">Show all</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- event-->
+      <div class="fullPage event">
+        <div class="event__content full-height">
+          <div class="m-container full-height">
+            <div class="m-row full-height">
+              <div class="m-col m-col--3 m-col__ms-display-none"></div>
+              <div class="m-col m-col--5 m-col__ms--15 m-order__ms--last">
+                <div class="event__text">
+                  <h3 class="event__title">Events</h3>
+                  <div class="text__bottom">
+                    <div class="event__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div><a class="arrow-link arrow-link--dark" href="#">Discover</a>
+                  </div>
+                </div>
+              </div>
+              <div class="m-col m-col--7 m-col__ms--15 m-order__ms--first">
+                <div class="event__video-wrapper">
+                  <h3 class="event__mobile-title">Events</h3>
+                  <div class="event__video-block">
+                    <div class="event__small"></div>
+                    <div class="play"></div>
+                    <video class="event__video" src="./media/video/test.mp4" playsinline muted autoplay loop preload=""></video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- blog-->
+      <div class="fullPage blog">
+        <div class="blog__content full-height">
+          <div class="m-container full-height">
+            <div class="m-row full-height">
+              <div class="m-col m-col--3 m-col__ms-display-none"></div>
+              <div class="m-col m-col--12 m-col__ms--15">
+                <div class="blog__wrapper">
+                  <div class="blog__title">Our Blog</div>
+                  <div class="blog__list">
+                    <div class="list__row"><a class="item" href="#"><img src="./media/image/blog1.jpg">
+                        <div class="name">Title of the page</div>
+                        <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div></a><a class="item" href="#"><img src="./media/image/blog2.jpg">
+                        <div class="name">Title of the page</div>
+                        <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div></a><a class="item" href="#"><img src="./media/image/blog3.jpg">
+                        <div class="name">Title of the page</div>
+                        <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div></a></div>
+                    <div class="list__row"><a class="item" href="#"><img src="./media/image/blog4.jpg">
+                        <div class="name">Title of the page</div>
+                        <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div></a><a class="item" href="#"><img src="./media/image/blog5.jpg">
+                        <div class="name">Title of the page</div>
+                        <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div></a><a class="item" href="#"><img src="./media/image/blog6.jpg">
+                        <div class="name">Title of the page</div>
+                        <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div></a></div>
+                  </div>
+                  <div class="blog__slider owl-carousel"><a class="item" href="#"><img src="./media/image/blog1.jpg">
+                      <div class="name">Title of the page</div>
+                      <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div></a><a class="item" href="#"><img src="./media/image/blog2.jpg">
+                      <div class="name">Title of the page</div>
+                      <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div></a><a class="item" href="#"><img src="./media/image/blog3.jpg">
+                      <div class="name">Title of the page</div>
+                      <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div></a><a class="item" href="#"><img src="./media/image/blog4.jpg">
+                      <div class="name">Title of the page</div>
+                      <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div></a><a class="item" href="#"><img src="./media/image/blog5.jpg">
+                      <div class="name">Title of the page</div>
+                      <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div></a><a class="item" href="#"><img src="./media/image/blog6.jpg">
+                      <div class="name">Title of the page</div>
+                      <div class="desc">Inspiration by the ocean and warm sand. <br> The combination of aquamarine and beige.</div></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- about-->
+      <div class="fullPage home-about">
+        <div class="home-about__content full-height">
+          <div class="m-container full-height home-about__container">
+            <div class="top-line"></div>
+            <div class="bot-line"></div>
+            <div class="m-row full-height">
+              <div class="m-col m-col--3 m-col__ms-display-none"></div>
+              <div class="m-col m-col--4 m-col__ms--5 m-col__mxs--15">
+                <div class="home-about__col">
+                  <div class="coll__top">
+                    <div class="home-about__big-block"><img src="./media/icon/payment.svg" alt="elba">
+                      <div class="name">Payment security</div>
+                      <div class="desc">All payments are protected by the <br> standard of 256 bit encryption</div>
+                    </div>
+                  </div>
+                  <div class="coll__center"><a class="home-about__link" href="#">Garanties</a><a class="home-about__link" href="#">Livraisons & Retour</a><a class="home-about__link" href="#">CGV</a><a class="home-about__link" href="#">Paiements</a></div>
+                  <div class="coll__bottom">
+                    <div class="elba-coop">ELBACONCEPT©2020. All right reserved.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="m-col m-col--4 m-col__ms--5 m-col__mxs--15">
+                <div class="home-about__col">
+                  <div class="coll__top">
+                    <div class="home-about__big-block"><img src="./media/icon/fast.svg" alt="elba">
+                      <div class="name">Fast shipping</div>
+                      <div class="desc">Delivery in 2 to 5 working days <br> Excluding personalized Elbag</div>
+                    </div>
+                  </div>
+                  <div class="coll__center"><a class="home-about__link" href="#">Contact</a><a class="home-about__link" href="#">Adresses des boutiQues</a></div>
+                  <div class="coll__bottom"></div>
+                </div>
+              </div>
+              <div class="m-col m-col--4 m-col__ms--5 m-col__mxs--15 home-about__border">
+                <div class="home-about__col">
+                  <div class="coll__top">
+                    <div class="home-about__big-block"><img src="./media/icon/money.svg" alt="elba">
+                      <div class="name">Money Back Guarantee</div>
+                      <div class="desc">Free return within 30 days <br> Excluding personalized Elbag</div>
+                    </div>
+                  </div>
+                  <div class="coll__center">
+                    <div class="subs__title">Get 10% Off your first order</div>
+                    <div class="subs__desc">Get an discount on the first order of your bag</div>
+                    <form class="subs__form">
+                      <input class="subs__input" type="email" placeholder="Enter your Email">
+                      <button class="subs__submit"></button>
+                    </form>
+                  </div>
+                  <div class="coll__bottom"></div>
+                </div>
+              </div>
+              <div class="m-col m-col__mxs--15 about__mobile-bottom">
+                <div class="links"><a class="home-about__link" href="#">Garanties</a><a class="home-about__link" href="#">Livraisons & Retour</a><a class="home-about__link" href="#">CGV</a><a class="home-about__link" href="#">Paiements</a><a class="home-about__link" href="#">Contact</a><a class="home-about__link" href="#">Adresses des boutiQues</a></div>
+                <div class="subs home-about__border">
+                  <div class="subs__title">Get 10% Off your first order</div>
+                  <div class="subs__desc">Get an discount on the first order of your bag</div>
+                  <form class="subs__form">
+                    <input class="subs__input" type="email" placeholder="Enter your Email">
+                    <button class="subs__submit"></button>
+                  </form>
+                </div>
+                <div class="elba-coop">ELBACONCEPT©2020. All right reserved.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="buildjs/TweenMax.min.js"></script>
+    <script src="buildjs/three.min.js"></script>
+    <script src="buildjs/hover-effect.umd.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="buildjs/jquery.touchSwipe.min.js"></script>
+    <script src="buildjs/owl.carousel.js"></script>
+    <script src="buildjs/index.js"></script>
+  </body>
+</html>

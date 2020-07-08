@@ -105,6 +105,15 @@ $(document).ready((e) => {
     dots: false,
   });
 
+  // list mobile slider
+  $('.list__slider__mobile').owlCarousel({
+    loop: false,
+    margin: 14,
+    autoWidth: true,
+    nav: false,
+    dots: false,
+  });
+
   // blog slider
   $('.blog__slider').owlCarousel({
     margin: 12,

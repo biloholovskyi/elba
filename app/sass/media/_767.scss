@@ -41,6 +41,114 @@
       line-height: 20px;
     }
   }
+
+  .list__slider__mobile {
+    display: block !important;
+  }
+
+  .list__col-wrapper {
+    &.double,
+    &.single,
+    &.triple,
+    &.five {
+      .list__item {
+        max-width: 100%;
+        padding: 132px 0 32px;
+
+        .img__block {
+          .list__inner-slider {
+            .inner__item {
+              max-height: 100%;
+            }
+          }
+        }
+
+        .double-price-wrapp {
+          flex-direction: column;
+
+          .name {
+            text-align: left;
+          }
+
+          .price {
+            text-align: left !important;
+            width: 100% !important;
+            margin: 0 !important;
+          }
+        }
+      }
+    }
+
+    &.single {
+      .list__item {
+        max-width: 100% !important;
+      }
+    }
+
+    &.triple,
+    &.quadruple,
+    &.five {
+      .list__col {
+        height: max-content;
+        &--first {
+          max-width: 100%;
+        }
+
+        &--second {
+          display: none;
+        }
+
+        &--center {
+          display: none;
+        }
+
+        .list__item {
+          display: none;
+        }
+
+        .list__slider__mobile {
+
+          .owl-stage-outer {
+            overflow: visible !important;
+          }
+
+          .list__item {
+            display: flex;
+            width: calc(100vw - 48px);
+            min-width: calc(100vw - 48px);
+            height: calc(100vh - 136px - 76px);
+
+            .img__block {
+              height: 100%;
+              max-height: calc(100% - 56px);
+            }
+
+            .name {
+              text-align: left;
+              margin-bottom: 0;
+            }
+
+            .price {
+              text-align: left;
+              line-height: 48px;
+
+              &__quick {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.five {
+      .list__col {
+        min-height: max-content;
+      }
+    }
+  }
   // list end
   // philosophy page 
     .inner-page {
@@ -347,4 +455,8 @@
     }
   }
   // catalog page
+
+  .list__arrow-mobile {
+    display: flex;
+  }
 }

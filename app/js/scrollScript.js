@@ -2063,6 +2063,10 @@ const scrollAnim = () => {
       link.css({
         'opacity': op,
       })
+
+      $('.list__arrow-mobile').css({
+        'opacity': 0
+      })
     } else {
       const block = $('.list');
       const link = $('.list__text .arrow-link');
@@ -2084,6 +2088,8 @@ const scrollAnim = () => {
       const n = pageYOffset - n1;
       const p = n / (n2 - n1) * 100;
       let tr1 = $(window).height() - 212;
+      const op2 = 1;
+      let op = op2 * (p / 100);
       if($(window).width() < 1061) {
         tr1 = $(window).height() - 212;
       }
@@ -2091,10 +2097,12 @@ const scrollAnim = () => {
 
       if (p > 99) {
         tr = 0;
+        op = 1
       }
 
       if (p < 1) {
         tr = $(window).height() - 212;
+        op = 0
       }
 
       const block = $('.list');
@@ -2104,6 +2112,9 @@ const scrollAnim = () => {
 
       col.css({
         'transform': 'translateY(' + tr + 'px)'
+      });
+      $('.list__arrow-mobile').css({
+        'opacity': op
       })
     } else {
       const col = $('.list__col');
