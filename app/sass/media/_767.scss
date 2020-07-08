@@ -80,11 +80,40 @@
     }
 
     &.single {
-      .list__item {
-        max-width: 100% !important;
+      .list__col {
+        height: max-content;
+
+        .list__item {
+          display: flex;
+          width: calc(100vw - 48px);
+          min-width: calc(100vw - 48px);
+          height: calc(100vh - 136px - 76px);
+
+          .img__block {
+            height: 100%;
+            max-height: calc(100% - 56px);
+          }
+
+          .name {
+            text-align: left;
+            margin-bottom: 0;
+          }
+
+          .price {
+            text-align: left;
+            line-height: 48px;
+
+            &__quick {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
       }
     }
 
+    &.double,
     &.triple,
     &.quadruple,
     &.five {
