@@ -59,17 +59,20 @@ const switchTabs = (e) => {
 
 const toggleModal = (e) => {
   e.preventDefault();
-  const modal = $('.conf-modal');
+  const link = $(e.currentTarget).attr('href');
+  console.log(link);
+  const modal = link ? $('.conf-modal--' + link) : $('.conf-modal');
   const header = $('.header');
-  modal.toggleClass('conf-modal--show');
   if(modal.hasClass('conf-modal--show')) {
+    modal.removeClass('conf-modal--show');
+    header.css('z-index', '60');
+    $('body').css('overflow', 'visible');
+  } else {
+    modal.addClass('conf-modal--show');
     header.css('z-index', '1')
     $('body').css({
       'overflow': 'hidden'
     });
-  } else {
-    header.css('z-index', '60');
-    $('body').css('overflow', 'visible');
   }
 }
 

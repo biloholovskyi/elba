@@ -34,6 +34,31 @@ $(document).ready((e) => {
   scrollAnim();
   autoSwitchFirst(e);
 
+  if($('.home-first').length > 0) {
+    let ts;
+    $(document).bind('touchstart', function(e) {
+      if($('.home-first').attr('data-swipe')) {
+        return
+      }
+      ts = e.originalEvent.touches[0].clientX;
+      $('.home-first').attr('data-swipe', 'start')
+    });
+
+    $(document).bind('touchend', function() {
+      $('.home-first').removeAttr('data-swipe');
+    });
+
+    $(document).bind('touchmove', function(e) {
+      let te = e.originalEvent.changedTouches[0].clientX;
+      const dist = ts - te;
+      if (dist > 0) {
+        switchSlideFirst(e, false, 'next');
+      } else if(dist < 0) {
+        switchSlideFirst(e, false, 'prev');
+      }
+    });
+  }
+
 
   $('#catalog-page .filter-btn').on('click', function () {
     $('body').css({
