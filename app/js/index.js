@@ -26,6 +26,7 @@ import './modal-other';
 import './select';
 import { hoverSlider } from "./listInnerSlider";
 import { collectionHeight } from "./collectionHeight";
+import cover from 'canvas-image-cover';
 
 
 $(document).ready((e) => {
@@ -33,6 +34,8 @@ $(document).ready((e) => {
   evSize();
   scrollAnim();
   autoSwitchFirst(e);
+
+  console.log(cover);
 
   if($('.home-first').length > 0) {
     let ts;
@@ -184,28 +187,17 @@ $(document).ready((e) => {
     }
   });
 
-  if($(window).width() < 1061 && $('.home-first').length > 0) {
-    $(function(e) {
-      //Enable swiping...
-      // $("body").swipe( {
-      //   //Generic swipe handler for all directions
-      //   swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-      //     const status = direction === 'left' ? 'next' : 'prev';
-      //     // switchSlideFirst(e, false, status);
-      //   },
-      //   //Default is 75px, set to 0 for demo so any distance triggers swipe
-      //   threshold:0
-      // });
-    });
-  }
 
   setTimeout(() => {
     Array.from(document.querySelectorAll('.poster-hover-effect')).forEach((el) => {
+      const r = $(el).children('.poster-hover-img-1').height() / $(el).children('.poster-hover-img-1').width();
+
       const img1 = $(el).attr('data-src-1');
       const img2 = $(el).attr('data-src-2');
       new hoverEffect({
         parent: el,
         intensity: el.dataset.intensity || undefined,
+        imagesRatio: r,
         speedIn: el.dataset.speedin || undefined,
         speedOut: el.dataset.speedout || undefined,
         easing: el.dataset.easing || undefined,
@@ -215,7 +207,7 @@ $(document).ready((e) => {
         displacementImage: '../media/displacement/14.jpg'
       });
     });
-  }, 1300)
+  }, 2500)
 
   setTimeout(() => {
     let minHeight = 0;
@@ -227,8 +219,8 @@ $(document).ready((e) => {
       } else if (minHeight > height) {
         minHeight = height;
       }
-      $(el).children('canvas').css('height', height + 'px');
-      $(el).children('canvas').css('width', width + 'px');
+      // $(el).children('canvas').css('height', height + 'px');
+      // $(el).children('canvas').css('width', width + 'px');
     });
     $('.collect-slider__item .poster').css('max-height', minHeight + 'px');
   }, 2000)
@@ -283,22 +275,6 @@ $(window).resize(() => {
     collectionHeight();
   }
   scrollAnim();
-
-  setTimeout(() => {
-    let minHeight = 0;
-    Array.from(document.querySelectorAll('.poster-hover-effect')).forEach((el) => {
-      const height = $(el).children('.poster-hover-img-1').height();
-      if (minHeight === 0) {
-        minHeight = height;
-      } else if (minHeight > height) {
-        minHeight = height;
-      }
-      const width = $(el).children('.poster-hover-img-1').width();
-      $(el).children('canvas').css('width', width + 'px');
-      $(el).children('canvas').css('height', height + 'px');
-    });
-    $('.collect-slider__item .poster').css('max-height', minHeight + 'px');
-  }, 400)
 });
 
 let btnContainer = document.getElementsByClassName('.catalog-btn');

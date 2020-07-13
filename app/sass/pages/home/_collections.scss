@@ -76,13 +76,17 @@
         object-fit: cover;
         position: relative;
         overflow: hidden;
+        z-index: 10;
 
         .poster-hover-img-1,
         .poster-hover-img-2 {
           position: absolute;
-          width: 100%;
+          width: auto;
+          height: auto;
+          object-fit: cover;
           top: 0;
           left: 0;
+          opacity: 0;
         }
 
         canvas {
