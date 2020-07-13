@@ -87,7 +87,11 @@
   }
 
   .home-about__container {
-    .top-line {
+
+    &::before,
+    &::after,
+    .top-line,
+    .bot-line {
       display: none;
     }
   }
