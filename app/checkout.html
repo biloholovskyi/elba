@@ -167,55 +167,45 @@
               <div class="inner-photo">
                 <div class="text">Template:</div>
                 <div class="birth-block">
-                  <select id="mounth">
+                  <select class="js-template" id="mounth">
                     <option value="hide">Template:</option>
-                    <option value="01">1</option>
-                    <option value="02">2</option>
-                    <option value="03">3</option>
-                    <option value="04" selected>none</option>
-                    <option value="05">4</option>
-                    <option value="06">5</option>
-                    <option value="07">6</option>
-                    <option value="08">8</option>
-                    <option value="09">9</option>
-                    <option value="10">10</option>
-                    <option value="09">11</option>
-                    <option value="10">12</option>
+                    <option value="template 1" data-name="Jon" data-last-name="Dou" data-company="Apple" data-address="Address" data-zip="111" data-country="Russian Federation" data-city="Moscow" data-phone="+3983782732323">Template 1</option>
+                    <option value="template 2" data-name="Dou" data-last-name="Jon" data-company="Microsoft" data-address="Address 2" data-zip="777" data-country="USA" data-city="Boston" data-phone="+34908573487">Template 2</option>
                   </select>
                 </div>
               </div>
               <div class="inner-photo">
                 <div class="text">Receiver last name:</div>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" id="js-template-last-name">
               </div>
               <div class="inner-photo">
                 <div class="text">Receiver first name:</div>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" id="js-template-name">
               </div>
               <div class="inner-photo">
                 <div class="text">Company name: <span class="opacity-span">(optional)</span></div>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" id="js-template-company">
               </div>
               <div class="inner-photo">
                 <div class="text">Address:</div>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" id="js-template-address">
               </div>
               <div class="inner-photo">
                 <div class="text">ZIP-code:</div>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" id="js-template-zip">
               </div>
               <div class="inner-photo">
                 <div class="text">Country:</div>
                 <div class="birth-block">
-                  <select id="country">
+                  <select class="js-template-country" id="country">
                     <option value="hide">Country</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
                     <option value="03">03</option>
                     <option value="04">04</option>
                     <option value="05">05</option>
-                    <option value="06" selected> Russian Federation</option>
-                    <option value="07">07</option>
+                    <option value="Russian Federation">Russian Federation</option>
+                    <option value="USA">USA</option>
                     <option value="08">08</option>
                     <option value="09">09</option>
                     <option value="10">10</option>
@@ -224,11 +214,11 @@
               </div>
               <div class="inner-photo">
                 <div class="text">City</div>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" id="js-template-city">
               </div>
               <div class="inner-photo">
                 <div class="text">Phone number:</div>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" id="js-template-phone">
               </div>
             </div>
             <div class="inner-content">
@@ -255,47 +245,37 @@
               <div class="inner-photo">
                 <div class="text">Template:</div>
                 <div class="birth-block">
-                  <select id="mounth">
+                  <select class="js-template-billing" id="mounth">
                     <option value="hide">Template:</option>
-                    <option value="01">1</option>
-                    <option value="02">2</option>
-                    <option value="03">3</option>
-                    <option value="04" selected>none</option>
-                    <option value="05">4</option>
-                    <option value="06">5</option>
-                    <option value="07">6</option>
-                    <option value="08"></option>
-                    <option value="09"></option>
-                    <option value="10"></option>
-                    <option value="09"></option>
-                    <option value="10"></option>
+                    <option value="template 1" data-name="Jon" data-last-name="Dou" data-company="Apple" data-address="Address" data-zip="111" data-country="Russian Federation" data-city="Moscow" data-phone="+3983782732323">Template 1</option>
+                    <option value="template 2" data-name="Dou" data-last-name="Jon" data-company="Microsoft" data-address="Address 2" data-zip="777" data-country="USA" data-city="Boston" data-phone="+34908573487">Template 2</option>
                   </select>
                 </div>
               </div>
               <div class="inner-photo">
                 <div class="text">Receiver last name:</div>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" id="js-billing-last-name">
               </div>
               <div class="inner-photo">
                 <div class="text">Receiver first name:</div>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" id="js-billing-name">
               </div>
               <div class="inner-photo">
                 <div class="text">Company name: <span class="opacity-span">(optional)</span></div>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" id="js-billing-company">
               </div>
               <div class="inner-photo">
                 <div class="text">Address:</div>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" id="js-billing-address">
               </div>
               <div class="inner-photo">
                 <div class="text">ZIP-code:</div>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" id="js-billing-zip">
               </div>
               <div class="inner-photo">
                 <div class="text">Country:</div>
                 <div class="birth-block">
-                  <select id="country">
+                  <select class="js-billing-country" id="country">
                     <option value="hide">Country</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
@@ -312,11 +292,11 @@
               </div>
               <div class="inner-photo">
                 <div class="text">City</div>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" id="js-billing-city">
               </div>
               <div class="inner-photo">
                 <div class="text">Phone number:</div>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" id="js-billing-phone">
               </div>
             </div>
             <div class="inner-content">
@@ -326,39 +306,29 @@
               <div class="inner-photo">
                 <div class="text">Template:</div>
                 <div class="birth-block">
-                  <select id="mounth">
+                  <select class="js-template-payment" id="mounth">
                     <option value="hide">Template:</option>
-                    <option value="01">1</option>
-                    <option value="02">2</option>
-                    <option value="03">3</option>
-                    <option value="04" selected>none</option>
-                    <option value="05">4</option>
-                    <option value="06">5</option>
-                    <option value="07">6</option>
-                    <option value="08"></option>
-                    <option value="09"></option>
-                    <option value="10"></option>
-                    <option value="09"></option>
-                    <option value="10"></option>
+                    <option value="template 1" data-method="credit card" data-number="4565646546464" data-until-m="April" data-until-y="2019" data-cardholder="JON DOU" data-cvv="111">Template 1</option>
+                    <option value="template 2" data-method="paypal" data-number="798798798797" data-until-m="May" data-until-y="2020" data-cardholder="DOU JON" data-cvv="000">Template 2</option>
                   </select>
                 </div>
               </div>
               <div class="inner-photo">
                 <div class="text">Method type:</div>
-                <div class="method_type">
-                  <button value=""><span>Credit</span> card</button>
-                  <button>Paypal</button>
-                  <button>UnionPay</button>
+                <div class="method_type js-tamplate-method">
+                  <button data-type="credit card"><span>Credit</span> card</button>
+                  <button data-type="paypal">Paypal</button>
+                  <button data-type="unionpay">UnionPay</button>
                 </div>
               </div>
               <div class="inner-photo">
-                <div class="text">Receiver first name:</div>
-                <input type="number">
+                <div class="text">Card number::</div>
+                <input type="number" id="js-payment-number">
               </div>
               <div class="inner-photo">
                 <div class="text">Until:</div>
                 <div class="birth-block cardUntil">
-                  <select id="mounth">
+                  <select class="js-payment-month" id="mounthid">
                     <option value="hide">Month</option>
                     <option value="01">January</option>
                     <option value="02">February</option>
@@ -373,7 +343,7 @@
                     <option value="09">November</option>
                     <option value="10">December</option>
                   </select>
-                  <select id="year">
+                  <select class="js-payment-year" id="yearid">
                     <option value="hide">year</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
@@ -390,11 +360,11 @@
               </div>
               <div class="inner-photo">
                 <div class="text">Cardholder:</div>
-                <input type="text">
+                <input type="text" id="js-payment-cardholder">
               </div>
               <div class="inner-photo">
                 <div class="text">CVV/CVC:</div>
-                <input type="password">
+                <input type="password" id="js-payment-cvv">
               </div>
             </div>
           </div>
