@@ -362,6 +362,16 @@
   }
 }
 
+@media (min-width: 761px) {
+  #catalog-page {
+    .list__item {
+      .img__block {
+        height: 278px;
+      }
+    }
+  }
+}
+
 
 // catalog block
 .catalog-wrap {
